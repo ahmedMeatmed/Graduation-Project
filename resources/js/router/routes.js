@@ -6,10 +6,12 @@ import Settings from "..\\components/Settings.vue";
 import Profile from "..\\components/Profile.vue";
 import About from "..\\components/About.vue";
 import Contact from "..\\components/Contact.vue";
+import Dashboard from "..\\components/Dashboard.vue";
 
 
 
 const routes =[
+    { path : '/dashboard' ,component: Dashboard },
     { path : '/logs' ,component: Logs },
     { path : "/log/:log" ,component: Log },
     { path : '/alerts' ,component: Alerts },
