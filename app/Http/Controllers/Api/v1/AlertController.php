@@ -10,7 +10,7 @@ class AlertController extends Controller
 {
     //
     public function index(){
-        $alerts = Alert::paginate(10);
+        $alerts = Alert::all();
 
         return response()->json($alerts);
     }

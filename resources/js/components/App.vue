@@ -7,12 +7,10 @@
             <div class="col-11 p-0 m-0">
                 <router-view>
                 </router-view>
-                <!-- <Apperance /> -->
             </div>
         </div>
     </div>
 </template>
 <script setup>
 import SideBar from "..\\components/SideBar.vue";
-import Apperance from "..\\components/Apperance.vue";
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary border" style="width:fit-content; height: 100vh;">
+    <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary border position-fixed" style="width:fit-content; height: 100vh;">
         <router-link to="/dashboard" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip"
             data-bs-placement="right" data-bs-original-title="Icon-only">
             <h6>IDS</h6>
@@ -24,7 +24,9 @@
                 <router-link to="/alerts" active-class="active" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
                     data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
                     <i class="bi bi-exclamation-octagon-fill fs-4"></i>
-                    <i class="bi bi-1-circle-fill text-danger m-1" style="position: absolute;"></i>
+                    <i v-if="notifications > 0"
+                    class="bi bi-circle-fill text-danger m-1 position-absolute">
+                        <span class="text-warning">{{ notifications }}</span></i>
                     <h6>Alerts</h6>
                 </router-link>
             </li>
@@ -68,3 +70,14 @@
         </div>
     </div>
 </template>
+<script setup>
+import { computed } from 'vue';
+import { useDataStore } from '../stores/dataStore';
+
+useDataStore().FetchAlerts();
+const data =useDataStore();
+let notifications = computed(()=>
+data.alerts.length
+);
+
+</script>

@@ -5,18 +5,58 @@ import { ref } from "vue";
 
 export const useDataStore = defineStore('data',()=>{
 
-    let logs=ref([]);
+    let logs = ref([]);
+    let singleLog = ref([]);
+
+    let alerts = ref([]);
+    let singleAlert = ref([]);
+
+
     const FetchLogs = async () =>{
         await axios.get('http://127.0.0.1:8000/api/v1/logs')
         .then((response)=>{
-            logs.value = response.data;
+            //  console.log(response.data);
+             logs.value = response.data;
+            //  console.log(logs.value)
         })
         .catch((response)=>{
-            return response;
+            console.log(response.data+"can't Fetch");
+        })
+    }
+
+    const FetchSingleLog = async (log)=>{
+        await axios.get(`http://127.0.0.1:8000/api/v1/logs/${log}`)
+        .then((response)=>{
+            singleLog.value = response.data;
+        })
+        .catch((response)=>{
+            console.log(response.data+"can't Fetch");
+        })
+    }
+
+    const FetchAlerts = async ()=>{
+        await axios.get("http://127.0.0.1:8000/api/v1/alerts")
+        .then((response)=>{
+            alerts.value = response.data
+        })
+        .catch((response)=>{
+            console.log(response.data+"can't Fetch");
+        })
+    }
+
+    const FetchSingleAlert = async (alert)=>{
+        await axios.get(`http://127.0.0.1:8000/api/v1/alerts/${alert}`)
+        .then((response)=>{
+            singleAlert.value = response.data;
+        })
+        .catch((response)=>{
+            console.log(response.data+"can't Fetch");
         })
     }
     return{
-        FetchLogs,
-        logs,
+        FetchLogs,FetchSingleLog,
+        FetchAlerts,FetchSingleAlert,
+        logs,singleLog,
+        alerts,singleAlert,
     };
 })

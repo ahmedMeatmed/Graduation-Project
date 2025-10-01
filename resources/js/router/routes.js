@@ -13,14 +13,13 @@ import Dashboard from "..\\components/Dashboard.vue";
 const routes =[
     { path : '/dashboard' ,component: Dashboard },
     { path : '/logs' ,component: Logs },
-    { path : "/log/:log" ,component: Log },
+    { path : "/logs/:log" ,component: Log },
     { path : '/alerts' ,component: Alerts },
     { path : "/alerts/:alert" ,component: Alert },
     { path : '/settings' ,component: Settings },
     { path : '/profile' ,component: Profile },
     { path : '/about' ,component: About },
     { path : '/contact' ,component: Contact },
-
 ];
 
 export default routes;

@@ -10,7 +10,7 @@ class LogConroller extends Controller
 {
     //
     public function index(){
-        $logs = Log::paginate(10);
+        $logs = Log::all();
         
         return response()->json($logs);
     }
