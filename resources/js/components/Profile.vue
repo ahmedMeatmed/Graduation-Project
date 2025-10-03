@@ -8,13 +8,15 @@
         <!-- Profile Card -->
         <div class="card shadow p-4 text-center">
           <!-- Avatar -->
-          <img 
+          <!-- <img 
             :src="profile.avatar" 
             alt="Profile Picture" 
             class="rounded-circle shadow mb-3" 
             width="120" 
             height="120"
-          >
+          > -->
+                <i class="bi bi-person-fill" style="font-size: 72px;"></i>
+
 
           <!-- User Info -->
           <h4 class="fw-semibold">{{ profile.name }}</h4>

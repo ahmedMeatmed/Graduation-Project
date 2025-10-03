@@ -14,7 +14,7 @@
                 <th class="border-end">FlowDirection</th>
                 <!-- <th class="border-end">PacketCount</th> -->
                 <!-- <th class="border-end">Duration</th> -->
-                <th class="border-end">MatchedSign</th>
+                <th class="border-end">Sign</th>
                 <th>Timestamp</th>
             </tr>
         </thead>

@@ -3,31 +3,31 @@
             <thead>
                 <tr>
                    
-                        <th>AlertID</th>
-                        <th>LogID</th>
-                        <th>Message</th>
-                        <th>AttackType</th>
-                        <th>SourceIP</th>
-                        <th>DestinationIP</th>
-                        <th>AssignedTo</th>
-                        <th>Severity</th>
-                        <th>Status</th>
-                        <th>Timestamp</th>
+                        <th class="text-center border">AlertID</th>
+                        <th class="text-center border">LogID</th>
+                        <th class="text-center border">Message</th>
+                        <th class="text-center border">AttackType</th>
+                        <th class="text-center border">SourceIP</th>
+                        <th class="text-center border">DestinationIP</th>
+                        <!-- <th class="text-center border">AssignedTo</th> -->
+                        <th class="text-center border">Severity</th>
+                        <th class="text-center border">Status</th>
+                        <th class="text-center border">Timestamp</th>
                 </tr>
             </thead>
             <tbody>
                 <tr v-for="alert in data.alerts" :key="alert.AlertID">
                      
-                    <td>{{ alert.AlertID }}</td>
-                    <td>{{ alert.LogID }}</td>
-                    <td><router-link :to="singleAlert(alert.AlertID)">{{ alert.Message }}</router-link></td>
-                    <td>{{ alert.AttackType }}</td>
-                    <td>{{ alert.SourceIP }}</td>
-                    <td>{{ alert.DestinationIP }}</td>
-                    <td>{{ alert.AssignedTo }}</td>
-                    <td>{{ alert.Severity }}</td>
-                    <td>{{ alert.Status }}</td>
-                    <td>{{ alert.Timestamp }}</td>
+                    <td class="text-center border">{{ alert.AlertID }}</td>
+                    <td class="text-center border"><router-link :to="singleLog(alert.LogID)">{{ alert.LogID }}</router-link></td>
+                    <td class="text-center border"><router-link :to="singleAlert(alert.AlertID)">{{ alert.Message }}</router-link></td>
+                    <td class="text-center border">{{ alert.AttackType }}</td>
+                    <td class="text-center border">{{ alert.SourceIP }}</td>
+                    <td class="text-center border">{{ alert.DestinationIP }}</td>
+                    <!-- <td class="text-center border">{{ alert.AssignedTo }}</td> -->
+                    <td class="text-center border">{{ alert.Severity }}</td>
+                    <td class="text-center border">{{ alert.Status }}</td>
+                    <td class="text-center border">{{ alert.Timestamp }}</td>
 
                 </tr>
             </tbody>
@@ -40,5 +40,9 @@ const data = useDataStore();
 
 const singleAlert = (alertId)=>{
     return `/alerts/${alertId}`;
+}
+
+const singleLog = (logId)=>{
+    return `/logs/${logId}`;
 }
 </script>

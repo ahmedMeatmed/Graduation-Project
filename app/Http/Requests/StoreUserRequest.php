@@ -21,12 +21,17 @@ class StoreUserRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
-            //
-            "Username" => "bail|required|max:50",
-            "PasswordHash" => "bail|required|password|max:15",
-            "Role" => "bail|required|max:2",
+        // return [
+        //     //
+        //     "Username" => "bail|required|max:50",
+        //     "PasswordHash" => "bail|required|password|max:15",
+        //     "Role" => "bail|required|max:2",
 
+        // ];
+        return[
+            'username' => 'required|string|min:3|max:50|unique:users,username',
+            'password' => 'required|string|min:8|confirmed',
+            'role'     => 'required|string|in:admin,analyst,viewer',
         ];
     }
 }

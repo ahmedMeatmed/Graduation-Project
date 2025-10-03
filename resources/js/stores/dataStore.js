@@ -11,6 +11,11 @@ export const useDataStore = defineStore('data',()=>{
     let alerts = ref([]);
     let singleAlert = ref([]);
 
+    let signatures = ref([]);
+
+    let firstPage = ref(null);
+    let lastPage = ref(null);
+
 
     const FetchLogs = async () =>{
         await axios.get('http://127.0.0.1:8000/api/v1/logs')
@@ -53,10 +58,25 @@ export const useDataStore = defineStore('data',()=>{
             console.log(response.data+"can't Fetch");
         })
     }
+     const FetchSignatures = async (page=1)=>{
+        await axios.get(`http://127.0.0.1:8000/api/v1/signatures?page=${page}`)
+        .then((response)=>{
+            firstPage.value = response.data.from
+            lastPage.value = response.data.last_page
+            signatures.value = response.data.data
+          
+
+        })
+        .catch((response)=>{
+            console.log(response.data+"can't Fetch");
+        })
+    }
     return{
         FetchLogs,FetchSingleLog,
         FetchAlerts,FetchSingleAlert,
+        FetchSignatures,
         logs,singleLog,
         alerts,singleAlert,
+        signatures,firstPage,lastPage,
     };
 })

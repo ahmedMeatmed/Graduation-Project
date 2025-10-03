@@ -1,23 +1,25 @@
 <template>
-    <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary border position-fixed" style="width:fit-content; height: 100vh;">
-        <router-link to="/dashboard" class="d-block p-3 link-body-emphasis text-decoration-none" data-bs-toggle="tooltip"
+    <div class="d-flex flex-column flex-shrink-0 bg-body-tertiary border position-fixed m-0 p-0" >
+        <router-link to="/dashboard" class="d-block link-body-emphasis text-decoration-none border-bottom m-0" data-bs-toggle="tooltip"
             data-bs-placement="right" data-bs-original-title="Icon-only">
-            <h6>IDS</h6>
+            <!-- <h3 class="text-center ">IDS</h3> -->
+            <img src="..\\imgs/logo.png" alt="Logo" class="m-auto" style="border-radius: 50%;" >
+
             <span class="visually-hidden">Icon-only</span>
         </router-link>
         <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
             <li class="nav-item">
                 <router-link  to="/dashboard" exact-active-class="active" class="nav-link py-3 border-bottom rounded-0" aria-current="page"
                     data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
-                    <i class="bi bi-speedometer2"></i>
-                    <h6>Dashboard</h6>
+                    <i class="bi bi-speedometer2 m-1"></i>
+                    <span>Dashboard</span>
                 </router-link>
             </li>
             <li>
                 <router-link to="/logs" active-class="active" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip"
                     data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
-                    <i class="bi bi-box-arrow-in-down-right"></i>
-                    <h6>Logs</h6>
+                    <i class="bi bi-box-arrow-in-down-right m-1"></i>
+                    <span>Logs</span>
                 </router-link>
             </li>
             <li>
@@ -26,7 +28,8 @@
                     <i class="bi bi-exclamation-octagon-fill fs-4"></i>
                     <i v-if="notifications > 0"
                     class="bi bi-circle-fill text-danger m-1 position-absolute">
-                        <span class="text-warning">{{ notifications }}</span></i>
+                        <!-- <span class="text-warning"><b>{{ notifications }}</b></span> -->
+                    </i>
                     <h6>Alerts</h6>
                 </router-link>
             </li>
@@ -51,8 +54,8 @@
                     <h6>Settings</h6>
                 </router-link>
             </li>
-        </ul>
-        <div class="dropdown ">
+            <li>
+                <div class="dropdown ">
             <a href="#"
                 class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -68,6 +71,9 @@
                 <li><a class="dropdown-item" href="/">Sign out</a></li>
             </ul>
         </div>
+            </li>
+        </ul>
+        
     </div>
 </template>
 <script setup>

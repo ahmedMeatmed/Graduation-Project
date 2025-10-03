@@ -8,46 +8,17 @@
       <div class="col-md-6">
         <div class="card shadow p-4">
           <h4 class="fw-semibold mb-3">General Settings</h4>
-          <form>
             <div class="mb-3">
               <label class="form-label">Project Name</label>
-              <input type="text" class="form-control" v-model="settings.projectName">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Theme</label>
-              <select class="form-select" v-model="settings.theme">
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-              </select>
+              <input type="text" class="form-control" disabled value="AEGIS">
             </div>
             <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" v-model="settings.notifications">
-              <label class="form-check-label">Enable Notifications</label>
+              <input class="form-check-input p-2" type="checkbox" style="cursor: pointer;">
+              <label class="form-check-label">Theme</label>
             </div>
-          </form>
         </div>
       </div>
 
-      <!-- Alerts Settings -->
-      <div class="col-md-6">
-        <div class="card shadow p-4">
-          <h4 class="fw-semibold mb-3">Alerts Settings</h4>
-          <form>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" v-model="settings.alerts.enabled">
-              <label class="form-check-label">Enable Alerts</label>
-            </div>
-            <div class="mb-3 mt-3">
-              <label class="form-label">Alert Severity</label>
-              <select class="form-select" v-model="settings.alerts.severity">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-              </select>
-            </div>
-          </form>
-        </div>
-      </div>
 
       <!-- Logs Settings -->
       <div class="col-md-6">
@@ -56,7 +27,7 @@
           <form>
             <div class="mb-3">
               <label class="form-label">Log Retention (days)</label>
-              <input type="number" class="form-control" v-model="settings.logs.retention">
+              <input type="number" class="form-control">
             </div>
             <button class="btn btn-outline-primary btn-sm">
               Export Logs
@@ -69,45 +40,176 @@
       <div class="col-md-6">
         <div class="card shadow p-4">
           <h4 class="fw-semibold mb-3">User Settings</h4>
-          <form>
-            <div class="mb-3">
-              <label class="form-label">Change Password</label>
-              <input type="password" class="form-control" placeholder="New Password">
-            </div>
-            <div class="mb-3">
-              <label class="form-label">Confirm Password</label>
-              <input type="password" class="form-control" placeholder="Confirm Password">
-            </div>
-            <button class="btn btn-primary btn-sm">Update Password</button>
-          </form>
+           <button class="btn btn-success btn-sm m-1" @click="createUser()"><b>Create User</b></button>
+            <button class="btn btn-info btn-sm m-1" @click="viewUsers"><b>Show Users</b></button>
+        </div>
+      </div>
+
+      <!-- Signature Settings -->
+      <div class="col-md-6">
+        <div class="card shadow p-4">
+          <h4 class="fw-semibold mb-3">Signature Settings</h4>
+      
+            <button class="btn btn-success btn-sm m-1" @click="createSignature"><b>Create Signature</b></button>
+            <button class="btn btn-info btn-sm m-1" @click="viewSignatures"><b>Show Signatures</b></button>
+          
         </div>
       </div>
     </div>
 
-    <!-- Save Button -->
-    <div class="text-center mt-4">
-      <button class="btn btn-success px-4" @click="saveSettings">Save Changes</button>
-    </div>
+    <Modal ref="User" id="createUser" title="Create User">
+      <template #body>
+        <form @submit.prevent="">
+          <div class="mb-3">
+            <label class="form-label"><b>user name</b></label>
+            <input v-model="newUser.userName" type="text" class="form-control" required>
+          </div>
+              <div class="mb-3">
+            <label class="form-label"><b>Role</b></label>
+            <!-- <input v-model="newUser.role" type="text" class="form-control" required> -->
+            <select name="role" id="role" v-model="newUser.role" class="form-control dropdown" style="cursor: pointer;" required>
+              <option value="1">Admin</option>
+              <option value="0">Analyst</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label"><b>password</b></label>
+            <input v-model="newUser.password" type="password" class="form-control" required>
+          </div>
+             <div class="mb-3">
+            <label class="form-label"><b>confirm password</b></label>
+            <input v-model="newUser.confirmPassword" type="password" class="form-control" required>
+          </div>
+        </form>
+      </template>
+        <template #footer>
+            <button type="button" class="btn btn-primary">Save</button>
+
+      </template>
+    </Modal>
+    <Modal ref="Signature" id="createSignature" title="Create Signature">
+      <template #body></template>
+      <template #footer>
+            <button type="button" class="btn btn-primary">Save</button>
+
+      </template>
+    </Modal>
+    <Modal ref="showUsers" id="showUsers" title="show Users">
+
+    </Modal>
+    <Modal ref="showSignatures" id="showSignatures" title="showSignatures" >
+      <template #body>
+              <div class="mb-3">
+            <input type="search" class="form-control" >
+          </div>
+        <table class="table table-striped border">
+        <thead>
+          <th class="border p-1 text-center">engine</th>
+          <th class="border p-1 text-center">attackName</th>
+          <th class="border p-1 text-center">protocol</th>
+          <th class="border p-1 text-center">srcIp</th>
+          <th class="border p-1 text-center">srcPort</th>
+          <th class="border p-1 text-center">direction</th>
+          <th class="border p-1 text-center">destIp</th>
+          <th class="border p-1 text-center">destPort</th>
+          <th class="border p-1 text-center">created_at</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border p-1 text-center">123</td>
+            <td class="border p-1 text-center">123</td>
+            <td class="border p-1 text-center">123</td>
+            <td class="border p-1 text-center">123</td>
+            <td class="border p-1 text-center">123</td>
+            <td class="border p-1 text-center">123</td>
+            <td class="border p-1 text-center">123</td>
+            <td class="border p-1 text-center">123</td>
+            <td class="border p-1 text-center">123</td>
+          </tr>
+        </tbody>
+      </table>
+      </template>
+      <template #footer>
+        <i 
+        class="bi bi-arrow-left-circle-fill fs-1 text-center m-auto" 
+        style="cursor: pointer;" 
+        @click="decrementPage"
+        ></i>
+        <span >-- {{ page }} --</span>
+        <i 
+        class="bi bi-arrow-right-circle-fill fs-1 text-center m-auto" 
+        style="cursor: pointer;" 
+        @click="incrementPage"
+        ></i>
+      </template>
+    </Modal>
+
+   
   </div>
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { ref } from "vue";
+import Modal from "../tools/Modal.vue";
+import { useDataStore } from "../stores/dataStore";
+const data = useDataStore();
+const User = ref(null);
+const Signature = ref(null);
+const showUsers = ref(null);
+const showSignatures = ref(null);
 
-const settings = reactive({
-  projectName: "IDS System",
-  theme: "light",
-  notifications: true,
-  alerts: {
-    enabled: true,
-    severity: "high",
-  },
-  logs: {
-    retention: 30, // days
-  },
+const createUser = ()=>{
+  User.value.open()
+}
+const createSignature = ()=>{
+  Signature.value.open()
+}
+
+const viewUsers =()=>{
+  showUsers.value.open()
+}
+
+const page = ref(1);
+const incrementPage = ()=>{
+  if(page < data.lastPage)
+      page.value++
+}
+const decrementPage = ()=>{
+  if(page > 0)
+      page.value--
+}
+
+const viewSignatures = ()=>{
+  useDataStore().FetchSignatures(page);
+  showSignatures.value.open()
+  
+}
+
+const newUser = ref({
+  userName:'',
+  password:'',
+  confirmPassword:'',
+  role:'Admin',
 });
 
-function saveSettings() {
-  alert("Settings saved successfully! ✅\n" + JSON.stringify(settings, null, 2));
-}
+const newSignature = ref({
+engine    :'', 
+attackName:'',
+ruleText  :'',
+protocol  :'',
+srcIp     :'',
+srcPort   :'',
+direction :'',
+destIp    :'',
+destPort  :'',
+flow      :'',  
+http      :'',
+tls       :'',
+contentPattern:'',
+sid       :'',
+rev       :'',
+})
+
+
+
 </script>
