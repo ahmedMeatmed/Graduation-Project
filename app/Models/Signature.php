@@ -9,6 +9,8 @@ class Signature extends Model
     //
     protected $table = "Signatures";
     protected $primaryKey = "signId";
+    
+    public $timestamps = false;
 
     protected $fillable = [
             "engine",

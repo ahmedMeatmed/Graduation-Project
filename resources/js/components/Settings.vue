@@ -50,7 +50,7 @@
         <div class="card shadow p-4">
           <h4 class="fw-semibold mb-3">Signature Settings</h4>
       
-            <a href="http://127.0.0.1:8000/api/v1/signatures/create" class="btn btn-success btn-sm m-1"><b>Create Signature</b></a>
+            <button @click="createSignature" class="btn btn-success btn-sm m-1"><b>Create Signature</b></button>
             
             <button class="btn btn-info btn-sm m-1" @click="viewSignatures"><b>Show Signatures</b></button>
           
@@ -88,13 +88,89 @@
 
       </template>
     </Modal>
-    <!-- <Modal ref="Signature" id="createSignature" title="Create Signature">
+    <Modal ref="Signature" id="createSignature" title="Create Signature">
       <template #body>
-        
+         <form @submit.prevent="storeSignature">
+            <div class="mb-3 text-start">
+              <label class="form-label">engine</label>
+              <input v-model="newSignature.engine" name="engine" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">attackName</label>
+              <input v-model="newSignature.attackName" name="attackName" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">ruleText</label>
+              <input v-model="newSignature.ruleText" name="ruleText" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">protocol</label>
+              <input v-model="newSignature.protocol" protocol type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">srcIp</label>
+              <input v-model="newSignature.srcIp" name="srcIp" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">srcPort</label>
+              <input v-model="newSignature.srcPort" name="srcPort" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">direction</label>
+              <input v-model="newSignature.direction" name="direction" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">destIp</label>
+              <input v-model="newSignature.destIp" name="destIp" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">destPort</label>
+              <input v-model="newSignature.destPort" name="destPort" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">flow</label>
+              <input v-model="newSignature.flow" name="flow" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">http</label>
+              <input v-model="newSignature.http" name="http" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">tls</label>
+              <input v-model="newSignature.tls" name="tls" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">contentPattern</label>
+              <input v-model="newSignature.contentPattern" name="contentPattern" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">sid</label>
+              <input v-model="newSignature.sid"  name="sid" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+
+               <div class="mb-3 text-start">
+              <label class="form-label">rev</label>
+              <input v-model="newSignature.rev" name="rev" type="text" class="form-control" placeholder="Enter your name">
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            </form>
       </template>
       <template #footer>
       </template>
-    </Modal> -->
+    </Modal>
     <Modal ref="showUsers" id="showUsers" title="show Users">
 
     </Modal>
@@ -228,25 +304,25 @@ const newUser = ref({
 
 // console.log(date.toLocaleDateString());
 
-//const date = new Date;
-// const newSignature = ref({
-// engine    :'', 
-// attackName:'',
-// ruleText  :'',
-// protocol  :'',
-// srcIp     :'',
-// srcPort   :'',
-// direction :'',
-// destIp    :'',
-// destPort  :'',
-// flow      :'',  
-// http      :'',
-// tls       :'',
-// contentPattern:'',
-// sid       :'',
-// rev       :'',
-// created_at : date.toLocaleDateString(),
-// })
+const date = new Date;
+ const newSignature = ref({
+ engine    :'', 
+ attackName:'',
+ ruleText  :'',
+ protocol  :'',
+ srcIp     :'',
+ srcPort   :'',
+ direction :'',
+ destIp    :'',
+ destPort  :'',
+ flow      :'',  
+ http      :'',
+ tls       :'',
+ contentPattern:'',
+ sid       :'',
+ rev       :'',
+ created_at : date.toLocaleDateString(),
+ })
 
 const signature = ref({
   attackName : '',
@@ -265,8 +341,7 @@ const singleSignature = (signature)=>{
 }
 
 const storeSignature = ()=>{
-  // console.log(...newSignature.value);
-  // console.log(newSignature.value);
+  // console.log(newSignature.value)
   data.storeSignature( newSignature.value);
 }
 

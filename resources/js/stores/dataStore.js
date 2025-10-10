@@ -17,6 +17,8 @@ export const useDataStore = defineStore('data',()=>{
     let firstPage = ref(null);
     let lastPage = ref(null);
 
+    let errors = ref([]);
+
 
     const FetchLogs = async () =>{
         await axios.get('http://127.0.0.1:8000/api/v1/logs')
@@ -93,12 +95,18 @@ export const useDataStore = defineStore('data',()=>{
     });
     }
     const storeSignature =async (signature)=>{
-        await axios.post("http://127.0.0.1:8000/api/v1/signatures",signature)
+        await axios.post("http://127.0.0.1:8000/api/v1/signatures",signature,{
+            headers:{
+                'Content-Type' :  'application/json'
+            }
+        })
         .then((response)=>{
             console.log("✅ Created:", response.data);
         })
-        .catch((response)=>{
-            console.error("❌ Error:");
+        .catch((error)=>{
+            errors.value = error.response.data.errors;
+            console.error(error.response.data.errors);
+            // console.error(errors.value.attackName[0]);
         })
     }
 

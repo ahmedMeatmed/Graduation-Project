@@ -57,7 +57,7 @@ class StoreSignatureRequest extends FormRequest
         'contentPattern'=> 'nullable|string|max:255',
 
         // signature metadata
-        'sid'           => 'required|integer|unique:signatures,sid',
+        'sid'           => 'required|integer',
         'rev'           => 'required|integer|min:1',
         'created_at'    => 'nullable|date',
         ];
