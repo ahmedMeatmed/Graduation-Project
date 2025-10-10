@@ -16,9 +16,9 @@ Route::group(['prefix' => "v1"],function(){
 
     Route::get('signatures/search/{attack}', [SignatureController::class, 'search']);
 
-    // Route::get('signatures/create',function(){ return view("signature");});
-
     Route::apiResource('logs',LogConroller::class);
+
+    Route::apiResource('users',LogConroller::class);
 
     Route::apiResource('alerts',AlertController::class);
 

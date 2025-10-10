@@ -94,6 +94,7 @@ export const useDataStore = defineStore('data',()=>{
       console.log("can't fetch");
     });
     }
+
     const storeSignature =async (signature)=>{
         await axios.post("http://127.0.0.1:8000/api/v1/signatures",signature,{
             headers:{
@@ -105,9 +106,12 @@ export const useDataStore = defineStore('data',()=>{
         })
         .catch((error)=>{
             errors.value = error.response.data.errors;
-            console.error(error.response.data.errors);
+            console.error(errors.value.attackName[0]);
             // console.error(errors.value.attackName[0]);
         })
+    }
+    const storeUser = async ()=>{
+        await axios.post()
     }
 
 
