@@ -12,5 +12,9 @@
     </div>
 </template>
 <script setup>
+import { useDataStore } from "../stores/dataStore";
 import SideBar from "..\\components/SideBar.vue";
+
+useDataStore().FetchLogs();
+useDataStore().FetchAlerts();
 </script>

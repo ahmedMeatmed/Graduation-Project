@@ -49,7 +49,7 @@
 import { onMounted, ref } from "vue";
 import { useDataStore } from "../stores/dataStore";
 const data = useDataStore();
-useDataStore().FetchLogs();
+// useDataStore().FetchLogs();
 
 const singleLog = (LogID)=>{
 return `logs/${LogID}`;

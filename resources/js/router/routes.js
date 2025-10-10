@@ -7,6 +7,7 @@ import Profile from "..\\components/Profile.vue";
 import About from "..\\components/About.vue";
 import Contact from "..\\components/Contact.vue";
 import Dashboard from "..\\components/Dashboard.vue";
+import Signature from "../components/Signature.vue";
 
 
 
@@ -16,6 +17,7 @@ const routes =[
     { path : "/logs/:log" ,component: Log },
     { path : '/alerts' ,component: Alerts },
     { path : "/alerts/:alert" ,component: Alert },
+    { path : "/signatures/:signature" ,component: Signature },
     { path : '/settings' ,component: Settings },
     { path : '/profile' ,component: Profile },
     { path : '/about' ,component: About },

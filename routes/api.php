@@ -10,11 +10,13 @@ use App\Http\Controllers\Api\v1\AlertController;
 use App\Http\Controllers\Api\v1\LogConroller;
 use App\Http\Controllers\Api\v1\SignatureController;
 
-
-
 Route::group(['prefix' => "v1"],function(){
 
     Route::apiResource('signatures',SignatureController::class);
+
+    Route::get('signatures/search/{attack}', [SignatureController::class, 'search']);
+
+    // Route::get('signatures/create',function(){ return view("signature");});
 
     Route::apiResource('logs',LogConroller::class);
 

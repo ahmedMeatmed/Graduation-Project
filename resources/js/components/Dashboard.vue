@@ -69,7 +69,7 @@
         </thead>
         <tbody>
           <tr 
-          v-for="(alert,index) in data.alerts" :key="alert.AlertID"
+          v-for="(alert,index) in recentAlerts" :key="alert.AlertID"
           
           >
             <td>{{index + 1}}</td>
@@ -91,8 +91,8 @@ import { useDataStore } from '../stores/dataStore';
 import Chart from "chart.js/auto";
 
 
-useDataStore().FetchAlerts();
-useDataStore().FetchLogs();
+// useDataStore().FetchAlerts();
+// useDataStore().FetchLogs();
 const data = useDataStore();
 
 const systemStatus =(noAlerts)=>{
@@ -112,17 +112,17 @@ const singleAlert = (alertId)=>{
   return `alerts/${alertId}`;
 }
 
-
 const highAlert = computed(() =>
-  data.alerts.filter(a => a.Severity === "High").length
+  useDataStore().alerts.filter(a => a.Severity === "High").length
 );
 const midAlert = computed(() =>
-  data.alerts.filter(a => a.Severity === "Medium").length
+  useDataStore().alerts.filter(a => a.Severity === "Medium").length
 );
 const lowAlert = computed(() =>
-  data.alerts.filter(a => a.Severity === "Low").length
+  useDataStore().alerts.filter(a => a.Severity === "Low").length
 );
 
+const recentAlerts = data.alerts.filter(a => a.Status === "New" || a.Status === "Investigating");
 
 
 // Charts
@@ -157,5 +157,6 @@ onMounted(() => {
       ],
     },
   });
+  
 });
 </script>

@@ -6,7 +6,7 @@
     aria-hidden="true"
     ref="modalRef"
   >
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl">
       <div class="modal-content">
 
         <!-- Header -->
@@ -24,7 +24,7 @@
         <div class="modal-footer">
           <slot name="footer">
         </slot>
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button> -->
         </div>
 
       </div>

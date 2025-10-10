@@ -9,4 +9,24 @@ class Signature extends Model
     //
     protected $table = "Signatures";
     protected $primaryKey = "signId";
+
+    protected $fillable = [
+            "engine",
+            "attackName",
+            "ruleText" ,
+            "protocol" ,
+            "protocol",
+            "srcPort" ,
+            "direction",
+            "destIp",
+            "destPort",
+            "flow",
+            "http",
+            "tls",
+            "contentPattern",
+            "sid",
+            "rev",
+            "created_at"
+    ];
+
 }
