@@ -19,7 +19,7 @@
         </div>
 
         <!-- Login Form -->
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login.store') }}">
             @csrf
 
             <!-- Username -->
@@ -30,7 +30,7 @@
                     class="form-control @error('username') is-invalid @enderror"
                     id="username"
                     name="username"
-                    value="{{ old('username') }}"
+                    {{-- value="{{ old('username') }}" --}}
                     required
                     autofocus
                     placeholder="Enter your username"
@@ -58,7 +58,7 @@
 
             <!-- Submit -->
             <button type="submit" class="btn btn-primary w-100">Login</button>
-    <a href="{{ route("dashboard") }}">dashboard</a>
+    {{-- <a href="{{ route("dashboard") }}">dashboard</a> --}}
         </form>
 
         <!-- Error Flash Message -->

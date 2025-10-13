@@ -30,8 +30,8 @@ class StoreUserRequest extends FormRequest
         // ];
         return[
             'username' => 'required|string|min:3|max:50|unique:users,username',
-            'password' => 'required|string|min:8|confirmed',
-            'role'     => 'required|string|in:admin,analyst,viewer',
+            'password' => 'required|string|min:8',
+            'Role'     => 'required|string',
         ];
     }
 }

@@ -5,16 +5,16 @@
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {return view('auth.login');});
+Route::get('/', function () {return view('auth.login');})->name('login');
 
-Route::post('login',[LoginController::class,'login'])->name('login');
+Route::post('login', [LoginController::class, 'login'])->name('login.store');
+// Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::middleware('auth')->group(function(){
+Route::middleware('auth')->group(function () {
 
-Route::get('/dashboard',function(){ return view('dashboard');})->name('dashboard');
+    Route::get('/dashboard', fn() => view('dashboard'))->name('dashboard');
 
-Route::get('signatures/create',function(){ return view("signature");});
+    Route::get('signatures/create', fn() => view("signature"));
 
-Route::get('/{any}', function () {return view('dashboard');})->where('any', '.*');
-
+    Route::get('/{any}', fn() => view('dashboard'))->where('any', '.*');
 });
