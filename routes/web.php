@@ -1,20 +1,20 @@
 <?php
 
-// use Illuminate\Support\Facades\Auth;
 
-use App\Http\Controllers\LoginController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
 
-Route::get('/', function () {return view('auth.login');})->name('login');
 
-Route::post('login', [LoginController::class, 'login'])->name('login.store');
-// Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+// Route::post('login', [LoginController::class, 'login'])->name('login.store');
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/dashboard', fn() => view('dashboard'))->name('dashboard');
-
-    Route::get('signatures/create', fn() => view("signature"));
-
-    Route::get('/{any}', fn() => view('dashboard'))->where('any', '.*');
+    
 });
+
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/{any}', fn() => view('app'))->where('any', '.*');

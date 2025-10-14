@@ -11,19 +11,12 @@ class LoginController extends Controller
 
     public function login(LoginRequest $request)
 {
-    $credentials = [
-        'Username' => $request->username,
-         'password' => $request->password,
-    ];
+    $credentials = ['Username' => $request->username,'password' => $request->password];
 
     if (Auth::attempt($credentials)) {
         // Regenerate session to prevent fixation attacks
-        // dd($credentials);//here
         $request->session()->regenerate();
         return redirect()->intended(route('dashboard'));
-
-        // return "Authinticated";
-        // redirect('/dashboard');
     }
 
     return back()->withErrors([

@@ -7,6 +7,7 @@ import { createWebHistory, createRouter  } from "vue-router";
 import { createPinia } from 'pinia';
 import routes from './router/routes';
 import App from './components/App.vue'
+import Login from './components/LoginPage.vue';
 
 
 

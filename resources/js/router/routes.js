@@ -8,10 +8,12 @@ import About from "..\\components/About.vue";
 import Contact from "..\\components/Contact.vue";
 import Dashboard from "..\\components/Dashboard.vue";
 import Signature from "../components/Signature.vue";
+// import Login from "../components/LoginPage.vue";
 
 
 
 const routes =[
+    // { path : '/loginPage' ,component: Login },
     { path : '/dashboard' ,component: Dashboard },
     { path : '/logs' ,component: Logs },
     { path : "/logs/:log" ,component: Log },
