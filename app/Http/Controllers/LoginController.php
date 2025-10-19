@@ -14,9 +14,10 @@ class LoginController extends Controller
     $credentials = ['Username' => $request->username,'password' => $request->password];
 
     if (Auth::attempt($credentials)) {
-        // Regenerate session to prevent fixation attacks
-        $request->session()->regenerate();
-        return redirect()->intended(route('dashboard'));
+
+        $user = Auth::user();
+        $token = $user->createToken('auth_token');    
+        return ['token' => $token->plainTextToken];
     }
 
     return back()->withErrors([
@@ -24,14 +25,12 @@ class LoginController extends Controller
     ]);
 }
 
-   public function logout(Request $request){
-    Auth::logout();
- 
-    $request->session()->invalidate();
- 
-    $request->session()->regenerateToken();
- 
-    return redirect('/');
+   public function logout(){
+    $user = Auth::user();
+    $user->currentAccessToken()->delete();
+    return response()->json([
+        'message' => 'Logged out successfully',
+    ]);
 }
 
 }

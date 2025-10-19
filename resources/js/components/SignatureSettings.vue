@@ -132,19 +132,19 @@
         </thead>
         <tbody>
           <tr v-for="(signature,index) in data.signatures" :key="index">
-            <td class="border p-1 text-center">{{ signature.signId }}</td>
-            <td class="border p-1 text-center">{{ signature.engine }}</td>
+            <td class="border p-1 text-center">{{ signature.SignId }}</td>
+            <td class="border p-1 text-center">{{ signature.Engine }}</td>
             <td class="border p-1 text-center">
               <!-- <router-link :to="singleSignature(signature.signId)" @click="showSignatures.value.close()">
                 {{ signature.attackName }}
               </router-link> -->
-              <a :href="singleSignature(signature.signId)">{{ signature.attackName }}</a>
+              <a :href="singleSignature(signature.signId)">{{ signature.AttackName }}</a>
             </td>
-            <td class="border p-1 text-center">{{ signature.protocol }}</td>
-            <td class="border p-1 text-center">{{ signature.srcIp }}</td>
-            <td class="border p-1 text-center">{{ signature.srcPort }}</td>
+            <td class="border p-1 text-center">{{ signature.Protocol }}</td>
+            <td class="border p-1 text-center">{{ signature.SrcIp }}</td>
+            <td class="border p-1 text-center">{{ signature.SrcPort }}</td>
             <!-- <td class="border p-1 text-center">{{ signature.direction }}</td> -->
-            <td class="border p-1 text-center">{{ signature.destIp }}</td>
+            <td class="border p-1 text-center">{{ signature.DestIp }}</td>
             <!-- <td class="border p-1 text-center">{{ signature.destPort }}</td> -->
             <!-- <td class="border p-1 text-center"><button class="btn btn-info">View</button></td> -->
           </tr>

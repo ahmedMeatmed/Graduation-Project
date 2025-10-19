@@ -3,30 +3,24 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\LogResource;
 use App\Models\Log;
 use Illuminate\Http\Request;
 
-class LogConroller extends Controller
+class LogController extends Controller
 {
     //
     public function index(){
+
         $logs = Log::all();
-        
-        return response()->json($logs);
+        return LogResource::collection($logs);
     }
 
     public function show($log){
 
         $log = Log::findOrFail($log);
 
-        return response()->json($log);
+        return new LogResource($log);
     }
 
-    public function delete(){
-        $logs = Log::all();
-
-        $logs->delete();
-        
-        return response()->noContent();
-    }
 }

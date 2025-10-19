@@ -8,27 +8,28 @@ class Signature extends Model
 {
     //
     protected $table = "Signatures";
-    protected $primaryKey = "signId";
+    protected $primaryKey = "SignId";
     
     public $timestamps = false;
 
     protected $fillable = [
-            "engine",
-            "attackName",
-            "ruleText" ,
-            "protocol" ,
-            "protocol",
-            "srcPort" ,
-            "direction",
-            "destIp",
-            "destPort",
-            "flow",
-            "http",
-            "tls",
-            "contentPattern",
-            "sid",
-            "rev",
-            "created_at"
+        'Engine',
+        'AttackName',
+        'RuleText',
+        'Protocol',
+        'SrcIp',
+        'SrcPort',
+        'Direction',
+        'DestIp',
+        'DestPort',
+        'Flow',
+        'Http',
+        'Tls',
+        'ContentPattern',
+        'Sid',
+        'Rev',
+        'CreatedAt'
     ];
+
 
 }

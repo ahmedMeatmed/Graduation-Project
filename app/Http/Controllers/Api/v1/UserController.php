@@ -21,14 +21,10 @@ class UserController extends Controller
             'PasswordHash' => Hash::make($request->password),
             'Role' => $request->Role
         ];
-        // dd($user);
 
         User::create($user);
-     return response()->json([
-    'message' => 'User saved successfully',
-    'user' => $user
-        ], 201);
-     }
+        return response()->json(['message' => 'User saved successfully','user' => $user], 201);
+        }
     
     public function update(UpdateUserRequest $user){
 
