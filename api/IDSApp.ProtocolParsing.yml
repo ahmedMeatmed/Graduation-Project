@@ -1,0 +1,297 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.ProtocolParsing
+  commentId: N:IDSApp.ProtocolParsing
+  id: IDSApp.ProtocolParsing
+  children:
+  - IDSApp.ProtocolParsing.BoyerMooreSearch
+  - IDSApp.ProtocolParsing.DatabaseParser
+  - IDSApp.ProtocolParsing.DhcpParser
+  - IDSApp.ProtocolParsing.DnsParser
+  - IDSApp.ProtocolParsing.DnsParser.DnsRecord
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler
+  - IDSApp.ProtocolParsing.FtpParseResult
+  - IDSApp.ProtocolParsing.FtpParser
+  - IDSApp.ProtocolParsing.HttpParser
+  - IDSApp.ProtocolParsing.HttpParser.ThreatResult
+  - IDSApp.ProtocolParsing.HttpParserHelpers
+  - IDSApp.ProtocolParsing.ImapParser
+  - IDSApp.ProtocolParsing.LdapParser
+  - IDSApp.ProtocolParsing.NetbiosParser
+  - IDSApp.ProtocolParsing.NtpParser
+  - IDSApp.ProtocolParsing.Pop3Parser
+  - IDSApp.ProtocolParsing.RdpParseResult
+  - IDSApp.ProtocolParsing.RdpParser
+  - IDSApp.ProtocolParsing.SmbParseResult
+  - IDSApp.ProtocolParsing.SmbParser
+  - IDSApp.ProtocolParsing.SmtpParseResult
+  - IDSApp.ProtocolParsing.SmtpParser
+  - IDSApp.ProtocolParsing.SnmpParser
+  - IDSApp.ProtocolParsing.SshParser
+  - IDSApp.ProtocolParsing.TelnetParseResult
+  - IDSApp.ProtocolParsing.TelnetParser
+  - IDSApp.ProtocolParsing.TftpParser
+  - IDSApp.ProtocolParsing.TlsParser
+  - IDSApp.ProtocolParsing.TlsParser.TlsParseResult
+  langs:
+  - csharp
+  - vb
+  name: IDSApp.ProtocolParsing
+  nameWithType: IDSApp.ProtocolParsing
+  fullName: IDSApp.ProtocolParsing
+  type: Namespace
+  assemblies:
+  - IDSApp
+references:
+- uid: IDSApp.ProtocolParsing.DatabaseParser
+  commentId: T:IDSApp.ProtocolParsing.DatabaseParser
+  href: IDSApp.ProtocolParsing.DatabaseParser.html
+  name: DatabaseParser
+  nameWithType: DatabaseParser
+  fullName: IDSApp.ProtocolParsing.DatabaseParser
+- uid: IDSApp.ProtocolParsing.DhcpParser
+  commentId: T:IDSApp.ProtocolParsing.DhcpParser
+  href: IDSApp.ProtocolParsing.DhcpParser.html
+  name: DhcpParser
+  nameWithType: DhcpParser
+  fullName: IDSApp.ProtocolParsing.DhcpParser
+- uid: IDSApp.ProtocolParsing.DnsParser
+  commentId: T:IDSApp.ProtocolParsing.DnsParser
+  href: IDSApp.ProtocolParsing.DnsParser.html
+  name: DnsParser
+  nameWithType: DnsParser
+  fullName: IDSApp.ProtocolParsing.DnsParser
+- uid: IDSApp.ProtocolParsing.DnsParser.DnsRecord
+  commentId: T:IDSApp.ProtocolParsing.DnsParser.DnsRecord
+  href: IDSApp.ProtocolParsing.DnsParser.html
+  name: DnsParser.DnsRecord
+  nameWithType: DnsParser.DnsRecord
+  fullName: IDSApp.ProtocolParsing.DnsParser.DnsRecord
+  spec.csharp:
+  - uid: IDSApp.ProtocolParsing.DnsParser
+    name: DnsParser
+    href: IDSApp.ProtocolParsing.DnsParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.DnsParser.DnsRecord
+    name: DnsRecord
+    href: IDSApp.ProtocolParsing.DnsParser.DnsRecord.html
+  spec.vb:
+  - uid: IDSApp.ProtocolParsing.DnsParser
+    name: DnsParser
+    href: IDSApp.ProtocolParsing.DnsParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.DnsParser.DnsRecord
+    name: DnsRecord
+    href: IDSApp.ProtocolParsing.DnsParser.DnsRecord.html
+- uid: IDSApp.ProtocolParsing.FtpParser
+  commentId: T:IDSApp.ProtocolParsing.FtpParser
+  href: IDSApp.ProtocolParsing.FtpParser.html
+  name: FtpParser
+  nameWithType: FtpParser
+  fullName: IDSApp.ProtocolParsing.FtpParser
+- uid: IDSApp.ProtocolParsing.FtpParseResult
+  commentId: T:IDSApp.ProtocolParsing.FtpParseResult
+  parent: IDSApp.ProtocolParsing
+  href: IDSApp.ProtocolParsing.FtpParseResult.html
+  name: FtpParseResult
+  nameWithType: FtpParseResult
+  fullName: IDSApp.ProtocolParsing.FtpParseResult
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  commentId: T:IDSApp.ProtocolParsing.EnhancedHttpHandler
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html
+  name: EnhancedHttpHandler
+  nameWithType: EnhancedHttpHandler
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler
+- uid: IDSApp.ProtocolParsing.HttpParser
+  commentId: T:IDSApp.ProtocolParsing.HttpParser
+  parent: IDSApp.ProtocolParsing
+  href: IDSApp.ProtocolParsing.HttpParser.html
+  name: HttpParser
+  nameWithType: HttpParser
+  fullName: IDSApp.ProtocolParsing.HttpParser
+- uid: IDSApp.ProtocolParsing.HttpParser.ThreatResult
+  commentId: T:IDSApp.ProtocolParsing.HttpParser.ThreatResult
+  parent: IDSApp.ProtocolParsing
+  href: IDSApp.ProtocolParsing.HttpParser.html
+  name: HttpParser.ThreatResult
+  nameWithType: HttpParser.ThreatResult
+  fullName: IDSApp.ProtocolParsing.HttpParser.ThreatResult
+  spec.csharp:
+  - uid: IDSApp.ProtocolParsing.HttpParser
+    name: HttpParser
+    href: IDSApp.ProtocolParsing.HttpParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.HttpParser.ThreatResult
+    name: ThreatResult
+    href: IDSApp.ProtocolParsing.HttpParser.ThreatResult.html
+  spec.vb:
+  - uid: IDSApp.ProtocolParsing.HttpParser
+    name: HttpParser
+    href: IDSApp.ProtocolParsing.HttpParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.HttpParser.ThreatResult
+    name: ThreatResult
+    href: IDSApp.ProtocolParsing.HttpParser.ThreatResult.html
+- uid: IDSApp.ProtocolParsing.HttpParserHelpers
+  commentId: T:IDSApp.ProtocolParsing.HttpParserHelpers
+  href: IDSApp.ProtocolParsing.HttpParserHelpers.html
+  name: HttpParserHelpers
+  nameWithType: HttpParserHelpers
+  fullName: IDSApp.ProtocolParsing.HttpParserHelpers
+- uid: IDSApp.ProtocolParsing.BoyerMooreSearch
+  commentId: T:IDSApp.ProtocolParsing.BoyerMooreSearch
+  href: IDSApp.ProtocolParsing.BoyerMooreSearch.html
+  name: BoyerMooreSearch
+  nameWithType: BoyerMooreSearch
+  fullName: IDSApp.ProtocolParsing.BoyerMooreSearch
+- uid: IDSApp.ProtocolParsing.ImapParser
+  commentId: T:IDSApp.ProtocolParsing.ImapParser
+  href: IDSApp.ProtocolParsing.ImapParser.html
+  name: ImapParser
+  nameWithType: ImapParser
+  fullName: IDSApp.ProtocolParsing.ImapParser
+- uid: IDSApp.ProtocolParsing.LdapParser
+  commentId: T:IDSApp.ProtocolParsing.LdapParser
+  href: IDSApp.ProtocolParsing.LdapParser.html
+  name: LdapParser
+  nameWithType: LdapParser
+  fullName: IDSApp.ProtocolParsing.LdapParser
+- uid: IDSApp.ProtocolParsing.NetbiosParser
+  commentId: T:IDSApp.ProtocolParsing.NetbiosParser
+  href: IDSApp.ProtocolParsing.NetbiosParser.html
+  name: NetbiosParser
+  nameWithType: NetbiosParser
+  fullName: IDSApp.ProtocolParsing.NetbiosParser
+- uid: IDSApp.ProtocolParsing.NtpParser
+  commentId: T:IDSApp.ProtocolParsing.NtpParser
+  href: IDSApp.ProtocolParsing.NtpParser.html
+  name: NtpParser
+  nameWithType: NtpParser
+  fullName: IDSApp.ProtocolParsing.NtpParser
+- uid: IDSApp.ProtocolParsing.Pop3Parser
+  commentId: T:IDSApp.ProtocolParsing.Pop3Parser
+  href: IDSApp.ProtocolParsing.Pop3Parser.html
+  name: Pop3Parser
+  nameWithType: Pop3Parser
+  fullName: IDSApp.ProtocolParsing.Pop3Parser
+- uid: IDSApp.ProtocolParsing.RdpParser
+  commentId: T:IDSApp.ProtocolParsing.RdpParser
+  href: IDSApp.ProtocolParsing.RdpParser.html
+  name: RdpParser
+  nameWithType: RdpParser
+  fullName: IDSApp.ProtocolParsing.RdpParser
+- uid: IDSApp.ProtocolParsing.RdpParseResult
+  commentId: T:IDSApp.ProtocolParsing.RdpParseResult
+  parent: IDSApp.ProtocolParsing
+  href: IDSApp.ProtocolParsing.RdpParseResult.html
+  name: RdpParseResult
+  nameWithType: RdpParseResult
+  fullName: IDSApp.ProtocolParsing.RdpParseResult
+- uid: IDSApp.ProtocolParsing.SmbParser
+  commentId: T:IDSApp.ProtocolParsing.SmbParser
+  href: IDSApp.ProtocolParsing.SmbParser.html
+  name: SmbParser
+  nameWithType: SmbParser
+  fullName: IDSApp.ProtocolParsing.SmbParser
+- uid: IDSApp.ProtocolParsing.SmbParseResult
+  commentId: T:IDSApp.ProtocolParsing.SmbParseResult
+  parent: IDSApp.ProtocolParsing
+  href: IDSApp.ProtocolParsing.SmbParseResult.html
+  name: SmbParseResult
+  nameWithType: SmbParseResult
+  fullName: IDSApp.ProtocolParsing.SmbParseResult
+- uid: IDSApp.ProtocolParsing.SmtpParser
+  commentId: T:IDSApp.ProtocolParsing.SmtpParser
+  href: IDSApp.ProtocolParsing.SmtpParser.html
+  name: SmtpParser
+  nameWithType: SmtpParser
+  fullName: IDSApp.ProtocolParsing.SmtpParser
+- uid: IDSApp.ProtocolParsing.SmtpParseResult
+  commentId: T:IDSApp.ProtocolParsing.SmtpParseResult
+  parent: IDSApp.ProtocolParsing
+  href: IDSApp.ProtocolParsing.SmtpParseResult.html
+  name: SmtpParseResult
+  nameWithType: SmtpParseResult
+  fullName: IDSApp.ProtocolParsing.SmtpParseResult
+- uid: IDSApp.ProtocolParsing.SnmpParser
+  commentId: T:IDSApp.ProtocolParsing.SnmpParser
+  href: IDSApp.ProtocolParsing.SnmpParser.html
+  name: SnmpParser
+  nameWithType: SnmpParser
+  fullName: IDSApp.ProtocolParsing.SnmpParser
+- uid: IDSApp.ProtocolParsing.SshParser
+  commentId: T:IDSApp.ProtocolParsing.SshParser
+  href: IDSApp.ProtocolParsing.SshParser.html
+  name: SshParser
+  nameWithType: SshParser
+  fullName: IDSApp.ProtocolParsing.SshParser
+- uid: IDSApp.ProtocolParsing.TelnetParser
+  commentId: T:IDSApp.ProtocolParsing.TelnetParser
+  href: IDSApp.ProtocolParsing.TelnetParser.html
+  name: TelnetParser
+  nameWithType: TelnetParser
+  fullName: IDSApp.ProtocolParsing.TelnetParser
+- uid: IDSApp.ProtocolParsing.TelnetParseResult
+  commentId: T:IDSApp.ProtocolParsing.TelnetParseResult
+  parent: IDSApp.ProtocolParsing
+  href: IDSApp.ProtocolParsing.TelnetParseResult.html
+  name: TelnetParseResult
+  nameWithType: TelnetParseResult
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult
+- uid: IDSApp.ProtocolParsing.TftpParser
+  commentId: T:IDSApp.ProtocolParsing.TftpParser
+  href: IDSApp.ProtocolParsing.TftpParser.html
+  name: TftpParser
+  nameWithType: TftpParser
+  fullName: IDSApp.ProtocolParsing.TftpParser
+- uid: IDSApp.ProtocolParsing.TlsParser
+  commentId: T:IDSApp.ProtocolParsing.TlsParser
+  href: IDSApp.ProtocolParsing.TlsParser.html
+  name: TlsParser
+  nameWithType: TlsParser
+  fullName: IDSApp.ProtocolParsing.TlsParser
+- uid: IDSApp.ProtocolParsing.TlsParser.TlsParseResult
+  commentId: T:IDSApp.ProtocolParsing.TlsParser.TlsParseResult
+  parent: IDSApp.ProtocolParsing
+  href: IDSApp.ProtocolParsing.TlsParser.html
+  name: TlsParser.TlsParseResult
+  nameWithType: TlsParser.TlsParseResult
+  fullName: IDSApp.ProtocolParsing.TlsParser.TlsParseResult
+  spec.csharp:
+  - uid: IDSApp.ProtocolParsing.TlsParser
+    name: TlsParser
+    href: IDSApp.ProtocolParsing.TlsParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.TlsParser.TlsParseResult
+    name: TlsParseResult
+    href: IDSApp.ProtocolParsing.TlsParser.TlsParseResult.html
+  spec.vb:
+  - uid: IDSApp.ProtocolParsing.TlsParser
+    name: TlsParser
+    href: IDSApp.ProtocolParsing.TlsParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.TlsParser.TlsParseResult
+    name: TlsParseResult
+    href: IDSApp.ProtocolParsing.TlsParser.TlsParseResult.html
+- uid: IDSApp.ProtocolParsing
+  commentId: N:IDSApp.ProtocolParsing
+  href: IDSApp.html
+  name: IDSApp.ProtocolParsing
+  nameWithType: IDSApp.ProtocolParsing
+  fullName: IDSApp.ProtocolParsing
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html

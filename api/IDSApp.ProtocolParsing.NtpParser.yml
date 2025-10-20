@@ -1,0 +1,580 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.ProtocolParsing.NtpParser
+  commentId: T:IDSApp.ProtocolParsing.NtpParser
+  id: NtpParser
+  parent: IDSApp.ProtocolParsing
+  children:
+  - IDSApp.ProtocolParsing.NtpParser.#ctor
+  - IDSApp.ProtocolParsing.NtpParser.Body
+  - IDSApp.ProtocolParsing.NtpParser.Dispose
+  - IDSApp.ProtocolParsing.NtpParser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  - IDSApp.ProtocolParsing.NtpParser.Reset
+  langs:
+  - csharp
+  - vb
+  name: NtpParser
+  nameWithType: NtpParser
+  fullName: IDSApp.ProtocolParsing.NtpParser
+  type: Class
+  source:
+    id: NtpParser
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\NtpParser.cs
+    startLine: 23
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: 'public class NtpParser : IDisposable'
+    content.vb: Public Class NtpParser Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.ProtocolParsing.NtpParser.#ctor
+  commentId: M:IDSApp.ProtocolParsing.NtpParser.#ctor
+  id: '#ctor'
+  parent: IDSApp.ProtocolParsing.NtpParser
+  langs:
+  - csharp
+  - vb
+  name: NtpParser()
+  nameWithType: NtpParser.NtpParser()
+  fullName: IDSApp.ProtocolParsing.NtpParser.NtpParser()
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\NtpParser.cs
+    startLine: 66
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Initializes a new instance of NTP parser with default values
+
+    Creates memory stream for payload storage and resets parser state
+  example: []
+  syntax:
+    content: public NtpParser()
+    content.vb: Public Sub New()
+  overload: IDSApp.ProtocolParsing.NtpParser.#ctor*
+  nameWithType.vb: NtpParser.New()
+  fullName.vb: IDSApp.ProtocolParsing.NtpParser.New()
+  name.vb: New()
+- uid: IDSApp.ProtocolParsing.NtpParser.Reset
+  commentId: M:IDSApp.ProtocolParsing.NtpParser.Reset
+  id: Reset
+  parent: IDSApp.ProtocolParsing.NtpParser
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: NtpParser.Reset()
+  fullName: IDSApp.ProtocolParsing.NtpParser.Reset()
+  type: Method
+  source:
+    id: Reset
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\NtpParser.cs
+    startLine: 81
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Resets all parser fields to their default values
+
+    Clears the body stream and prepares parser for new packet
+
+    Thread-safe operation using lock synchronization
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: IDSApp.ProtocolParsing.NtpParser.Reset*
+- uid: IDSApp.ProtocolParsing.NtpParser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  commentId: M:IDSApp.ProtocolParsing.NtpParser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  id: Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  parent: IDSApp.ProtocolParsing.NtpParser
+  langs:
+  - csharp
+  - vb
+  name: Parse(byte[], string, string, int, int, string)
+  nameWithType: NtpParser.Parse(byte[], string, string, int, int, string)
+  fullName: IDSApp.ProtocolParsing.NtpParser.Parse(byte[], string, string, int, int, string)
+  type: Method
+  source:
+    id: Parse
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\NtpParser.cs
+    startLine: 113
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Main packet parsing method - processes NTP packet data
+
+    Validates input parameters, checks packet size, and initiates parsing
+
+    Handles errors gracefully and logs parsing results to database
+  example: []
+  syntax:
+    content: public void Parse(byte[] payload, string srcIp, string dstIp, int srcPort, int dstPort, string sessionId = null)
+    parameters:
+    - id: payload
+      type: System.Byte[]
+      description: Raw packet bytes to parse
+    - id: srcIp
+      type: System.String
+      description: Source IP address
+    - id: dstIp
+      type: System.String
+      description: Destination IP address
+    - id: srcPort
+      type: System.Int32
+      description: Source port number
+    - id: dstPort
+      type: System.Int32
+      description: Destination port number
+    - id: sessionId
+      type: System.String
+      description: Optional session identifier
+    content.vb: Public Sub Parse(payload As Byte(), srcIp As String, dstIp As String, srcPort As Integer, dstPort As Integer, sessionId As String = Nothing)
+  overload: IDSApp.ProtocolParsing.NtpParser.Parse*
+  nameWithType.vb: NtpParser.Parse(Byte(), String, String, Integer, Integer, String)
+  fullName.vb: IDSApp.ProtocolParsing.NtpParser.Parse(Byte(), String, String, Integer, Integer, String)
+  name.vb: Parse(Byte(), String, String, Integer, Integer, String)
+- uid: IDSApp.ProtocolParsing.NtpParser.Body
+  commentId: P:IDSApp.ProtocolParsing.NtpParser.Body
+  id: Body
+  parent: IDSApp.ProtocolParsing.NtpParser
+  langs:
+  - csharp
+  - vb
+  name: Body
+  nameWithType: NtpParser.Body
+  fullName: IDSApp.ProtocolParsing.NtpParser.Body
+  type: Property
+  source:
+    id: Body
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\NtpParser.cs
+    startLine: 447
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Read-only property providing access to raw packet payload
+
+    Returns copy of stored body stream as byte array
+  example: []
+  syntax:
+    content: public byte[] Body { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property Body As Byte()
+  overload: IDSApp.ProtocolParsing.NtpParser.Body*
+- uid: IDSApp.ProtocolParsing.NtpParser.Dispose
+  commentId: M:IDSApp.ProtocolParsing.NtpParser.Dispose
+  id: Dispose
+  parent: IDSApp.ProtocolParsing.NtpParser
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: NtpParser.Dispose()
+  fullName: IDSApp.ProtocolParsing.NtpParser.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\NtpParser.cs
+    startLine: 457
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Implements IDisposable pattern for proper resource cleanup
+
+    Disposes memory stream and marks instance as disposed
+
+    Thread-safe disposal using lock synchronization
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: IDSApp.ProtocolParsing.NtpParser.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: IDSApp.ProtocolParsing
+  commentId: N:IDSApp.ProtocolParsing
+  href: IDSApp.html
+  name: IDSApp.ProtocolParsing
+  nameWithType: IDSApp.ProtocolParsing
+  fullName: IDSApp.ProtocolParsing
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.ProtocolParsing.NtpParser.#ctor*
+  commentId: Overload:IDSApp.ProtocolParsing.NtpParser.#ctor
+  href: IDSApp.ProtocolParsing.NtpParser.html#IDSApp_ProtocolParsing_NtpParser__ctor
+  name: NtpParser
+  nameWithType: NtpParser.NtpParser
+  fullName: IDSApp.ProtocolParsing.NtpParser.NtpParser
+  nameWithType.vb: NtpParser.New
+  fullName.vb: IDSApp.ProtocolParsing.NtpParser.New
+  name.vb: New
+- uid: IDSApp.ProtocolParsing.NtpParser.Reset*
+  commentId: Overload:IDSApp.ProtocolParsing.NtpParser.Reset
+  href: IDSApp.ProtocolParsing.NtpParser.html#IDSApp_ProtocolParsing_NtpParser_Reset
+  name: Reset
+  nameWithType: NtpParser.Reset
+  fullName: IDSApp.ProtocolParsing.NtpParser.Reset
+- uid: IDSApp.ProtocolParsing.NtpParser.Parse*
+  commentId: Overload:IDSApp.ProtocolParsing.NtpParser.Parse
+  href: IDSApp.ProtocolParsing.NtpParser.html#IDSApp_ProtocolParsing_NtpParser_Parse_System_Byte___System_String_System_String_System_Int32_System_Int32_System_String_
+  name: Parse
+  nameWithType: NtpParser.Parse
+  fullName: IDSApp.ProtocolParsing.NtpParser.Parse
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: IDSApp.ProtocolParsing.NtpParser.Body*
+  commentId: Overload:IDSApp.ProtocolParsing.NtpParser.Body
+  href: IDSApp.ProtocolParsing.NtpParser.html#IDSApp_ProtocolParsing_NtpParser_Body
+  name: Body
+  nameWithType: NtpParser.Body
+  fullName: IDSApp.ProtocolParsing.NtpParser.Body
+- uid: IDSApp.ProtocolParsing.NtpParser.Dispose*
+  commentId: Overload:IDSApp.ProtocolParsing.NtpParser.Dispose
+  href: IDSApp.ProtocolParsing.NtpParser.html#IDSApp_ProtocolParsing_NtpParser_Dispose
+  name: Dispose
+  nameWithType: NtpParser.Dispose
+  fullName: IDSApp.ProtocolParsing.NtpParser.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

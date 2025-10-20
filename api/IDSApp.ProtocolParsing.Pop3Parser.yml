@@ -1,0 +1,882 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.ProtocolParsing.Pop3Parser
+  commentId: T:IDSApp.ProtocolParsing.Pop3Parser
+  id: Pop3Parser
+  parent: IDSApp.ProtocolParsing
+  children:
+  - IDSApp.ProtocolParsing.Pop3Parser.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})
+  - IDSApp.ProtocolParsing.Pop3Parser.Body
+  - IDSApp.ProtocolParsing.Pop3Parser.Dispose
+  - IDSApp.ProtocolParsing.Pop3Parser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  - IDSApp.ProtocolParsing.Pop3Parser.ParseBody(System.Byte[])
+  - IDSApp.ProtocolParsing.Pop3Parser.ParseCommand(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Int32)
+  - IDSApp.ProtocolParsing.Pop3Parser.ParseResponse(System.String)
+  - IDSApp.ProtocolParsing.Pop3Parser.Reset
+  langs:
+  - csharp
+  - vb
+  name: Pop3Parser
+  nameWithType: Pop3Parser
+  fullName: IDSApp.ProtocolParsing.Pop3Parser
+  type: Class
+  source:
+    id: Pop3Parser
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\Pop3Parser.cs
+    startLine: 23
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: 'public class Pop3Parser : IDisposable'
+    content.vb: Public Class Pop3Parser Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.ProtocolParsing.Pop3Parser.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:IDSApp.ProtocolParsing.Pop3Parser.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})'
+  parent: IDSApp.ProtocolParsing.Pop3Parser
+  langs:
+  - csharp
+  - vb
+  name: Pop3Parser(IEnumerable<string>, IEnumerable<string>)
+  nameWithType: Pop3Parser.Pop3Parser(IEnumerable<string>, IEnumerable<string>)
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.Pop3Parser(System.Collections.Generic.IEnumerable<string>, System.Collections.Generic.IEnumerable<string>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\Pop3Parser.cs
+    startLine: 71
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Initializes POP3 parser with configurable security patterns
+
+    Creates memory stream for payload storage and sets up detection rules
+  example: []
+  syntax:
+    content: public Pop3Parser(IEnumerable<string> suspiciousCommands = null, IEnumerable<string> suspiciousPayloadPatterns = null)
+    parameters:
+    - id: suspiciousCommands
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Custom list of suspicious POP3 commands
+    - id: suspiciousPayloadPatterns
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Custom regex patterns for payload analysis
+    content.vb: Public Sub New(suspiciousCommands As IEnumerable(Of String) = Nothing, suspiciousPayloadPatterns As IEnumerable(Of String) = Nothing)
+  overload: IDSApp.ProtocolParsing.Pop3Parser.#ctor*
+  nameWithType.vb: Pop3Parser.New(IEnumerable(Of String), IEnumerable(Of String))
+  fullName.vb: IDSApp.ProtocolParsing.Pop3Parser.New(System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of String))
+  name.vb: New(IEnumerable(Of String), IEnumerable(Of String))
+- uid: IDSApp.ProtocolParsing.Pop3Parser.Reset
+  commentId: M:IDSApp.ProtocolParsing.Pop3Parser.Reset
+  id: Reset
+  parent: IDSApp.ProtocolParsing.Pop3Parser
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: Pop3Parser.Reset()
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.Reset()
+  type: Method
+  source:
+    id: Reset
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\Pop3Parser.cs
+    startLine: 104
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Resets all parser fields to default values for new session
+
+    Clears body stream and resets counters while maintaining configuration
+
+    Thread-safe operation using lock synchronization
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: IDSApp.ProtocolParsing.Pop3Parser.Reset*
+- uid: IDSApp.ProtocolParsing.Pop3Parser.ParseCommand(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Int32)
+  commentId: M:IDSApp.ProtocolParsing.Pop3Parser.ParseCommand(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Int32)
+  id: ParseCommand(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Int32)
+  parent: IDSApp.ProtocolParsing.Pop3Parser
+  langs:
+  - csharp
+  - vb
+  name: ParseCommand(string, string, string, string, DateTime?, int)
+  nameWithType: Pop3Parser.ParseCommand(string, string, string, string, DateTime?, int)
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.ParseCommand(string, string, string, string, System.DateTime?, int)
+  type: Method
+  source:
+    id: ParseCommand
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\Pop3Parser.cs
+    startLine: 136
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Parses individual POP3 command lines from client to server
+
+    Extracts commands, usernames, and tracks authentication attempts
+
+    Detects suspicious commands based on configured patterns
+  example: []
+  syntax:
+    content: public void ParseCommand(string commandLine, string srcIp, string dstIp, string sessionId, DateTime? timestamp = null, int dstPort = 110)
+    parameters:
+    - id: commandLine
+      type: System.String
+      description: Raw command line string to parse
+    - id: srcIp
+      type: System.String
+      description: Source IP address (client)
+    - id: dstIp
+      type: System.String
+      description: Destination IP address (server)
+    - id: sessionId
+      type: System.String
+      description: Session identifier for correlation
+    - id: timestamp
+      type: System.Nullable{System.DateTime}
+      description: Optional timestamp (uses current UTC if null)
+    - id: dstPort
+      type: System.Int32
+      description: Destination port (default 110)
+    content.vb: Public Sub ParseCommand(commandLine As String, srcIp As String, dstIp As String, sessionId As String, timestamp As Date? = Nothing, dstPort As Integer = 110)
+  overload: IDSApp.ProtocolParsing.Pop3Parser.ParseCommand*
+  nameWithType.vb: Pop3Parser.ParseCommand(String, String, String, String, Date?, Integer)
+  fullName.vb: IDSApp.ProtocolParsing.Pop3Parser.ParseCommand(String, String, String, String, Date?, Integer)
+  name.vb: ParseCommand(String, String, String, String, Date?, Integer)
+- uid: IDSApp.ProtocolParsing.Pop3Parser.ParseResponse(System.String)
+  commentId: M:IDSApp.ProtocolParsing.Pop3Parser.ParseResponse(System.String)
+  id: ParseResponse(System.String)
+  parent: IDSApp.ProtocolParsing.Pop3Parser
+  langs:
+  - csharp
+  - vb
+  name: ParseResponse(string)
+  nameWithType: Pop3Parser.ParseResponse(string)
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.ParseResponse(string)
+  type: Method
+  source:
+    id: ParseResponse
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\Pop3Parser.cs
+    startLine: 180
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Parses POP3 server response lines (+OK/-ERR)
+
+    Extracts status codes, message sizes, and detects error conditions
+
+    Automatically logs suspicious error responses
+  example: []
+  syntax:
+    content: public void ParseResponse(string responseLine)
+    parameters:
+    - id: responseLine
+      type: System.String
+      description: Server response line to parse
+    content.vb: Public Sub ParseResponse(responseLine As String)
+  overload: IDSApp.ProtocolParsing.Pop3Parser.ParseResponse*
+  nameWithType.vb: Pop3Parser.ParseResponse(String)
+  fullName.vb: IDSApp.ProtocolParsing.Pop3Parser.ParseResponse(String)
+  name.vb: ParseResponse(String)
+- uid: IDSApp.ProtocolParsing.Pop3Parser.ParseBody(System.Byte[])
+  commentId: M:IDSApp.ProtocolParsing.Pop3Parser.ParseBody(System.Byte[])
+  id: ParseBody(System.Byte[])
+  parent: IDSApp.ProtocolParsing.Pop3Parser
+  langs:
+  - csharp
+  - vb
+  name: ParseBody(byte[])
+  nameWithType: Pop3Parser.ParseBody(byte[])
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.ParseBody(byte[])
+  type: Method
+  source:
+    id: ParseBody
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\Pop3Parser.cs
+    startLine: 218
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Analyzes email body content for RETR and TOP commands
+
+    Performs security scanning using regex patterns on ASCII content
+
+    Generates payload fingerprints for tracking and correlation
+  example: []
+  syntax:
+    content: public void ParseBody(byte[] bodyData)
+    parameters:
+    - id: bodyData
+      type: System.Byte[]
+      description: Raw email body data bytes
+    content.vb: Public Sub ParseBody(bodyData As Byte())
+  overload: IDSApp.ProtocolParsing.Pop3Parser.ParseBody*
+  nameWithType.vb: Pop3Parser.ParseBody(Byte())
+  fullName.vb: IDSApp.ProtocolParsing.Pop3Parser.ParseBody(Byte())
+  name.vb: ParseBody(Byte())
+- uid: IDSApp.ProtocolParsing.Pop3Parser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  commentId: M:IDSApp.ProtocolParsing.Pop3Parser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  id: Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  parent: IDSApp.ProtocolParsing.Pop3Parser
+  langs:
+  - csharp
+  - vb
+  name: Parse(byte[], string, string, int, int, string)
+  nameWithType: Pop3Parser.Parse(byte[], string, string, int, int, string)
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.Parse(byte[], string, string, int, int, string)
+  type: Method
+  source:
+    id: Parse
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\Pop3Parser.cs
+    startLine: 265
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Main packet parsing method - processes raw POP3 protocol data
+
+    Automatically distinguishes between commands and responses
+
+    Handles multi-line protocols and coordinates command/response/body parsing
+  example: []
+  syntax:
+    content: public void Parse(byte[] payload, string srcIp, string dstIp, int srcPort, int dstPort, string sessionId = null)
+    parameters:
+    - id: payload
+      type: System.Byte[]
+      description: Raw packet bytes to parse
+    - id: srcIp
+      type: System.String
+      description: Source IP address
+    - id: dstIp
+      type: System.String
+      description: Destination IP address
+    - id: srcPort
+      type: System.Int32
+      description: Source port number
+    - id: dstPort
+      type: System.Int32
+      description: Destination port number
+    - id: sessionId
+      type: System.String
+      description: Optional session identifier
+    content.vb: Public Sub Parse(payload As Byte(), srcIp As String, dstIp As String, srcPort As Integer, dstPort As Integer, sessionId As String = Nothing)
+  overload: IDSApp.ProtocolParsing.Pop3Parser.Parse*
+  nameWithType.vb: Pop3Parser.Parse(Byte(), String, String, Integer, Integer, String)
+  fullName.vb: IDSApp.ProtocolParsing.Pop3Parser.Parse(Byte(), String, String, Integer, Integer, String)
+  name.vb: Parse(Byte(), String, String, Integer, Integer, String)
+- uid: IDSApp.ProtocolParsing.Pop3Parser.Body
+  commentId: P:IDSApp.ProtocolParsing.Pop3Parser.Body
+  id: Body
+  parent: IDSApp.ProtocolParsing.Pop3Parser
+  langs:
+  - csharp
+  - vb
+  name: Body
+  nameWithType: Pop3Parser.Body
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.Body
+  type: Property
+  source:
+    id: Body
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\Pop3Parser.cs
+    startLine: 492
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Read-only property providing access to stored email body content
+
+    Returns copy of stored body stream as byte array
+  example: []
+  syntax:
+    content: public byte[] Body { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property Body As Byte()
+  overload: IDSApp.ProtocolParsing.Pop3Parser.Body*
+- uid: IDSApp.ProtocolParsing.Pop3Parser.Dispose
+  commentId: M:IDSApp.ProtocolParsing.Pop3Parser.Dispose
+  id: Dispose
+  parent: IDSApp.ProtocolParsing.Pop3Parser
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Pop3Parser.Dispose()
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\Pop3Parser.cs
+    startLine: 502
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Implements IDisposable pattern for proper resource cleanup
+
+    Disposes memory stream and marks instance as disposed
+
+    Thread-safe disposal using lock synchronization
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: IDSApp.ProtocolParsing.Pop3Parser.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: IDSApp.ProtocolParsing
+  commentId: N:IDSApp.ProtocolParsing
+  href: IDSApp.html
+  name: IDSApp.ProtocolParsing
+  nameWithType: IDSApp.ProtocolParsing
+  fullName: IDSApp.ProtocolParsing
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.ProtocolParsing.Pop3Parser.#ctor*
+  commentId: Overload:IDSApp.ProtocolParsing.Pop3Parser.#ctor
+  href: IDSApp.ProtocolParsing.Pop3Parser.html#IDSApp_ProtocolParsing_Pop3Parser__ctor_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__
+  name: Pop3Parser
+  nameWithType: Pop3Parser.Pop3Parser
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.Pop3Parser
+  nameWithType.vb: Pop3Parser.New
+  fullName.vb: IDSApp.ProtocolParsing.Pop3Parser.New
+  name.vb: New
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: IDSApp.ProtocolParsing.Pop3Parser.Reset*
+  commentId: Overload:IDSApp.ProtocolParsing.Pop3Parser.Reset
+  href: IDSApp.ProtocolParsing.Pop3Parser.html#IDSApp_ProtocolParsing_Pop3Parser_Reset
+  name: Reset
+  nameWithType: Pop3Parser.Reset
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.Reset
+- uid: IDSApp.ProtocolParsing.Pop3Parser.ParseCommand*
+  commentId: Overload:IDSApp.ProtocolParsing.Pop3Parser.ParseCommand
+  href: IDSApp.ProtocolParsing.Pop3Parser.html#IDSApp_ProtocolParsing_Pop3Parser_ParseCommand_System_String_System_String_System_String_System_String_System_Nullable_System_DateTime__System_Int32_
+  name: ParseCommand
+  nameWithType: Pop3Parser.ParseCommand
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.ParseCommand
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: IDSApp.ProtocolParsing.Pop3Parser.ParseResponse*
+  commentId: Overload:IDSApp.ProtocolParsing.Pop3Parser.ParseResponse
+  href: IDSApp.ProtocolParsing.Pop3Parser.html#IDSApp_ProtocolParsing_Pop3Parser_ParseResponse_System_String_
+  name: ParseResponse
+  nameWithType: Pop3Parser.ParseResponse
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.ParseResponse
+- uid: IDSApp.ProtocolParsing.Pop3Parser.ParseBody*
+  commentId: Overload:IDSApp.ProtocolParsing.Pop3Parser.ParseBody
+  href: IDSApp.ProtocolParsing.Pop3Parser.html#IDSApp_ProtocolParsing_Pop3Parser_ParseBody_System_Byte___
+  name: ParseBody
+  nameWithType: Pop3Parser.ParseBody
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.ParseBody
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: IDSApp.ProtocolParsing.Pop3Parser.Parse*
+  commentId: Overload:IDSApp.ProtocolParsing.Pop3Parser.Parse
+  href: IDSApp.ProtocolParsing.Pop3Parser.html#IDSApp_ProtocolParsing_Pop3Parser_Parse_System_Byte___System_String_System_String_System_Int32_System_Int32_System_String_
+  name: Parse
+  nameWithType: Pop3Parser.Parse
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.Parse
+- uid: IDSApp.ProtocolParsing.Pop3Parser.Body*
+  commentId: Overload:IDSApp.ProtocolParsing.Pop3Parser.Body
+  href: IDSApp.ProtocolParsing.Pop3Parser.html#IDSApp_ProtocolParsing_Pop3Parser_Body
+  name: Body
+  nameWithType: Pop3Parser.Body
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.Body
+- uid: IDSApp.ProtocolParsing.Pop3Parser.Dispose*
+  commentId: Overload:IDSApp.ProtocolParsing.Pop3Parser.Dispose
+  href: IDSApp.ProtocolParsing.Pop3Parser.html#IDSApp_ProtocolParsing_Pop3Parser_Dispose
+  name: Dispose
+  nameWithType: Pop3Parser.Dispose
+  fullName: IDSApp.ProtocolParsing.Pop3Parser.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

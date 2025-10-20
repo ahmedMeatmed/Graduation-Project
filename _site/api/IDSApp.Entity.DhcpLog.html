@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class DhcpLog | mysite </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class DhcpLog | mysite ">
+      
+      <meta name="description" content="Represents a DHCP (Dynamic Host Configuration Protocol) log entry captured by the Intrusion Detection System. Contains detailed information about DHCP network transactions for monitoring IP address allocation and potential network threats.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="mysite">
+            mysite
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="IDSApp.Entity.DhcpLog">
+
+
+
+  <h1 id="IDSApp_Entity_DhcpLog" data-uid="IDSApp.Entity.DhcpLog" class="text-break">
+Class DhcpLog  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="IDSApp.html">IDSApp</a>.<a class="xref" href="IDSApp.Entity.html">Entity</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>IDSApp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a DHCP (Dynamic Host Configuration Protocol) log entry captured by the Intrusion Detection System.
+Contains detailed information about DHCP network transactions for monitoring IP address allocation and potential network threats.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class DhcpLog</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">DhcpLog</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="IDSApp_Entity_DhcpLog__ctor_" data-uid="IDSApp.Entity.DhcpLog.#ctor*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog__ctor" data-uid="IDSApp.Entity.DhcpLog.#ctor">
+  DhcpLog()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the DhcpLog class with default values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DhcpLog()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog__ctor_" data-uid="IDSApp.Entity.DhcpLog.#ctor*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog__ctor_IDSApp_Entity_DhcpLog_" data-uid="IDSApp.Entity.DhcpLog.#ctor(IDSApp.Entity.DhcpLog)">
+  DhcpLog(DhcpLog)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the DhcpLog class as a copy of an existing DhcpLog object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DhcpLog(DhcpLog d)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>d</code> <a class="xref" href="IDSApp.Entity.DhcpLog.html">DhcpLog</a></dt>
+    <dd><p>Source DhcpLog object to copy from</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog__ctor_" data-uid="IDSApp.Entity.DhcpLog.#ctor*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog__ctor_System_Int32_System_Int32_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_DateTime_System_String_System_String_System_Int32_" data-uid="IDSApp.Entity.DhcpLog.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String,System.Int32)">
+  DhcpLog(int, int, string, string, string, string, string, string, string, DateTime, string, string, int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the DhcpLog class with specified parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DhcpLog(int dhcpLogId, int logId, string messageType, string transactionId, string clientIp, string offeredIp, string serverIp, string sourceIp, string destinationIp, DateTime timestamp, string sessionId, string status, int leaseDuration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>dhcpLogId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Unique identifier for the DHCP log entry</p>
+</dd>
+    <dt><code>logId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Reference identifier linking to the main system log</p>
+</dd>
+    <dt><code>messageType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>DHCP message type</p>
+</dd>
+    <dt><code>transactionId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Unique transaction ID for request-response correlation</p>
+</dd>
+    <dt><code>clientIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Current IP address of the DHCP client</p>
+</dd>
+    <dt><code>offeredIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>IP address being offered or assigned</p>
+</dd>
+    <dt><code>serverIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>IP address of the DHCP server</p>
+</dd>
+    <dt><code>sourceIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Source IP address of the DHCP packet</p>
+</dd>
+    <dt><code>destinationIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Destination IP address of the DHCP packet</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>When the DHCP transaction occurred</p>
+</dd>
+    <dt><code>sessionId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Session identifier for tracking conversations</p>
+</dd>
+    <dt><code>status</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Transaction status</p>
+</dd>
+    <dt><code>leaseDuration</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Duration of IP address lease in seconds</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="IDSApp_Entity_DhcpLog_ClientIp_" data-uid="IDSApp.Entity.DhcpLog.ClientIp*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_ClientIp" data-uid="IDSApp.Entity.DhcpLog.ClientIp">
+  ClientIp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Current IP address of the DHCP client (may be 0.0.0.0 for initial requests)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ClientIp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_DestinationIp_" data-uid="IDSApp.Entity.DhcpLog.DestinationIp*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_DestinationIp" data-uid="IDSApp.Entity.DhcpLog.DestinationIp">
+  DestinationIp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Destination IP address of the DHCP packet</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DestinationIp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_DhcpLogId_" data-uid="IDSApp.Entity.DhcpLog.DhcpLogId*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_DhcpLogId" data-uid="IDSApp.Entity.DhcpLog.DhcpLogId">
+  DhcpLogId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unique identifier for the DHCP log entry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int DhcpLogId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_LeaseDuration_" data-uid="IDSApp.Entity.DhcpLog.LeaseDuration*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_LeaseDuration" data-uid="IDSApp.Entity.DhcpLog.LeaseDuration">
+  LeaseDuration
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Duration of the IP address lease in seconds</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LeaseDuration { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_LogId_" data-uid="IDSApp.Entity.DhcpLog.LogId*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_LogId" data-uid="IDSApp.Entity.DhcpLog.LogId">
+  LogId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference identifier linking to the main system log entry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LogId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_MessageType_" data-uid="IDSApp.Entity.DhcpLog.MessageType*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_MessageType" data-uid="IDSApp.Entity.DhcpLog.MessageType">
+  MessageType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>DHCP message type (e.g., DISCOVER, OFFER, REQUEST, ACK, NAK, RELEASE)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string MessageType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_OfferedIp_" data-uid="IDSApp.Entity.DhcpLog.OfferedIp*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_OfferedIp" data-uid="IDSApp.Entity.DhcpLog.OfferedIp">
+  OfferedIp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>IP address being offered or assigned to the client</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string OfferedIp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_ServerIp_" data-uid="IDSApp.Entity.DhcpLog.ServerIp*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_ServerIp" data-uid="IDSApp.Entity.DhcpLog.ServerIp">
+  ServerIp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>IP address of the DHCP server handling the request</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ServerIp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_SessionId_" data-uid="IDSApp.Entity.DhcpLog.SessionId*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_SessionId" data-uid="IDSApp.Entity.DhcpLog.SessionId">
+  SessionId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Session identifier for tracking DHCP conversations</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SessionId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_SourceIp_" data-uid="IDSApp.Entity.DhcpLog.SourceIp*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_SourceIp" data-uid="IDSApp.Entity.DhcpLog.SourceIp">
+  SourceIp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Source IP address of the DHCP packet</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SourceIp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_Status_" data-uid="IDSApp.Entity.DhcpLog.Status*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_Status" data-uid="IDSApp.Entity.DhcpLog.Status">
+  Status
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Transaction status (e.g., Success, Failed, Pending, Error)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Status { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_Timestamp_" data-uid="IDSApp.Entity.DhcpLog.Timestamp*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_Timestamp" data-uid="IDSApp.Entity.DhcpLog.Timestamp">
+  Timestamp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Timestamp when the DHCP transaction occurred</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime Timestamp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_DhcpLog_TransactionId_" data-uid="IDSApp.Entity.DhcpLog.TransactionId*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_TransactionId" data-uid="IDSApp.Entity.DhcpLog.TransactionId">
+  TransactionId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unique transaction ID to correlate DHCP request-response pairs</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TransactionId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="IDSApp_Entity_DhcpLog_Clone_" data-uid="IDSApp.Entity.DhcpLog.Clone*"></a>
+
+  <h3 id="IDSApp_Entity_DhcpLog_Clone" data-uid="IDSApp.Entity.DhcpLog.Clone">
+  Clone()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a deep copy of the current DhcpLog instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DhcpLog Clone()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IDSApp.Entity.DhcpLog.html">DhcpLog</a></dt>
+    <dd><p>A new DhcpLog object that is an exact copy of the current instance</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

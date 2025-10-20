@@ -1,0 +1,831 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Entity.TftpLog
+  commentId: T:IDSApp.Entity.TftpLog
+  id: TftpLog
+  parent: IDSApp.Entity
+  children:
+  - IDSApp.Entity.TftpLog.#ctor
+  - IDSApp.Entity.TftpLog.#ctor(IDSApp.Entity.TftpLog)
+  - IDSApp.Entity.TftpLog.#ctor(System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.DateTime,System.String,System.String)
+  - IDSApp.Entity.TftpLog.Clone
+  - IDSApp.Entity.TftpLog.DestinationIp
+  - IDSApp.Entity.TftpLog.Filename
+  - IDSApp.Entity.TftpLog.LogId
+  - IDSApp.Entity.TftpLog.Operation
+  - IDSApp.Entity.TftpLog.SessionId
+  - IDSApp.Entity.TftpLog.SourceIp
+  - IDSApp.Entity.TftpLog.Status
+  - IDSApp.Entity.TftpLog.TftpLogId
+  - IDSApp.Entity.TftpLog.Timestamp
+  - IDSApp.Entity.TftpLog.TransferSize
+  langs:
+  - csharp
+  - vb
+  name: TftpLog
+  nameWithType: TftpLog
+  fullName: IDSApp.Entity.TftpLog
+  type: Class
+  source:
+    id: TftpLog
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 8
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: >-
+    Represents a log entry for TFTP (Trivial File Transfer Protocol) activity.
+
+    Contains information about the operation, file transferred, transfer size, source and destination IPs, timestamp, session, and status.
+  example: []
+  syntax:
+    content: public class TftpLog
+    content.vb: Public Class TftpLog
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.Entity.TftpLog.TftpLogId
+  commentId: P:IDSApp.Entity.TftpLog.TftpLogId
+  id: TftpLogId
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: TftpLogId
+  nameWithType: TftpLog.TftpLogId
+  fullName: IDSApp.Entity.TftpLog.TftpLogId
+  type: Property
+  source:
+    id: TftpLogId
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 13
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the unique identifier for this TFTP log entry.
+  example: []
+  syntax:
+    content: public int TftpLogId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TftpLogId As Integer
+  overload: IDSApp.Entity.TftpLog.TftpLogId*
+- uid: IDSApp.Entity.TftpLog.LogId
+  commentId: P:IDSApp.Entity.TftpLog.LogId
+  id: LogId
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: LogId
+  nameWithType: TftpLog.LogId
+  fullName: IDSApp.Entity.TftpLog.LogId
+  type: Property
+  source:
+    id: LogId
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 18
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the associated general log entry ID.
+  example: []
+  syntax:
+    content: public int LogId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property LogId As Integer
+  overload: IDSApp.Entity.TftpLog.LogId*
+- uid: IDSApp.Entity.TftpLog.Operation
+  commentId: P:IDSApp.Entity.TftpLog.Operation
+  id: Operation
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: Operation
+  nameWithType: TftpLog.Operation
+  fullName: IDSApp.Entity.TftpLog.Operation
+  type: Property
+  source:
+    id: Operation
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 23
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the TFTP operation performed (e.g., read, write).
+  example: []
+  syntax:
+    content: public string Operation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Operation As String
+  overload: IDSApp.Entity.TftpLog.Operation*
+- uid: IDSApp.Entity.TftpLog.Filename
+  commentId: P:IDSApp.Entity.TftpLog.Filename
+  id: Filename
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: Filename
+  nameWithType: TftpLog.Filename
+  fullName: IDSApp.Entity.TftpLog.Filename
+  type: Property
+  source:
+    id: Filename
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 28
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the name of the file involved in the TFTP operation.
+  example: []
+  syntax:
+    content: public string Filename { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Filename As String
+  overload: IDSApp.Entity.TftpLog.Filename*
+- uid: IDSApp.Entity.TftpLog.TransferSize
+  commentId: P:IDSApp.Entity.TftpLog.TransferSize
+  id: TransferSize
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: TransferSize
+  nameWithType: TftpLog.TransferSize
+  fullName: IDSApp.Entity.TftpLog.TransferSize
+  type: Property
+  source:
+    id: TransferSize
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 33
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the size of the file transferred in bytes.
+  example: []
+  syntax:
+    content: public int TransferSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TransferSize As Integer
+  overload: IDSApp.Entity.TftpLog.TransferSize*
+- uid: IDSApp.Entity.TftpLog.SourceIp
+  commentId: P:IDSApp.Entity.TftpLog.SourceIp
+  id: SourceIp
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: SourceIp
+  nameWithType: TftpLog.SourceIp
+  fullName: IDSApp.Entity.TftpLog.SourceIp
+  type: Property
+  source:
+    id: SourceIp
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 38
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the source IP address of the TFTP transfer.
+  example: []
+  syntax:
+    content: public string SourceIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceIp As String
+  overload: IDSApp.Entity.TftpLog.SourceIp*
+- uid: IDSApp.Entity.TftpLog.DestinationIp
+  commentId: P:IDSApp.Entity.TftpLog.DestinationIp
+  id: DestinationIp
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: DestinationIp
+  nameWithType: TftpLog.DestinationIp
+  fullName: IDSApp.Entity.TftpLog.DestinationIp
+  type: Property
+  source:
+    id: DestinationIp
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 43
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the destination IP address of the TFTP transfer.
+  example: []
+  syntax:
+    content: public string DestinationIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DestinationIp As String
+  overload: IDSApp.Entity.TftpLog.DestinationIp*
+- uid: IDSApp.Entity.TftpLog.Timestamp
+  commentId: P:IDSApp.Entity.TftpLog.Timestamp
+  id: Timestamp
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: TftpLog.Timestamp
+  fullName: IDSApp.Entity.TftpLog.Timestamp
+  type: Property
+  source:
+    id: Timestamp
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 48
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the timestamp when the TFTP log was recorded.
+  example: []
+  syntax:
+    content: public DateTime Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Timestamp As Date
+  overload: IDSApp.Entity.TftpLog.Timestamp*
+- uid: IDSApp.Entity.TftpLog.SessionId
+  commentId: P:IDSApp.Entity.TftpLog.SessionId
+  id: SessionId
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: SessionId
+  nameWithType: TftpLog.SessionId
+  fullName: IDSApp.Entity.TftpLog.SessionId
+  type: Property
+  source:
+    id: SessionId
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 53
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the session ID for the TFTP transfer.
+  example: []
+  syntax:
+    content: public string SessionId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SessionId As String
+  overload: IDSApp.Entity.TftpLog.SessionId*
+- uid: IDSApp.Entity.TftpLog.Status
+  commentId: P:IDSApp.Entity.TftpLog.Status
+  id: Status
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: TftpLog.Status
+  fullName: IDSApp.Entity.TftpLog.Status
+  type: Property
+  source:
+    id: Status
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 58
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the status of the TFTP operation (e.g., success, error).
+  example: []
+  syntax:
+    content: public string Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Status As String
+  overload: IDSApp.Entity.TftpLog.Status*
+- uid: IDSApp.Entity.TftpLog.#ctor
+  commentId: M:IDSApp.Entity.TftpLog.#ctor
+  id: '#ctor'
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: TftpLog()
+  nameWithType: TftpLog.TftpLog()
+  fullName: IDSApp.Entity.TftpLog.TftpLog()
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 63
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Initializes a new instance of the <xref href="IDSApp.Entity.TftpLog" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public TftpLog()
+    content.vb: Public Sub New()
+  overload: IDSApp.Entity.TftpLog.#ctor*
+  nameWithType.vb: TftpLog.New()
+  fullName.vb: IDSApp.Entity.TftpLog.New()
+  name.vb: New()
+- uid: IDSApp.Entity.TftpLog.#ctor(System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.DateTime,System.String,System.String)
+  commentId: M:IDSApp.Entity.TftpLog.#ctor(System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.DateTime,System.String,System.String)
+  id: '#ctor(System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.DateTime,System.String,System.String)'
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: TftpLog(int, int, string, string, int, string, string, DateTime, string, string)
+  nameWithType: TftpLog.TftpLog(int, int, string, string, int, string, string, DateTime, string, string)
+  fullName: IDSApp.Entity.TftpLog.TftpLog(int, int, string, string, int, string, string, System.DateTime, string, string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 68
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Initializes a new instance of the <xref href="IDSApp.Entity.TftpLog" data-throw-if-not-resolved="false"></xref> class with specified values.
+  example: []
+  syntax:
+    content: public TftpLog(int tftpLogId, int logId, string operation, string filename, int transferSize, string sourceIp, string destinationIp, DateTime timestamp, string sessionId, string status)
+    parameters:
+    - id: tftpLogId
+      type: System.Int32
+    - id: logId
+      type: System.Int32
+    - id: operation
+      type: System.String
+    - id: filename
+      type: System.String
+    - id: transferSize
+      type: System.Int32
+    - id: sourceIp
+      type: System.String
+    - id: destinationIp
+      type: System.String
+    - id: timestamp
+      type: System.DateTime
+    - id: sessionId
+      type: System.String
+    - id: status
+      type: System.String
+    content.vb: Public Sub New(tftpLogId As Integer, logId As Integer, operation As String, filename As String, transferSize As Integer, sourceIp As String, destinationIp As String, timestamp As Date, sessionId As String, status As String)
+  overload: IDSApp.Entity.TftpLog.#ctor*
+  nameWithType.vb: TftpLog.New(Integer, Integer, String, String, Integer, String, String, Date, String, String)
+  fullName.vb: IDSApp.Entity.TftpLog.New(Integer, Integer, String, String, Integer, String, String, Date, String, String)
+  name.vb: New(Integer, Integer, String, String, Integer, String, String, Date, String, String)
+- uid: IDSApp.Entity.TftpLog.#ctor(IDSApp.Entity.TftpLog)
+  commentId: M:IDSApp.Entity.TftpLog.#ctor(IDSApp.Entity.TftpLog)
+  id: '#ctor(IDSApp.Entity.TftpLog)'
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: TftpLog(TftpLog)
+  nameWithType: TftpLog.TftpLog(TftpLog)
+  fullName: IDSApp.Entity.TftpLog.TftpLog(IDSApp.Entity.TftpLog)
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 87
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Initializes a new instance of the <xref href="IDSApp.Entity.TftpLog" data-throw-if-not-resolved="false"></xref> class by copying another instance.
+  example: []
+  syntax:
+    content: public TftpLog(TftpLog t)
+    parameters:
+    - id: t
+      type: IDSApp.Entity.TftpLog
+      description: The <xref href="IDSApp.Entity.TftpLog" data-throw-if-not-resolved="false"></xref> instance to copy.
+    content.vb: Public Sub New(t As TftpLog)
+  overload: IDSApp.Entity.TftpLog.#ctor*
+  nameWithType.vb: TftpLog.New(TftpLog)
+  fullName.vb: IDSApp.Entity.TftpLog.New(IDSApp.Entity.TftpLog)
+  name.vb: New(TftpLog)
+- uid: IDSApp.Entity.TftpLog.Clone
+  commentId: M:IDSApp.Entity.TftpLog.Clone
+  id: Clone
+  parent: IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: TftpLog.Clone()
+  fullName: IDSApp.Entity.TftpLog.Clone()
+  type: Method
+  source:
+    id: Clone
+    path: G:\C#\IDSApp\IDSApp\Entity\TftpLog.cs
+    startLine: 95
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Creates a deep copy of the current <xref href="IDSApp.Entity.TftpLog" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: public TftpLog Clone()
+    return:
+      type: IDSApp.Entity.TftpLog
+      description: A new <xref href="IDSApp.Entity.TftpLog" data-throw-if-not-resolved="false"></xref> object identical to the current instance.
+    content.vb: Public Function Clone() As TftpLog
+  overload: IDSApp.Entity.TftpLog.Clone*
+references:
+- uid: IDSApp.Entity
+  commentId: N:IDSApp.Entity
+  href: IDSApp.html
+  name: IDSApp.Entity
+  nameWithType: IDSApp.Entity
+  fullName: IDSApp.Entity
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.Entity.TftpLog.TftpLogId*
+  commentId: Overload:IDSApp.Entity.TftpLog.TftpLogId
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog_TftpLogId
+  name: TftpLogId
+  nameWithType: TftpLog.TftpLogId
+  fullName: IDSApp.Entity.TftpLog.TftpLogId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: IDSApp.Entity.TftpLog.LogId*
+  commentId: Overload:IDSApp.Entity.TftpLog.LogId
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog_LogId
+  name: LogId
+  nameWithType: TftpLog.LogId
+  fullName: IDSApp.Entity.TftpLog.LogId
+- uid: IDSApp.Entity.TftpLog.Operation*
+  commentId: Overload:IDSApp.Entity.TftpLog.Operation
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog_Operation
+  name: Operation
+  nameWithType: TftpLog.Operation
+  fullName: IDSApp.Entity.TftpLog.Operation
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: IDSApp.Entity.TftpLog.Filename*
+  commentId: Overload:IDSApp.Entity.TftpLog.Filename
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog_Filename
+  name: Filename
+  nameWithType: TftpLog.Filename
+  fullName: IDSApp.Entity.TftpLog.Filename
+- uid: IDSApp.Entity.TftpLog.TransferSize*
+  commentId: Overload:IDSApp.Entity.TftpLog.TransferSize
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog_TransferSize
+  name: TransferSize
+  nameWithType: TftpLog.TransferSize
+  fullName: IDSApp.Entity.TftpLog.TransferSize
+- uid: IDSApp.Entity.TftpLog.SourceIp*
+  commentId: Overload:IDSApp.Entity.TftpLog.SourceIp
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog_SourceIp
+  name: SourceIp
+  nameWithType: TftpLog.SourceIp
+  fullName: IDSApp.Entity.TftpLog.SourceIp
+- uid: IDSApp.Entity.TftpLog.DestinationIp*
+  commentId: Overload:IDSApp.Entity.TftpLog.DestinationIp
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog_DestinationIp
+  name: DestinationIp
+  nameWithType: TftpLog.DestinationIp
+  fullName: IDSApp.Entity.TftpLog.DestinationIp
+- uid: IDSApp.Entity.TftpLog.Timestamp*
+  commentId: Overload:IDSApp.Entity.TftpLog.Timestamp
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog_Timestamp
+  name: Timestamp
+  nameWithType: TftpLog.Timestamp
+  fullName: IDSApp.Entity.TftpLog.Timestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: IDSApp.Entity.TftpLog.SessionId*
+  commentId: Overload:IDSApp.Entity.TftpLog.SessionId
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog_SessionId
+  name: SessionId
+  nameWithType: TftpLog.SessionId
+  fullName: IDSApp.Entity.TftpLog.SessionId
+- uid: IDSApp.Entity.TftpLog.Status*
+  commentId: Overload:IDSApp.Entity.TftpLog.Status
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog_Status
+  name: Status
+  nameWithType: TftpLog.Status
+  fullName: IDSApp.Entity.TftpLog.Status
+- uid: IDSApp.Entity.TftpLog
+  commentId: T:IDSApp.Entity.TftpLog
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.TftpLog.html
+  name: TftpLog
+  nameWithType: TftpLog
+  fullName: IDSApp.Entity.TftpLog
+- uid: IDSApp.Entity.TftpLog.#ctor*
+  commentId: Overload:IDSApp.Entity.TftpLog.#ctor
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog__ctor
+  name: TftpLog
+  nameWithType: TftpLog.TftpLog
+  fullName: IDSApp.Entity.TftpLog.TftpLog
+  nameWithType.vb: TftpLog.New
+  fullName.vb: IDSApp.Entity.TftpLog.New
+  name.vb: New
+- uid: IDSApp.Entity.TftpLog.Clone*
+  commentId: Overload:IDSApp.Entity.TftpLog.Clone
+  href: IDSApp.Entity.TftpLog.html#IDSApp_Entity_TftpLog_Clone
+  name: Clone
+  nameWithType: TftpLog.Clone
+  fullName: IDSApp.Entity.TftpLog.Clone

@@ -1,0 +1,804 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Helper.OptimizedLogger
+  commentId: T:IDSApp.Helper.OptimizedLogger
+  id: OptimizedLogger
+  parent: IDSApp.Helper
+  children:
+  - IDSApp.Helper.OptimizedLogger.CurrentLogLevel
+  - IDSApp.Helper.OptimizedLogger.Dispose
+  - IDSApp.Helper.OptimizedLogger.GetPacketCount
+  - IDSApp.Helper.OptimizedLogger.IncrementPacketCounter
+  - IDSApp.Helper.OptimizedLogger.LogDebug(System.String)
+  - IDSApp.Helper.OptimizedLogger.LogError(System.String)
+  - IDSApp.Helper.OptimizedLogger.LogImportant(System.String)
+  - IDSApp.Helper.OptimizedLogger.LogNetwork(System.String)
+  - IDSApp.Helper.OptimizedLogger.LogPacketStats(System.String)
+  - IDSApp.Helper.OptimizedLogger.LogPerformance(System.String)
+  - IDSApp.Helper.OptimizedLogger.LogQueue(System.String)
+  - IDSApp.Helper.OptimizedLogger.LogRule(System.String)
+  - IDSApp.Helper.OptimizedLogger.LogRuleMatch(System.String)
+  langs:
+  - csharp
+  - vb
+  name: OptimizedLogger
+  nameWithType: OptimizedLogger
+  fullName: IDSApp.Helper.OptimizedLogger
+  type: Class
+  source:
+    id: OptimizedLogger
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 11
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: >-
+    Provides optimized logging functionality for the IDS system with configurable log levels
+
+    to reduce console clutter while maintaining essential statistics and critical information.
+  example: []
+  syntax:
+    content: public static class OptimizedLogger
+    content.vb: Public Module OptimizedLogger
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.Helper.OptimizedLogger.CurrentLogLevel
+  commentId: P:IDSApp.Helper.OptimizedLogger.CurrentLogLevel
+  id: CurrentLogLevel
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: CurrentLogLevel
+  nameWithType: OptimizedLogger.CurrentLogLevel
+  fullName: IDSApp.Helper.OptimizedLogger.CurrentLogLevel
+  type: Property
+  source:
+    id: CurrentLogLevel
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 42
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: public static OptimizedLogger.LogLevel CurrentLogLevel { get; set; }
+    parameters: []
+    return:
+      type: IDSApp.Helper.OptimizedLogger.LogLevel
+    content.vb: Public Shared Property CurrentLogLevel As OptimizedLogger.LogLevel
+  overload: IDSApp.Helper.OptimizedLogger.CurrentLogLevel*
+- uid: IDSApp.Helper.OptimizedLogger.LogDebug(System.String)
+  commentId: M:IDSApp.Helper.OptimizedLogger.LogDebug(System.String)
+  id: LogDebug(System.String)
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: LogDebug(string)
+  nameWithType: OptimizedLogger.LogDebug(string)
+  fullName: IDSApp.Helper.OptimizedLogger.LogDebug(string)
+  type: Method
+  source:
+    id: LogDebug
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 54
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Logs debug information (disabled by default to reduce console output)
+  example: []
+  syntax:
+    content: public static void LogDebug(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Shared Sub LogDebug(message As String)
+  overload: IDSApp.Helper.OptimizedLogger.LogDebug*
+  nameWithType.vb: OptimizedLogger.LogDebug(String)
+  fullName.vb: IDSApp.Helper.OptimizedLogger.LogDebug(String)
+  name.vb: LogDebug(String)
+- uid: IDSApp.Helper.OptimizedLogger.LogNetwork(System.String)
+  commentId: M:IDSApp.Helper.OptimizedLogger.LogNetwork(System.String)
+  id: LogNetwork(System.String)
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: LogNetwork(string)
+  nameWithType: OptimizedLogger.LogNetwork(string)
+  fullName: IDSApp.Helper.OptimizedLogger.LogNetwork(string)
+  type: Method
+  source:
+    id: LogNetwork
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 63
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Logs network-related information (disabled by default)
+  example: []
+  syntax:
+    content: public static void LogNetwork(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Shared Sub LogNetwork(message As String)
+  overload: IDSApp.Helper.OptimizedLogger.LogNetwork*
+  nameWithType.vb: OptimizedLogger.LogNetwork(String)
+  fullName.vb: IDSApp.Helper.OptimizedLogger.LogNetwork(String)
+  name.vb: LogNetwork(String)
+- uid: IDSApp.Helper.OptimizedLogger.LogQueue(System.String)
+  commentId: M:IDSApp.Helper.OptimizedLogger.LogQueue(System.String)
+  id: LogQueue(System.String)
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: LogQueue(string)
+  nameWithType: OptimizedLogger.LogQueue(string)
+  fullName: IDSApp.Helper.OptimizedLogger.LogQueue(string)
+  type: Method
+  source:
+    id: LogQueue
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 72
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Logs queue operations (disabled by default)
+  example: []
+  syntax:
+    content: public static void LogQueue(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Shared Sub LogQueue(message As String)
+  overload: IDSApp.Helper.OptimizedLogger.LogQueue*
+  nameWithType.vb: OptimizedLogger.LogQueue(String)
+  fullName.vb: IDSApp.Helper.OptimizedLogger.LogQueue(String)
+  name.vb: LogQueue(String)
+- uid: IDSApp.Helper.OptimizedLogger.LogRuleMatch(System.String)
+  commentId: M:IDSApp.Helper.OptimizedLogger.LogRuleMatch(System.String)
+  id: LogRuleMatch(System.String)
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: LogRuleMatch(string)
+  nameWithType: OptimizedLogger.LogRuleMatch(string)
+  fullName: IDSApp.Helper.OptimizedLogger.LogRuleMatch(string)
+  type: Method
+  source:
+    id: LogRuleMatch
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 81
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Logs rule matching events with throttling to prevent spam
+  example: []
+  syntax:
+    content: public static void LogRuleMatch(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Shared Sub LogRuleMatch(message As String)
+  overload: IDSApp.Helper.OptimizedLogger.LogRuleMatch*
+  nameWithType.vb: OptimizedLogger.LogRuleMatch(String)
+  fullName.vb: IDSApp.Helper.OptimizedLogger.LogRuleMatch(String)
+  name.vb: LogRuleMatch(String)
+- uid: IDSApp.Helper.OptimizedLogger.LogPerformance(System.String)
+  commentId: M:IDSApp.Helper.OptimizedLogger.LogPerformance(System.String)
+  id: LogPerformance(System.String)
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: LogPerformance(string)
+  nameWithType: OptimizedLogger.LogPerformance(string)
+  fullName: IDSApp.Helper.OptimizedLogger.LogPerformance(string)
+  type: Method
+  source:
+    id: LogPerformance
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 94
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Logs performance metrics at configured intervals
+  example: []
+  syntax:
+    content: public static void LogPerformance(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Shared Sub LogPerformance(message As String)
+  overload: IDSApp.Helper.OptimizedLogger.LogPerformance*
+  nameWithType.vb: OptimizedLogger.LogPerformance(String)
+  fullName.vb: IDSApp.Helper.OptimizedLogger.LogPerformance(String)
+  name.vb: LogPerformance(String)
+- uid: IDSApp.Helper.OptimizedLogger.LogRule(System.String)
+  commentId: M:IDSApp.Helper.OptimizedLogger.LogRule(System.String)
+  id: LogRule(System.String)
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: LogRule(string)
+  nameWithType: OptimizedLogger.LogRule(string)
+  fullName: IDSApp.Helper.OptimizedLogger.LogRule(string)
+  type: Method
+  source:
+    id: LogRule
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 112
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Logs rule processing information (reduced frequency)
+  example: []
+  syntax:
+    content: public static void LogRule(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Shared Sub LogRule(message As String)
+  overload: IDSApp.Helper.OptimizedLogger.LogRule*
+  nameWithType.vb: OptimizedLogger.LogRule(String)
+  fullName.vb: IDSApp.Helper.OptimizedLogger.LogRule(String)
+  name.vb: LogRule(String)
+- uid: IDSApp.Helper.OptimizedLogger.LogError(System.String)
+  commentId: M:IDSApp.Helper.OptimizedLogger.LogError(System.String)
+  id: LogError(System.String)
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: LogError(string)
+  nameWithType: OptimizedLogger.LogError(string)
+  fullName: IDSApp.Helper.OptimizedLogger.LogError(string)
+  type: Method
+  source:
+    id: LogError
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 125
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Logs error messages (always enabled for critical issues)
+  example: []
+  syntax:
+    content: public static void LogError(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Shared Sub LogError(message As String)
+  overload: IDSApp.Helper.OptimizedLogger.LogError*
+  nameWithType.vb: OptimizedLogger.LogError(String)
+  fullName.vb: IDSApp.Helper.OptimizedLogger.LogError(String)
+  name.vb: LogError(String)
+- uid: IDSApp.Helper.OptimizedLogger.LogImportant(System.String)
+  commentId: M:IDSApp.Helper.OptimizedLogger.LogImportant(System.String)
+  id: LogImportant(System.String)
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: LogImportant(string)
+  nameWithType: OptimizedLogger.LogImportant(string)
+  fullName: IDSApp.Helper.OptimizedLogger.LogImportant(string)
+  type: Method
+  source:
+    id: LogImportant
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 134
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Logs important system events (startup, shutdown, alerts)
+  example: []
+  syntax:
+    content: public static void LogImportant(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Shared Sub LogImportant(message As String)
+  overload: IDSApp.Helper.OptimizedLogger.LogImportant*
+  nameWithType.vb: OptimizedLogger.LogImportant(String)
+  fullName.vb: IDSApp.Helper.OptimizedLogger.LogImportant(String)
+  name.vb: LogImportant(String)
+- uid: IDSApp.Helper.OptimizedLogger.LogPacketStats(System.String)
+  commentId: M:IDSApp.Helper.OptimizedLogger.LogPacketStats(System.String)
+  id: LogPacketStats(System.String)
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: LogPacketStats(string)
+  nameWithType: OptimizedLogger.LogPacketStats(string)
+  fullName: IDSApp.Helper.OptimizedLogger.LogPacketStats(string)
+  type: Method
+  source:
+    id: LogPacketStats
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 143
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Logs packet statistics at configured intervals
+  example: []
+  syntax:
+    content: public static void LogPacketStats(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Shared Sub LogPacketStats(message As String)
+  overload: IDSApp.Helper.OptimizedLogger.LogPacketStats*
+  nameWithType.vb: OptimizedLogger.LogPacketStats(String)
+  fullName.vb: IDSApp.Helper.OptimizedLogger.LogPacketStats(String)
+  name.vb: LogPacketStats(String)
+- uid: IDSApp.Helper.OptimizedLogger.IncrementPacketCounter
+  commentId: M:IDSApp.Helper.OptimizedLogger.IncrementPacketCounter
+  id: IncrementPacketCounter
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: IncrementPacketCounter()
+  nameWithType: OptimizedLogger.IncrementPacketCounter()
+  fullName: IDSApp.Helper.OptimizedLogger.IncrementPacketCounter()
+  type: Method
+  source:
+    id: IncrementPacketCounter
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 155
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Increments the global packet counter for statistics
+  example: []
+  syntax:
+    content: public static void IncrementPacketCounter()
+    content.vb: Public Shared Sub IncrementPacketCounter()
+  overload: IDSApp.Helper.OptimizedLogger.IncrementPacketCounter*
+- uid: IDSApp.Helper.OptimizedLogger.GetPacketCount
+  commentId: M:IDSApp.Helper.OptimizedLogger.GetPacketCount
+  id: GetPacketCount
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: GetPacketCount()
+  nameWithType: OptimizedLogger.GetPacketCount()
+  fullName: IDSApp.Helper.OptimizedLogger.GetPacketCount()
+  type: Method
+  source:
+    id: GetPacketCount
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 163
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Gets the current packet count for statistical purposes
+  example: []
+  syntax:
+    content: public static long GetPacketCount()
+    return:
+      type: System.Int64
+    content.vb: Public Shared Function GetPacketCount() As Long
+  overload: IDSApp.Helper.OptimizedLogger.GetPacketCount*
+- uid: IDSApp.Helper.OptimizedLogger.Dispose
+  commentId: M:IDSApp.Helper.OptimizedLogger.Dispose
+  id: Dispose
+  parent: IDSApp.Helper.OptimizedLogger
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: OptimizedLogger.Dispose()
+  fullName: IDSApp.Helper.OptimizedLogger.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 269
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Disposes the logger and flushes any remaining messages
+  example: []
+  syntax:
+    content: public static void Dispose()
+    content.vb: Public Shared Sub Dispose()
+  overload: IDSApp.Helper.OptimizedLogger.Dispose*
+references:
+- uid: IDSApp.Helper
+  commentId: N:IDSApp.Helper
+  href: IDSApp.html
+  name: IDSApp.Helper
+  nameWithType: IDSApp.Helper
+  fullName: IDSApp.Helper
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.Helper.OptimizedLogger.CurrentLogLevel*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.CurrentLogLevel
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_CurrentLogLevel
+  name: CurrentLogLevel
+  nameWithType: OptimizedLogger.CurrentLogLevel
+  fullName: IDSApp.Helper.OptimizedLogger.CurrentLogLevel
+- uid: IDSApp.Helper.OptimizedLogger.LogLevel
+  commentId: T:IDSApp.Helper.OptimizedLogger.LogLevel
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.OptimizedLogger.html
+  name: OptimizedLogger.LogLevel
+  nameWithType: OptimizedLogger.LogLevel
+  fullName: IDSApp.Helper.OptimizedLogger.LogLevel
+  spec.csharp:
+  - uid: IDSApp.Helper.OptimizedLogger
+    name: OptimizedLogger
+    href: IDSApp.Helper.OptimizedLogger.html
+  - name: .
+  - uid: IDSApp.Helper.OptimizedLogger.LogLevel
+    name: LogLevel
+    href: IDSApp.Helper.OptimizedLogger.LogLevel.html
+  spec.vb:
+  - uid: IDSApp.Helper.OptimizedLogger
+    name: OptimizedLogger
+    href: IDSApp.Helper.OptimizedLogger.html
+  - name: .
+  - uid: IDSApp.Helper.OptimizedLogger.LogLevel
+    name: LogLevel
+    href: IDSApp.Helper.OptimizedLogger.LogLevel.html
+- uid: IDSApp.Helper.OptimizedLogger.LogDebug*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.LogDebug
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_LogDebug_System_String_
+  name: LogDebug
+  nameWithType: OptimizedLogger.LogDebug
+  fullName: IDSApp.Helper.OptimizedLogger.LogDebug
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: IDSApp.Helper.OptimizedLogger.LogNetwork*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.LogNetwork
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_LogNetwork_System_String_
+  name: LogNetwork
+  nameWithType: OptimizedLogger.LogNetwork
+  fullName: IDSApp.Helper.OptimizedLogger.LogNetwork
+- uid: IDSApp.Helper.OptimizedLogger.LogQueue*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.LogQueue
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_LogQueue_System_String_
+  name: LogQueue
+  nameWithType: OptimizedLogger.LogQueue
+  fullName: IDSApp.Helper.OptimizedLogger.LogQueue
+- uid: IDSApp.Helper.OptimizedLogger.LogRuleMatch*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.LogRuleMatch
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_LogRuleMatch_System_String_
+  name: LogRuleMatch
+  nameWithType: OptimizedLogger.LogRuleMatch
+  fullName: IDSApp.Helper.OptimizedLogger.LogRuleMatch
+- uid: IDSApp.Helper.OptimizedLogger.LogPerformance*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.LogPerformance
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_LogPerformance_System_String_
+  name: LogPerformance
+  nameWithType: OptimizedLogger.LogPerformance
+  fullName: IDSApp.Helper.OptimizedLogger.LogPerformance
+- uid: IDSApp.Helper.OptimizedLogger.LogRule*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.LogRule
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_LogRule_System_String_
+  name: LogRule
+  nameWithType: OptimizedLogger.LogRule
+  fullName: IDSApp.Helper.OptimizedLogger.LogRule
+- uid: IDSApp.Helper.OptimizedLogger.LogError*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.LogError
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_LogError_System_String_
+  name: LogError
+  nameWithType: OptimizedLogger.LogError
+  fullName: IDSApp.Helper.OptimizedLogger.LogError
+- uid: IDSApp.Helper.OptimizedLogger.LogImportant*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.LogImportant
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_LogImportant_System_String_
+  name: LogImportant
+  nameWithType: OptimizedLogger.LogImportant
+  fullName: IDSApp.Helper.OptimizedLogger.LogImportant
+- uid: IDSApp.Helper.OptimizedLogger.LogPacketStats*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.LogPacketStats
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_LogPacketStats_System_String_
+  name: LogPacketStats
+  nameWithType: OptimizedLogger.LogPacketStats
+  fullName: IDSApp.Helper.OptimizedLogger.LogPacketStats
+- uid: IDSApp.Helper.OptimizedLogger.IncrementPacketCounter*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.IncrementPacketCounter
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_IncrementPacketCounter
+  name: IncrementPacketCounter
+  nameWithType: OptimizedLogger.IncrementPacketCounter
+  fullName: IDSApp.Helper.OptimizedLogger.IncrementPacketCounter
+- uid: IDSApp.Helper.OptimizedLogger.GetPacketCount*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.GetPacketCount
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_GetPacketCount
+  name: GetPacketCount
+  nameWithType: OptimizedLogger.GetPacketCount
+  fullName: IDSApp.Helper.OptimizedLogger.GetPacketCount
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: IDSApp.Helper.OptimizedLogger.Dispose*
+  commentId: Overload:IDSApp.Helper.OptimizedLogger.Dispose
+  href: IDSApp.Helper.OptimizedLogger.html#IDSApp_Helper_OptimizedLogger_Dispose
+  name: Dispose
+  nameWithType: OptimizedLogger.Dispose
+  fullName: IDSApp.Helper.OptimizedLogger.Dispose

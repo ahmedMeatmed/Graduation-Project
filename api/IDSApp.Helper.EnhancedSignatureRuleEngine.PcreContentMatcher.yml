@@ -1,0 +1,535 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+  commentId: T:IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+  id: EnhancedSignatureRuleEngine.PcreContentMatcher
+  parent: IDSApp.Helper
+  children:
+  - IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.#ctor(PCRE.PcreRegex)
+  - IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch(System.Byte[])
+  - IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.Match(System.Byte[],System.String)
+  langs:
+  - csharp
+  - vb
+  name: EnhancedSignatureRuleEngine.PcreContentMatcher
+  nameWithType: EnhancedSignatureRuleEngine.PcreContentMatcher
+  fullName: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+  type: Class
+  source:
+    id: PcreContentMatcher
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedSignatureRuleEngine.cs
+    startLine: 524
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: PCRE-based content matcher implementation for regex pattern matching
+  example: []
+  syntax:
+    content: 'public class EnhancedSignatureRuleEngine.PcreContentMatcher : IContentMatcher'
+    content.vb: Public Class EnhancedSignatureRuleEngine.PcreContentMatcher Implements IContentMatcher
+  inheritance:
+  - System.Object
+  implements:
+  - IDSApp.Helper.IContentMatcher
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.#ctor(PCRE.PcreRegex)
+  commentId: M:IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.#ctor(PCRE.PcreRegex)
+  id: '#ctor(PCRE.PcreRegex)'
+  parent: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+  langs:
+  - csharp
+  - vb
+  name: PcreContentMatcher(PcreRegex)
+  nameWithType: EnhancedSignatureRuleEngine.PcreContentMatcher.PcreContentMatcher(PcreRegex)
+  fullName: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.PcreContentMatcher(PCRE.PcreRegex)
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedSignatureRuleEngine.cs
+    startLine: 532
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Initializes a new PCRE content matcher with compiled regex pattern
+  example: []
+  syntax:
+    content: public PcreContentMatcher(PcreRegex regex)
+    parameters:
+    - id: regex
+      type: PCRE.PcreRegex
+      description: Compiled PCRE regex pattern for efficient matching
+    content.vb: Public Sub New(regex As PcreRegex)
+  overload: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.#ctor*
+  nameWithType.vb: EnhancedSignatureRuleEngine.PcreContentMatcher.New(PcreRegex)
+  fullName.vb: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.New(PCRE.PcreRegex)
+  name.vb: New(PcreRegex)
+- uid: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch(System.Byte[])
+  commentId: M:IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch(System.Byte[])
+  id: IsMatch(System.Byte[])
+  parent: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+  langs:
+  - csharp
+  - vb
+  name: IsMatch(byte[])
+  nameWithType: EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch(byte[])
+  fullName: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch(byte[])
+  type: Method
+  source:
+    id: IsMatch
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedSignatureRuleEngine.cs
+    startLine: 542
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Matches payload against the PCRE pattern using UTF-8 encoding
+  example: []
+  syntax:
+    content: public bool IsMatch(byte[] payload)
+    parameters:
+    - id: payload
+      type: System.Byte[]
+      description: Binary payload to inspect
+    return:
+      type: System.Boolean
+      description: True if pattern matches any part of the payload
+    content.vb: Public Function IsMatch(payload As Byte()) As Boolean
+  overload: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch*
+  nameWithType.vb: EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch(Byte())
+  fullName.vb: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch(Byte())
+  name.vb: IsMatch(Byte())
+- uid: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.Match(System.Byte[],System.String)
+  commentId: M:IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.Match(System.Byte[],System.String)
+  id: Match(System.Byte[],System.String)
+  parent: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+  langs:
+  - csharp
+  - vb
+  name: Match(byte[], string)
+  nameWithType: EnhancedSignatureRuleEngine.PcreContentMatcher.Match(byte[], string)
+  fullName: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.Match(byte[], string)
+  type: Method
+  source:
+    id: Match
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedSignatureRuleEngine.cs
+    startLine: 553
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Interface implementation for protocol-aware content matching
+  example: []
+  syntax:
+    content: public bool Match(byte[] payload, string protocol)
+    parameters:
+    - id: payload
+      type: System.Byte[]
+    - id: protocol
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function Match(payload As Byte(), protocol As String) As Boolean
+  overload: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.Match*
+  implements:
+  - IDSApp.Helper.IContentMatcher.Match(System.Byte[],System.String)
+  nameWithType.vb: EnhancedSignatureRuleEngine.PcreContentMatcher.Match(Byte(), String)
+  fullName.vb: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.Match(Byte(), String)
+  name.vb: Match(Byte(), String)
+references:
+- uid: IDSApp.Helper
+  commentId: N:IDSApp.Helper
+  href: IDSApp.html
+  name: IDSApp.Helper
+  nameWithType: IDSApp.Helper
+  fullName: IDSApp.Helper
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: IDSApp.Helper.IContentMatcher
+  commentId: T:IDSApp.Helper.IContentMatcher
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.IContentMatcher.html
+  name: IContentMatcher
+  nameWithType: IContentMatcher
+  fullName: IDSApp.Helper.IContentMatcher
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.#ctor*
+  commentId: Overload:IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.#ctor
+  href: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.html#IDSApp_Helper_EnhancedSignatureRuleEngine_PcreContentMatcher__ctor_PCRE_PcreRegex_
+  name: PcreContentMatcher
+  nameWithType: EnhancedSignatureRuleEngine.PcreContentMatcher.PcreContentMatcher
+  fullName: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.PcreContentMatcher
+  nameWithType.vb: EnhancedSignatureRuleEngine.PcreContentMatcher.New
+  fullName.vb: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.New
+  name.vb: New
+- uid: PCRE.PcreRegex
+  commentId: T:PCRE.PcreRegex
+  parent: PCRE
+  isExternal: true
+  name: PcreRegex
+  nameWithType: PcreRegex
+  fullName: PCRE.PcreRegex
+- uid: PCRE
+  commentId: N:PCRE
+  isExternal: true
+  name: PCRE
+  nameWithType: PCRE
+  fullName: PCRE
+- uid: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch*
+  commentId: Overload:IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch
+  href: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.html#IDSApp_Helper_EnhancedSignatureRuleEngine_PcreContentMatcher_IsMatch_System_Byte___
+  name: IsMatch
+  nameWithType: EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch
+  fullName: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.IsMatch
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.Match*
+  commentId: Overload:IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.Match
+  href: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.html#IDSApp_Helper_EnhancedSignatureRuleEngine_PcreContentMatcher_Match_System_Byte___System_String_
+  name: Match
+  nameWithType: EnhancedSignatureRuleEngine.PcreContentMatcher.Match
+  fullName: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.Match
+- uid: IDSApp.Helper.IContentMatcher.Match(System.Byte[],System.String)
+  commentId: M:IDSApp.Helper.IContentMatcher.Match(System.Byte[],System.String)
+  parent: IDSApp.Helper.IContentMatcher
+  isExternal: true
+  href: IDSApp.Helper.IContentMatcher.html#IDSApp_Helper_IContentMatcher_Match_System_Byte___System_String_
+  name: Match(byte[], string)
+  nameWithType: IContentMatcher.Match(byte[], string)
+  fullName: IDSApp.Helper.IContentMatcher.Match(byte[], string)
+  nameWithType.vb: IContentMatcher.Match(Byte(), String)
+  fullName.vb: IDSApp.Helper.IContentMatcher.Match(Byte(), String)
+  name.vb: Match(Byte(), String)
+  spec.csharp:
+  - uid: IDSApp.Helper.IContentMatcher.Match(System.Byte[],System.String)
+    name: Match
+    href: IDSApp.Helper.IContentMatcher.html#IDSApp_Helper_IContentMatcher_Match_System_Byte___System_String_
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: IDSApp.Helper.IContentMatcher.Match(System.Byte[],System.String)
+    name: Match
+    href: IDSApp.Helper.IContentMatcher.html#IDSApp_Helper_IContentMatcher_Match_System_Byte___System_String_
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

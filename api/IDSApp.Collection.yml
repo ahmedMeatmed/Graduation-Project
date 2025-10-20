@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Collection
+  commentId: N:IDSApp.Collection
+  id: IDSApp.Collection
+  children:
+  - IDSApp.Collection.SettingCollection
+  langs:
+  - csharp
+  - vb
+  name: IDSApp.Collection
+  nameWithType: IDSApp.Collection
+  fullName: IDSApp.Collection
+  type: Namespace
+  assemblies:
+  - IDSApp
+references:
+- uid: IDSApp.Collection.SettingCollection
+  commentId: T:IDSApp.Collection.SettingCollection
+  parent: IDSApp.Collection
+  href: IDSApp.Collection.SettingCollection.html
+  name: SettingCollection
+  nameWithType: SettingCollection
+  fullName: IDSApp.Collection.SettingCollection
+- uid: IDSApp.Collection
+  commentId: N:IDSApp.Collection
+  href: IDSApp.html
+  name: IDSApp.Collection
+  nameWithType: IDSApp.Collection
+  fullName: IDSApp.Collection
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Collection
+    name: Collection
+    href: IDSApp.Collection.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Collection
+    name: Collection
+    href: IDSApp.Collection.html

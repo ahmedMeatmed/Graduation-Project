@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class IDSCore | mysite </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class IDSCore | mysite ">
+      
+      <meta name="description" content="Main Intrusion Detection System core engine that coordinates packet capture, processing, rule matching, and alert generation. Provides real-time network traffic analysis and threat detection using signature-based and behavioral analysis techniques. Key Responsibilities:  Packet capture from network interfaces or PCAP files Multi-threaded packet processing with worker queues Rule-based threat detection using enhanced signature engine Protocol parsing and analysis (HTTP, DNS, SSH, FTP, etc.) Alert generation and security event logging Performance monitoring and system statistics collection Flow tracking and behavioral analysis DDoS and port scan detection Resource management and cleanup">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="mysite">
+            mysite
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="IDSApp.IDSCore">
+
+
+
+  <h1 id="IDSApp_IDSCore" data-uid="IDSApp.IDSCore" class="text-break">
+Class IDSCore  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="IDSApp.html">IDSApp</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>IDSApp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Main Intrusion Detection System core engine that coordinates packet capture, processing,
+rule matching, and alert generation. Provides real-time network traffic analysis and
+threat detection using signature-based and behavioral analysis techniques.</p>
+<p>Key Responsibilities:</p>
+<ul>
+<li>Packet capture from network interfaces or PCAP files</li>
+<li>Multi-threaded packet processing with worker queues</li>
+<li>Rule-based threat detection using enhanced signature engine</li>
+<li>Protocol parsing and analysis (HTTP, DNS, SSH, FTP, etc.)</li>
+<li>Alert generation and security event logging</li>
+<li>Performance monitoring and system statistics collection</li>
+<li>Flow tracking and behavioral analysis</li>
+<li>DDoS and port scan detection</li>
+<li>Resource management and cleanup</li>
+</ul>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class IDSCore : IDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">IDSCore</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="IDSApp_IDSCore__ctor_" data-uid="IDSApp.IDSCore.#ctor*"></a>
+
+  <h3 id="IDSApp_IDSCore__ctor" data-uid="IDSApp.IDSCore.#ctor">
+  IDSCore()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the IDS core with default configuration
+and performance settings. Sets up rule engines, protocol parsers, and
+internal data structures for efficient packet processing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDSCore()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="IDSApp_IDSCore__ctor_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Initialization Process:</p>
+<ol>
+<li>Creates rule statistics tracker for performance monitoring</li>
+<li>Calculates optimal worker thread count based on system resources</li>
+<li>Initializes packet processing queue with configured capacity</li>
+<li>Prepares protocol parsers for detailed traffic analysis</li>
+<li>Sets up internal data structures for flow tracking and alerting</li>
+</ol>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="IDSApp_IDSCore_Dispose_" data-uid="IDSApp.IDSCore.Dispose*"></a>
+
+  <h3 id="IDSApp_IDSCore_Dispose" data-uid="IDSApp.IDSCore.Dispose">
+  Dispose()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Releases all resources used by the IDS core and ensures proper shutdown</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="IDSApp_IDSCore_Dispose_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Resource Cleanup:</p>
+<ol>
+<li>Disposes of cancellation tokens and timers</li>
+<li>Releases capture device resources</li>
+<li>Clears all internal data structures</li>
+<li>Disposes performance monitoring components</li>
+<li>Suppresses finalization for proper garbage collection</li>
+</ol>
+</div>
+
+
+
+
+  <a id="IDSApp_IDSCore_GetMetrics_" data-uid="IDSApp.IDSCore.GetMetrics*"></a>
+
+  <h3 id="IDSApp_IDSCore_GetMetrics" data-uid="IDSApp.IDSCore.GetMetrics">
+  GetMetrics()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets comprehensive system metrics for monitoring, analysis, and integration
+with external monitoring systems</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, object&gt; GetMetrics()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>Dictionary containing system metrics and performance indicators</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="IDSApp_IDSCore_GetMetrics_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Available Metrics:</p>
+<ol>
+<li>System state and operational status</li>
+<li>Packet processing statistics and rates</li>
+<li>Rule matching efficiency and counts</li>
+<li>Error counts and system health</li>
+<li>Resource usage and queue status</li>
+<li>Worker thread information and load distribution</li>
+<li>Memory consumption and garbage collection stats</li>
+</ol>
+</div>
+
+
+
+
+  <a id="IDSApp_IDSCore_GetStatus_" data-uid="IDSApp.IDSCore.GetStatus*"></a>
+
+  <h3 id="IDSApp_IDSCore_GetStatus" data-uid="IDSApp.IDSCore.GetStatus">
+  GetStatus()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets current system status for monitoring and health checks</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetStatus()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Formatted status string with key performance indicators</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_IDSCore_IsInternalTraffic_" data-uid="IDSApp.IDSCore.IsInternalTraffic*"></a>
+
+  <h3 id="IDSApp_IDSCore_IsInternalTraffic_System_String_System_String_" data-uid="IDSApp.IDSCore.IsInternalTraffic(System.String,System.String)">
+  IsInternalTraffic(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if traffic between two IP addresses is internal network traffic</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInternalTraffic(string srcIp, string dstIp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>srcIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Source IP address</p>
+</dd>
+    <dt><code>dstIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Destination IP address</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True if both IPs are internal, otherwise false</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_IDSCore_Start_" data-uid="IDSApp.IDSCore.Start*"></a>
+
+  <h3 id="IDSApp_IDSCore_Start" data-uid="IDSApp.IDSCore.Start">
+  Start()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Starts the IDS core system including packet capture, worker threads,
+and monitoring timers. Initializes rule engines and begins processing
+network traffic for threat detection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Start()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="IDSApp_IDSCore_Start_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Startup Sequence:</p>
+<ol>
+<li>Validates system state and prevents multiple startups</li>
+<li>Initializes and loads detection rules from database</li>
+<li>Creates worker threads for parallel packet processing</li>
+<li>Starts packet capture from configured source (live interface or PCAP file)</li>
+<li>Activates cleanup and statistics monitoring timers</li>
+<li>Enables performance monitoring and system health checks</li>
+</ol>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></dt>
+    <dd><p>Thrown when IDS is already running</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>Thrown when packet capture initialization fails</p>
+</dd>
+  </dl>
+
+
+
+  <a id="IDSApp_IDSCore_Stop_" data-uid="IDSApp.IDSCore.Stop*"></a>
+
+  <h3 id="IDSApp_IDSCore_Stop" data-uid="IDSApp.IDSCore.Stop">
+  Stop()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Stops the IDS core system gracefully by terminating packet capture,
+stopping worker threads, and cleaning up resources. Ensures all
+pending packets are processed before shutdown.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Stop()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="IDSApp_IDSCore_Stop_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Shutdown Sequence:</p>
+<ol>
+<li>Stops packet capture from network interface</li>
+<li>Cancels worker threads with graceful termination</li>
+<li>Completes packet queue to prevent new additions</li>
+<li>Waits for worker threads to finish processing</li>
+<li>Stops maintenance timers and cleans up resources</li>
+<li>Generates final performance statistics and reports</li>
+</ol>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

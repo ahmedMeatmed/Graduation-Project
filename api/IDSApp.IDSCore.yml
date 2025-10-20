@@ -1,0 +1,829 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.IDSCore
+  commentId: T:IDSApp.IDSCore
+  id: IDSCore
+  parent: IDSApp
+  children:
+  - IDSApp.IDSCore.#ctor
+  - IDSApp.IDSCore.Dispose
+  - IDSApp.IDSCore.GetMetrics
+  - IDSApp.IDSCore.GetStatus
+  - IDSApp.IDSCore.IsInternalTraffic(System.String,System.String)
+  - IDSApp.IDSCore.Start
+  - IDSApp.IDSCore.Stop
+  langs:
+  - csharp
+  - vb
+  name: IDSCore
+  nameWithType: IDSCore
+  fullName: IDSApp.IDSCore
+  type: Class
+  source:
+    id: IDSCore
+    path: G:\C#\IDSApp\IDSApp\IDSCore.cs
+    startLine: 97
+  assemblies:
+  - IDSApp
+  namespace: IDSApp
+  summary: >-
+    Main Intrusion Detection System core engine that coordinates packet capture, processing,
+
+    rule matching, and alert generation. Provides real-time network traffic analysis and
+
+    threat detection using signature-based and behavioral analysis techniques.
+
+
+    Key Responsibilities:
+
+    - Packet capture from network interfaces or PCAP files
+
+    - Multi-threaded packet processing with worker queues
+
+    - Rule-based threat detection using enhanced signature engine
+
+    - Protocol parsing and analysis (HTTP, DNS, SSH, FTP, etc.)
+
+    - Alert generation and security event logging
+
+    - Performance monitoring and system statistics collection
+
+    - Flow tracking and behavioral analysis
+
+    - DDoS and port scan detection
+
+    - Resource management and cleanup
+  example: []
+  syntax:
+    content: 'public class IDSCore : IDisposable'
+    content.vb: Public Class IDSCore Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.IDSCore.#ctor
+  commentId: M:IDSApp.IDSCore.#ctor
+  id: '#ctor'
+  parent: IDSApp.IDSCore
+  langs:
+  - csharp
+  - vb
+  name: IDSCore()
+  nameWithType: IDSCore.IDSCore()
+  fullName: IDSApp.IDSCore.IDSCore()
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\IDSCore.cs
+    startLine: 167
+  assemblies:
+  - IDSApp
+  namespace: IDSApp
+  summary: >-
+    Initializes a new instance of the IDS core with default configuration
+
+    and performance settings. Sets up rule engines, protocol parsers, and
+
+    internal data structures for efficient packet processing.
+  remarks: >-
+    Initialization Process:
+
+    1. Creates rule statistics tracker for performance monitoring
+
+    2. Calculates optimal worker thread count based on system resources
+
+    3. Initializes packet processing queue with configured capacity
+
+    4. Prepares protocol parsers for detailed traffic analysis
+
+    5. Sets up internal data structures for flow tracking and alerting
+  example: []
+  syntax:
+    content: public IDSCore()
+    content.vb: Public Sub New()
+  overload: IDSApp.IDSCore.#ctor*
+  nameWithType.vb: IDSCore.New()
+  fullName.vb: IDSApp.IDSCore.New()
+  name.vb: New()
+- uid: IDSApp.IDSCore.Start
+  commentId: M:IDSApp.IDSCore.Start
+  id: Start
+  parent: IDSApp.IDSCore
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: IDSCore.Start()
+  fullName: IDSApp.IDSCore.Start()
+  type: Method
+  source:
+    id: Start
+    path: G:\C#\IDSApp\IDSApp\IDSCore.cs
+    startLine: 203
+  assemblies:
+  - IDSApp
+  namespace: IDSApp
+  summary: >-
+    Starts the IDS core system including packet capture, worker threads,
+
+    and monitoring timers. Initializes rule engines and begins processing
+
+    network traffic for threat detection.
+  remarks: >-
+    Startup Sequence:
+
+    1. Validates system state and prevents multiple startups
+
+    2. Initializes and loads detection rules from database
+
+    3. Creates worker threads for parallel packet processing
+
+    4. Starts packet capture from configured source (live interface or PCAP file)
+
+    5. Activates cleanup and statistics monitoring timers
+
+    6. Enables performance monitoring and system health checks
+  example: []
+  syntax:
+    content: public void Start()
+    content.vb: Public Sub Start()
+  overload: IDSApp.IDSCore.Start*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when IDS is already running
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: Thrown when packet capture initialization fails
+- uid: IDSApp.IDSCore.Stop
+  commentId: M:IDSApp.IDSCore.Stop
+  id: Stop
+  parent: IDSApp.IDSCore
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: IDSCore.Stop()
+  fullName: IDSApp.IDSCore.Stop()
+  type: Method
+  source:
+    id: Stop
+    path: G:\C#\IDSApp\IDSApp\IDSCore.cs
+    startLine: 637
+  assemblies:
+  - IDSApp
+  namespace: IDSApp
+  summary: >-
+    Stops the IDS core system gracefully by terminating packet capture,
+
+    stopping worker threads, and cleaning up resources. Ensures all
+
+    pending packets are processed before shutdown.
+  remarks: >-
+    Shutdown Sequence:
+
+    1. Stops packet capture from network interface
+
+    2. Cancels worker threads with graceful termination
+
+    3. Completes packet queue to prevent new additions
+
+    4. Waits for worker threads to finish processing
+
+    5. Stops maintenance timers and cleans up resources
+
+    6. Generates final performance statistics and reports
+  example: []
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub [Stop]()
+  overload: IDSApp.IDSCore.Stop*
+- uid: IDSApp.IDSCore.Dispose
+  commentId: M:IDSApp.IDSCore.Dispose
+  id: Dispose
+  parent: IDSApp.IDSCore
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: IDSCore.Dispose()
+  fullName: IDSApp.IDSCore.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: G:\C#\IDSApp\IDSApp\IDSCore.cs
+    startLine: 694
+  assemblies:
+  - IDSApp
+  namespace: IDSApp
+  summary: Releases all resources used by the IDS core and ensures proper shutdown
+  remarks: >-
+    Resource Cleanup:
+
+    1. Disposes of cancellation tokens and timers
+
+    2. Releases capture device resources
+
+    3. Clears all internal data structures
+
+    4. Disposes performance monitoring components
+
+    5. Suppresses finalization for proper garbage collection
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: IDSApp.IDSCore.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: IDSApp.IDSCore.IsInternalTraffic(System.String,System.String)
+  commentId: M:IDSApp.IDSCore.IsInternalTraffic(System.String,System.String)
+  id: IsInternalTraffic(System.String,System.String)
+  parent: IDSApp.IDSCore
+  langs:
+  - csharp
+  - vb
+  name: IsInternalTraffic(string, string)
+  nameWithType: IDSCore.IsInternalTraffic(string, string)
+  fullName: IDSApp.IDSCore.IsInternalTraffic(string, string)
+  type: Method
+  source:
+    id: IsInternalTraffic
+    path: G:\C#\IDSApp\IDSApp\IDSCore.cs
+    startLine: 1945
+  assemblies:
+  - IDSApp
+  namespace: IDSApp
+  summary: Determines if traffic between two IP addresses is internal network traffic
+  example: []
+  syntax:
+    content: public bool IsInternalTraffic(string srcIp, string dstIp)
+    parameters:
+    - id: srcIp
+      type: System.String
+      description: Source IP address
+    - id: dstIp
+      type: System.String
+      description: Destination IP address
+    return:
+      type: System.Boolean
+      description: True if both IPs are internal, otherwise false
+    content.vb: Public Function IsInternalTraffic(srcIp As String, dstIp As String) As Boolean
+  overload: IDSApp.IDSCore.IsInternalTraffic*
+  nameWithType.vb: IDSCore.IsInternalTraffic(String, String)
+  fullName.vb: IDSApp.IDSCore.IsInternalTraffic(String, String)
+  name.vb: IsInternalTraffic(String, String)
+- uid: IDSApp.IDSCore.GetStatus
+  commentId: M:IDSApp.IDSCore.GetStatus
+  id: GetStatus
+  parent: IDSApp.IDSCore
+  langs:
+  - csharp
+  - vb
+  name: GetStatus()
+  nameWithType: IDSCore.GetStatus()
+  fullName: IDSApp.IDSCore.GetStatus()
+  type: Method
+  source:
+    id: GetStatus
+    path: G:\C#\IDSApp\IDSApp\IDSCore.cs
+    startLine: 1968
+  assemblies:
+  - IDSApp
+  namespace: IDSApp
+  summary: Gets current system status for monitoring and health checks
+  example: []
+  syntax:
+    content: public string GetStatus()
+    return:
+      type: System.String
+      description: Formatted status string with key performance indicators
+    content.vb: Public Function GetStatus() As String
+  overload: IDSApp.IDSCore.GetStatus*
+- uid: IDSApp.IDSCore.GetMetrics
+  commentId: M:IDSApp.IDSCore.GetMetrics
+  id: GetMetrics
+  parent: IDSApp.IDSCore
+  langs:
+  - csharp
+  - vb
+  name: GetMetrics()
+  nameWithType: IDSCore.GetMetrics()
+  fullName: IDSApp.IDSCore.GetMetrics()
+  type: Method
+  source:
+    id: GetMetrics
+    path: G:\C#\IDSApp\IDSApp\IDSCore.cs
+    startLine: 1990
+  assemblies:
+  - IDSApp
+  namespace: IDSApp
+  summary: >-
+    Gets comprehensive system metrics for monitoring, analysis, and integration
+
+    with external monitoring systems
+  remarks: >-
+    Available Metrics:
+
+    1. System state and operational status
+
+    2. Packet processing statistics and rates
+
+    3. Rule matching efficiency and counts
+
+    4. Error counts and system health
+
+    5. Resource usage and queue status
+
+    6. Worker thread information and load distribution
+
+    7. Memory consumption and garbage collection stats
+  example: []
+  syntax:
+    content: public Dictionary<string, object> GetMetrics()
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: Dictionary containing system metrics and performance indicators
+    content.vb: Public Function GetMetrics() As Dictionary(Of String, Object)
+  overload: IDSApp.IDSCore.GetMetrics*
+references:
+- uid: IDSApp
+  commentId: N:IDSApp
+  href: IDSApp.html
+  name: IDSApp
+  nameWithType: IDSApp
+  fullName: IDSApp
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.IDSCore.#ctor*
+  commentId: Overload:IDSApp.IDSCore.#ctor
+  href: IDSApp.IDSCore.html#IDSApp_IDSCore__ctor
+  name: IDSCore
+  nameWithType: IDSCore.IDSCore
+  fullName: IDSApp.IDSCore.IDSCore
+  nameWithType.vb: IDSCore.New
+  fullName.vb: IDSApp.IDSCore.New
+  name.vb: New
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: System.Exception
+  commentId: T:System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: IDSApp.IDSCore.Start*
+  commentId: Overload:IDSApp.IDSCore.Start
+  href: IDSApp.IDSCore.html#IDSApp_IDSCore_Start
+  name: Start
+  nameWithType: IDSCore.Start
+  fullName: IDSApp.IDSCore.Start
+- uid: IDSApp.IDSCore.Stop*
+  commentId: Overload:IDSApp.IDSCore.Stop
+  href: IDSApp.IDSCore.html#IDSApp_IDSCore_Stop
+  name: Stop
+  nameWithType: IDSCore.Stop
+  fullName: IDSApp.IDSCore.Stop
+- uid: IDSApp.IDSCore.Dispose*
+  commentId: Overload:IDSApp.IDSCore.Dispose
+  href: IDSApp.IDSCore.html#IDSApp_IDSCore_Dispose
+  name: Dispose
+  nameWithType: IDSCore.Dispose
+  fullName: IDSApp.IDSCore.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: IDSApp.IDSCore.IsInternalTraffic*
+  commentId: Overload:IDSApp.IDSCore.IsInternalTraffic
+  href: IDSApp.IDSCore.html#IDSApp_IDSCore_IsInternalTraffic_System_String_System_String_
+  name: IsInternalTraffic
+  nameWithType: IDSCore.IsInternalTraffic
+  fullName: IDSApp.IDSCore.IsInternalTraffic
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: IDSApp.IDSCore.GetStatus*
+  commentId: Overload:IDSApp.IDSCore.GetStatus
+  href: IDSApp.IDSCore.html#IDSApp_IDSCore_GetStatus
+  name: GetStatus
+  nameWithType: IDSCore.GetStatus
+  fullName: IDSApp.IDSCore.GetStatus
+- uid: IDSApp.IDSCore.GetMetrics*
+  commentId: Overload:IDSApp.IDSCore.GetMetrics
+  href: IDSApp.IDSCore.html#IDSApp_IDSCore_GetMetrics
+  name: GetMetrics
+  nameWithType: IDSCore.GetMetrics
+  fullName: IDSApp.IDSCore.GetMetrics
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

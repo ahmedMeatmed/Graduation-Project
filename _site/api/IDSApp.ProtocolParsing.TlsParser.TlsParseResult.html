@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TlsParser.TlsParseResult | mysite </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TlsParser.TlsParseResult | mysite ">
+      
+      <meta name="description" content="Comprehensive result container for TLS parsing operations Stores extracted TLS handshake data, security analysis results, and threat intelligence matches">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="mysite">
+            mysite
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult">
+
+
+
+  <h1 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult" class="text-break">
+Class TlsParser.TlsParseResult  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="IDSApp.html">IDSApp</a>.<a class="xref" href="IDSApp.ProtocolParsing.html">ProtocolParsing</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>IDSApp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Comprehensive result container for TLS parsing operations
+Stores extracted TLS handshake data, security analysis results, and threat intelligence matches</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TlsParser.TlsParseResult</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TlsParser.TlsParseResult</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_AlertReason_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.AlertReason*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_AlertReason" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.AlertReason">
+  AlertReason
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reasons for security alerts and suspicious flags</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string AlertReason { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_CertificateCN_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.CertificateCN*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_CertificateCN" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.CertificateCN">
+  CertificateCN
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Common Name from server certificate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CertificateCN { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_CertificateFingerprintsSha256_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.CertificateFingerprintsSha256*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_CertificateFingerprintsSha256" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.CertificateFingerprintsSha256">
+  CertificateFingerprintsSha256
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>List of SHA-256 certificate fingerprints in chain</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;string&gt; CertificateFingerprintsSha256 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_CertificateIssuer_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.CertificateIssuer*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_CertificateIssuer" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.CertificateIssuer">
+  CertificateIssuer
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Issuer Common Name from server certificate</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CertificateIssuer { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_CertificateSummary_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.CertificateSummary*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_CertificateSummary" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.CertificateSummary">
+  CertificateSummary
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Summary of certificate chain validation results</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CertificateSummary { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_CipherSuiteSummary_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.CipherSuiteSummary*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_CipherSuiteSummary" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.CipherSuiteSummary">
+  CipherSuiteSummary
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Summary of cipher suites offered by client</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string CipherSuiteSummary { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_IsSuspicious_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.IsSuspicious*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_IsSuspicious" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.IsSuspicious">
+  IsSuspicious
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag indicating suspicious activity detection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSuspicious { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_Ja3Fingerprint_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.Ja3Fingerprint*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_Ja3Fingerprint" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.Ja3Fingerprint">
+  Ja3Fingerprint
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>JA3 TLS fingerprint for client identification</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Ja3Fingerprint { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_MatchedKnownMaliciousJa3_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.MatchedKnownMaliciousJa3*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_MatchedKnownMaliciousJa3" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.MatchedKnownMaliciousJa3">
+  MatchedKnownMaliciousJa3
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Flag indicating match with known malicious JA3 fingerprint</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool MatchedKnownMaliciousJa3 { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_Sni_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.Sni*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_Sni" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.Sni">
+  Sni
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Server Name Indication (SNI) from ClientHello</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Sni { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_SrcIp_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.SrcIp*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_SrcIp" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.SrcIp">
+  SrcIp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Source IP address of TLS connection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SrcIp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_Version_" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.Version*"></a>
+
+  <h3 id="IDSApp_ProtocolParsing_TlsParser_TlsParseResult_Version" data-uid="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.Version">
+  Version
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>TLS protocol version (SSL 3.0, TLS 1.0-1.3)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Version { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

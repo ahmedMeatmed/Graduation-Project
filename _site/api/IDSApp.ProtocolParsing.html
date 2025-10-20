@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace IDSApp.ProtocolParsing | mysite </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace IDSApp.ProtocolParsing | mysite ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="mysite">
+            mysite
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="IDSApp.ProtocolParsing">
+
+  <h1 id="IDSApp_ProtocolParsing" data-uid="IDSApp.ProtocolParsing" class="text-break">Namespace IDSApp.ProtocolParsing</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.BoyerMooreSearch.html">BoyerMooreSearch</a></dt>
+      <dd><p>Efficient binary pattern search using Boyer-Moore algorithm</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.DatabaseParser.html">DatabaseParser</a></dt>
+      <dd><p>Database protocol parser for Intrusion Detection System</p>
+<p>Main Responsibilities:</p>
+<ul>
+<li>Parse and analyze database network traffic for security threats</li>
+<li>Extract SQL queries, commands, and session information</li>
+<li>Detect suspicious database activities and potential attacks</li>
+<li>Generate security logs and alerts for database operations</li>
+</ul>
+<p>Supported Database Engines:</p>
+<ul>
+<li>MySQL (port 3306)</li>
+<li>PostgreSQL (port 5432)</li>
+<li>SQL Server (port 1433)</li>
+<li>Generic SQL traffic analysis</li>
+</ul>
+<p>Security Detection Capabilities:</p>
+<ul>
+<li>Dangerous SQL commands (DROP, DELETE, ALTER, etc.)</li>
+<li>Suspicious query patterns and keywords</li>
+<li>Long-running queries indicating potential attacks</li>
+<li>Unauthorized database access attempts</li>
+<li>SQL injection pattern detection</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Protocol-aware parsing based on destination ports</li>
+<li>Payload fingerprinting for attack correlation</li>
+<li>Session tracking and correlation</li>
+<li>Comprehensive logging with performance considerations</li>
+<li>Memory-efficient payload handling</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.DhcpParser.html">DhcpParser</a></dt>
+      <dd><p>DHCP protocol parser for Intrusion Detection System</p>
+<p>Main Responsibilities:</p>
+<ul>
+<li>Parse and analyze DHCP (Dynamic Host Configuration Protocol) network traffic</li>
+<li>Detect DHCP-based attacks and suspicious activities</li>
+<li>Monitor IP address assignment and lease management</li>
+<li>Identify rogue DHCP servers and IP spoofing attempts</li>
+</ul>
+<p>DHCP Protocol Support:</p>
+<ul>
+<li>Message Types: DISCOVER, OFFER, REQUEST, ACK, NAK, RELEASE, DECLINE, INFORM</li>
+<li>Standard Ports: 67 (server), 68 (client)</li>
+<li>Option parsing and validation</li>
+<li>Lease duration monitoring</li>
+</ul>
+<p>Security Detection Capabilities:</p>
+<ul>
+<li>Rogue DHCP server detection</li>
+<li>IP address spoofing in DHCP transactions</li>
+<li>Suspicious lease duration values</li>
+<li>Malicious content in DHCP options</li>
+<li>DHCP starvation attacks</li>
+<li>Unauthorized IP assignment attempts</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Comprehensive DHCP header parsing</li>
+<li>Option analysis with security validation</li>
+<li>Transaction tracking and correlation</li>
+<li>Timestamp validation and correction</li>
+<li>Payload fingerprinting for attack correlation</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.DnsParser.html">DnsParser</a></dt>
+      <dd><p>DNS protocol parser for Intrusion Detection System</p>
+<p>Main Responsibilities:</p>
+<ul>
+<li>Parse and analyze DNS (Domain Name System) network traffic</li>
+<li>Extract DNS queries and responses for security analysis</li>
+<li>Detect DNS-based attacks and suspicious domain activities</li>
+<li>Monitor DNS tunneling and data exfiltration attempts</li>
+</ul>
+<p>DNS Protocol Support:</p>
+<ul>
+<li>Query Types: A, AAAA, NS, CNAME, PTR, and other common record types</li>
+<li>Standard Port: 53 (UDP/TCP)</li>
+<li>DNS packet structure parsing (header, questions, answers)</li>
+<li>Domain name compression pointer resolution</li>
+</ul>
+<p>Security Detection Capabilities:</p>
+<ul>
+<li>DNS tunneling detection through suspicious domain patterns</li>
+<li>Data exfiltration via DNS queries</li>
+<li>Malicious domain name patterns and DGA (Domain Generation Algorithm)</li>
+<li>Suspicious query types and response patterns</li>
+<li>DNS amplification attack indicators</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Complete DNS packet parsing with compression handling</li>
+<li>Question and answer section analysis</li>
+<li>IPv4 and IPv6 address parsing</li>
+<li>Suspicious domain pattern matching</li>
+<li>Comprehensive logging with forensic data</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.DnsParser.DnsRecord.html">DnsParser.DnsRecord</a></dt>
+      <dd><p>Represents a DNS record with name, type, and response data
+Used for both questions and answers in DNS packets</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.EnhancedHttpHandler.html">EnhancedHttpHandler</a></dt>
+      <dd><p>Advanced HTTP protocol parsing and analysis system for Intrusion Detection System</p>
+<p>Main Responsibilities:</p>
+<ul>
+<li>Parse and analyze HTTP/HTTPS traffic for security threats</li>
+<li>Extract and validate HTTP headers, methods, URLs, and body content</li>
+<li>Detect malicious patterns in HTTP requests and responses</li>
+<li>Integrate TLS/SSL certificate analysis for encrypted traffic</li>
+<li>Provide comprehensive threat scoring and pattern matching</li>
+</ul>
+<p>Security Detection Capabilities:</p>
+<ul>
+<li>Cross-Site Scripting (XSS) attacks</li>
+<li>SQL Injection (SQLi) attempts</li>
+<li>Local File Inclusion (LFI) and path traversal</li>
+<li>Remote Code Execution (RCE) patterns</li>
+<li>Malicious file uploads and binary content</li>
+<li>Base64-encoded payloads and evasion techniques</li>
+<li>Suspicious HTTP headers and user agents</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Complete HTTP protocol parsing with validation</li>
+<li>Multi-layer threat detection (text, binary, regex patterns)</li>
+<li>TLS/SSL certificate fingerprinting and analysis</li>
+<li>Content-type aware inspection optimization</li>
+<li>Comprehensive logging with forensic data</li>
+<li>Performance-optimized pattern matching</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.FtpParseResult.html">FtpParseResult</a></dt>
+      <dd><p>Comprehensive result container for FTP parsing analysis
+Contains parsed command information and security assessment flags</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.FtpParser.html">FtpParser</a></dt>
+      <dd><p>Advanced FTP protocol parser for Intrusion Detection System</p>
+<p>Main Responsibilities:</p>
+<ul>
+<li>Parse and analyze FTP (File Transfer Protocol) commands and transactions</li>
+<li>Extract filenames, paths, and command arguments with security context</li>
+<li>Detect suspicious FTP activities and potential attack patterns</li>
+<li>Normalize paths and identify path traversal attempts</li>
+<li>Flag credential exposure in FTP sessions</li>
+</ul>
+<p>Security Detection Capabilities:</p>
+<ul>
+<li>Path traversal attacks using &quot;../&quot; and absolute paths</li>
+<li>Suspicious file extensions indicating malware/scripts</li>
+<li>Base64-encoded payloads in filenames or arguments</li>
+<li>Suspicious keywords (shell, cmd, webshell, etc.)</li>
+<li>Credential exposure in PASS commands</li>
+<li>Long filenames potentially hiding malicious content</li>
+<li>Percent-encoding evasion techniques</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Comprehensive FTP command parsing with argument extraction</li>
+<li>Path normalization and traversal detection</li>
+<li>File operation classification (RETR, STOR, DELE, etc.)</li>
+<li>Multiple encoding detection and handling</li>
+<li>Suspicious pattern matching with detailed reasoning</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.HttpParser.html">HttpParser</a></dt>
+      <dd><p>Advanced HTTP threat detection engine for Intrusion Detection System</p>
+<p>Detection Methods:</p>
+<ul>
+<li>Text pattern matching for common attack signatures</li>
+<li>Regular expression analysis for complex attack patterns</li>
+<li>Binary pattern detection for executable content</li>
+<li>Base64 decoding and analysis for encoded payloads</li>
+<li>URL decoding for obfuscated attack vectors</li>
+</ul>
+<p>Performance Features:</p>
+<ul>
+<li>Configurable inspection limits to prevent resource exhaustion</li>
+<li>Content-type filtering to skip non-relevant data</li>
+<li>Efficient Boyer-Moore algorithm for binary pattern matching</li>
+<li>Threat scoring with adjustable thresholds</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.HttpParser.ThreatResult.html">HttpParser.ThreatResult</a></dt>
+      <dd><p>Threat analysis result container</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.HttpParserHelpers.html">HttpParserHelpers</a></dt>
+      <dd><p>HTTP parser utility functions</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.ImapParser.html">ImapParser</a></dt>
+      <dd><p>IMAP protocol parser for Intrusion Detection System</p>
+<p>Main Responsibilities:</p>
+<ul>
+<li>Parse and analyze IMAP (Internet Message Access Protocol) traffic</li>
+<li>Monitor email client-server communications for security threats</li>
+<li>Detect suspicious IMAP commands and authentication attempts</li>
+<li>Analyze email content and attachments for malicious patterns</li>
+<li>Track session activity and command sequences</li>
+</ul>
+<p>IMAP Protocol Support:</p>
+<ul>
+<li>Standard IMAP commands (LOGIN, SELECT, FETCH, STORE, APPEND, LOGOUT)</li>
+<li>Email folder operations and message management</li>
+<li>Authentication and session management</li>
+<li>Email content retrieval and analysis</li>
+</ul>
+<p>Security Detection Capabilities:</p>
+<ul>
+<li>Suspicious command patterns and sequences</li>
+<li>Authentication brute force attempts</li>
+<li>Malicious payloads in email content</li>
+<li>Sensitive information extraction attempts</li>
+<li>Protocol anomalies and error conditions</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Comprehensive IMAP command and response parsing</li>
+<li>Configurable suspicious command detection</li>
+<li>Payload fingerprinting for content correlation</li>
+<li>Session tracking and attempt counting</li>
+<li>Real-time threat detection and logging</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.LdapParser.html">LdapParser</a></dt>
+      <dd><p>LDAP protocol parser for Intrusion Detection System</p>
+<p>Main Responsibilities:</p>
+<ul>
+<li>Parse and analyze LDAP (Lightweight Directory Access Protocol) traffic</li>
+<li>Extract directory operations, authentication attempts, and search queries</li>
+<li>Detect suspicious LDAP activities and directory service attacks</li>
+<li>Monitor directory access patterns and privilege escalation attempts</li>
+<li>Analyze distinguished names and filter criteria for security threats</li>
+</ul>
+<p>LDAP Protocol Support:</p>
+<ul>
+<li>Authentication operations (BindRequest, BindResponse)</li>
+<li>Directory search and query operations (SearchRequest, SearchResultEntry)</li>
+<li>Directory modification operations (Add, Modify, Delete)</li>
+<li>ASN.1 BER encoding parsing for LDAP packets</li>
+<li>Standard ports 389 (LDAP) and 636 (LDAPS)</li>
+</ul>
+<p>Security Detection Capabilities:</p>
+<ul>
+<li>Suspicious distinguished name patterns</li>
+<li>Directory traversal and unauthorized access attempts</li>
+<li>LDAP injection and filter manipulation</li>
+<li>Privilege escalation through directory modifications</li>
+<li>Encrypted LDAPS traffic monitoring</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Complete ASN.1 BER protocol parsing</li>
+<li>Operation type extraction and classification</li>
+<li>Distinguished name analysis and validation</li>
+<li>Result code monitoring for failed operations</li>
+<li>Encrypted session detection and handling</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.NetbiosParser.html">NetbiosParser</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.NtpParser.html">NtpParser</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.Pop3Parser.html">Pop3Parser</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.RdpParseResult.html">RdpParseResult</a></dt>
+      <dd><p>Result container for RDP parsing operations
+Stores extracted RDP session data, authentication information, and security analysis results
+Provides utility methods for result validation and formatting</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.RdpParser.html">RdpParser</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.SmbParseResult.html">SmbParseResult</a></dt>
+      <dd><p>Result container for SMB parsing operations
+Stores extracted SMB command data, file information, and security analysis results
+Provides formatted output for logging and monitoring systems</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.SmbParser.html">SmbParser</a></dt>
+      <dd><p>Advanced SMB parser supporting SMB1/SMB2/SMB3,
+extracting command, filename, share, and performing
+IDS checks for suspicious activity.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.SmtpParseResult.html">SmtpParseResult</a></dt>
+      <dd><p>Result container for SMTP parsing operations
+Stores extracted email metadata, security analysis results, and suspicion reasons
+Provides formatted output for logging and email security monitoring</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.SmtpParser.html">SmtpParser</a></dt>
+      <dd><p>Advanced SMTP parser that extracts From, To, Subject,
+decodes MIME headers, handles multi-line subjects,
+and performs basic IDS checks for suspicious content and attachments.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.SnmpParser.html">SnmpParser</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.SshParser.html">SshParser</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.TelnetParseResult.html">TelnetParseResult</a></dt>
+      <dd><p>Result container for Telnet parsing operations
+Stores extracted Telnet commands, connection information, and security analysis results
+Provides utility methods for result validation and formatted output</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.TelnetParser.html">TelnetParser</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.TftpParser.html">TftpParser</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.TlsParser.html">TlsParser</a></dt>
+      <dd><p>Production-ready TLS parser:</p>
+<ul>
+<li>Parses TLS records and handshake (ClientHello, Certificate)</li>
+<li>Extracts SNI, computes a best-effort JA3 fingerprint</li>
+<li>Extracts certificate(s) from Certificate handshake and inspects them (self-signed, expired, SHA256 fingerprint)</li>
+<li>Performs lightweight deep-inspection on ASCII content (configurable)</li>
+<li>Logs results to DB via LogBLL.Insert and saves TLS-ERROR rows also via LogBLL.Insert</li>
+<li>Loads known-malicious JA3s from Ja3Repository (DB-backed)</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.ProtocolParsing.TlsParser.TlsParseResult.html">TlsParser.TlsParseResult</a></dt>
+      <dd><p>Comprehensive result container for TLS parsing operations
+Stores extracted TLS handshake data, security analysis results, and threat intelligence matches</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

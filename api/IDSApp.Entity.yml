@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Entity
+  commentId: N:IDSApp.Entity
+  id: IDSApp.Entity
+  children:
+  - IDSApp.Entity.DbLog
+  - IDSApp.Entity.DhcpLog
+  - IDSApp.Entity.LdapLog
+  - IDSApp.Entity.NetbiosLog
+  - IDSApp.Entity.Settings
+  - IDSApp.Entity.Signatures
+  - IDSApp.Entity.TftpLog
+  langs:
+  - csharp
+  - vb
+  name: IDSApp.Entity
+  nameWithType: IDSApp.Entity
+  fullName: IDSApp.Entity
+  type: Namespace
+  assemblies:
+  - IDSApp
+references:
+- uid: IDSApp.Entity.DbLog
+  commentId: T:IDSApp.Entity.DbLog
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.DbLog.html
+  name: DbLog
+  nameWithType: DbLog
+  fullName: IDSApp.Entity.DbLog
+- uid: IDSApp.Entity.DhcpLog
+  commentId: T:IDSApp.Entity.DhcpLog
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.DhcpLog.html
+  name: DhcpLog
+  nameWithType: DhcpLog
+  fullName: IDSApp.Entity.DhcpLog
+- uid: IDSApp.Entity.LdapLog
+  commentId: T:IDSApp.Entity.LdapLog
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.LdapLog.html
+  name: LdapLog
+  nameWithType: LdapLog
+  fullName: IDSApp.Entity.LdapLog
+- uid: IDSApp.Entity.NetbiosLog
+  commentId: T:IDSApp.Entity.NetbiosLog
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.NetbiosLog.html
+  name: NetbiosLog
+  nameWithType: NetbiosLog
+  fullName: IDSApp.Entity.NetbiosLog
+- uid: IDSApp.Entity.Settings
+  commentId: T:IDSApp.Entity.Settings
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.Settings.html
+  name: Settings
+  nameWithType: Settings
+  fullName: IDSApp.Entity.Settings
+- uid: IDSApp.Entity.Signatures
+  commentId: T:IDSApp.Entity.Signatures
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.Signatures.html
+  name: Signatures
+  nameWithType: Signatures
+  fullName: IDSApp.Entity.Signatures
+- uid: IDSApp.Entity.TftpLog
+  commentId: T:IDSApp.Entity.TftpLog
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.TftpLog.html
+  name: TftpLog
+  nameWithType: TftpLog
+  fullName: IDSApp.Entity.TftpLog
+- uid: IDSApp.Entity
+  commentId: N:IDSApp.Entity
+  href: IDSApp.html
+  name: IDSApp.Entity
+  nameWithType: IDSApp.Entity
+  fullName: IDSApp.Entity
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html

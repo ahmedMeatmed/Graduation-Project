@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class SettingBLL | mysite </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class SettingBLL | mysite ">
+      
+      <meta name="description" content="Provides business logic layer operations for application settings management with built-in caching for performance. This class serves as a facade to the data access layer with additional caching capabilities for frequently accessed settings.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="mysite">
+            mysite
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="IDSApp.BLL.SettingBLL">
+
+
+
+  <h1 id="IDSApp_BLL_SettingBLL" data-uid="IDSApp.BLL.SettingBLL" class="text-break">
+Class SettingBLL  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="IDSApp.html">IDSApp</a>.<a class="xref" href="IDSApp.BLL.html">BLL</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>IDSApp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Provides business logic layer operations for application settings management with built-in caching for performance.
+This class serves as a facade to the data access layer with additional caching capabilities for frequently accessed settings.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class SettingBLL</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">SettingBLL</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="IDSApp_BLL_SettingBLL_Delete_" data-uid="IDSApp.BLL.SettingBLL.Delete*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_Delete_System_Int32_" data-uid="IDSApp.BLL.SettingBLL.Delete(System.Int32)">
+  Delete(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Deletes a specific setting from the system and clears the settings cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Delete(int id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The SettingID of the setting to delete.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the setting was successfully deleted; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetAll_" data-uid="IDSApp.BLL.SettingBLL.GetAll*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetAll" data-uid="IDSApp.BLL.SettingBLL.GetAll">
+  GetAll()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves all settings from the system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SettingCollection GetAll()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IDSApp.Collection.SettingCollection.html">SettingCollection</a></dt>
+    <dd><p>A collection of Settings objects containing all configuration settings in the system.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetAllCachedSettings_" data-uid="IDSApp.BLL.SettingBLL.GetAllCachedSettings*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetAllCachedSettings" data-uid="IDSApp.BLL.SettingBLL.GetAllCachedSettings">
+  GetAllCachedSettings()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves all settings as a dictionary from the cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Dictionary&lt;string, string&gt; GetAllCachedSettings()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd><p>A dictionary containing all cached setting names and values.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetById_" data-uid="IDSApp.BLL.SettingBLL.GetById*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetById_System_Int32_" data-uid="IDSApp.BLL.SettingBLL.GetById(System.Int32)">
+  GetById(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a specific setting by its unique identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Settings GetById(int id)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The SettingID of the setting to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IDSApp.Entity.Settings.html">Settings</a></dt>
+    <dd><p>A Settings object if found; otherwise, null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetByName_" data-uid="IDSApp.BLL.SettingBLL.GetByName*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetByName_System_String_" data-uid="IDSApp.BLL.SettingBLL.GetByName(System.String)">
+  GetByName(string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a specific setting by its name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Settings GetByName(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the setting to retrieve.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IDSApp.Entity.Settings.html">Settings</a></dt>
+    <dd><p>A Settings object if found; otherwise, null.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetDeauthThreshold_" data-uid="IDSApp.BLL.SettingBLL.GetDeauthThreshold*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetDeauthThreshold" data-uid="IDSApp.BLL.SettingBLL.GetDeauthThreshold">
+  GetDeauthThreshold()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the deauthentication attack detection threshold.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetDeauthThreshold()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of deauth frames required to trigger an alert.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetEnablePerformanceLogging_" data-uid="IDSApp.BLL.SettingBLL.GetEnablePerformanceLogging*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetEnablePerformanceLogging" data-uid="IDSApp.BLL.SettingBLL.GetEnablePerformanceLogging">
+  GetEnablePerformanceLogging()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the performance logging enablement setting.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetEnablePerformanceLogging()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if performance logging is enabled; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetHttpBodyThreatThreshold_" data-uid="IDSApp.BLL.SettingBLL.GetHttpBodyThreatThreshold*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetHttpBodyThreatThreshold" data-uid="IDSApp.BLL.SettingBLL.GetHttpBodyThreatThreshold">
+  GetHttpBodyThreatThreshold()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the HTTP body threat detection threshold.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetHttpBodyThreatThreshold()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of threat indicators in HTTP body required to trigger an alert.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetInternalIpPrefix_" data-uid="IDSApp.BLL.SettingBLL.GetInternalIpPrefix*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetInternalIpPrefix" data-uid="IDSApp.BLL.SettingBLL.GetInternalIpPrefix">
+  GetInternalIpPrefix()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the internal IP address prefix used for network segmentation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetInternalIpPrefix()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The IP address prefix for internal network addresses.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetNetworkInterface_" data-uid="IDSApp.BLL.SettingBLL.GetNetworkInterface*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetNetworkInterface" data-uid="IDSApp.BLL.SettingBLL.GetNetworkInterface">
+  GetNetworkInterface()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the network interface setting for packet capture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetNetworkInterface()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the network interface to monitor.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetPortScanThreshold_" data-uid="IDSApp.BLL.SettingBLL.GetPortScanThreshold*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetPortScanThreshold" data-uid="IDSApp.BLL.SettingBLL.GetPortScanThreshold">
+  GetPortScanThreshold()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves the port scan detection threshold.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetPortScanThreshold()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of port scan attempts required to trigger an alert.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetSetting_" data-uid="IDSApp.BLL.SettingBLL.GetSetting*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetSetting_System_String_System_String_" data-uid="IDSApp.BLL.SettingBLL.GetSetting(System.String,System.String)">
+  GetSetting(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a setting value from cache with optional default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetSetting(string key, string defaultValue = &quot;&quot;)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the setting to retrieve.</p>
+</dd>
+    <dt><code>defaultValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The default value to return if the setting is not found.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The setting value if found; otherwise, the specified default value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_GetSetting_" data-uid="IDSApp.BLL.SettingBLL.GetSetting*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_GetSetting__1_System_String___0_" data-uid="IDSApp.BLL.SettingBLL.GetSetting``1(System.String,``0)">
+  GetSetting&lt;T&gt;(string, T)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a typed setting value from cache with optional default value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T GetSetting&lt;T&gt;(string key, T defaultValue = default)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the setting to retrieve.</p>
+</dd>
+    <dt><code>defaultValue</code> <span class="xref">T</span></dt>
+    <dd><p>The default value to return if the setting is not found or conversion fails.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The typed setting value if found and convertible; otherwise, the specified default value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The type to convert the setting value to (e.g., int, bool, double).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_Insert_" data-uid="IDSApp.BLL.SettingBLL.Insert*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_Insert_System_String_System_String_System_String_System_String_System_String_System_DateTime_" data-uid="IDSApp.BLL.SettingBLL.Insert(System.String,System.String,System.String,System.String,System.String,System.DateTime)">
+  Insert(string, string, string, string, string, DateTime)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a new setting in the system and clears the settings cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool Insert(string settingName, string settingValue, string dataType, string category, string desc, DateTime lastModified)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>settingName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The unique name identifier for the setting.</p>
+</dd>
+    <dt><code>settingValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value of the setting.</p>
+</dd>
+    <dt><code>dataType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The data type of the setting value (e.g., String, Integer, Boolean).</p>
+</dd>
+    <dt><code>category</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The category grouping for the setting (e.g., Network, Security, Performance).</p>
+</dd>
+    <dt><code>desc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>A description of what the setting controls.</p>
+</dd>
+    <dt><code>lastModified</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The date and time when the setting was last modified.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>true if the setting was successfully created; otherwise, false.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_RefreshSettingsCache_" data-uid="IDSApp.BLL.SettingBLL.RefreshSettingsCache*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_RefreshSettingsCache" data-uid="IDSApp.BLL.SettingBLL.RefreshSettingsCache">
+  RefreshSettingsCache()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Forces a refresh of the settings cache by clearing and reloading all settings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RefreshSettingsCache()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_BLL_SettingBLL_Update_" data-uid="IDSApp.BLL.SettingBLL.Update*"></a>
+
+  <h3 id="IDSApp_BLL_SettingBLL_Update_System_Int32_System_String_System_String_System_String_System_String_System_String_System_DateTime_" data-uid="IDSApp.BLL.SettingBLL.Update(System.Int32,System.String,System.String,System.String,System.String,System.String,System.DateTime)">
+  Update(int, string, string, string, string, string, DateTime)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates an existing setting and clears the settings cache.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int Update(int id, string settingName, string settingValue, string dataType, string category, string desc, DateTime lastModified)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>id</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The SettingID of the setting to update.</p>
+</dd>
+    <dt><code>settingName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The updated setting name.</p>
+</dd>
+    <dt><code>settingValue</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The updated setting value.</p>
+</dd>
+    <dt><code>dataType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The updated data type.</p>
+</dd>
+    <dt><code>category</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The updated category.</p>
+</dd>
+    <dt><code>desc</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The updated description.</p>
+</dd>
+    <dt><code>lastModified</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>The updated last modified timestamp.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The number of rows affected by the update operation.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

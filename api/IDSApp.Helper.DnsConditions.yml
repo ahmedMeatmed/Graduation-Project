@@ -1,0 +1,465 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Helper.DnsConditions
+  commentId: T:IDSApp.Helper.DnsConditions
+  id: DnsConditions
+  parent: IDSApp.Helper
+  children:
+  - IDSApp.Helper.DnsConditions.Qname
+  - IDSApp.Helper.DnsConditions.Qtype
+  - IDSApp.Helper.DnsConditions.RCode
+  - IDSApp.Helper.DnsConditions.RData
+  - IDSApp.Helper.DnsConditions.RRType
+  langs:
+  - csharp
+  - vb
+  name: DnsConditions
+  nameWithType: DnsConditions
+  fullName: IDSApp.Helper.DnsConditions
+  type: Class
+  source:
+    id: DnsConditions
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedRuleParser.cs
+    startLine: 813
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: public class DnsConditions
+    content.vb: Public Class DnsConditions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.Helper.DnsConditions.Qname
+  commentId: P:IDSApp.Helper.DnsConditions.Qname
+  id: Qname
+  parent: IDSApp.Helper.DnsConditions
+  langs:
+  - csharp
+  - vb
+  name: Qname
+  nameWithType: DnsConditions.Qname
+  fullName: IDSApp.Helper.DnsConditions.Qname
+  type: Property
+  source:
+    id: Qname
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedRuleParser.cs
+    startLine: 815
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: public string Qname { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Qname As String
+  overload: IDSApp.Helper.DnsConditions.Qname*
+- uid: IDSApp.Helper.DnsConditions.Qtype
+  commentId: P:IDSApp.Helper.DnsConditions.Qtype
+  id: Qtype
+  parent: IDSApp.Helper.DnsConditions
+  langs:
+  - csharp
+  - vb
+  name: Qtype
+  nameWithType: DnsConditions.Qtype
+  fullName: IDSApp.Helper.DnsConditions.Qtype
+  type: Property
+  source:
+    id: Qtype
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedRuleParser.cs
+    startLine: 816
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: public string Qtype { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Qtype As String
+  overload: IDSApp.Helper.DnsConditions.Qtype*
+- uid: IDSApp.Helper.DnsConditions.RRType
+  commentId: P:IDSApp.Helper.DnsConditions.RRType
+  id: RRType
+  parent: IDSApp.Helper.DnsConditions
+  langs:
+  - csharp
+  - vb
+  name: RRType
+  nameWithType: DnsConditions.RRType
+  fullName: IDSApp.Helper.DnsConditions.RRType
+  type: Property
+  source:
+    id: RRType
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedRuleParser.cs
+    startLine: 817
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: public string RRType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RRType As String
+  overload: IDSApp.Helper.DnsConditions.RRType*
+- uid: IDSApp.Helper.DnsConditions.RData
+  commentId: P:IDSApp.Helper.DnsConditions.RData
+  id: RData
+  parent: IDSApp.Helper.DnsConditions
+  langs:
+  - csharp
+  - vb
+  name: RData
+  nameWithType: DnsConditions.RData
+  fullName: IDSApp.Helper.DnsConditions.RData
+  type: Property
+  source:
+    id: RData
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedRuleParser.cs
+    startLine: 818
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: public string RData { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RData As String
+  overload: IDSApp.Helper.DnsConditions.RData*
+- uid: IDSApp.Helper.DnsConditions.RCode
+  commentId: P:IDSApp.Helper.DnsConditions.RCode
+  id: RCode
+  parent: IDSApp.Helper.DnsConditions
+  langs:
+  - csharp
+  - vb
+  name: RCode
+  nameWithType: DnsConditions.RCode
+  fullName: IDSApp.Helper.DnsConditions.RCode
+  type: Property
+  source:
+    id: RCode
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedRuleParser.cs
+    startLine: 819
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: public string RCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RCode As String
+  overload: IDSApp.Helper.DnsConditions.RCode*
+references:
+- uid: IDSApp.Helper
+  commentId: N:IDSApp.Helper
+  href: IDSApp.html
+  name: IDSApp.Helper
+  nameWithType: IDSApp.Helper
+  fullName: IDSApp.Helper
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.Helper.DnsConditions.Qname*
+  commentId: Overload:IDSApp.Helper.DnsConditions.Qname
+  href: IDSApp.Helper.DnsConditions.html#IDSApp_Helper_DnsConditions_Qname
+  name: Qname
+  nameWithType: DnsConditions.Qname
+  fullName: IDSApp.Helper.DnsConditions.Qname
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: IDSApp.Helper.DnsConditions.Qtype*
+  commentId: Overload:IDSApp.Helper.DnsConditions.Qtype
+  href: IDSApp.Helper.DnsConditions.html#IDSApp_Helper_DnsConditions_Qtype
+  name: Qtype
+  nameWithType: DnsConditions.Qtype
+  fullName: IDSApp.Helper.DnsConditions.Qtype
+- uid: IDSApp.Helper.DnsConditions.RRType*
+  commentId: Overload:IDSApp.Helper.DnsConditions.RRType
+  href: IDSApp.Helper.DnsConditions.html#IDSApp_Helper_DnsConditions_RRType
+  name: RRType
+  nameWithType: DnsConditions.RRType
+  fullName: IDSApp.Helper.DnsConditions.RRType
+- uid: IDSApp.Helper.DnsConditions.RData*
+  commentId: Overload:IDSApp.Helper.DnsConditions.RData
+  href: IDSApp.Helper.DnsConditions.html#IDSApp_Helper_DnsConditions_RData
+  name: RData
+  nameWithType: DnsConditions.RData
+  fullName: IDSApp.Helper.DnsConditions.RData
+- uid: IDSApp.Helper.DnsConditions.RCode*
+  commentId: Overload:IDSApp.Helper.DnsConditions.RCode
+  href: IDSApp.Helper.DnsConditions.html#IDSApp_Helper_DnsConditions_RCode
+  name: RCode
+  nameWithType: DnsConditions.RCode
+  fullName: IDSApp.Helper.DnsConditions.RCode

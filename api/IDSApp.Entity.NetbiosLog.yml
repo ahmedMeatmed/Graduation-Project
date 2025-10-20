@@ -1,0 +1,880 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Entity.NetbiosLog
+  commentId: T:IDSApp.Entity.NetbiosLog
+  id: NetbiosLog
+  parent: IDSApp.Entity
+  children:
+  - IDSApp.Entity.NetbiosLog.#ctor
+  - IDSApp.Entity.NetbiosLog.#ctor(IDSApp.Entity.NetbiosLog)
+  - IDSApp.Entity.NetbiosLog.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String)
+  - IDSApp.Entity.NetbiosLog.Clone
+  - IDSApp.Entity.NetbiosLog.DestinationIp
+  - IDSApp.Entity.NetbiosLog.LogId
+  - IDSApp.Entity.NetbiosLog.NetbiosLogId
+  - IDSApp.Entity.NetbiosLog.QueryName
+  - IDSApp.Entity.NetbiosLog.QueryType
+  - IDSApp.Entity.NetbiosLog.ResponderIp
+  - IDSApp.Entity.NetbiosLog.Response
+  - IDSApp.Entity.NetbiosLog.SessionId
+  - IDSApp.Entity.NetbiosLog.SourceIp
+  - IDSApp.Entity.NetbiosLog.Status
+  - IDSApp.Entity.NetbiosLog.Timestamp
+  langs:
+  - csharp
+  - vb
+  name: NetbiosLog
+  nameWithType: NetbiosLog
+  fullName: IDSApp.Entity.NetbiosLog
+  type: Class
+  source:
+    id: NetbiosLog
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 9
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: >-
+    Represents a NetBIOS (Network Basic Input/Output System) log entry captured by the Intrusion Detection System.
+
+    Contains information about NetBIOS name resolution and service discovery operations for monitoring
+
+    Windows network browsing, host discovery, and detecting network reconnaissance activities.
+  example: []
+  syntax:
+    content: public class NetbiosLog
+    content.vb: Public Class NetbiosLog
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.Entity.NetbiosLog.NetbiosLogId
+  commentId: P:IDSApp.Entity.NetbiosLog.NetbiosLogId
+  id: NetbiosLogId
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: NetbiosLogId
+  nameWithType: NetbiosLog.NetbiosLogId
+  fullName: IDSApp.Entity.NetbiosLog.NetbiosLogId
+  type: Property
+  source:
+    id: NetbiosLogId
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 12
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Unique identifier for the NetBIOS log entry
+  example: []
+  syntax:
+    content: public int NetbiosLogId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NetbiosLogId As Integer
+  overload: IDSApp.Entity.NetbiosLog.NetbiosLogId*
+- uid: IDSApp.Entity.NetbiosLog.LogId
+  commentId: P:IDSApp.Entity.NetbiosLog.LogId
+  id: LogId
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: LogId
+  nameWithType: NetbiosLog.LogId
+  fullName: IDSApp.Entity.NetbiosLog.LogId
+  type: Property
+  source:
+    id: LogId
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 15
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Reference identifier linking to the main system log entry
+  example: []
+  syntax:
+    content: public int LogId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property LogId As Integer
+  overload: IDSApp.Entity.NetbiosLog.LogId*
+- uid: IDSApp.Entity.NetbiosLog.QueryName
+  commentId: P:IDSApp.Entity.NetbiosLog.QueryName
+  id: QueryName
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: QueryName
+  nameWithType: NetbiosLog.QueryName
+  fullName: IDSApp.Entity.NetbiosLog.QueryName
+  type: Property
+  source:
+    id: QueryName
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 18
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: NetBIOS name being queried or resolved
+  example: []
+  syntax:
+    content: public string QueryName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property QueryName As String
+  overload: IDSApp.Entity.NetbiosLog.QueryName*
+- uid: IDSApp.Entity.NetbiosLog.QueryType
+  commentId: P:IDSApp.Entity.NetbiosLog.QueryType
+  id: QueryType
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: QueryType
+  nameWithType: NetbiosLog.QueryType
+  fullName: IDSApp.Entity.NetbiosLog.QueryType
+  type: Property
+  source:
+    id: QueryType
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 21
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Type of NetBIOS query (e.g., NBSTAT, NBTNAME, SESSION, DATAGRAM)
+  example: []
+  syntax:
+    content: public string QueryType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property QueryType As String
+  overload: IDSApp.Entity.NetbiosLog.QueryType*
+- uid: IDSApp.Entity.NetbiosLog.Response
+  commentId: P:IDSApp.Entity.NetbiosLog.Response
+  id: Response
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: Response
+  nameWithType: NetbiosLog.Response
+  fullName: IDSApp.Entity.NetbiosLog.Response
+  type: Property
+  source:
+    id: Response
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 24
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Response data from the NetBIOS query, including resolved names and services
+  example: []
+  syntax:
+    content: public string Response { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Response As String
+  overload: IDSApp.Entity.NetbiosLog.Response*
+- uid: IDSApp.Entity.NetbiosLog.ResponderIp
+  commentId: P:IDSApp.Entity.NetbiosLog.ResponderIp
+  id: ResponderIp
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: ResponderIp
+  nameWithType: NetbiosLog.ResponderIp
+  fullName: IDSApp.Entity.NetbiosLog.ResponderIp
+  type: Property
+  source:
+    id: ResponderIp
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 27
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: IP address of the system responding to the NetBIOS query
+  example: []
+  syntax:
+    content: public string ResponderIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ResponderIp As String
+  overload: IDSApp.Entity.NetbiosLog.ResponderIp*
+- uid: IDSApp.Entity.NetbiosLog.SourceIp
+  commentId: P:IDSApp.Entity.NetbiosLog.SourceIp
+  id: SourceIp
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: SourceIp
+  nameWithType: NetbiosLog.SourceIp
+  fullName: IDSApp.Entity.NetbiosLog.SourceIp
+  type: Property
+  source:
+    id: SourceIp
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 30
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Source IP address initiating the NetBIOS query
+  example: []
+  syntax:
+    content: public string SourceIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceIp As String
+  overload: IDSApp.Entity.NetbiosLog.SourceIp*
+- uid: IDSApp.Entity.NetbiosLog.DestinationIp
+  commentId: P:IDSApp.Entity.NetbiosLog.DestinationIp
+  id: DestinationIp
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: DestinationIp
+  nameWithType: NetbiosLog.DestinationIp
+  fullName: IDSApp.Entity.NetbiosLog.DestinationIp
+  type: Property
+  source:
+    id: DestinationIp
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 33
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Destination IP address for the NetBIOS query (often broadcast address)
+  example: []
+  syntax:
+    content: public string DestinationIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DestinationIp As String
+  overload: IDSApp.Entity.NetbiosLog.DestinationIp*
+- uid: IDSApp.Entity.NetbiosLog.Timestamp
+  commentId: P:IDSApp.Entity.NetbiosLog.Timestamp
+  id: Timestamp
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: NetbiosLog.Timestamp
+  fullName: IDSApp.Entity.NetbiosLog.Timestamp
+  type: Property
+  source:
+    id: Timestamp
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 36
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Timestamp when the NetBIOS operation occurred
+  example: []
+  syntax:
+    content: public DateTime Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Timestamp As Date
+  overload: IDSApp.Entity.NetbiosLog.Timestamp*
+- uid: IDSApp.Entity.NetbiosLog.SessionId
+  commentId: P:IDSApp.Entity.NetbiosLog.SessionId
+  id: SessionId
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: SessionId
+  nameWithType: NetbiosLog.SessionId
+  fullName: IDSApp.Entity.NetbiosLog.SessionId
+  type: Property
+  source:
+    id: SessionId
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 39
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Unique session identifier for tracking NetBIOS conversations
+  example: []
+  syntax:
+    content: public string SessionId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SessionId As String
+  overload: IDSApp.Entity.NetbiosLog.SessionId*
+- uid: IDSApp.Entity.NetbiosLog.Status
+  commentId: P:IDSApp.Entity.NetbiosLog.Status
+  id: Status
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: NetbiosLog.Status
+  fullName: IDSApp.Entity.NetbiosLog.Status
+  type: Property
+  source:
+    id: Status
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 42
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Operation status (e.g., Success, Failed, Timeout, NoResponse)
+  example: []
+  syntax:
+    content: public string Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Status As String
+  overload: IDSApp.Entity.NetbiosLog.Status*
+- uid: IDSApp.Entity.NetbiosLog.#ctor
+  commentId: M:IDSApp.Entity.NetbiosLog.#ctor
+  id: '#ctor'
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: NetbiosLog()
+  nameWithType: NetbiosLog.NetbiosLog()
+  fullName: IDSApp.Entity.NetbiosLog.NetbiosLog()
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 47
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Initializes a new instance of the NetbiosLog class with default values.
+  example: []
+  syntax:
+    content: public NetbiosLog()
+    content.vb: Public Sub New()
+  overload: IDSApp.Entity.NetbiosLog.#ctor*
+  nameWithType.vb: NetbiosLog.New()
+  fullName.vb: IDSApp.Entity.NetbiosLog.New()
+  name.vb: New()
+- uid: IDSApp.Entity.NetbiosLog.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String)
+  commentId: M:IDSApp.Entity.NetbiosLog.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String)
+  id: '#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String)'
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: NetbiosLog(int, int, string, string, string, string, string, string, DateTime, string, string)
+  nameWithType: NetbiosLog.NetbiosLog(int, int, string, string, string, string, string, string, DateTime, string, string)
+  fullName: IDSApp.Entity.NetbiosLog.NetbiosLog(int, int, string, string, string, string, string, string, System.DateTime, string, string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 63
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Initializes a new instance of the NetbiosLog class with specified parameters.
+  example: []
+  syntax:
+    content: public NetbiosLog(int netbiosLogId, int logId, string queryName, string queryType, string response, string responderIp, string sourceIp, string destinationIp, DateTime timestamp, string sessionId, string status)
+    parameters:
+    - id: netbiosLogId
+      type: System.Int32
+      description: Unique identifier for the NetBIOS log entry
+    - id: logId
+      type: System.Int32
+      description: Reference identifier linking to the main system log
+    - id: queryName
+      type: System.String
+      description: NetBIOS name being queried or resolved
+    - id: queryType
+      type: System.String
+      description: Type of NetBIOS query
+    - id: response
+      type: System.String
+      description: Response data from the NetBIOS query
+    - id: responderIp
+      type: System.String
+      description: IP address of the system responding to the query
+    - id: sourceIp
+      type: System.String
+      description: Source IP address initiating the query
+    - id: destinationIp
+      type: System.String
+      description: Destination IP address for the query
+    - id: timestamp
+      type: System.DateTime
+      description: When the NetBIOS operation occurred
+    - id: sessionId
+      type: System.String
+      description: Unique session identifier for tracking conversations
+    - id: status
+      type: System.String
+      description: Operation status
+    content.vb: Public Sub New(netbiosLogId As Integer, logId As Integer, queryName As String, queryType As String, response As String, responderIp As String, sourceIp As String, destinationIp As String, timestamp As Date, sessionId As String, status As String)
+  overload: IDSApp.Entity.NetbiosLog.#ctor*
+  nameWithType.vb: NetbiosLog.New(Integer, Integer, String, String, String, String, String, String, Date, String, String)
+  fullName.vb: IDSApp.Entity.NetbiosLog.New(Integer, Integer, String, String, String, String, String, String, Date, String, String)
+  name.vb: New(Integer, Integer, String, String, String, String, String, String, Date, String, String)
+- uid: IDSApp.Entity.NetbiosLog.#ctor(IDSApp.Entity.NetbiosLog)
+  commentId: M:IDSApp.Entity.NetbiosLog.#ctor(IDSApp.Entity.NetbiosLog)
+  id: '#ctor(IDSApp.Entity.NetbiosLog)'
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: NetbiosLog(NetbiosLog)
+  nameWithType: NetbiosLog.NetbiosLog(NetbiosLog)
+  fullName: IDSApp.Entity.NetbiosLog.NetbiosLog(IDSApp.Entity.NetbiosLog)
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 84
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Initializes a new instance of the NetbiosLog class as a copy of an existing NetbiosLog object.
+  example: []
+  syntax:
+    content: public NetbiosLog(NetbiosLog n)
+    parameters:
+    - id: n
+      type: IDSApp.Entity.NetbiosLog
+      description: Source NetbiosLog object to copy from
+    content.vb: Public Sub New(n As NetbiosLog)
+  overload: IDSApp.Entity.NetbiosLog.#ctor*
+  nameWithType.vb: NetbiosLog.New(NetbiosLog)
+  fullName.vb: IDSApp.Entity.NetbiosLog.New(IDSApp.Entity.NetbiosLog)
+  name.vb: New(NetbiosLog)
+- uid: IDSApp.Entity.NetbiosLog.Clone
+  commentId: M:IDSApp.Entity.NetbiosLog.Clone
+  id: Clone
+  parent: IDSApp.Entity.NetbiosLog
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: NetbiosLog.Clone()
+  fullName: IDSApp.Entity.NetbiosLog.Clone()
+  type: Method
+  source:
+    id: Clone
+    path: G:\C#\IDSApp\IDSApp\Entity\NetbiosLog.cs
+    startLine: 93
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Creates a deep copy of the current NetbiosLog instance.
+  example: []
+  syntax:
+    content: public NetbiosLog Clone()
+    return:
+      type: IDSApp.Entity.NetbiosLog
+      description: A new NetbiosLog object that is an exact copy of the current instance
+    content.vb: Public Function Clone() As NetbiosLog
+  overload: IDSApp.Entity.NetbiosLog.Clone*
+references:
+- uid: IDSApp.Entity
+  commentId: N:IDSApp.Entity
+  href: IDSApp.html
+  name: IDSApp.Entity
+  nameWithType: IDSApp.Entity
+  fullName: IDSApp.Entity
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.Entity.NetbiosLog.NetbiosLogId*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.NetbiosLogId
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_NetbiosLogId
+  name: NetbiosLogId
+  nameWithType: NetbiosLog.NetbiosLogId
+  fullName: IDSApp.Entity.NetbiosLog.NetbiosLogId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: IDSApp.Entity.NetbiosLog.LogId*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.LogId
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_LogId
+  name: LogId
+  nameWithType: NetbiosLog.LogId
+  fullName: IDSApp.Entity.NetbiosLog.LogId
+- uid: IDSApp.Entity.NetbiosLog.QueryName*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.QueryName
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_QueryName
+  name: QueryName
+  nameWithType: NetbiosLog.QueryName
+  fullName: IDSApp.Entity.NetbiosLog.QueryName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: IDSApp.Entity.NetbiosLog.QueryType*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.QueryType
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_QueryType
+  name: QueryType
+  nameWithType: NetbiosLog.QueryType
+  fullName: IDSApp.Entity.NetbiosLog.QueryType
+- uid: IDSApp.Entity.NetbiosLog.Response*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.Response
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_Response
+  name: Response
+  nameWithType: NetbiosLog.Response
+  fullName: IDSApp.Entity.NetbiosLog.Response
+- uid: IDSApp.Entity.NetbiosLog.ResponderIp*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.ResponderIp
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_ResponderIp
+  name: ResponderIp
+  nameWithType: NetbiosLog.ResponderIp
+  fullName: IDSApp.Entity.NetbiosLog.ResponderIp
+- uid: IDSApp.Entity.NetbiosLog.SourceIp*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.SourceIp
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_SourceIp
+  name: SourceIp
+  nameWithType: NetbiosLog.SourceIp
+  fullName: IDSApp.Entity.NetbiosLog.SourceIp
+- uid: IDSApp.Entity.NetbiosLog.DestinationIp*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.DestinationIp
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_DestinationIp
+  name: DestinationIp
+  nameWithType: NetbiosLog.DestinationIp
+  fullName: IDSApp.Entity.NetbiosLog.DestinationIp
+- uid: IDSApp.Entity.NetbiosLog.Timestamp*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.Timestamp
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_Timestamp
+  name: Timestamp
+  nameWithType: NetbiosLog.Timestamp
+  fullName: IDSApp.Entity.NetbiosLog.Timestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: IDSApp.Entity.NetbiosLog.SessionId*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.SessionId
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_SessionId
+  name: SessionId
+  nameWithType: NetbiosLog.SessionId
+  fullName: IDSApp.Entity.NetbiosLog.SessionId
+- uid: IDSApp.Entity.NetbiosLog.Status*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.Status
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_Status
+  name: Status
+  nameWithType: NetbiosLog.Status
+  fullName: IDSApp.Entity.NetbiosLog.Status
+- uid: IDSApp.Entity.NetbiosLog.#ctor*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.#ctor
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog__ctor
+  name: NetbiosLog
+  nameWithType: NetbiosLog.NetbiosLog
+  fullName: IDSApp.Entity.NetbiosLog.NetbiosLog
+  nameWithType.vb: NetbiosLog.New
+  fullName.vb: IDSApp.Entity.NetbiosLog.New
+  name.vb: New
+- uid: IDSApp.Entity.NetbiosLog
+  commentId: T:IDSApp.Entity.NetbiosLog
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.NetbiosLog.html
+  name: NetbiosLog
+  nameWithType: NetbiosLog
+  fullName: IDSApp.Entity.NetbiosLog
+- uid: IDSApp.Entity.NetbiosLog.Clone*
+  commentId: Overload:IDSApp.Entity.NetbiosLog.Clone
+  href: IDSApp.Entity.NetbiosLog.html#IDSApp_Entity_NetbiosLog_Clone
+  name: Clone
+  nameWithType: NetbiosLog.Clone
+  fullName: IDSApp.Entity.NetbiosLog.Clone

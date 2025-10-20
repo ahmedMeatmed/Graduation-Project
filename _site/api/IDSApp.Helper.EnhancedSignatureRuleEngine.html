@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class EnhancedSignatureRuleEngine | mysite </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class EnhancedSignatureRuleEngine | mysite ">
+      
+      <meta name="description" content="Enhanced rule engine for signature-based threat detection with support for multiple rule formats, performance optimizations, and advanced pattern matching. Provides fast packet inspection using bloom filters and rule prioritization. Features:  PCRE pattern matching with validation and recovery Protocol-specific rule optimization and indexing Rule conflict resolution and prioritization Performance monitoring and statistical analysis Fast-path optimization using bloom filters Multi-threaded rule checking with load balancing Comprehensive error handling and validation">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="mysite">
+            mysite
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine">
+
+
+
+  <h1 id="IDSApp_Helper_EnhancedSignatureRuleEngine" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine" class="text-break">
+Class EnhancedSignatureRuleEngine  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="IDSApp.html">IDSApp</a>.<a class="xref" href="IDSApp.Helper.html">Helper</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>IDSApp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Enhanced rule engine for signature-based threat detection with support for
+multiple rule formats, performance optimizations, and advanced pattern matching.
+Provides fast packet inspection using bloom filters and rule prioritization.</p>
+<p>Features:</p>
+<ul>
+<li>PCRE pattern matching with validation and recovery</li>
+<li>Protocol-specific rule optimization and indexing</li>
+<li>Rule conflict resolution and prioritization</li>
+<li>Performance monitoring and statistical analysis</li>
+<li>Fast-path optimization using bloom filters</li>
+<li>Multi-threaded rule checking with load balancing</li>
+<li>Comprehensive error handling and validation</li>
+</ul>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class EnhancedSignatureRuleEngine</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">EnhancedSignatureRuleEngine</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine__ctor_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.#ctor*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine__ctor" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.#ctor">
+  EnhancedSignatureRuleEngine()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new enhanced signature rule engine with default configuration</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public EnhancedSignatureRuleEngine()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_CheckPacket_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.CheckPacket*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_CheckPacket_PacketDotNet_IPPacket_System_Byte___System_String_System_String_System_Int32_System_Int32_System_String_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.CheckPacket(PacketDotNet.IPPacket,System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)">
+  CheckPacket(IPPacket, byte[], string, string, int, int, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Inspects a network packet against loaded detection rules to identify
+malicious activity. Uses multiple optimization techniques to ensure
+high-performance inspection even with large rule sets.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Signatures&gt; CheckPacket(IPPacket ipPacket, byte[] payload, string srcIp, string dstIp, int srcPort, int dstPort, string protocolName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ipPacket</code> <span class="xref">IPPacket</span></dt>
+    <dd><p>IP packet to inspect for threats</p>
+</dd>
+    <dt><code>payload</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.byte">byte</a>[]</dt>
+    <dd><p>Packet payload data for content inspection</p>
+</dd>
+    <dt><code>srcIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Source IP address for contextual analysis</p>
+</dd>
+    <dt><code>dstIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Destination IP address for contextual analysis</p>
+</dd>
+    <dt><code>srcPort</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Source port number for protocol analysis</p>
+</dd>
+    <dt><code>dstPort</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Destination port number for protocol analysis</p>
+</dd>
+    <dt><code>protocolName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Network protocol name for rule filtering</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="IDSApp.Entity.Signatures.html">Signatures</a>&gt;</dt>
+    <dd><p>List of matched signature rules describing detected threats</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="IDSApp_Helper_EnhancedSignatureRuleEngine_CheckPacket_PacketDotNet_IPPacket_System_Byte___System_String_System_String_System_Int32_System_Int32_System_String__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Inspection Pipeline:</p>
+<ol>
+<li>Pre-filtering using bloom filters and whitelists</li>
+<li>Protocol and port-based rule selection</li>
+<li>Content pattern matching with PCRE</li>
+<li>Rule prioritization and conflict resolution</li>
+<li>Statistical tracking and performance monitoring</li>
+<li>Result deduplication and optimization</li>
+</ol>
+</div>
+
+
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_ClearRules_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.ClearRules*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_ClearRules" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.ClearRules">
+  ClearRules()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Clears all loaded rules and resets the engine to initial state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearRules()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_GetActiveRulesCount_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.GetActiveRulesCount*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_GetActiveRulesCount" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.GetActiveRulesCount">
+  GetActiveRulesCount()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of currently active rules</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int GetActiveRulesCount()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_GetRuleById_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.GetRuleById*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_GetRuleById_System_Int32_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.GetRuleById(System.Int32)">
+  GetRuleById(int)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Retrieves a rule by its signature ID for detailed analysis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Signatures GetRuleById(int signatureId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>signatureId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IDSApp.Entity.Signatures.html">Signatures</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_IsInternalTraffic_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.IsInternalTraffic*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_IsInternalTraffic_System_String_System_String_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.IsInternalTraffic(System.String,System.String)">
+  IsInternalTraffic(string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines if traffic between two IP addresses is internal network traffic</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInternalTraffic(string srcIp, string dstIp)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>srcIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>dstIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_IsSuspiciousEmptyPacket_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.IsSuspiciousEmptyPacket*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_IsSuspiciousEmptyPacket_PacketDotNet_IPPacket_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.IsSuspiciousEmptyPacket(PacketDotNet.IPPacket)">
+  IsSuspiciousEmptyPacket(IPPacket)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Identifies suspicious empty packets that may indicate protocol anomalies</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSuspiciousEmptyPacket(IPPacket ipPacket)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ipPacket</code> <span class="xref">IPPacket</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_IsSuspiciousSmallPacket_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.IsSuspiciousSmallPacket*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_IsSuspiciousSmallPacket_PacketDotNet_IPPacket_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.IsSuspiciousSmallPacket(PacketDotNet.IPPacket)">
+  IsSuspiciousSmallPacket(IPPacket)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Identifies suspicious small packets that may indicate scanning or attacks</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsSuspiciousSmallPacket(IPPacket ipPacket)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ipPacket</code> <span class="xref">IPPacket</span></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_LoadRules_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.LoadRules*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_LoadRules" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.LoadRules">
+  LoadRules()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Loads and initializes detection rules from the database, building optimized
+indexes for fast packet inspection. Validates rule syntax and organizes rules
+by protocol, port, and content patterns for efficient matching.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LoadRules()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+  <h4 class="section" id="IDSApp_Helper_EnhancedSignatureRuleEngine_LoadRules_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Rule Loading Process:</p>
+<ol>
+<li>Load rules from database and backup sources with error handling</li>
+<li>Validate PCRE patterns and apply automatic fixes for common issues</li>
+<li>Build protocol-based, port-based, and content-based indexes</li>
+<li>Initialize bloom filters for fast-path optimization</li>
+<li>Analyze rule conflicts and establish priority hierarchy</li>
+<li>Generate comprehensive rule statistics and validation reports</li>
+</ol>
+</div>
+
+
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_LogInternalStats_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.LogInternalStats*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_LogInternalStats" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.LogInternalStats">
+  LogInternalStats()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Logs internal engine statistics for monitoring and optimization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LogInternalStats()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_PrintEnhancedPerformanceStats_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.PrintEnhancedPerformanceStats*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_PrintEnhancedPerformanceStats" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.PrintEnhancedPerformanceStats">
+  PrintEnhancedPerformanceStats()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Enhanced performance statistics with additional metrics and analysis</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PrintEnhancedPerformanceStats()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_PrintPerformanceStats_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.PrintPerformanceStats*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_PrintPerformanceStats" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.PrintPerformanceStats">
+  PrintPerformanceStats()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prints comprehensive performance statistics including rule matching rates,
+processing times, and optimization effectiveness for system monitoring</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PrintPerformanceStats()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Helper_EnhancedSignatureRuleEngine_PrintRuleStatistics_" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.PrintRuleStatistics*"></a>
+
+  <h3 id="IDSApp_Helper_EnhancedSignatureRuleEngine_PrintRuleStatistics" data-uid="IDSApp.Helper.EnhancedSignatureRuleEngine.PrintRuleStatistics">
+  PrintRuleStatistics()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Prints detailed rule statistics including distribution by protocol,
+port, and content patterns for system analysis and optimization</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PrintRuleStatistics()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

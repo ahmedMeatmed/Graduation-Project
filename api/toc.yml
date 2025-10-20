@@ -1,0 +1,244 @@
+### YamlMime:TableOfContent
+items:
+- uid: IDSApp
+  name: IDSApp
+  type: Namespace
+  items:
+  - uid: IDSApp.IDSCore
+    name: IDSCore
+    type: Class
+  - uid: IDSApp.PacketCaptureWrapper
+    name: PacketCaptureWrapper
+    type: Class
+  - uid: IDSApp.PerformanceMonitor
+    name: PerformanceMonitor
+    type: Class
+- uid: IDSApp.BLL
+  name: IDSApp.BLL
+  type: Namespace
+  items:
+  - uid: IDSApp.BLL.SettingBLL
+    name: SettingBLL
+    type: Class
+- uid: IDSApp.Collection
+  name: IDSApp.Collection
+  type: Namespace
+  items:
+  - uid: IDSApp.Collection.SettingCollection
+    name: SettingCollection
+    type: Class
+- uid: IDSApp.DAL
+  name: IDSApp.DAL
+  type: Namespace
+  items:
+  - uid: IDSApp.DAL.SettingDal
+    name: SettingDal
+    type: Class
+- uid: IDSApp.Entity
+  name: IDSApp.Entity
+  type: Namespace
+  items:
+  - uid: IDSApp.Entity.DbLog
+    name: DbLog
+    type: Class
+  - uid: IDSApp.Entity.DhcpLog
+    name: DhcpLog
+    type: Class
+  - uid: IDSApp.Entity.LdapLog
+    name: LdapLog
+    type: Class
+  - uid: IDSApp.Entity.NetbiosLog
+    name: NetbiosLog
+    type: Class
+  - uid: IDSApp.Entity.Settings
+    name: Settings
+    type: Class
+  - uid: IDSApp.Entity.Signatures
+    name: Signatures
+    type: Class
+  - uid: IDSApp.Entity.TftpLog
+    name: TftpLog
+    type: Class
+- uid: IDSApp.Helper
+  name: IDSApp.Helper
+  type: Namespace
+  items:
+  - uid: IDSApp.Helper.BoyerMooreSearch
+    name: BoyerMooreSearch
+    type: Class
+  - uid: IDSApp.Helper.BytePatternMatcher
+    name: BytePatternMatcher
+    type: Class
+  - uid: IDSApp.Helper.DnsConditions
+    name: DnsConditions
+    type: Class
+  - uid: IDSApp.Helper.EnhancedPcreValidator
+    name: EnhancedPcreValidator
+    type: Class
+  - uid: IDSApp.Helper.EnhancedRuleParser
+    name: EnhancedRuleParser
+    type: Class
+  - uid: IDSApp.Helper.EnhancedSignatureRuleEngine
+    name: EnhancedSignatureRuleEngine
+    type: Class
+  - uid: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+    name: EnhancedSignatureRuleEngine.PcreContentMatcher
+    type: Class
+  - uid: IDSApp.Helper.FlowConditions
+    name: FlowConditions
+    type: Class
+  - uid: IDSApp.Helper.HttpConditions
+    name: HttpConditions
+    type: Class
+  - uid: IDSApp.Helper.IContentMatcher
+    name: IContentMatcher
+    type: Interface
+  - uid: IDSApp.Helper.IPNetwork
+    name: IPNetwork
+    type: Class
+  - uid: IDSApp.Helper.IcmpConditions
+    name: IcmpConditions
+    type: Class
+  - uid: IDSApp.Helper.NetworkConditions
+    name: NetworkConditions
+    type: Class
+  - uid: IDSApp.Helper.OptimizedLogger
+    name: OptimizedLogger
+    type: Class
+  - uid: IDSApp.Helper.OptimizedLogger.LogLevel
+    name: OptimizedLogger.LogLevel
+    type: Enum
+  - uid: IDSApp.Helper.ParsedRuleConditions
+    name: ParsedRuleConditions
+    type: Class
+  - uid: IDSApp.Helper.PcreContentMatcher
+    name: PcreContentMatcher
+    type: Class
+  - uid: IDSApp.Helper.ProtocolPerformance
+    name: ProtocolPerformance
+    type: Class
+  - uid: IDSApp.Helper.RuleBloomFilter
+    name: RuleBloomFilter
+    type: Class
+  - uid: IDSApp.Helper.RuleFastPathOptimizer
+    name: RuleFastPathOptimizer
+    type: Class
+  - uid: IDSApp.Helper.RuleGroup
+    name: RuleGroup
+    type: Class
+  - uid: IDSApp.Helper.RuleMetadata
+    name: RuleMetadata
+    type: Class
+  - uid: IDSApp.Helper.RuleOptimizationStats
+    name: RuleOptimizationStats
+    type: Class
+  - uid: IDSApp.Helper.RulePerformance
+    name: RulePerformance
+    type: Class
+  - uid: IDSApp.Helper.RulePriorityManager
+    name: RulePriorityManager
+    type: Class
+  - uid: IDSApp.Helper.RuleSpecificity
+    name: RuleSpecificity
+    type: Class
+  - uid: IDSApp.Helper.RuleStatistics
+    name: RuleStatistics
+    type: Class
+  - uid: IDSApp.Helper.StatisticsSnapshot
+    name: StatisticsSnapshot
+    type: Class
+  - uid: IDSApp.Helper.TlsConditions
+    name: TlsConditions
+    type: Class
+- uid: IDSApp.ProtocolParsing
+  name: IDSApp.ProtocolParsing
+  type: Namespace
+  items:
+  - uid: IDSApp.ProtocolParsing.BoyerMooreSearch
+    name: BoyerMooreSearch
+    type: Class
+  - uid: IDSApp.ProtocolParsing.DatabaseParser
+    name: DatabaseParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.DhcpParser
+    name: DhcpParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.DnsParser
+    name: DnsParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.DnsParser.DnsRecord
+    name: DnsParser.DnsRecord
+    type: Class
+  - uid: IDSApp.ProtocolParsing.EnhancedHttpHandler
+    name: EnhancedHttpHandler
+    type: Class
+  - uid: IDSApp.ProtocolParsing.FtpParseResult
+    name: FtpParseResult
+    type: Class
+  - uid: IDSApp.ProtocolParsing.FtpParser
+    name: FtpParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.HttpParser
+    name: HttpParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.HttpParser.ThreatResult
+    name: HttpParser.ThreatResult
+    type: Class
+  - uid: IDSApp.ProtocolParsing.HttpParserHelpers
+    name: HttpParserHelpers
+    type: Class
+  - uid: IDSApp.ProtocolParsing.ImapParser
+    name: ImapParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.LdapParser
+    name: LdapParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.NetbiosParser
+    name: NetbiosParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.NtpParser
+    name: NtpParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.Pop3Parser
+    name: Pop3Parser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.RdpParseResult
+    name: RdpParseResult
+    type: Class
+  - uid: IDSApp.ProtocolParsing.RdpParser
+    name: RdpParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.SmbParseResult
+    name: SmbParseResult
+    type: Class
+  - uid: IDSApp.ProtocolParsing.SmbParser
+    name: SmbParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.SmtpParseResult
+    name: SmtpParseResult
+    type: Class
+  - uid: IDSApp.ProtocolParsing.SmtpParser
+    name: SmtpParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.SnmpParser
+    name: SnmpParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.SshParser
+    name: SshParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.TelnetParseResult
+    name: TelnetParseResult
+    type: Class
+  - uid: IDSApp.ProtocolParsing.TelnetParser
+    name: TelnetParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.TftpParser
+    name: TftpParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.TlsParser
+    name: TlsParser
+    type: Class
+  - uid: IDSApp.ProtocolParsing.TlsParser.TlsParseResult
+    name: TlsParser.TlsParseResult
+    type: Class
+memberLayout: SamePage

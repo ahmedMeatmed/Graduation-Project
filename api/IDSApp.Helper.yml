@@ -1,0 +1,286 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Helper
+  commentId: N:IDSApp.Helper
+  id: IDSApp.Helper
+  children:
+  - IDSApp.Helper.BoyerMooreSearch
+  - IDSApp.Helper.BytePatternMatcher
+  - IDSApp.Helper.DnsConditions
+  - IDSApp.Helper.EnhancedPcreValidator
+  - IDSApp.Helper.EnhancedRuleParser
+  - IDSApp.Helper.EnhancedSignatureRuleEngine
+  - IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+  - IDSApp.Helper.FlowConditions
+  - IDSApp.Helper.HttpConditions
+  - IDSApp.Helper.IContentMatcher
+  - IDSApp.Helper.IPNetwork
+  - IDSApp.Helper.IcmpConditions
+  - IDSApp.Helper.NetworkConditions
+  - IDSApp.Helper.OptimizedLogger
+  - IDSApp.Helper.OptimizedLogger.LogLevel
+  - IDSApp.Helper.ParsedRuleConditions
+  - IDSApp.Helper.PcreContentMatcher
+  - IDSApp.Helper.ProtocolPerformance
+  - IDSApp.Helper.RuleBloomFilter
+  - IDSApp.Helper.RuleFastPathOptimizer
+  - IDSApp.Helper.RuleGroup
+  - IDSApp.Helper.RuleMetadata
+  - IDSApp.Helper.RuleOptimizationStats
+  - IDSApp.Helper.RulePerformance
+  - IDSApp.Helper.RulePriorityManager
+  - IDSApp.Helper.RuleSpecificity
+  - IDSApp.Helper.RuleStatistics
+  - IDSApp.Helper.StatisticsSnapshot
+  - IDSApp.Helper.TlsConditions
+  langs:
+  - csharp
+  - vb
+  name: IDSApp.Helper
+  nameWithType: IDSApp.Helper
+  fullName: IDSApp.Helper
+  type: Namespace
+  assemblies:
+  - IDSApp
+references:
+- uid: IDSApp.Helper.IContentMatcher
+  commentId: T:IDSApp.Helper.IContentMatcher
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.IContentMatcher.html
+  name: IContentMatcher
+  nameWithType: IContentMatcher
+  fullName: IDSApp.Helper.IContentMatcher
+- uid: IDSApp.Helper.BytePatternMatcher
+  commentId: T:IDSApp.Helper.BytePatternMatcher
+  href: IDSApp.Helper.BytePatternMatcher.html
+  name: BytePatternMatcher
+  nameWithType: BytePatternMatcher
+  fullName: IDSApp.Helper.BytePatternMatcher
+- uid: IDSApp.Helper.PcreContentMatcher
+  commentId: T:IDSApp.Helper.PcreContentMatcher
+  href: IDSApp.Helper.PcreContentMatcher.html
+  name: PcreContentMatcher
+  nameWithType: PcreContentMatcher
+  fullName: IDSApp.Helper.PcreContentMatcher
+- uid: IDSApp.Helper.BoyerMooreSearch
+  commentId: T:IDSApp.Helper.BoyerMooreSearch
+  href: IDSApp.Helper.BoyerMooreSearch.html
+  name: BoyerMooreSearch
+  nameWithType: BoyerMooreSearch
+  fullName: IDSApp.Helper.BoyerMooreSearch
+- uid: IDSApp.Helper.IPNetwork
+  commentId: T:IDSApp.Helper.IPNetwork
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.IPNetwork.html
+  name: IPNetwork
+  nameWithType: IPNetwork
+  fullName: IDSApp.Helper.IPNetwork
+- uid: IDSApp.Helper.EnhancedRuleParser
+  commentId: T:IDSApp.Helper.EnhancedRuleParser
+  href: IDSApp.Helper.EnhancedRuleParser.html
+  name: EnhancedRuleParser
+  nameWithType: EnhancedRuleParser
+  fullName: IDSApp.Helper.EnhancedRuleParser
+- uid: IDSApp.Helper.ParsedRuleConditions
+  commentId: T:IDSApp.Helper.ParsedRuleConditions
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.ParsedRuleConditions.html
+  name: ParsedRuleConditions
+  nameWithType: ParsedRuleConditions
+  fullName: IDSApp.Helper.ParsedRuleConditions
+- uid: IDSApp.Helper.DnsConditions
+  commentId: T:IDSApp.Helper.DnsConditions
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.DnsConditions.html
+  name: DnsConditions
+  nameWithType: DnsConditions
+  fullName: IDSApp.Helper.DnsConditions
+- uid: IDSApp.Helper.IcmpConditions
+  commentId: T:IDSApp.Helper.IcmpConditions
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.IcmpConditions.html
+  name: IcmpConditions
+  nameWithType: IcmpConditions
+  fullName: IDSApp.Helper.IcmpConditions
+- uid: IDSApp.Helper.RuleMetadata
+  commentId: T:IDSApp.Helper.RuleMetadata
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.RuleMetadata.html
+  name: RuleMetadata
+  nameWithType: RuleMetadata
+  fullName: IDSApp.Helper.RuleMetadata
+- uid: IDSApp.Helper.HttpConditions
+  commentId: T:IDSApp.Helper.HttpConditions
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.HttpConditions.html
+  name: HttpConditions
+  nameWithType: HttpConditions
+  fullName: IDSApp.Helper.HttpConditions
+- uid: IDSApp.Helper.FlowConditions
+  commentId: T:IDSApp.Helper.FlowConditions
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.FlowConditions.html
+  name: FlowConditions
+  nameWithType: FlowConditions
+  fullName: IDSApp.Helper.FlowConditions
+- uid: IDSApp.Helper.TlsConditions
+  commentId: T:IDSApp.Helper.TlsConditions
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.TlsConditions.html
+  name: TlsConditions
+  nameWithType: TlsConditions
+  fullName: IDSApp.Helper.TlsConditions
+- uid: IDSApp.Helper.NetworkConditions
+  commentId: T:IDSApp.Helper.NetworkConditions
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.NetworkConditions.html
+  name: NetworkConditions
+  nameWithType: NetworkConditions
+  fullName: IDSApp.Helper.NetworkConditions
+- uid: IDSApp.Helper.EnhancedPcreValidator
+  commentId: T:IDSApp.Helper.EnhancedPcreValidator
+  href: IDSApp.Helper.EnhancedPcreValidator.html
+  name: EnhancedPcreValidator
+  nameWithType: EnhancedPcreValidator
+  fullName: IDSApp.Helper.EnhancedPcreValidator
+- uid: IDSApp.Helper.EnhancedSignatureRuleEngine
+  commentId: T:IDSApp.Helper.EnhancedSignatureRuleEngine
+  href: IDSApp.Helper.EnhancedSignatureRuleEngine.html
+  name: EnhancedSignatureRuleEngine
+  nameWithType: EnhancedSignatureRuleEngine
+  fullName: IDSApp.Helper.EnhancedSignatureRuleEngine
+- uid: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+  commentId: T:IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+  href: IDSApp.Helper.EnhancedSignatureRuleEngine.html
+  name: EnhancedSignatureRuleEngine.PcreContentMatcher
+  nameWithType: EnhancedSignatureRuleEngine.PcreContentMatcher
+  fullName: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+  spec.csharp:
+  - uid: IDSApp.Helper.EnhancedSignatureRuleEngine
+    name: EnhancedSignatureRuleEngine
+    href: IDSApp.Helper.EnhancedSignatureRuleEngine.html
+  - name: .
+  - uid: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+    name: PcreContentMatcher
+    href: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.html
+  spec.vb:
+  - uid: IDSApp.Helper.EnhancedSignatureRuleEngine
+    name: EnhancedSignatureRuleEngine
+    href: IDSApp.Helper.EnhancedSignatureRuleEngine.html
+  - name: .
+  - uid: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher
+    name: PcreContentMatcher
+    href: IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.html
+- uid: IDSApp.Helper.OptimizedLogger
+  commentId: T:IDSApp.Helper.OptimizedLogger
+  href: IDSApp.Helper.OptimizedLogger.html
+  name: OptimizedLogger
+  nameWithType: OptimizedLogger
+  fullName: IDSApp.Helper.OptimizedLogger
+- uid: IDSApp.Helper.OptimizedLogger.LogLevel
+  commentId: T:IDSApp.Helper.OptimizedLogger.LogLevel
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.OptimizedLogger.html
+  name: OptimizedLogger.LogLevel
+  nameWithType: OptimizedLogger.LogLevel
+  fullName: IDSApp.Helper.OptimizedLogger.LogLevel
+  spec.csharp:
+  - uid: IDSApp.Helper.OptimizedLogger
+    name: OptimizedLogger
+    href: IDSApp.Helper.OptimizedLogger.html
+  - name: .
+  - uid: IDSApp.Helper.OptimizedLogger.LogLevel
+    name: LogLevel
+    href: IDSApp.Helper.OptimizedLogger.LogLevel.html
+  spec.vb:
+  - uid: IDSApp.Helper.OptimizedLogger
+    name: OptimizedLogger
+    href: IDSApp.Helper.OptimizedLogger.html
+  - name: .
+  - uid: IDSApp.Helper.OptimizedLogger.LogLevel
+    name: LogLevel
+    href: IDSApp.Helper.OptimizedLogger.LogLevel.html
+- uid: IDSApp.Helper.RuleFastPathOptimizer
+  commentId: T:IDSApp.Helper.RuleFastPathOptimizer
+  href: IDSApp.Helper.RuleFastPathOptimizer.html
+  name: RuleFastPathOptimizer
+  nameWithType: RuleFastPathOptimizer
+  fullName: IDSApp.Helper.RuleFastPathOptimizer
+- uid: IDSApp.Helper.RuleBloomFilter
+  commentId: T:IDSApp.Helper.RuleBloomFilter
+  href: IDSApp.Helper.RuleBloomFilter.html
+  name: RuleBloomFilter
+  nameWithType: RuleBloomFilter
+  fullName: IDSApp.Helper.RuleBloomFilter
+- uid: IDSApp.Helper.RuleGroup
+  commentId: T:IDSApp.Helper.RuleGroup
+  href: IDSApp.Helper.RuleGroup.html
+  name: RuleGroup
+  nameWithType: RuleGroup
+  fullName: IDSApp.Helper.RuleGroup
+- uid: IDSApp.Helper.RuleOptimizationStats
+  commentId: T:IDSApp.Helper.RuleOptimizationStats
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.RuleOptimizationStats.html
+  name: RuleOptimizationStats
+  nameWithType: RuleOptimizationStats
+  fullName: IDSApp.Helper.RuleOptimizationStats
+- uid: IDSApp.Helper.RulePriorityManager
+  commentId: T:IDSApp.Helper.RulePriorityManager
+  href: IDSApp.Helper.RulePriorityManager.html
+  name: RulePriorityManager
+  nameWithType: RulePriorityManager
+  fullName: IDSApp.Helper.RulePriorityManager
+- uid: IDSApp.Helper.RuleSpecificity
+  commentId: T:IDSApp.Helper.RuleSpecificity
+  href: IDSApp.Helper.RuleSpecificity.html
+  name: RuleSpecificity
+  nameWithType: RuleSpecificity
+  fullName: IDSApp.Helper.RuleSpecificity
+- uid: IDSApp.Helper.RuleStatistics
+  commentId: T:IDSApp.Helper.RuleStatistics
+  href: IDSApp.Helper.RuleStatistics.html
+  name: RuleStatistics
+  nameWithType: RuleStatistics
+  fullName: IDSApp.Helper.RuleStatistics
+- uid: IDSApp.Helper.RulePerformance
+  commentId: T:IDSApp.Helper.RulePerformance
+  href: IDSApp.Helper.RulePerformance.html
+  name: RulePerformance
+  nameWithType: RulePerformance
+  fullName: IDSApp.Helper.RulePerformance
+- uid: IDSApp.Helper.ProtocolPerformance
+  commentId: T:IDSApp.Helper.ProtocolPerformance
+  href: IDSApp.Helper.ProtocolPerformance.html
+  name: ProtocolPerformance
+  nameWithType: ProtocolPerformance
+  fullName: IDSApp.Helper.ProtocolPerformance
+- uid: IDSApp.Helper.StatisticsSnapshot
+  commentId: T:IDSApp.Helper.StatisticsSnapshot
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.StatisticsSnapshot.html
+  name: StatisticsSnapshot
+  nameWithType: StatisticsSnapshot
+  fullName: IDSApp.Helper.StatisticsSnapshot
+- uid: IDSApp.Helper
+  commentId: N:IDSApp.Helper
+  href: IDSApp.html
+  name: IDSApp.Helper
+  nameWithType: IDSApp.Helper
+  fullName: IDSApp.Helper
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html

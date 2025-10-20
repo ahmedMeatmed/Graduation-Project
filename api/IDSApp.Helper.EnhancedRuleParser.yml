@@ -1,0 +1,966 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Helper.EnhancedRuleParser
+  commentId: T:IDSApp.Helper.EnhancedRuleParser
+  id: EnhancedRuleParser
+  parent: IDSApp.Helper
+  children:
+  - IDSApp.Helper.EnhancedRuleParser.#ctor
+  - IDSApp.Helper.EnhancedRuleParser.ParseConditions(IDSApp.Entity.Signatures)
+  - IDSApp.Helper.EnhancedRuleParser.ParseTlsPacket(System.Byte[])
+  - IDSApp.Helper.EnhancedRuleParser.ValidateRule(IDSApp.Entity.Signatures,System.Collections.Generic.List{System.String}@)
+  langs:
+  - csharp
+  - vb
+  name: EnhancedRuleParser
+  nameWithType: EnhancedRuleParser
+  fullName: IDSApp.Helper.EnhancedRuleParser
+  type: Class
+  source:
+    id: EnhancedRuleParser
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedRuleParser.cs
+    startLine: 30
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: >-
+    Advanced rule parsing and analysis system for Intrusion Detection System (IDS)
+
+
+    Main Responsibilities:
+
+    - Parse and extract conditions from security rules in multiple protocols
+
+    - Analyze network traffic against parsed rule conditions
+
+    - Validate rule syntax and semantics
+
+    - Extract metadata and content patterns from rules
+
+
+    Supported Protocols:
+
+    - HTTP/HTTPS traffic analysis
+
+    - TLS/SSL certificate inspection
+
+    - DNS query and response parsing
+
+    - ICMP packet analysis
+
+    - Network flow and connection tracking
+
+
+    Features:
+
+    - High-performance regex-based parsing
+
+    - Comprehensive protocol support
+
+    - Rule validation and error checking
+
+    - TLS fingerprinting and certificate analysis
+
+    - Content pattern extraction and normalization
+  example: []
+  syntax:
+    content: public class EnhancedRuleParser
+    content.vb: Public Class EnhancedRuleParser
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.Helper.EnhancedRuleParser.#ctor
+  commentId: M:IDSApp.Helper.EnhancedRuleParser.#ctor
+  id: '#ctor'
+  parent: IDSApp.Helper.EnhancedRuleParser
+  langs:
+  - csharp
+  - vb
+  name: EnhancedRuleParser()
+  nameWithType: EnhancedRuleParser.EnhancedRuleParser()
+  fullName: IDSApp.Helper.EnhancedRuleParser.EnhancedRuleParser()
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedRuleParser.cs
+    startLine: 64
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: public EnhancedRuleParser()
+    content.vb: Public Sub New()
+  overload: IDSApp.Helper.EnhancedRuleParser.#ctor*
+  nameWithType.vb: EnhancedRuleParser.New()
+  fullName.vb: IDSApp.Helper.EnhancedRuleParser.New()
+  name.vb: New()
+- uid: IDSApp.Helper.EnhancedRuleParser.ParseConditions(IDSApp.Entity.Signatures)
+  commentId: M:IDSApp.Helper.EnhancedRuleParser.ParseConditions(IDSApp.Entity.Signatures)
+  id: ParseConditions(IDSApp.Entity.Signatures)
+  parent: IDSApp.Helper.EnhancedRuleParser
+  langs:
+  - csharp
+  - vb
+  name: ParseConditions(Signatures)
+  nameWithType: EnhancedRuleParser.ParseConditions(Signatures)
+  fullName: IDSApp.Helper.EnhancedRuleParser.ParseConditions(IDSApp.Entity.Signatures)
+  type: Method
+  source:
+    id: ParseConditions
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedRuleParser.cs
+    startLine: 74
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: >-
+    Parse all conditions from a security rule into structured format
+
+    Extracts HTTP, TLS, DNS, ICMP, network, and metadata conditions
+  example: []
+  syntax:
+    content: public ParsedRuleConditions ParseConditions(Signatures rule)
+    parameters:
+    - id: rule
+      type: IDSApp.Entity.Signatures
+      description: The security rule to parse
+    return:
+      type: IDSApp.Helper.ParsedRuleConditions
+      description: Structured rule conditions
+    content.vb: Public Function ParseConditions(rule As Signatures) As ParsedRuleConditions
+  overload: IDSApp.Helper.EnhancedRuleParser.ParseConditions*
+- uid: IDSApp.Helper.EnhancedRuleParser.ParseTlsPacket(System.Byte[])
+  commentId: M:IDSApp.Helper.EnhancedRuleParser.ParseTlsPacket(System.Byte[])
+  id: ParseTlsPacket(System.Byte[])
+  parent: IDSApp.Helper.EnhancedRuleParser
+  langs:
+  - csharp
+  - vb
+  name: ParseTlsPacket(byte[])
+  nameWithType: EnhancedRuleParser.ParseTlsPacket(byte[])
+  fullName: IDSApp.Helper.EnhancedRuleParser.ParseTlsPacket(byte[])
+  type: Method
+  source:
+    id: ParseTlsPacket
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedRuleParser.cs
+    startLine: 292
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: >-
+    Parse TLS handshake packet and extract security information
+
+
+    Returns:
+
+    - SNI (Server Name Indication)
+
+    - TLS version
+
+    - Cipher suite
+
+    - Certificate fingerprint
+
+    - JA3 fingerprint (for client hello)
+
+    - Certificate subject and issuer
+
+    - Certificate validity dates
+  example: []
+  syntax:
+    content: public (string sni, string version, string cipherSuite, string certFingerprint, string ja3Fingerprint, string subject, string issuer, DateTime? notBefore, DateTime? notAfter) ParseTlsPacket(byte[] payload)
+    parameters:
+    - id: payload
+      type: System.Byte[]
+    return:
+      type: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}
+    content.vb: Public Function ParseTlsPacket(payload As Byte()) As (sni As String, version As String, cipherSuite As String, certFingerprint As String, ja3Fingerprint As String, subject As String, issuer As String, notBefore As Date?, notAfter As Date?)
+  overload: IDSApp.Helper.EnhancedRuleParser.ParseTlsPacket*
+  nameWithType.vb: EnhancedRuleParser.ParseTlsPacket(Byte())
+  fullName.vb: IDSApp.Helper.EnhancedRuleParser.ParseTlsPacket(Byte())
+  name.vb: ParseTlsPacket(Byte())
+- uid: IDSApp.Helper.EnhancedRuleParser.ValidateRule(IDSApp.Entity.Signatures,System.Collections.Generic.List{System.String}@)
+  commentId: M:IDSApp.Helper.EnhancedRuleParser.ValidateRule(IDSApp.Entity.Signatures,System.Collections.Generic.List{System.String}@)
+  id: ValidateRule(IDSApp.Entity.Signatures,System.Collections.Generic.List{System.String}@)
+  parent: IDSApp.Helper.EnhancedRuleParser
+  langs:
+  - csharp
+  - vb
+  name: ValidateRule(Signatures, out List<string>)
+  nameWithType: EnhancedRuleParser.ValidateRule(Signatures, out List<string>)
+  fullName: IDSApp.Helper.EnhancedRuleParser.ValidateRule(IDSApp.Entity.Signatures, out System.Collections.Generic.List<string>)
+  type: Method
+  source:
+    id: ValidateRule
+    path: G:\C#\IDSApp\IDSApp\Helper\EnhancedRuleParser.cs
+    startLine: 727
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: >-
+    Validate rule syntax and semantics
+
+    Checks for valid patterns, IPs, ports, and protocol-specific conditions
+  example: []
+  syntax:
+    content: public bool ValidateRule(Signatures rule, out List<string> validationErrors)
+    parameters:
+    - id: rule
+      type: IDSApp.Entity.Signatures
+    - id: validationErrors
+      type: System.Collections.Generic.List{System.String}
+    return:
+      type: System.Boolean
+    content.vb: Public Function ValidateRule(rule As Signatures, validationErrors As List(Of String)) As Boolean
+  overload: IDSApp.Helper.EnhancedRuleParser.ValidateRule*
+  nameWithType.vb: EnhancedRuleParser.ValidateRule(Signatures, List(Of String))
+  fullName.vb: IDSApp.Helper.EnhancedRuleParser.ValidateRule(IDSApp.Entity.Signatures, System.Collections.Generic.List(Of String))
+  name.vb: ValidateRule(Signatures, List(Of String))
+references:
+- uid: IDSApp.Helper
+  commentId: N:IDSApp.Helper
+  href: IDSApp.html
+  name: IDSApp.Helper
+  nameWithType: IDSApp.Helper
+  fullName: IDSApp.Helper
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.Helper.EnhancedRuleParser.#ctor*
+  commentId: Overload:IDSApp.Helper.EnhancedRuleParser.#ctor
+  href: IDSApp.Helper.EnhancedRuleParser.html#IDSApp_Helper_EnhancedRuleParser__ctor
+  name: EnhancedRuleParser
+  nameWithType: EnhancedRuleParser.EnhancedRuleParser
+  fullName: IDSApp.Helper.EnhancedRuleParser.EnhancedRuleParser
+  nameWithType.vb: EnhancedRuleParser.New
+  fullName.vb: IDSApp.Helper.EnhancedRuleParser.New
+  name.vb: New
+- uid: IDSApp.Helper.EnhancedRuleParser.ParseConditions*
+  commentId: Overload:IDSApp.Helper.EnhancedRuleParser.ParseConditions
+  href: IDSApp.Helper.EnhancedRuleParser.html#IDSApp_Helper_EnhancedRuleParser_ParseConditions_IDSApp_Entity_Signatures_
+  name: ParseConditions
+  nameWithType: EnhancedRuleParser.ParseConditions
+  fullName: IDSApp.Helper.EnhancedRuleParser.ParseConditions
+- uid: IDSApp.Entity.Signatures
+  commentId: T:IDSApp.Entity.Signatures
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.Signatures.html
+  name: Signatures
+  nameWithType: Signatures
+  fullName: IDSApp.Entity.Signatures
+- uid: IDSApp.Helper.ParsedRuleConditions
+  commentId: T:IDSApp.Helper.ParsedRuleConditions
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.ParsedRuleConditions.html
+  name: ParsedRuleConditions
+  nameWithType: ParsedRuleConditions
+  fullName: IDSApp.Helper.ParsedRuleConditions
+- uid: IDSApp.Entity
+  commentId: N:IDSApp.Entity
+  href: IDSApp.html
+  name: IDSApp.Entity
+  nameWithType: IDSApp.Entity
+  fullName: IDSApp.Entity
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+- uid: IDSApp.Helper.EnhancedRuleParser.ParseTlsPacket*
+  commentId: Overload:IDSApp.Helper.EnhancedRuleParser.ParseTlsPacket
+  href: IDSApp.Helper.EnhancedRuleParser.html#IDSApp_Helper_EnhancedRuleParser_ParseTlsPacket_System_Byte___
+  name: ParseTlsPacket
+  nameWithType: EnhancedRuleParser.ParseTlsPacket
+  fullName: IDSApp.Helper.EnhancedRuleParser.ParseTlsPacket
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}
+  commentId: T:System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}
+  parent: System
+  definition: System.ValueTuple`8
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: (string sni, string version, string cipherSuite, string certFingerprint, string ja3Fingerprint, string subject, string issuer, DateTime? notBefore, DateTime? notAfter)
+  nameWithType: (string sni, string version, string cipherSuite, string certFingerprint, string ja3Fingerprint, string subject, string issuer, DateTime? notBefore, DateTime? notAfter)
+  fullName: (string sni, string version, string cipherSuite, string certFingerprint, string ja3Fingerprint, string subject, string issuer, System.DateTime? notBefore, System.DateTime? notAfter)
+  nameWithType.vb: (sni As String, version As String, cipherSuite As String, certFingerprint As String, ja3Fingerprint As String, subject As String, issuer As String, notBefore As Date?, notAfter As Date?)
+  fullName.vb: (sni As String, version As String, cipherSuite As String, certFingerprint As String, ja3Fingerprint As String, subject As String, issuer As String, notBefore As Date?, notAfter As Date?)
+  name.vb: (sni As String, version As String, cipherSuite As String, certFingerprint As String, ja3Fingerprint As String, subject As String, issuer As String, notBefore As Date?, notAfter As Date?)
+  spec.csharp:
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.sni
+    name: sni
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.sni
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.version
+    name: version
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.version
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.cipherSuite
+    name: cipherSuite
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.ciphersuite
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.certFingerprint
+    name: certFingerprint
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.certfingerprint
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.ja3Fingerprint
+    name: ja3Fingerprint
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.ja3fingerprint
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.subject
+    name: subject
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.subject
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.issuer
+    name: issuer
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.issuer
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.notBefore
+    name: notBefore
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.notbefore
+  - name: ','
+  - name: " "
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.notAfter
+    name: notAfter
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.notafter
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.sni
+    name: sni
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.sni
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.version
+    name: version
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.version
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.cipherSuite
+    name: cipherSuite
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.ciphersuite
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.certFingerprint
+    name: certFingerprint
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.certfingerprint
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.ja3Fingerprint
+    name: ja3Fingerprint
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.ja3fingerprint
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.subject
+    name: subject
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.subject
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.issuer
+    name: issuer
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.issuer
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.notBefore
+    name: notBefore
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.notbefore
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.ValueTuple{System.Nullable{System.DateTime},System.Nullable{System.DateTime}}}.notAfter
+    name: notAfter
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.string,system.string,system.string,system.string,system.string,system.string,system.string,system.valuetuple-system.nullable-system.datetime-,system.nullable-system.datetime---.notafter
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  - name: )
+- uid: System.ValueTuple`8
+  commentId: T:System.ValueTuple`8
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetuple-8
+  name: ValueTuple<T1, T2, T3, T4, T5, T6, T7, TRest>
+  nameWithType: ValueTuple<T1, T2, T3, T4, T5, T6, T7, TRest>
+  fullName: System.ValueTuple<T1, T2, T3, T4, T5, T6, T7, TRest>
+  nameWithType.vb: ValueTuple(Of T1, T2, T3, T4, T5, T6, T7, TRest)
+  fullName.vb: System.ValueTuple(Of T1, T2, T3, T4, T5, T6, T7, TRest)
+  name.vb: ValueTuple(Of T1, T2, T3, T4, T5, T6, T7, TRest)
+  spec.csharp:
+  - uid: System.ValueTuple`8
+    name: ValueTuple
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-8
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: ','
+  - name: " "
+  - name: T7
+  - name: ','
+  - name: " "
+  - name: TRest
+  - name: '>'
+  spec.vb:
+  - uid: System.ValueTuple`8
+    name: ValueTuple
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-8
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: T3
+  - name: ','
+  - name: " "
+  - name: T4
+  - name: ','
+  - name: " "
+  - name: T5
+  - name: ','
+  - name: " "
+  - name: T6
+  - name: ','
+  - name: " "
+  - name: T7
+  - name: ','
+  - name: " "
+  - name: TRest
+  - name: )
+- uid: IDSApp.Helper.EnhancedRuleParser.ValidateRule*
+  commentId: Overload:IDSApp.Helper.EnhancedRuleParser.ValidateRule
+  href: IDSApp.Helper.EnhancedRuleParser.html#IDSApp_Helper_EnhancedRuleParser_ValidateRule_IDSApp_Entity_Signatures_System_Collections_Generic_List_System_String___
+  name: ValidateRule
+  nameWithType: EnhancedRuleParser.ValidateRule
+  fullName: IDSApp.Helper.EnhancedRuleParser.ValidateRule
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

@@ -1,0 +1,575 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.ProtocolParsing.HttpParser
+  commentId: T:IDSApp.ProtocolParsing.HttpParser
+  id: HttpParser
+  parent: IDSApp.ProtocolParsing
+  children:
+  - IDSApp.ProtocolParsing.HttpParser.#ctor(System.Int32,System.Int32,System.Boolean,System.Boolean)
+  - IDSApp.ProtocolParsing.HttpParser.AnalyzeBody(System.Byte[],System.String,System.String,System.String,System.String)
+  - IDSApp.ProtocolParsing.HttpParser.CheckBodyForThreats(System.Byte[],System.String,System.String,System.String,System.String)
+  - IDSApp.ProtocolParsing.HttpParser.IsValidHttpPacket(System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: HttpParser
+  nameWithType: HttpParser
+  fullName: IDSApp.ProtocolParsing.HttpParser
+  type: Class
+  source:
+    id: HttpParser
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 327
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Advanced HTTP threat detection engine for Intrusion Detection System
+
+
+    Detection Methods:
+
+    - Text pattern matching for common attack signatures
+
+    - Regular expression analysis for complex attack patterns
+
+    - Binary pattern detection for executable content
+
+    - Base64 decoding and analysis for encoded payloads
+
+    - URL decoding for obfuscated attack vectors
+
+
+    Performance Features:
+
+    - Configurable inspection limits to prevent resource exhaustion
+
+    - Content-type filtering to skip non-relevant data
+
+    - Efficient Boyer-Moore algorithm for binary pattern matching
+
+    - Threat scoring with adjustable thresholds
+  example: []
+  syntax:
+    content: public class HttpParser
+    content.vb: Public Class HttpParser
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.ProtocolParsing.HttpParser.#ctor(System.Int32,System.Int32,System.Boolean,System.Boolean)
+  commentId: M:IDSApp.ProtocolParsing.HttpParser.#ctor(System.Int32,System.Int32,System.Boolean,System.Boolean)
+  id: '#ctor(System.Int32,System.Int32,System.Boolean,System.Boolean)'
+  parent: IDSApp.ProtocolParsing.HttpParser
+  langs:
+  - csharp
+  - vb
+  name: HttpParser(int, int, bool, bool)
+  nameWithType: HttpParser.HttpParser(int, int, bool, bool)
+  fullName: IDSApp.ProtocolParsing.HttpParser.HttpParser(int, int, bool, bool)
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 376
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public HttpParser(int threatThreshold = 1, int maxInspectBytes = 1048576, bool enableBase64Decode = true, bool enableUrlDecode = true)
+    parameters:
+    - id: threatThreshold
+      type: System.Int32
+    - id: maxInspectBytes
+      type: System.Int32
+    - id: enableBase64Decode
+      type: System.Boolean
+    - id: enableUrlDecode
+      type: System.Boolean
+    content.vb: Public Sub New(threatThreshold As Integer = 1, maxInspectBytes As Integer = 1048576, enableBase64Decode As Boolean = True, enableUrlDecode As Boolean = True)
+  overload: IDSApp.ProtocolParsing.HttpParser.#ctor*
+  nameWithType.vb: HttpParser.New(Integer, Integer, Boolean, Boolean)
+  fullName.vb: IDSApp.ProtocolParsing.HttpParser.New(Integer, Integer, Boolean, Boolean)
+  name.vb: New(Integer, Integer, Boolean, Boolean)
+- uid: IDSApp.ProtocolParsing.HttpParser.IsValidHttpPacket(System.Byte[])
+  commentId: M:IDSApp.ProtocolParsing.HttpParser.IsValidHttpPacket(System.Byte[])
+  id: IsValidHttpPacket(System.Byte[])
+  parent: IDSApp.ProtocolParsing.HttpParser
+  langs:
+  - csharp
+  - vb
+  name: IsValidHttpPacket(byte[])
+  nameWithType: HttpParser.IsValidHttpPacket(byte[])
+  fullName: IDSApp.ProtocolParsing.HttpParser.IsValidHttpPacket(byte[])
+  type: Method
+  source:
+    id: IsValidHttpPacket
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 388
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: Validate if packet contains valid HTTP protocol data
+  example: []
+  syntax:
+    content: public bool IsValidHttpPacket(byte[] payload)
+    parameters:
+    - id: payload
+      type: System.Byte[]
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsValidHttpPacket(payload As Byte()) As Boolean
+  overload: IDSApp.ProtocolParsing.HttpParser.IsValidHttpPacket*
+  nameWithType.vb: HttpParser.IsValidHttpPacket(Byte())
+  fullName.vb: IDSApp.ProtocolParsing.HttpParser.IsValidHttpPacket(Byte())
+  name.vb: IsValidHttpPacket(Byte())
+- uid: IDSApp.ProtocolParsing.HttpParser.AnalyzeBody(System.Byte[],System.String,System.String,System.String,System.String)
+  commentId: M:IDSApp.ProtocolParsing.HttpParser.AnalyzeBody(System.Byte[],System.String,System.String,System.String,System.String)
+  id: AnalyzeBody(System.Byte[],System.String,System.String,System.String,System.String)
+  parent: IDSApp.ProtocolParsing.HttpParser
+  langs:
+  - csharp
+  - vb
+  name: AnalyzeBody(byte[], string, string, string, string)
+  nameWithType: HttpParser.AnalyzeBody(byte[], string, string, string, string)
+  fullName: IDSApp.ProtocolParsing.HttpParser.AnalyzeBody(byte[], string, string, string, string)
+  type: Method
+  source:
+    id: AnalyzeBody
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 428
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: Comprehensive HTTP body analysis for security threats
+  example: []
+  syntax:
+    content: public HttpParser.ThreatResult AnalyzeBody(byte[] body, string srcIp, string dstIp, string direction, string contentType = null)
+    parameters:
+    - id: body
+      type: System.Byte[]
+    - id: srcIp
+      type: System.String
+    - id: dstIp
+      type: System.String
+    - id: direction
+      type: System.String
+    - id: contentType
+      type: System.String
+    return:
+      type: IDSApp.ProtocolParsing.HttpParser.ThreatResult
+    content.vb: Public Function AnalyzeBody(body As Byte(), srcIp As String, dstIp As String, direction As String, contentType As String = Nothing) As HttpParser.ThreatResult
+  overload: IDSApp.ProtocolParsing.HttpParser.AnalyzeBody*
+  nameWithType.vb: HttpParser.AnalyzeBody(Byte(), String, String, String, String)
+  fullName.vb: IDSApp.ProtocolParsing.HttpParser.AnalyzeBody(Byte(), String, String, String, String)
+  name.vb: AnalyzeBody(Byte(), String, String, String, String)
+- uid: IDSApp.ProtocolParsing.HttpParser.CheckBodyForThreats(System.Byte[],System.String,System.String,System.String,System.String)
+  commentId: M:IDSApp.ProtocolParsing.HttpParser.CheckBodyForThreats(System.Byte[],System.String,System.String,System.String,System.String)
+  id: CheckBodyForThreats(System.Byte[],System.String,System.String,System.String,System.String)
+  parent: IDSApp.ProtocolParsing.HttpParser
+  langs:
+  - csharp
+  - vb
+  name: CheckBodyForThreats(byte[], string, string, string, string)
+  nameWithType: HttpParser.CheckBodyForThreats(byte[], string, string, string, string)
+  fullName: IDSApp.ProtocolParsing.HttpParser.CheckBodyForThreats(byte[], string, string, string, string)
+  type: Method
+  source:
+    id: CheckBodyForThreats
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 634
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public bool CheckBodyForThreats(byte[] body, string srcIp, string dstIp, string direction, string contentType = null)
+    parameters:
+    - id: body
+      type: System.Byte[]
+    - id: srcIp
+      type: System.String
+    - id: dstIp
+      type: System.String
+    - id: direction
+      type: System.String
+    - id: contentType
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Function CheckBodyForThreats(body As Byte(), srcIp As String, dstIp As String, direction As String, contentType As String = Nothing) As Boolean
+  overload: IDSApp.ProtocolParsing.HttpParser.CheckBodyForThreats*
+  nameWithType.vb: HttpParser.CheckBodyForThreats(Byte(), String, String, String, String)
+  fullName.vb: IDSApp.ProtocolParsing.HttpParser.CheckBodyForThreats(Byte(), String, String, String, String)
+  name.vb: CheckBodyForThreats(Byte(), String, String, String, String)
+references:
+- uid: IDSApp.ProtocolParsing
+  commentId: N:IDSApp.ProtocolParsing
+  href: IDSApp.html
+  name: IDSApp.ProtocolParsing
+  nameWithType: IDSApp.ProtocolParsing
+  fullName: IDSApp.ProtocolParsing
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.ProtocolParsing.HttpParser.#ctor*
+  commentId: Overload:IDSApp.ProtocolParsing.HttpParser.#ctor
+  href: IDSApp.ProtocolParsing.HttpParser.html#IDSApp_ProtocolParsing_HttpParser__ctor_System_Int32_System_Int32_System_Boolean_System_Boolean_
+  name: HttpParser
+  nameWithType: HttpParser.HttpParser
+  fullName: IDSApp.ProtocolParsing.HttpParser.HttpParser
+  nameWithType.vb: HttpParser.New
+  fullName.vb: IDSApp.ProtocolParsing.HttpParser.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: IDSApp.ProtocolParsing.HttpParser.IsValidHttpPacket*
+  commentId: Overload:IDSApp.ProtocolParsing.HttpParser.IsValidHttpPacket
+  href: IDSApp.ProtocolParsing.HttpParser.html#IDSApp_ProtocolParsing_HttpParser_IsValidHttpPacket_System_Byte___
+  name: IsValidHttpPacket
+  nameWithType: HttpParser.IsValidHttpPacket
+  fullName: IDSApp.ProtocolParsing.HttpParser.IsValidHttpPacket
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: IDSApp.ProtocolParsing.HttpParser.AnalyzeBody*
+  commentId: Overload:IDSApp.ProtocolParsing.HttpParser.AnalyzeBody
+  href: IDSApp.ProtocolParsing.HttpParser.html#IDSApp_ProtocolParsing_HttpParser_AnalyzeBody_System_Byte___System_String_System_String_System_String_System_String_
+  name: AnalyzeBody
+  nameWithType: HttpParser.AnalyzeBody
+  fullName: IDSApp.ProtocolParsing.HttpParser.AnalyzeBody
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: IDSApp.ProtocolParsing.HttpParser.ThreatResult
+  commentId: T:IDSApp.ProtocolParsing.HttpParser.ThreatResult
+  parent: IDSApp.ProtocolParsing
+  href: IDSApp.ProtocolParsing.HttpParser.html
+  name: HttpParser.ThreatResult
+  nameWithType: HttpParser.ThreatResult
+  fullName: IDSApp.ProtocolParsing.HttpParser.ThreatResult
+  spec.csharp:
+  - uid: IDSApp.ProtocolParsing.HttpParser
+    name: HttpParser
+    href: IDSApp.ProtocolParsing.HttpParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.HttpParser.ThreatResult
+    name: ThreatResult
+    href: IDSApp.ProtocolParsing.HttpParser.ThreatResult.html
+  spec.vb:
+  - uid: IDSApp.ProtocolParsing.HttpParser
+    name: HttpParser
+    href: IDSApp.ProtocolParsing.HttpParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.HttpParser.ThreatResult
+    name: ThreatResult
+    href: IDSApp.ProtocolParsing.HttpParser.ThreatResult.html
+- uid: IDSApp.ProtocolParsing.HttpParser.CheckBodyForThreats*
+  commentId: Overload:IDSApp.ProtocolParsing.HttpParser.CheckBodyForThreats
+  href: IDSApp.ProtocolParsing.HttpParser.html#IDSApp_ProtocolParsing_HttpParser_CheckBodyForThreats_System_Byte___System_String_System_String_System_String_System_String_
+  name: CheckBodyForThreats
+  nameWithType: HttpParser.CheckBodyForThreats
+  fullName: IDSApp.ProtocolParsing.HttpParser.CheckBodyForThreats

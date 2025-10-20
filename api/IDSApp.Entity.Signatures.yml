@@ -1,0 +1,1049 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Entity.Signatures
+  commentId: T:IDSApp.Entity.Signatures
+  id: Signatures
+  parent: IDSApp.Entity
+  children:
+  - IDSApp.Entity.Signatures.AttackName
+  - IDSApp.Entity.Signatures.Clone
+  - IDSApp.Entity.Signatures.ContentPattern
+  - IDSApp.Entity.Signatures.Created_at
+  - IDSApp.Entity.Signatures.DestIp
+  - IDSApp.Entity.Signatures.DestPort
+  - IDSApp.Entity.Signatures.Direction
+  - IDSApp.Entity.Signatures.Engine
+  - IDSApp.Entity.Signatures.Flow
+  - IDSApp.Entity.Signatures.Http
+  - IDSApp.Entity.Signatures.Protocol
+  - IDSApp.Entity.Signatures.Rev
+  - IDSApp.Entity.Signatures.RuleText
+  - IDSApp.Entity.Signatures.Severity
+  - IDSApp.Entity.Signatures.Sid
+  - IDSApp.Entity.Signatures.SignatureId
+  - IDSApp.Entity.Signatures.SrcIp
+  - IDSApp.Entity.Signatures.SrcPort
+  - IDSApp.Entity.Signatures.Tls
+  langs:
+  - csharp
+  - vb
+  name: Signatures
+  nameWithType: Signatures
+  fullName: IDSApp.Entity.Signatures
+  type: Class
+  source:
+    id: Signatures
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 13
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: >-
+    Represents a security signature used for intrusion detection.
+
+    Contains information about attack patterns, network traffic characteristics,
+
+    and detection rules.
+  example: []
+  syntax:
+    content: public class Signatures
+    content.vb: Public Class Signatures
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.Entity.Signatures.SignatureId
+  commentId: P:IDSApp.Entity.Signatures.SignatureId
+  id: SignatureId
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: SignatureId
+  nameWithType: Signatures.SignatureId
+  fullName: IDSApp.Entity.Signatures.SignatureId
+  type: Property
+  source:
+    id: SignatureId
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 35
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the unique identifier for the signature.
+  example: []
+  syntax:
+    content: public int SignatureId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property SignatureId As Integer
+  overload: IDSApp.Entity.Signatures.SignatureId*
+- uid: IDSApp.Entity.Signatures.AttackName
+  commentId: P:IDSApp.Entity.Signatures.AttackName
+  id: AttackName
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: AttackName
+  nameWithType: Signatures.AttackName
+  fullName: IDSApp.Entity.Signatures.AttackName
+  type: Property
+  source:
+    id: AttackName
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 38
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the name of the attack detected by this signature.
+  example: []
+  syntax:
+    content: public string AttackName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AttackName As String
+  overload: IDSApp.Entity.Signatures.AttackName*
+- uid: IDSApp.Entity.Signatures.Engine
+  commentId: P:IDSApp.Entity.Signatures.Engine
+  id: Engine
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: Engine
+  nameWithType: Signatures.Engine
+  fullName: IDSApp.Entity.Signatures.Engine
+  type: Property
+  source:
+    id: Engine
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 41
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the detection engine that uses this signature.
+  example: []
+  syntax:
+    content: public string Engine { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Engine As String
+  overload: IDSApp.Entity.Signatures.Engine*
+- uid: IDSApp.Entity.Signatures.RuleText
+  commentId: P:IDSApp.Entity.Signatures.RuleText
+  id: RuleText
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: RuleText
+  nameWithType: Signatures.RuleText
+  fullName: IDSApp.Entity.Signatures.RuleText
+  type: Property
+  source:
+    id: RuleText
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 44
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the rule text or detection pattern.
+  example: []
+  syntax:
+    content: public string RuleText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RuleText As String
+  overload: IDSApp.Entity.Signatures.RuleText*
+- uid: IDSApp.Entity.Signatures.Protocol
+  commentId: P:IDSApp.Entity.Signatures.Protocol
+  id: Protocol
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: Protocol
+  nameWithType: Signatures.Protocol
+  fullName: IDSApp.Entity.Signatures.Protocol
+  type: Property
+  source:
+    id: Protocol
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 47
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the network protocol (TCP, UDP, etc.).
+  example: []
+  syntax:
+    content: public string Protocol { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Protocol As String
+  overload: IDSApp.Entity.Signatures.Protocol*
+- uid: IDSApp.Entity.Signatures.SrcIp
+  commentId: P:IDSApp.Entity.Signatures.SrcIp
+  id: SrcIp
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: SrcIp
+  nameWithType: Signatures.SrcIp
+  fullName: IDSApp.Entity.Signatures.SrcIp
+  type: Property
+  source:
+    id: SrcIp
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 50
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the source IP address.
+  example: []
+  syntax:
+    content: public string SrcIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SrcIp As String
+  overload: IDSApp.Entity.Signatures.SrcIp*
+- uid: IDSApp.Entity.Signatures.SrcPort
+  commentId: P:IDSApp.Entity.Signatures.SrcPort
+  id: SrcPort
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: SrcPort
+  nameWithType: Signatures.SrcPort
+  fullName: IDSApp.Entity.Signatures.SrcPort
+  type: Property
+  source:
+    id: SrcPort
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 53
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the source port number.
+  example: []
+  syntax:
+    content: public string SrcPort { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SrcPort As String
+  overload: IDSApp.Entity.Signatures.SrcPort*
+- uid: IDSApp.Entity.Signatures.Direction
+  commentId: P:IDSApp.Entity.Signatures.Direction
+  id: Direction
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: Direction
+  nameWithType: Signatures.Direction
+  fullName: IDSApp.Entity.Signatures.Direction
+  type: Property
+  source:
+    id: Direction
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 56
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the traffic direction (inbound, outbound, etc.).
+  example: []
+  syntax:
+    content: public string Direction { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Direction As String
+  overload: IDSApp.Entity.Signatures.Direction*
+- uid: IDSApp.Entity.Signatures.DestIp
+  commentId: P:IDSApp.Entity.Signatures.DestIp
+  id: DestIp
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: DestIp
+  nameWithType: Signatures.DestIp
+  fullName: IDSApp.Entity.Signatures.DestIp
+  type: Property
+  source:
+    id: DestIp
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 59
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the destination IP address.
+  example: []
+  syntax:
+    content: public string DestIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DestIp As String
+  overload: IDSApp.Entity.Signatures.DestIp*
+- uid: IDSApp.Entity.Signatures.Flow
+  commentId: P:IDSApp.Entity.Signatures.Flow
+  id: Flow
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: Flow
+  nameWithType: Signatures.Flow
+  fullName: IDSApp.Entity.Signatures.Flow
+  type: Property
+  source:
+    id: Flow
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 62
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the flow characteristics of the network traffic.
+  example: []
+  syntax:
+    content: public string Flow { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Flow As String
+  overload: IDSApp.Entity.Signatures.Flow*
+- uid: IDSApp.Entity.Signatures.Http
+  commentId: P:IDSApp.Entity.Signatures.Http
+  id: Http
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: Http
+  nameWithType: Signatures.Http
+  fullName: IDSApp.Entity.Signatures.Http
+  type: Property
+  source:
+    id: Http
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 65
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets HTTP-specific detection patterns.
+  example: []
+  syntax:
+    content: public string Http { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Http As String
+  overload: IDSApp.Entity.Signatures.Http*
+- uid: IDSApp.Entity.Signatures.Tls
+  commentId: P:IDSApp.Entity.Signatures.Tls
+  id: Tls
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: Tls
+  nameWithType: Signatures.Tls
+  fullName: IDSApp.Entity.Signatures.Tls
+  type: Property
+  source:
+    id: Tls
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 68
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets TLS/SSL-related detection patterns.
+  example: []
+  syntax:
+    content: public string Tls { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Tls As String
+  overload: IDSApp.Entity.Signatures.Tls*
+- uid: IDSApp.Entity.Signatures.ContentPattern
+  commentId: P:IDSApp.Entity.Signatures.ContentPattern
+  id: ContentPattern
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: ContentPattern
+  nameWithType: Signatures.ContentPattern
+  fullName: IDSApp.Entity.Signatures.ContentPattern
+  type: Property
+  source:
+    id: ContentPattern
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 71
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets content patterns used for payload inspection.
+  example: []
+  syntax:
+    content: public string ContentPattern { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ContentPattern As String
+  overload: IDSApp.Entity.Signatures.ContentPattern*
+- uid: IDSApp.Entity.Signatures.Sid
+  commentId: P:IDSApp.Entity.Signatures.Sid
+  id: Sid
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: Sid
+  nameWithType: Signatures.Sid
+  fullName: IDSApp.Entity.Signatures.Sid
+  type: Property
+  source:
+    id: Sid
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 74
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the signature ID (SID).
+  example: []
+  syntax:
+    content: public double Sid { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Sid As Double
+  overload: IDSApp.Entity.Signatures.Sid*
+- uid: IDSApp.Entity.Signatures.Rev
+  commentId: P:IDSApp.Entity.Signatures.Rev
+  id: Rev
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: Rev
+  nameWithType: Signatures.Rev
+  fullName: IDSApp.Entity.Signatures.Rev
+  type: Property
+  source:
+    id: Rev
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 77
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the revision number of the signature.
+  example: []
+  syntax:
+    content: public int? Rev { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property Rev As Integer?
+  overload: IDSApp.Entity.Signatures.Rev*
+- uid: IDSApp.Entity.Signatures.Created_at
+  commentId: P:IDSApp.Entity.Signatures.Created_at
+  id: Created_at
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: Created_at
+  nameWithType: Signatures.Created_at
+  fullName: IDSApp.Entity.Signatures.Created_at
+  type: Property
+  source:
+    id: Created_at
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 80
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the timestamp when the signature was created.
+  example: []
+  syntax:
+    content: public DateTime Created_at { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Created_at As Date
+  overload: IDSApp.Entity.Signatures.Created_at*
+- uid: IDSApp.Entity.Signatures.DestPort
+  commentId: P:IDSApp.Entity.Signatures.DestPort
+  id: DestPort
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: DestPort
+  nameWithType: Signatures.DestPort
+  fullName: IDSApp.Entity.Signatures.DestPort
+  type: Property
+  source:
+    id: DestPort
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 83
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the destination port number.
+  example: []
+  syntax:
+    content: public string DestPort { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DestPort As String
+  overload: IDSApp.Entity.Signatures.DestPort*
+- uid: IDSApp.Entity.Signatures.Severity
+  commentId: P:IDSApp.Entity.Signatures.Severity
+  id: Severity
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: Severity
+  nameWithType: Signatures.Severity
+  fullName: IDSApp.Entity.Signatures.Severity
+  type: Property
+  source:
+    id: Severity
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 86
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Gets or sets the severity level of the detected attack.
+  example: []
+  syntax:
+    content: public string Severity { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Severity As String
+  overload: IDSApp.Entity.Signatures.Severity*
+- uid: IDSApp.Entity.Signatures.Clone
+  commentId: M:IDSApp.Entity.Signatures.Clone
+  id: Clone
+  parent: IDSApp.Entity.Signatures
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: Signatures.Clone()
+  fullName: IDSApp.Entity.Signatures.Clone()
+  type: Method
+  source:
+    id: Clone
+    path: G:\C#\IDSApp\IDSApp\Entity\Signatures.cs
+    startLine: 168
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Creates a new object that is a copy of the current instance.
+  example: []
+  syntax:
+    content: public Signatures Clone()
+    return:
+      type: IDSApp.Entity.Signatures
+      description: A new Signatures object that is a copy of this instance.
+    content.vb: Public Function Clone() As Signatures
+  overload: IDSApp.Entity.Signatures.Clone*
+references:
+- uid: IDSApp.Entity
+  commentId: N:IDSApp.Entity
+  href: IDSApp.html
+  name: IDSApp.Entity
+  nameWithType: IDSApp.Entity
+  fullName: IDSApp.Entity
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.Entity.Signatures.SignatureId*
+  commentId: Overload:IDSApp.Entity.Signatures.SignatureId
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_SignatureId
+  name: SignatureId
+  nameWithType: Signatures.SignatureId
+  fullName: IDSApp.Entity.Signatures.SignatureId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: IDSApp.Entity.Signatures.AttackName*
+  commentId: Overload:IDSApp.Entity.Signatures.AttackName
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_AttackName
+  name: AttackName
+  nameWithType: Signatures.AttackName
+  fullName: IDSApp.Entity.Signatures.AttackName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: IDSApp.Entity.Signatures.Engine*
+  commentId: Overload:IDSApp.Entity.Signatures.Engine
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_Engine
+  name: Engine
+  nameWithType: Signatures.Engine
+  fullName: IDSApp.Entity.Signatures.Engine
+- uid: IDSApp.Entity.Signatures.RuleText*
+  commentId: Overload:IDSApp.Entity.Signatures.RuleText
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_RuleText
+  name: RuleText
+  nameWithType: Signatures.RuleText
+  fullName: IDSApp.Entity.Signatures.RuleText
+- uid: IDSApp.Entity.Signatures.Protocol*
+  commentId: Overload:IDSApp.Entity.Signatures.Protocol
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_Protocol
+  name: Protocol
+  nameWithType: Signatures.Protocol
+  fullName: IDSApp.Entity.Signatures.Protocol
+- uid: IDSApp.Entity.Signatures.SrcIp*
+  commentId: Overload:IDSApp.Entity.Signatures.SrcIp
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_SrcIp
+  name: SrcIp
+  nameWithType: Signatures.SrcIp
+  fullName: IDSApp.Entity.Signatures.SrcIp
+- uid: IDSApp.Entity.Signatures.SrcPort*
+  commentId: Overload:IDSApp.Entity.Signatures.SrcPort
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_SrcPort
+  name: SrcPort
+  nameWithType: Signatures.SrcPort
+  fullName: IDSApp.Entity.Signatures.SrcPort
+- uid: IDSApp.Entity.Signatures.Direction*
+  commentId: Overload:IDSApp.Entity.Signatures.Direction
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_Direction
+  name: Direction
+  nameWithType: Signatures.Direction
+  fullName: IDSApp.Entity.Signatures.Direction
+- uid: IDSApp.Entity.Signatures.DestIp*
+  commentId: Overload:IDSApp.Entity.Signatures.DestIp
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_DestIp
+  name: DestIp
+  nameWithType: Signatures.DestIp
+  fullName: IDSApp.Entity.Signatures.DestIp
+- uid: IDSApp.Entity.Signatures.Flow*
+  commentId: Overload:IDSApp.Entity.Signatures.Flow
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_Flow
+  name: Flow
+  nameWithType: Signatures.Flow
+  fullName: IDSApp.Entity.Signatures.Flow
+- uid: IDSApp.Entity.Signatures.Http*
+  commentId: Overload:IDSApp.Entity.Signatures.Http
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_Http
+  name: Http
+  nameWithType: Signatures.Http
+  fullName: IDSApp.Entity.Signatures.Http
+- uid: IDSApp.Entity.Signatures.Tls*
+  commentId: Overload:IDSApp.Entity.Signatures.Tls
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_Tls
+  name: Tls
+  nameWithType: Signatures.Tls
+  fullName: IDSApp.Entity.Signatures.Tls
+- uid: IDSApp.Entity.Signatures.ContentPattern*
+  commentId: Overload:IDSApp.Entity.Signatures.ContentPattern
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_ContentPattern
+  name: ContentPattern
+  nameWithType: Signatures.ContentPattern
+  fullName: IDSApp.Entity.Signatures.ContentPattern
+- uid: IDSApp.Entity.Signatures.Sid*
+  commentId: Overload:IDSApp.Entity.Signatures.Sid
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_Sid
+  name: Sid
+  nameWithType: Signatures.Sid
+  fullName: IDSApp.Entity.Signatures.Sid
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: IDSApp.Entity.Signatures.Rev*
+  commentId: Overload:IDSApp.Entity.Signatures.Rev
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_Rev
+  name: Rev
+  nameWithType: Signatures.Rev
+  fullName: IDSApp.Entity.Signatures.Rev
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: IDSApp.Entity.Signatures.Created_at*
+  commentId: Overload:IDSApp.Entity.Signatures.Created_at
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_Created_at
+  name: Created_at
+  nameWithType: Signatures.Created_at
+  fullName: IDSApp.Entity.Signatures.Created_at
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: IDSApp.Entity.Signatures.DestPort*
+  commentId: Overload:IDSApp.Entity.Signatures.DestPort
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_DestPort
+  name: DestPort
+  nameWithType: Signatures.DestPort
+  fullName: IDSApp.Entity.Signatures.DestPort
+- uid: IDSApp.Entity.Signatures.Severity*
+  commentId: Overload:IDSApp.Entity.Signatures.Severity
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_Severity
+  name: Severity
+  nameWithType: Signatures.Severity
+  fullName: IDSApp.Entity.Signatures.Severity
+- uid: IDSApp.Entity.Signatures.Clone*
+  commentId: Overload:IDSApp.Entity.Signatures.Clone
+  href: IDSApp.Entity.Signatures.html#IDSApp_Entity_Signatures_Clone
+  name: Clone
+  nameWithType: Signatures.Clone
+  fullName: IDSApp.Entity.Signatures.Clone
+- uid: IDSApp.Entity.Signatures
+  commentId: T:IDSApp.Entity.Signatures
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.Signatures.html
+  name: Signatures
+  nameWithType: Signatures
+  fullName: IDSApp.Entity.Signatures

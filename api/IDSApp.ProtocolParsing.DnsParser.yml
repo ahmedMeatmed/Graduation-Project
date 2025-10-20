@@ -1,0 +1,754 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.ProtocolParsing.DnsParser
+  commentId: T:IDSApp.ProtocolParsing.DnsParser
+  id: DnsParser
+  parent: IDSApp.ProtocolParsing
+  children:
+  - IDSApp.ProtocolParsing.DnsParser.#ctor
+  - IDSApp.ProtocolParsing.DnsParser.Body
+  - IDSApp.ProtocolParsing.DnsParser.Dispose
+  - IDSApp.ProtocolParsing.DnsParser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  - IDSApp.ProtocolParsing.DnsParser.Reset
+  langs:
+  - csharp
+  - vb
+  name: DnsParser
+  nameWithType: DnsParser
+  fullName: IDSApp.ProtocolParsing.DnsParser
+  type: Class
+  source:
+    id: DnsParser
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\DnsParser.cs
+    startLine: 43
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    DNS protocol parser for Intrusion Detection System
+
+
+    Main Responsibilities:
+
+    - Parse and analyze DNS (Domain Name System) network traffic
+
+    - Extract DNS queries and responses for security analysis
+
+    - Detect DNS-based attacks and suspicious domain activities
+
+    - Monitor DNS tunneling and data exfiltration attempts
+
+
+    DNS Protocol Support:
+
+    - Query Types: A, AAAA, NS, CNAME, PTR, and other common record types
+
+    - Standard Port: 53 (UDP/TCP)
+
+    - DNS packet structure parsing (header, questions, answers)
+
+    - Domain name compression pointer resolution
+
+
+    Security Detection Capabilities:
+
+    - DNS tunneling detection through suspicious domain patterns
+
+    - Data exfiltration via DNS queries
+
+    - Malicious domain name patterns and DGA (Domain Generation Algorithm)
+
+    - Suspicious query types and response patterns
+
+    - DNS amplification attack indicators
+
+
+    Features:
+
+    - Complete DNS packet parsing with compression handling
+
+    - Question and answer section analysis
+
+    - IPv4 and IPv6 address parsing
+
+    - Suspicious domain pattern matching
+
+    - Comprehensive logging with forensic data
+  example: []
+  syntax:
+    content: 'public class DnsParser : IDisposable'
+    content.vb: Public Class DnsParser Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.ProtocolParsing.DnsParser.#ctor
+  commentId: M:IDSApp.ProtocolParsing.DnsParser.#ctor
+  id: '#ctor'
+  parent: IDSApp.ProtocolParsing.DnsParser
+  langs:
+  - csharp
+  - vb
+  name: DnsParser()
+  nameWithType: DnsParser.DnsParser()
+  fullName: IDSApp.ProtocolParsing.DnsParser.DnsParser()
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\DnsParser.cs
+    startLine: 73
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public DnsParser()
+    content.vb: Public Sub New()
+  overload: IDSApp.ProtocolParsing.DnsParser.#ctor*
+  nameWithType.vb: DnsParser.New()
+  fullName.vb: IDSApp.ProtocolParsing.DnsParser.New()
+  name.vb: New()
+- uid: IDSApp.ProtocolParsing.DnsParser.Reset
+  commentId: M:IDSApp.ProtocolParsing.DnsParser.Reset
+  id: Reset
+  parent: IDSApp.ProtocolParsing.DnsParser
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: DnsParser.Reset()
+  fullName: IDSApp.ProtocolParsing.DnsParser.Reset()
+  type: Method
+  source:
+    id: Reset
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\DnsParser.cs
+    startLine: 83
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Reset parser state for processing new DNS packet
+
+    Clears all extracted information and payload buffer
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: IDSApp.ProtocolParsing.DnsParser.Reset*
+- uid: IDSApp.ProtocolParsing.DnsParser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  commentId: M:IDSApp.ProtocolParsing.DnsParser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  id: Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  parent: IDSApp.ProtocolParsing.DnsParser
+  langs:
+  - csharp
+  - vb
+  name: Parse(byte[], string, string, int, int, string)
+  nameWithType: DnsParser.Parse(byte[], string, string, int, int, string)
+  fullName: IDSApp.ProtocolParsing.DnsParser.Parse(byte[], string, string, int, int, string)
+  type: Method
+  source:
+    id: Parse
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\DnsParser.cs
+    startLine: 114
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Parse DNS protocol packet and extract queries and responses
+
+
+    Processing Steps:
+
+    1. Validate input parameters and payload size
+
+    2. Verify standard DNS port (53)
+
+    3. Parse DNS header to get question and answer counts
+
+    4. Extract question section with domain names and types
+
+    5. Extract answer section with response data
+
+    6. Detect suspicious patterns in domains and responses
+
+    7. Log security events and parsed information
+
+
+    DNS Packet Structure:
+
+    - Bytes 0-1: Transaction ID
+
+    - Bytes 2-3: Flags
+
+    - Bytes 4-5: Question Count
+
+    - Bytes 6-7: Answer Count
+
+    - Byte 12+: Question and Answer sections
+  example: []
+  syntax:
+    content: public (List<DnsParser.DnsRecord> Questions, List<DnsParser.DnsRecord> Answers) Parse(byte[] payload, string srcIp, string dstIp, int srcPort, int dstPort, string sessionId = null)
+    parameters:
+    - id: payload
+      type: System.Byte[]
+    - id: srcIp
+      type: System.String
+    - id: dstIp
+      type: System.String
+    - id: srcPort
+      type: System.Int32
+    - id: dstPort
+      type: System.Int32
+    - id: sessionId
+      type: System.String
+    return:
+      type: System.ValueTuple{System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord},System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord}}
+    content.vb: Public Function Parse(payload As Byte(), srcIp As String, dstIp As String, srcPort As Integer, dstPort As Integer, sessionId As String = Nothing) As (Questions As List(Of DnsParser.DnsRecord), Answers As List(Of DnsParser.DnsRecord))
+  overload: IDSApp.ProtocolParsing.DnsParser.Parse*
+  nameWithType.vb: DnsParser.Parse(Byte(), String, String, Integer, Integer, String)
+  fullName.vb: IDSApp.ProtocolParsing.DnsParser.Parse(Byte(), String, String, Integer, Integer, String)
+  name.vb: Parse(Byte(), String, String, Integer, Integer, String)
+- uid: IDSApp.ProtocolParsing.DnsParser.Body
+  commentId: P:IDSApp.ProtocolParsing.DnsParser.Body
+  id: Body
+  parent: IDSApp.ProtocolParsing.DnsParser
+  langs:
+  - csharp
+  - vb
+  name: Body
+  nameWithType: DnsParser.Body
+  fullName: IDSApp.ProtocolParsing.DnsParser.Body
+  type: Property
+  source:
+    id: Body
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\DnsParser.cs
+    startLine: 377
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: Access to raw payload data
+  example: []
+  syntax:
+    content: public byte[] Body { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property Body As Byte()
+  overload: IDSApp.ProtocolParsing.DnsParser.Body*
+- uid: IDSApp.ProtocolParsing.DnsParser.Dispose
+  commentId: M:IDSApp.ProtocolParsing.DnsParser.Dispose
+  id: Dispose
+  parent: IDSApp.ProtocolParsing.DnsParser
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DnsParser.Dispose()
+  fullName: IDSApp.ProtocolParsing.DnsParser.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\DnsParser.cs
+    startLine: 382
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: Clean up resources
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: IDSApp.ProtocolParsing.DnsParser.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: IDSApp.ProtocolParsing
+  commentId: N:IDSApp.ProtocolParsing
+  href: IDSApp.html
+  name: IDSApp.ProtocolParsing
+  nameWithType: IDSApp.ProtocolParsing
+  fullName: IDSApp.ProtocolParsing
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.ProtocolParsing.DnsParser.#ctor*
+  commentId: Overload:IDSApp.ProtocolParsing.DnsParser.#ctor
+  href: IDSApp.ProtocolParsing.DnsParser.html#IDSApp_ProtocolParsing_DnsParser__ctor
+  name: DnsParser
+  nameWithType: DnsParser.DnsParser
+  fullName: IDSApp.ProtocolParsing.DnsParser.DnsParser
+  nameWithType.vb: DnsParser.New
+  fullName.vb: IDSApp.ProtocolParsing.DnsParser.New
+  name.vb: New
+- uid: IDSApp.ProtocolParsing.DnsParser.Reset*
+  commentId: Overload:IDSApp.ProtocolParsing.DnsParser.Reset
+  href: IDSApp.ProtocolParsing.DnsParser.html#IDSApp_ProtocolParsing_DnsParser_Reset
+  name: Reset
+  nameWithType: DnsParser.Reset
+  fullName: IDSApp.ProtocolParsing.DnsParser.Reset
+- uid: IDSApp.ProtocolParsing.DnsParser.Parse*
+  commentId: Overload:IDSApp.ProtocolParsing.DnsParser.Parse
+  href: IDSApp.ProtocolParsing.DnsParser.html#IDSApp_ProtocolParsing_DnsParser_Parse_System_Byte___System_String_System_String_System_Int32_System_Int32_System_String_
+  name: Parse
+  nameWithType: DnsParser.Parse
+  fullName: IDSApp.ProtocolParsing.DnsParser.Parse
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.ValueTuple{System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord},System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord}}
+  commentId: T:System.ValueTuple{System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord},System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord}}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: (List<DnsParser.DnsRecord> Questions, List<DnsParser.DnsRecord> Answers)
+  nameWithType: (List<DnsParser.DnsRecord> Questions, List<DnsParser.DnsRecord> Answers)
+  fullName: (System.Collections.Generic.List<IDSApp.ProtocolParsing.DnsParser.DnsRecord> Questions, System.Collections.Generic.List<IDSApp.ProtocolParsing.DnsParser.DnsRecord> Answers)
+  nameWithType.vb: (Questions As List(Of DnsParser.DnsRecord), Answers As List(Of DnsParser.DnsRecord))
+  fullName.vb: (Questions As System.Collections.Generic.List(Of IDSApp.ProtocolParsing.DnsParser.DnsRecord), Answers As System.Collections.Generic.List(Of IDSApp.ProtocolParsing.DnsParser.DnsRecord))
+  name.vb: (Questions As List(Of DnsParser.DnsRecord), Answers As List(Of DnsParser.DnsRecord))
+  spec.csharp:
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: IDSApp.ProtocolParsing.DnsParser
+    name: DnsParser
+    href: IDSApp.ProtocolParsing.DnsParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.DnsParser.DnsRecord
+    name: DnsRecord
+    href: IDSApp.ProtocolParsing.DnsParser.DnsRecord.html
+  - name: '>'
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord},System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord}}.Questions
+    name: Questions
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.list-idsapp.protocolparsing.dnsparser.dnsrecord-,system.collections.generic.list-idsapp.protocolparsing.dnsparser.dnsrecord--.questions
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: IDSApp.ProtocolParsing.DnsParser
+    name: DnsParser
+    href: IDSApp.ProtocolParsing.DnsParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.DnsParser.DnsRecord
+    name: DnsRecord
+    href: IDSApp.ProtocolParsing.DnsParser.DnsRecord.html
+  - name: '>'
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord},System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord}}.Answers
+    name: Answers
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.list-idsapp.protocolparsing.dnsparser.dnsrecord-,system.collections.generic.list-idsapp.protocolparsing.dnsparser.dnsrecord--.answers
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord},System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord}}.Questions
+    name: Questions
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.list-idsapp.protocolparsing.dnsparser.dnsrecord-,system.collections.generic.list-idsapp.protocolparsing.dnsparser.dnsrecord--.questions
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: IDSApp.ProtocolParsing.DnsParser
+    name: DnsParser
+    href: IDSApp.ProtocolParsing.DnsParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.DnsParser.DnsRecord
+    name: DnsRecord
+    href: IDSApp.ProtocolParsing.DnsParser.DnsRecord.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord},System.Collections.Generic.List{IDSApp.ProtocolParsing.DnsParser.DnsRecord}}.Answers
+    name: Answers
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.list-idsapp.protocolparsing.dnsparser.dnsrecord-,system.collections.generic.list-idsapp.protocolparsing.dnsparser.dnsrecord--.answers
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: IDSApp.ProtocolParsing.DnsParser
+    name: DnsParser
+    href: IDSApp.ProtocolParsing.DnsParser.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing.DnsParser.DnsRecord
+    name: DnsRecord
+    href: IDSApp.ProtocolParsing.DnsParser.DnsRecord.html
+  - name: )
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: IDSApp.ProtocolParsing.DnsParser.Body*
+  commentId: Overload:IDSApp.ProtocolParsing.DnsParser.Body
+  href: IDSApp.ProtocolParsing.DnsParser.html#IDSApp_ProtocolParsing_DnsParser_Body
+  name: Body
+  nameWithType: DnsParser.Body
+  fullName: IDSApp.ProtocolParsing.DnsParser.Body
+- uid: IDSApp.ProtocolParsing.DnsParser.Dispose*
+  commentId: Overload:IDSApp.ProtocolParsing.DnsParser.Dispose
+  href: IDSApp.ProtocolParsing.DnsParser.html#IDSApp_ProtocolParsing_DnsParser_Dispose
+  name: Dispose
+  nameWithType: DnsParser.Dispose
+  fullName: IDSApp.ProtocolParsing.DnsParser.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

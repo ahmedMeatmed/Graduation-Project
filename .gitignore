@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+*.user
+*.dbmdl
+*.mdf
+*.ldf
+appsettings.json
+app.config

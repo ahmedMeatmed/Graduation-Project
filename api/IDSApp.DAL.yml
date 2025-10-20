@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.DAL
+  commentId: N:IDSApp.DAL
+  id: IDSApp.DAL
+  children:
+  - IDSApp.DAL.SettingDal
+  langs:
+  - csharp
+  - vb
+  name: IDSApp.DAL
+  nameWithType: IDSApp.DAL
+  fullName: IDSApp.DAL
+  type: Namespace
+  assemblies:
+  - IDSApp
+references:
+- uid: IDSApp.DAL.SettingDal
+  commentId: T:IDSApp.DAL.SettingDal
+  href: IDSApp.DAL.SettingDal.html
+  name: SettingDal
+  nameWithType: SettingDal
+  fullName: IDSApp.DAL.SettingDal

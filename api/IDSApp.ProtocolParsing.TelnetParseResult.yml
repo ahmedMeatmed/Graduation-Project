@@ -1,0 +1,564 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.ProtocolParsing.TelnetParseResult
+  commentId: T:IDSApp.ProtocolParsing.TelnetParseResult
+  id: TelnetParseResult
+  parent: IDSApp.ProtocolParsing
+  children:
+  - IDSApp.ProtocolParsing.TelnetParseResult.AuthAttempts
+  - IDSApp.ProtocolParsing.TelnetParseResult.ClientIp
+  - IDSApp.ProtocolParsing.TelnetParseResult.Command
+  - IDSApp.ProtocolParsing.TelnetParseResult.HasMeaningfulData
+  - IDSApp.ProtocolParsing.TelnetParseResult.ServerIp
+  - IDSApp.ProtocolParsing.TelnetParseResult.ToString
+  langs:
+  - csharp
+  - vb
+  name: TelnetParseResult
+  nameWithType: TelnetParseResult
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult
+  type: Class
+  source:
+    id: TelnetParseResult
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\TelnetParser.cs
+    startLine: 164
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Result container for Telnet parsing operations
+
+    Stores extracted Telnet commands, connection information, and security analysis results
+
+    Provides utility methods for result validation and formatted output
+  example: []
+  syntax:
+    content: public class TelnetParseResult
+    content.vb: Public Class TelnetParseResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.Command
+  commentId: P:IDSApp.ProtocolParsing.TelnetParseResult.Command
+  id: Command
+  parent: IDSApp.ProtocolParsing.TelnetParseResult
+  langs:
+  - csharp
+  - vb
+  name: Command
+  nameWithType: TelnetParseResult.Command
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.Command
+  type: Property
+  source:
+    id: Command
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\TelnetParser.cs
+    startLine: 174
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Extracted Telnet command text after removing control sequences
+
+    Contains clear-text user commands and data entered in Telnet session
+
+    Default value: empty string
+  example: []
+  syntax:
+    content: public string Command { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Command As String
+  overload: IDSApp.ProtocolParsing.TelnetParseResult.Command*
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.ClientIp
+  commentId: P:IDSApp.ProtocolParsing.TelnetParseResult.ClientIp
+  id: ClientIp
+  parent: IDSApp.ProtocolParsing.TelnetParseResult
+  langs:
+  - csharp
+  - vb
+  name: ClientIp
+  nameWithType: TelnetParseResult.ClientIp
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.ClientIp
+  type: Property
+  source:
+    id: ClientIp
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\TelnetParser.cs
+    startLine: 183
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Source IP address of Telnet client
+
+    Used for connection tracking and client identification
+  example: []
+  syntax:
+    content: public string ClientIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClientIp As String
+  overload: IDSApp.ProtocolParsing.TelnetParseResult.ClientIp*
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.ServerIp
+  commentId: P:IDSApp.ProtocolParsing.TelnetParseResult.ServerIp
+  id: ServerIp
+  parent: IDSApp.ProtocolParsing.TelnetParseResult
+  langs:
+  - csharp
+  - vb
+  name: ServerIp
+  nameWithType: TelnetParseResult.ServerIp
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.ServerIp
+  type: Property
+  source:
+    id: ServerIp
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\TelnetParser.cs
+    startLine: 192
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Destination IP address of Telnet server
+
+    Used for connection tracking and server identification
+  example: []
+  syntax:
+    content: public string ServerIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ServerIp As String
+  overload: IDSApp.ProtocolParsing.TelnetParseResult.ServerIp*
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.AuthAttempts
+  commentId: P:IDSApp.ProtocolParsing.TelnetParseResult.AuthAttempts
+  id: AuthAttempts
+  parent: IDSApp.ProtocolParsing.TelnetParseResult
+  langs:
+  - csharp
+  - vb
+  name: AuthAttempts
+  nameWithType: TelnetParseResult.AuthAttempts
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.AuthAttempts
+  type: Property
+  source:
+    id: AuthAttempts
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\TelnetParser.cs
+    startLine: 204
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Counter for authentication attempts and suspicious activity levels
+
+    - 0: No authentication detected
+
+    - 1: Authentication patterns detected (login/password)
+
+    - 2: Suspicious commands detected (shell access, file operations)
+
+    Default value: 0
+  example: []
+  syntax:
+    content: public int AuthAttempts { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property AuthAttempts As Integer
+  overload: IDSApp.ProtocolParsing.TelnetParseResult.AuthAttempts*
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.ToString
+  commentId: M:IDSApp.ProtocolParsing.TelnetParseResult.ToString
+  id: ToString
+  parent: IDSApp.ProtocolParsing.TelnetParseResult
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: TelnetParseResult.ToString()
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\TelnetParser.cs
+    startLine: 214
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Provides formatted string representation of Telnet parse results
+
+    Includes all key properties for logging and display purposes
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: Formatted string containing Telnet analysis results
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: IDSApp.ProtocolParsing.TelnetParseResult.ToString*
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.HasMeaningfulData
+  commentId: M:IDSApp.ProtocolParsing.TelnetParseResult.HasMeaningfulData
+  id: HasMeaningfulData
+  parent: IDSApp.ProtocolParsing.TelnetParseResult
+  langs:
+  - csharp
+  - vb
+  name: HasMeaningfulData()
+  nameWithType: TelnetParseResult.HasMeaningfulData()
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.HasMeaningfulData()
+  type: Method
+  source:
+    id: HasMeaningfulData
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\TelnetParser.cs
+    startLine: 227
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Determines if the parse result contains meaningful Telnet data
+
+    Checks for valid commands and filters out errors or empty results
+  example: []
+  syntax:
+    content: public bool HasMeaningfulData()
+    return:
+      type: System.Boolean
+      description: True if result contains valid Telnet command data, false otherwise
+    content.vb: Public Function HasMeaningfulData() As Boolean
+  overload: IDSApp.ProtocolParsing.TelnetParseResult.HasMeaningfulData*
+references:
+- uid: IDSApp.ProtocolParsing
+  commentId: N:IDSApp.ProtocolParsing
+  href: IDSApp.html
+  name: IDSApp.ProtocolParsing
+  nameWithType: IDSApp.ProtocolParsing
+  fullName: IDSApp.ProtocolParsing
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.Command*
+  commentId: Overload:IDSApp.ProtocolParsing.TelnetParseResult.Command
+  href: IDSApp.ProtocolParsing.TelnetParseResult.html#IDSApp_ProtocolParsing_TelnetParseResult_Command
+  name: Command
+  nameWithType: TelnetParseResult.Command
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.Command
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.ClientIp*
+  commentId: Overload:IDSApp.ProtocolParsing.TelnetParseResult.ClientIp
+  href: IDSApp.ProtocolParsing.TelnetParseResult.html#IDSApp_ProtocolParsing_TelnetParseResult_ClientIp
+  name: ClientIp
+  nameWithType: TelnetParseResult.ClientIp
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.ClientIp
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.ServerIp*
+  commentId: Overload:IDSApp.ProtocolParsing.TelnetParseResult.ServerIp
+  href: IDSApp.ProtocolParsing.TelnetParseResult.html#IDSApp_ProtocolParsing_TelnetParseResult_ServerIp
+  name: ServerIp
+  nameWithType: TelnetParseResult.ServerIp
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.ServerIp
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.AuthAttempts*
+  commentId: Overload:IDSApp.ProtocolParsing.TelnetParseResult.AuthAttempts
+  href: IDSApp.ProtocolParsing.TelnetParseResult.html#IDSApp_ProtocolParsing_TelnetParseResult_AuthAttempts
+  name: AuthAttempts
+  nameWithType: TelnetParseResult.AuthAttempts
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.AuthAttempts
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.ToString*
+  commentId: Overload:IDSApp.ProtocolParsing.TelnetParseResult.ToString
+  href: IDSApp.ProtocolParsing.TelnetParseResult.html#IDSApp_ProtocolParsing_TelnetParseResult_ToString
+  name: ToString
+  nameWithType: TelnetParseResult.ToString
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.ToString
+- uid: IDSApp.ProtocolParsing.TelnetParseResult.HasMeaningfulData*
+  commentId: Overload:IDSApp.ProtocolParsing.TelnetParseResult.HasMeaningfulData
+  href: IDSApp.ProtocolParsing.TelnetParseResult.html#IDSApp_ProtocolParsing_TelnetParseResult_HasMeaningfulData
+  name: HasMeaningfulData
+  nameWithType: TelnetParseResult.HasMeaningfulData
+  fullName: IDSApp.ProtocolParsing.TelnetParseResult.HasMeaningfulData
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

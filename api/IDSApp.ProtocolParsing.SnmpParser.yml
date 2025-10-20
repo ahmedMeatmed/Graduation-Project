@@ -1,0 +1,854 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.ProtocolParsing.SnmpParser
+  commentId: T:IDSApp.ProtocolParsing.SnmpParser
+  id: SnmpParser
+  parent: IDSApp.ProtocolParsing
+  children:
+  - IDSApp.ProtocolParsing.SnmpParser.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})
+  - IDSApp.ProtocolParsing.SnmpParser.Body
+  - IDSApp.ProtocolParsing.SnmpParser.Dispose
+  - IDSApp.ProtocolParsing.SnmpParser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  - IDSApp.ProtocolParsing.SnmpParser.ParseRequest(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.DateTime},System.Byte[])
+  - IDSApp.ProtocolParsing.SnmpParser.ParseResponse(System.String,System.String,System.Byte[])
+  - IDSApp.ProtocolParsing.SnmpParser.Reset
+  langs:
+  - csharp
+  - vb
+  name: SnmpParser
+  nameWithType: SnmpParser
+  fullName: IDSApp.ProtocolParsing.SnmpParser
+  type: Class
+  source:
+    id: SnmpParser
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\SnmpParser.cs
+    startLine: 23
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: 'public class SnmpParser : IDisposable'
+    content.vb: Public Class SnmpParser Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.ProtocolParsing.SnmpParser.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:IDSApp.ProtocolParsing.SnmpParser.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})'
+  parent: IDSApp.ProtocolParsing.SnmpParser
+  langs:
+  - csharp
+  - vb
+  name: SnmpParser(IEnumerable<string>, IEnumerable<string>)
+  nameWithType: SnmpParser.SnmpParser(IEnumerable<string>, IEnumerable<string>)
+  fullName: IDSApp.ProtocolParsing.SnmpParser.SnmpParser(System.Collections.Generic.IEnumerable<string>, System.Collections.Generic.IEnumerable<string>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\SnmpParser.cs
+    startLine: 81
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Initializes SNMP parser with configurable security patterns and thresholds
+
+    Creates memory stream for payload storage and sets up detection rules
+  example: []
+  syntax:
+    content: public SnmpParser(IEnumerable<string> suspiciousCommunities = null, IEnumerable<string> suspiciousRequestTypes = null)
+    parameters:
+    - id: suspiciousCommunities
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Custom list of suspicious SNMP community strings
+    - id: suspiciousRequestTypes
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Custom list of suspicious SNMP operation types
+    content.vb: Public Sub New(suspiciousCommunities As IEnumerable(Of String) = Nothing, suspiciousRequestTypes As IEnumerable(Of String) = Nothing)
+  overload: IDSApp.ProtocolParsing.SnmpParser.#ctor*
+  nameWithType.vb: SnmpParser.New(IEnumerable(Of String), IEnumerable(Of String))
+  fullName.vb: IDSApp.ProtocolParsing.SnmpParser.New(System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of String))
+  name.vb: New(IEnumerable(Of String), IEnumerable(Of String))
+- uid: IDSApp.ProtocolParsing.SnmpParser.Reset
+  commentId: M:IDSApp.ProtocolParsing.SnmpParser.Reset
+  id: Reset
+  parent: IDSApp.ProtocolParsing.SnmpParser
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: SnmpParser.Reset()
+  fullName: IDSApp.ProtocolParsing.SnmpParser.Reset()
+  type: Method
+  source:
+    id: Reset
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\SnmpParser.cs
+    startLine: 108
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Resets all parser fields to default values for new session
+
+    Clears OID list, body stream, and resets state while maintaining configuration
+
+    Thread-safe operation using lock synchronization
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: IDSApp.ProtocolParsing.SnmpParser.Reset*
+- uid: IDSApp.ProtocolParsing.SnmpParser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  commentId: M:IDSApp.ProtocolParsing.SnmpParser.Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  id: Parse(System.Byte[],System.String,System.String,System.Int32,System.Int32,System.String)
+  parent: IDSApp.ProtocolParsing.SnmpParser
+  langs:
+  - csharp
+  - vb
+  name: Parse(byte[], string, string, int, int, string)
+  nameWithType: SnmpParser.Parse(byte[], string, string, int, int, string)
+  fullName: IDSApp.ProtocolParsing.SnmpParser.Parse(byte[], string, string, int, int, string)
+  type: Method
+  source:
+    id: Parse
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\SnmpParser.cs
+    startLine: 140
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Main SNMP packet parsing method - processes SNMP protocol traffic
+
+    Validates input parameters, checks packet size, and initiates ASN.1 parsing
+
+    Handles both SNMP requests and responses with security analysis
+  example: []
+  syntax:
+    content: public void Parse(byte[] payload, string srcIp, string dstIp, int srcPort, int dstPort, string sessionId = null)
+    parameters:
+    - id: payload
+      type: System.Byte[]
+      description: Raw packet bytes to parse
+    - id: srcIp
+      type: System.String
+      description: Source IP address
+    - id: dstIp
+      type: System.String
+      description: Destination IP address
+    - id: srcPort
+      type: System.Int32
+      description: Source port number
+    - id: dstPort
+      type: System.Int32
+      description: Destination port number
+    - id: sessionId
+      type: System.String
+      description: Optional session identifier
+    content.vb: Public Sub Parse(payload As Byte(), srcIp As String, dstIp As String, srcPort As Integer, dstPort As Integer, sessionId As String = Nothing)
+  overload: IDSApp.ProtocolParsing.SnmpParser.Parse*
+  nameWithType.vb: SnmpParser.Parse(Byte(), String, String, Integer, Integer, String)
+  fullName.vb: IDSApp.ProtocolParsing.SnmpParser.Parse(Byte(), String, String, Integer, Integer, String)
+  name.vb: Parse(Byte(), String, String, Integer, Integer, String)
+- uid: IDSApp.ProtocolParsing.SnmpParser.ParseRequest(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.DateTime},System.Byte[])
+  commentId: M:IDSApp.ProtocolParsing.SnmpParser.ParseRequest(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.DateTime},System.Byte[])
+  id: ParseRequest(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.String,System.String,System.Nullable{System.DateTime},System.Byte[])
+  parent: IDSApp.ProtocolParsing.SnmpParser
+  langs:
+  - csharp
+  - vb
+  name: ParseRequest(string, string, string, IEnumerable<string>, string, string, string, DateTime?, byte[])
+  nameWithType: SnmpParser.ParseRequest(string, string, string, IEnumerable<string>, string, string, string, DateTime?, byte[])
+  fullName: IDSApp.ProtocolParsing.SnmpParser.ParseRequest(string, string, string, System.Collections.Generic.IEnumerable<string>, string, string, string, System.DateTime?, byte[])
+  type: Method
+  source:
+    id: ParseRequest
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\SnmpParser.cs
+    startLine: 221
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Processes SNMP request data and performs security analysis
+
+    Validates community strings, request types, and OID patterns
+
+    Detects bulk requests, suspicious operations, and weak authentication
+  example: []
+  syntax:
+    content: public void ParseRequest(string version, string community, string requestType, IEnumerable<string> oids, string srcIp, string dstIp, string sessionId, DateTime? timestamp = null, byte[] rawPayload = null)
+    parameters:
+    - id: version
+      type: System.String
+      description: SNMP protocol version
+    - id: community
+      type: System.String
+      description: SNMP community string
+    - id: requestType
+      type: System.String
+      description: SNMP operation type
+    - id: oids
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: List of OIDs being queried
+    - id: srcIp
+      type: System.String
+      description: Source IP address
+    - id: dstIp
+      type: System.String
+      description: Destination IP address
+    - id: sessionId
+      type: System.String
+      description: Session identifier
+    - id: timestamp
+      type: System.Nullable{System.DateTime}
+      description: Optional timestamp
+    - id: rawPayload
+      type: System.Byte[]
+      description: Raw packet bytes for fingerprinting
+    content.vb: Public Sub ParseRequest(version As String, community As String, requestType As String, oids As IEnumerable(Of String), srcIp As String, dstIp As String, sessionId As String, timestamp As Date? = Nothing, rawPayload As Byte() = Nothing)
+  overload: IDSApp.ProtocolParsing.SnmpParser.ParseRequest*
+  nameWithType.vb: SnmpParser.ParseRequest(String, String, String, IEnumerable(Of String), String, String, String, Date?, Byte())
+  fullName.vb: IDSApp.ProtocolParsing.SnmpParser.ParseRequest(String, String, String, System.Collections.Generic.IEnumerable(Of String), String, String, String, Date?, Byte())
+  name.vb: ParseRequest(String, String, String, IEnumerable(Of String), String, String, String, Date?, Byte())
+- uid: IDSApp.ProtocolParsing.SnmpParser.ParseResponse(System.String,System.String,System.Byte[])
+  commentId: M:IDSApp.ProtocolParsing.SnmpParser.ParseResponse(System.String,System.String,System.Byte[])
+  id: ParseResponse(System.String,System.String,System.Byte[])
+  parent: IDSApp.ProtocolParsing.SnmpParser
+  langs:
+  - csharp
+  - vb
+  name: ParseResponse(string, string, byte[])
+  nameWithType: SnmpParser.ParseResponse(string, string, byte[])
+  fullName: IDSApp.ProtocolParsing.SnmpParser.ParseResponse(string, string, byte[])
+  type: Method
+  source:
+    id: ParseResponse
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\SnmpParser.cs
+    startLine: 267
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Processes SNMP response data and performs content analysis
+
+    Scans response values for sensitive information and attack indicators
+
+    Monitors payload size and response patterns for anomalies
+  example: []
+  syntax:
+    content: public void ParseResponse(string value, string responseCode = "OK", byte[] payload = null)
+    parameters:
+    - id: value
+      type: System.String
+      description: SNMP response value data
+    - id: responseCode
+      type: System.String
+      description: SNMP response status code
+    - id: payload
+      type: System.Byte[]
+      description: Raw response payload for analysis
+    content.vb: Public Sub ParseResponse(value As String, responseCode As String = "OK", payload As Byte() = Nothing)
+  overload: IDSApp.ProtocolParsing.SnmpParser.ParseResponse*
+  nameWithType.vb: SnmpParser.ParseResponse(String, String, Byte())
+  fullName.vb: IDSApp.ProtocolParsing.SnmpParser.ParseResponse(String, String, Byte())
+  name.vb: ParseResponse(String, String, Byte())
+- uid: IDSApp.ProtocolParsing.SnmpParser.Body
+  commentId: P:IDSApp.ProtocolParsing.SnmpParser.Body
+  id: Body
+  parent: IDSApp.ProtocolParsing.SnmpParser
+  langs:
+  - csharp
+  - vb
+  name: Body
+  nameWithType: SnmpParser.Body
+  fullName: IDSApp.ProtocolParsing.SnmpParser.Body
+  type: Property
+  source:
+    id: Body
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\SnmpParser.cs
+    startLine: 494
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Read-only property providing access to raw packet payload
+
+    Returns copy of stored body stream as byte array
+  example: []
+  syntax:
+    content: public byte[] Body { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public ReadOnly Property Body As Byte()
+  overload: IDSApp.ProtocolParsing.SnmpParser.Body*
+- uid: IDSApp.ProtocolParsing.SnmpParser.Dispose
+  commentId: M:IDSApp.ProtocolParsing.SnmpParser.Dispose
+  id: Dispose
+  parent: IDSApp.ProtocolParsing.SnmpParser
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: SnmpParser.Dispose()
+  fullName: IDSApp.ProtocolParsing.SnmpParser.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\SnmpParser.cs
+    startLine: 504
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Implements IDisposable pattern for proper resource cleanup
+
+    Disposes memory stream and marks instance as disposed
+
+    Thread-safe disposal using lock synchronization
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: IDSApp.ProtocolParsing.SnmpParser.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: IDSApp.ProtocolParsing
+  commentId: N:IDSApp.ProtocolParsing
+  href: IDSApp.html
+  name: IDSApp.ProtocolParsing
+  nameWithType: IDSApp.ProtocolParsing
+  fullName: IDSApp.ProtocolParsing
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.ProtocolParsing.SnmpParser.#ctor*
+  commentId: Overload:IDSApp.ProtocolParsing.SnmpParser.#ctor
+  href: IDSApp.ProtocolParsing.SnmpParser.html#IDSApp_ProtocolParsing_SnmpParser__ctor_System_Collections_Generic_IEnumerable_System_String__System_Collections_Generic_IEnumerable_System_String__
+  name: SnmpParser
+  nameWithType: SnmpParser.SnmpParser
+  fullName: IDSApp.ProtocolParsing.SnmpParser.SnmpParser
+  nameWithType.vb: SnmpParser.New
+  fullName.vb: IDSApp.ProtocolParsing.SnmpParser.New
+  name.vb: New
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: IDSApp.ProtocolParsing.SnmpParser.Reset*
+  commentId: Overload:IDSApp.ProtocolParsing.SnmpParser.Reset
+  href: IDSApp.ProtocolParsing.SnmpParser.html#IDSApp_ProtocolParsing_SnmpParser_Reset
+  name: Reset
+  nameWithType: SnmpParser.Reset
+  fullName: IDSApp.ProtocolParsing.SnmpParser.Reset
+- uid: IDSApp.ProtocolParsing.SnmpParser.Parse*
+  commentId: Overload:IDSApp.ProtocolParsing.SnmpParser.Parse
+  href: IDSApp.ProtocolParsing.SnmpParser.html#IDSApp_ProtocolParsing_SnmpParser_Parse_System_Byte___System_String_System_String_System_Int32_System_Int32_System_String_
+  name: Parse
+  nameWithType: SnmpParser.Parse
+  fullName: IDSApp.ProtocolParsing.SnmpParser.Parse
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: IDSApp.ProtocolParsing.SnmpParser.ParseRequest*
+  commentId: Overload:IDSApp.ProtocolParsing.SnmpParser.ParseRequest
+  href: IDSApp.ProtocolParsing.SnmpParser.html#IDSApp_ProtocolParsing_SnmpParser_ParseRequest_System_String_System_String_System_String_System_Collections_Generic_IEnumerable_System_String__System_String_System_String_System_String_System_Nullable_System_DateTime__System_Byte___
+  name: ParseRequest
+  nameWithType: SnmpParser.ParseRequest
+  fullName: IDSApp.ProtocolParsing.SnmpParser.ParseRequest
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: IDSApp.ProtocolParsing.SnmpParser.ParseResponse*
+  commentId: Overload:IDSApp.ProtocolParsing.SnmpParser.ParseResponse
+  href: IDSApp.ProtocolParsing.SnmpParser.html#IDSApp_ProtocolParsing_SnmpParser_ParseResponse_System_String_System_String_System_Byte___
+  name: ParseResponse
+  nameWithType: SnmpParser.ParseResponse
+  fullName: IDSApp.ProtocolParsing.SnmpParser.ParseResponse
+- uid: IDSApp.ProtocolParsing.SnmpParser.Body*
+  commentId: Overload:IDSApp.ProtocolParsing.SnmpParser.Body
+  href: IDSApp.ProtocolParsing.SnmpParser.html#IDSApp_ProtocolParsing_SnmpParser_Body
+  name: Body
+  nameWithType: SnmpParser.Body
+  fullName: IDSApp.ProtocolParsing.SnmpParser.Body
+- uid: IDSApp.ProtocolParsing.SnmpParser.Dispose*
+  commentId: Overload:IDSApp.ProtocolParsing.SnmpParser.Dispose
+  href: IDSApp.ProtocolParsing.SnmpParser.html#IDSApp_ProtocolParsing_SnmpParser_Dispose
+  name: Dispose
+  nameWithType: SnmpParser.Dispose
+  fullName: IDSApp.ProtocolParsing.SnmpParser.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

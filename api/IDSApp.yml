@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp
+  commentId: N:IDSApp
+  id: IDSApp
+  children:
+  - IDSApp.IDSCore
+  - IDSApp.PacketCaptureWrapper
+  - IDSApp.PerformanceMonitor
+  langs:
+  - csharp
+  - vb
+  name: IDSApp
+  nameWithType: IDSApp
+  fullName: IDSApp
+  type: Namespace
+  assemblies:
+  - IDSApp
+references:
+- uid: IDSApp.PerformanceMonitor
+  commentId: T:IDSApp.PerformanceMonitor
+  href: IDSApp.PerformanceMonitor.html
+  name: PerformanceMonitor
+  nameWithType: PerformanceMonitor
+  fullName: IDSApp.PerformanceMonitor
+- uid: IDSApp.IDSCore
+  commentId: T:IDSApp.IDSCore
+  href: IDSApp.IDSCore.html
+  name: IDSCore
+  nameWithType: IDSCore
+  fullName: IDSApp.IDSCore
+- uid: IDSApp.PacketCaptureWrapper
+  commentId: T:IDSApp.PacketCaptureWrapper
+  href: IDSApp.PacketCaptureWrapper.html
+  name: PacketCaptureWrapper
+  nameWithType: PacketCaptureWrapper
+  fullName: IDSApp.PacketCaptureWrapper

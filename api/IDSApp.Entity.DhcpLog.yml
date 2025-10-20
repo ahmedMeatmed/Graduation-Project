@@ -1,0 +1,952 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Entity.DhcpLog
+  commentId: T:IDSApp.Entity.DhcpLog
+  id: DhcpLog
+  parent: IDSApp.Entity
+  children:
+  - IDSApp.Entity.DhcpLog.#ctor
+  - IDSApp.Entity.DhcpLog.#ctor(IDSApp.Entity.DhcpLog)
+  - IDSApp.Entity.DhcpLog.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String,System.Int32)
+  - IDSApp.Entity.DhcpLog.ClientIp
+  - IDSApp.Entity.DhcpLog.Clone
+  - IDSApp.Entity.DhcpLog.DestinationIp
+  - IDSApp.Entity.DhcpLog.DhcpLogId
+  - IDSApp.Entity.DhcpLog.LeaseDuration
+  - IDSApp.Entity.DhcpLog.LogId
+  - IDSApp.Entity.DhcpLog.MessageType
+  - IDSApp.Entity.DhcpLog.OfferedIp
+  - IDSApp.Entity.DhcpLog.ServerIp
+  - IDSApp.Entity.DhcpLog.SessionId
+  - IDSApp.Entity.DhcpLog.SourceIp
+  - IDSApp.Entity.DhcpLog.Status
+  - IDSApp.Entity.DhcpLog.Timestamp
+  - IDSApp.Entity.DhcpLog.TransactionId
+  langs:
+  - csharp
+  - vb
+  name: DhcpLog
+  nameWithType: DhcpLog
+  fullName: IDSApp.Entity.DhcpLog
+  type: Class
+  source:
+    id: DhcpLog
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 8
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: >-
+    Represents a DHCP (Dynamic Host Configuration Protocol) log entry captured by the Intrusion Detection System.
+
+    Contains detailed information about DHCP network transactions for monitoring IP address allocation and potential network threats.
+  example: []
+  syntax:
+    content: public class DhcpLog
+    content.vb: Public Class DhcpLog
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.Entity.DhcpLog.DhcpLogId
+  commentId: P:IDSApp.Entity.DhcpLog.DhcpLogId
+  id: DhcpLogId
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: DhcpLogId
+  nameWithType: DhcpLog.DhcpLogId
+  fullName: IDSApp.Entity.DhcpLog.DhcpLogId
+  type: Property
+  source:
+    id: DhcpLogId
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 11
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Unique identifier for the DHCP log entry
+  example: []
+  syntax:
+    content: public int DhcpLogId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DhcpLogId As Integer
+  overload: IDSApp.Entity.DhcpLog.DhcpLogId*
+- uid: IDSApp.Entity.DhcpLog.LogId
+  commentId: P:IDSApp.Entity.DhcpLog.LogId
+  id: LogId
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: LogId
+  nameWithType: DhcpLog.LogId
+  fullName: IDSApp.Entity.DhcpLog.LogId
+  type: Property
+  source:
+    id: LogId
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 14
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Reference identifier linking to the main system log entry
+  example: []
+  syntax:
+    content: public int LogId { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property LogId As Integer
+  overload: IDSApp.Entity.DhcpLog.LogId*
+- uid: IDSApp.Entity.DhcpLog.MessageType
+  commentId: P:IDSApp.Entity.DhcpLog.MessageType
+  id: MessageType
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: MessageType
+  nameWithType: DhcpLog.MessageType
+  fullName: IDSApp.Entity.DhcpLog.MessageType
+  type: Property
+  source:
+    id: MessageType
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 17
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: DHCP message type (e.g., DISCOVER, OFFER, REQUEST, ACK, NAK, RELEASE)
+  example: []
+  syntax:
+    content: public string MessageType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MessageType As String
+  overload: IDSApp.Entity.DhcpLog.MessageType*
+- uid: IDSApp.Entity.DhcpLog.TransactionId
+  commentId: P:IDSApp.Entity.DhcpLog.TransactionId
+  id: TransactionId
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: TransactionId
+  nameWithType: DhcpLog.TransactionId
+  fullName: IDSApp.Entity.DhcpLog.TransactionId
+  type: Property
+  source:
+    id: TransactionId
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 20
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Unique transaction ID to correlate DHCP request-response pairs
+  example: []
+  syntax:
+    content: public string TransactionId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TransactionId As String
+  overload: IDSApp.Entity.DhcpLog.TransactionId*
+- uid: IDSApp.Entity.DhcpLog.ClientIp
+  commentId: P:IDSApp.Entity.DhcpLog.ClientIp
+  id: ClientIp
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: ClientIp
+  nameWithType: DhcpLog.ClientIp
+  fullName: IDSApp.Entity.DhcpLog.ClientIp
+  type: Property
+  source:
+    id: ClientIp
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 23
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Current IP address of the DHCP client (may be 0.0.0.0 for initial requests)
+  example: []
+  syntax:
+    content: public string ClientIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClientIp As String
+  overload: IDSApp.Entity.DhcpLog.ClientIp*
+- uid: IDSApp.Entity.DhcpLog.OfferedIp
+  commentId: P:IDSApp.Entity.DhcpLog.OfferedIp
+  id: OfferedIp
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: OfferedIp
+  nameWithType: DhcpLog.OfferedIp
+  fullName: IDSApp.Entity.DhcpLog.OfferedIp
+  type: Property
+  source:
+    id: OfferedIp
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 26
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: IP address being offered or assigned to the client
+  example: []
+  syntax:
+    content: public string OfferedIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OfferedIp As String
+  overload: IDSApp.Entity.DhcpLog.OfferedIp*
+- uid: IDSApp.Entity.DhcpLog.ServerIp
+  commentId: P:IDSApp.Entity.DhcpLog.ServerIp
+  id: ServerIp
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: ServerIp
+  nameWithType: DhcpLog.ServerIp
+  fullName: IDSApp.Entity.DhcpLog.ServerIp
+  type: Property
+  source:
+    id: ServerIp
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 29
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: IP address of the DHCP server handling the request
+  example: []
+  syntax:
+    content: public string ServerIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ServerIp As String
+  overload: IDSApp.Entity.DhcpLog.ServerIp*
+- uid: IDSApp.Entity.DhcpLog.SourceIp
+  commentId: P:IDSApp.Entity.DhcpLog.SourceIp
+  id: SourceIp
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: SourceIp
+  nameWithType: DhcpLog.SourceIp
+  fullName: IDSApp.Entity.DhcpLog.SourceIp
+  type: Property
+  source:
+    id: SourceIp
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 32
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Source IP address of the DHCP packet
+  example: []
+  syntax:
+    content: public string SourceIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceIp As String
+  overload: IDSApp.Entity.DhcpLog.SourceIp*
+- uid: IDSApp.Entity.DhcpLog.DestinationIp
+  commentId: P:IDSApp.Entity.DhcpLog.DestinationIp
+  id: DestinationIp
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: DestinationIp
+  nameWithType: DhcpLog.DestinationIp
+  fullName: IDSApp.Entity.DhcpLog.DestinationIp
+  type: Property
+  source:
+    id: DestinationIp
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 35
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Destination IP address of the DHCP packet
+  example: []
+  syntax:
+    content: public string DestinationIp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DestinationIp As String
+  overload: IDSApp.Entity.DhcpLog.DestinationIp*
+- uid: IDSApp.Entity.DhcpLog.Timestamp
+  commentId: P:IDSApp.Entity.DhcpLog.Timestamp
+  id: Timestamp
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: DhcpLog.Timestamp
+  fullName: IDSApp.Entity.DhcpLog.Timestamp
+  type: Property
+  source:
+    id: Timestamp
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 38
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Timestamp when the DHCP transaction occurred
+  example: []
+  syntax:
+    content: public DateTime Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Timestamp As Date
+  overload: IDSApp.Entity.DhcpLog.Timestamp*
+- uid: IDSApp.Entity.DhcpLog.SessionId
+  commentId: P:IDSApp.Entity.DhcpLog.SessionId
+  id: SessionId
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: SessionId
+  nameWithType: DhcpLog.SessionId
+  fullName: IDSApp.Entity.DhcpLog.SessionId
+  type: Property
+  source:
+    id: SessionId
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 41
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Session identifier for tracking DHCP conversations
+  example: []
+  syntax:
+    content: public string SessionId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SessionId As String
+  overload: IDSApp.Entity.DhcpLog.SessionId*
+- uid: IDSApp.Entity.DhcpLog.Status
+  commentId: P:IDSApp.Entity.DhcpLog.Status
+  id: Status
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: DhcpLog.Status
+  fullName: IDSApp.Entity.DhcpLog.Status
+  type: Property
+  source:
+    id: Status
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 44
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Transaction status (e.g., Success, Failed, Pending, Error)
+  example: []
+  syntax:
+    content: public string Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Status As String
+  overload: IDSApp.Entity.DhcpLog.Status*
+- uid: IDSApp.Entity.DhcpLog.LeaseDuration
+  commentId: P:IDSApp.Entity.DhcpLog.LeaseDuration
+  id: LeaseDuration
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: LeaseDuration
+  nameWithType: DhcpLog.LeaseDuration
+  fullName: IDSApp.Entity.DhcpLog.LeaseDuration
+  type: Property
+  source:
+    id: LeaseDuration
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 47
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Duration of the IP address lease in seconds
+  example: []
+  syntax:
+    content: public int LeaseDuration { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property LeaseDuration As Integer
+  overload: IDSApp.Entity.DhcpLog.LeaseDuration*
+- uid: IDSApp.Entity.DhcpLog.#ctor
+  commentId: M:IDSApp.Entity.DhcpLog.#ctor
+  id: '#ctor'
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: DhcpLog()
+  nameWithType: DhcpLog.DhcpLog()
+  fullName: IDSApp.Entity.DhcpLog.DhcpLog()
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 52
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Initializes a new instance of the DhcpLog class with default values.
+  example: []
+  syntax:
+    content: public DhcpLog()
+    content.vb: Public Sub New()
+  overload: IDSApp.Entity.DhcpLog.#ctor*
+  nameWithType.vb: DhcpLog.New()
+  fullName.vb: IDSApp.Entity.DhcpLog.New()
+  name.vb: New()
+- uid: IDSApp.Entity.DhcpLog.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String,System.Int32)
+  commentId: M:IDSApp.Entity.DhcpLog.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String,System.Int32)'
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: DhcpLog(int, int, string, string, string, string, string, string, string, DateTime, string, string, int)
+  nameWithType: DhcpLog.DhcpLog(int, int, string, string, string, string, string, string, string, DateTime, string, string, int)
+  fullName: IDSApp.Entity.DhcpLog.DhcpLog(int, int, string, string, string, string, string, string, string, System.DateTime, string, string, int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 70
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Initializes a new instance of the DhcpLog class with specified parameters.
+  example: []
+  syntax:
+    content: public DhcpLog(int dhcpLogId, int logId, string messageType, string transactionId, string clientIp, string offeredIp, string serverIp, string sourceIp, string destinationIp, DateTime timestamp, string sessionId, string status, int leaseDuration)
+    parameters:
+    - id: dhcpLogId
+      type: System.Int32
+      description: Unique identifier for the DHCP log entry
+    - id: logId
+      type: System.Int32
+      description: Reference identifier linking to the main system log
+    - id: messageType
+      type: System.String
+      description: DHCP message type
+    - id: transactionId
+      type: System.String
+      description: Unique transaction ID for request-response correlation
+    - id: clientIp
+      type: System.String
+      description: Current IP address of the DHCP client
+    - id: offeredIp
+      type: System.String
+      description: IP address being offered or assigned
+    - id: serverIp
+      type: System.String
+      description: IP address of the DHCP server
+    - id: sourceIp
+      type: System.String
+      description: Source IP address of the DHCP packet
+    - id: destinationIp
+      type: System.String
+      description: Destination IP address of the DHCP packet
+    - id: timestamp
+      type: System.DateTime
+      description: When the DHCP transaction occurred
+    - id: sessionId
+      type: System.String
+      description: Session identifier for tracking conversations
+    - id: status
+      type: System.String
+      description: Transaction status
+    - id: leaseDuration
+      type: System.Int32
+      description: Duration of IP address lease in seconds
+    content.vb: Public Sub New(dhcpLogId As Integer, logId As Integer, messageType As String, transactionId As String, clientIp As String, offeredIp As String, serverIp As String, sourceIp As String, destinationIp As String, timestamp As Date, sessionId As String, status As String, leaseDuration As Integer)
+  overload: IDSApp.Entity.DhcpLog.#ctor*
+  nameWithType.vb: DhcpLog.New(Integer, Integer, String, String, String, String, String, String, String, Date, String, String, Integer)
+  fullName.vb: IDSApp.Entity.DhcpLog.New(Integer, Integer, String, String, String, String, String, String, String, Date, String, String, Integer)
+  name.vb: New(Integer, Integer, String, String, String, String, String, String, String, Date, String, String, Integer)
+- uid: IDSApp.Entity.DhcpLog.#ctor(IDSApp.Entity.DhcpLog)
+  commentId: M:IDSApp.Entity.DhcpLog.#ctor(IDSApp.Entity.DhcpLog)
+  id: '#ctor(IDSApp.Entity.DhcpLog)'
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: DhcpLog(DhcpLog)
+  nameWithType: DhcpLog.DhcpLog(DhcpLog)
+  fullName: IDSApp.Entity.DhcpLog.DhcpLog(IDSApp.Entity.DhcpLog)
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 94
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Initializes a new instance of the DhcpLog class as a copy of an existing DhcpLog object.
+  example: []
+  syntax:
+    content: public DhcpLog(DhcpLog d)
+    parameters:
+    - id: d
+      type: IDSApp.Entity.DhcpLog
+      description: Source DhcpLog object to copy from
+    content.vb: Public Sub New(d As DhcpLog)
+  overload: IDSApp.Entity.DhcpLog.#ctor*
+  nameWithType.vb: DhcpLog.New(DhcpLog)
+  fullName.vb: IDSApp.Entity.DhcpLog.New(IDSApp.Entity.DhcpLog)
+  name.vb: New(DhcpLog)
+- uid: IDSApp.Entity.DhcpLog.Clone
+  commentId: M:IDSApp.Entity.DhcpLog.Clone
+  id: Clone
+  parent: IDSApp.Entity.DhcpLog
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: DhcpLog.Clone()
+  fullName: IDSApp.Entity.DhcpLog.Clone()
+  type: Method
+  source:
+    id: Clone
+    path: G:\C#\IDSApp\IDSApp\Entity\DhcpLog.cs
+    startLine: 104
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Entity
+  summary: Creates a deep copy of the current DhcpLog instance.
+  example: []
+  syntax:
+    content: public DhcpLog Clone()
+    return:
+      type: IDSApp.Entity.DhcpLog
+      description: A new DhcpLog object that is an exact copy of the current instance
+    content.vb: Public Function Clone() As DhcpLog
+  overload: IDSApp.Entity.DhcpLog.Clone*
+references:
+- uid: IDSApp.Entity
+  commentId: N:IDSApp.Entity
+  href: IDSApp.html
+  name: IDSApp.Entity
+  nameWithType: IDSApp.Entity
+  fullName: IDSApp.Entity
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.Entity.DhcpLog.DhcpLogId*
+  commentId: Overload:IDSApp.Entity.DhcpLog.DhcpLogId
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_DhcpLogId
+  name: DhcpLogId
+  nameWithType: DhcpLog.DhcpLogId
+  fullName: IDSApp.Entity.DhcpLog.DhcpLogId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: IDSApp.Entity.DhcpLog.LogId*
+  commentId: Overload:IDSApp.Entity.DhcpLog.LogId
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_LogId
+  name: LogId
+  nameWithType: DhcpLog.LogId
+  fullName: IDSApp.Entity.DhcpLog.LogId
+- uid: IDSApp.Entity.DhcpLog.MessageType*
+  commentId: Overload:IDSApp.Entity.DhcpLog.MessageType
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_MessageType
+  name: MessageType
+  nameWithType: DhcpLog.MessageType
+  fullName: IDSApp.Entity.DhcpLog.MessageType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: IDSApp.Entity.DhcpLog.TransactionId*
+  commentId: Overload:IDSApp.Entity.DhcpLog.TransactionId
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_TransactionId
+  name: TransactionId
+  nameWithType: DhcpLog.TransactionId
+  fullName: IDSApp.Entity.DhcpLog.TransactionId
+- uid: IDSApp.Entity.DhcpLog.ClientIp*
+  commentId: Overload:IDSApp.Entity.DhcpLog.ClientIp
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_ClientIp
+  name: ClientIp
+  nameWithType: DhcpLog.ClientIp
+  fullName: IDSApp.Entity.DhcpLog.ClientIp
+- uid: IDSApp.Entity.DhcpLog.OfferedIp*
+  commentId: Overload:IDSApp.Entity.DhcpLog.OfferedIp
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_OfferedIp
+  name: OfferedIp
+  nameWithType: DhcpLog.OfferedIp
+  fullName: IDSApp.Entity.DhcpLog.OfferedIp
+- uid: IDSApp.Entity.DhcpLog.ServerIp*
+  commentId: Overload:IDSApp.Entity.DhcpLog.ServerIp
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_ServerIp
+  name: ServerIp
+  nameWithType: DhcpLog.ServerIp
+  fullName: IDSApp.Entity.DhcpLog.ServerIp
+- uid: IDSApp.Entity.DhcpLog.SourceIp*
+  commentId: Overload:IDSApp.Entity.DhcpLog.SourceIp
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_SourceIp
+  name: SourceIp
+  nameWithType: DhcpLog.SourceIp
+  fullName: IDSApp.Entity.DhcpLog.SourceIp
+- uid: IDSApp.Entity.DhcpLog.DestinationIp*
+  commentId: Overload:IDSApp.Entity.DhcpLog.DestinationIp
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_DestinationIp
+  name: DestinationIp
+  nameWithType: DhcpLog.DestinationIp
+  fullName: IDSApp.Entity.DhcpLog.DestinationIp
+- uid: IDSApp.Entity.DhcpLog.Timestamp*
+  commentId: Overload:IDSApp.Entity.DhcpLog.Timestamp
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_Timestamp
+  name: Timestamp
+  nameWithType: DhcpLog.Timestamp
+  fullName: IDSApp.Entity.DhcpLog.Timestamp
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: IDSApp.Entity.DhcpLog.SessionId*
+  commentId: Overload:IDSApp.Entity.DhcpLog.SessionId
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_SessionId
+  name: SessionId
+  nameWithType: DhcpLog.SessionId
+  fullName: IDSApp.Entity.DhcpLog.SessionId
+- uid: IDSApp.Entity.DhcpLog.Status*
+  commentId: Overload:IDSApp.Entity.DhcpLog.Status
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_Status
+  name: Status
+  nameWithType: DhcpLog.Status
+  fullName: IDSApp.Entity.DhcpLog.Status
+- uid: IDSApp.Entity.DhcpLog.LeaseDuration*
+  commentId: Overload:IDSApp.Entity.DhcpLog.LeaseDuration
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_LeaseDuration
+  name: LeaseDuration
+  nameWithType: DhcpLog.LeaseDuration
+  fullName: IDSApp.Entity.DhcpLog.LeaseDuration
+- uid: IDSApp.Entity.DhcpLog.#ctor*
+  commentId: Overload:IDSApp.Entity.DhcpLog.#ctor
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog__ctor
+  name: DhcpLog
+  nameWithType: DhcpLog.DhcpLog
+  fullName: IDSApp.Entity.DhcpLog.DhcpLog
+  nameWithType.vb: DhcpLog.New
+  fullName.vb: IDSApp.Entity.DhcpLog.New
+  name.vb: New
+- uid: IDSApp.Entity.DhcpLog
+  commentId: T:IDSApp.Entity.DhcpLog
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.DhcpLog.html
+  name: DhcpLog
+  nameWithType: DhcpLog
+  fullName: IDSApp.Entity.DhcpLog
+- uid: IDSApp.Entity.DhcpLog.Clone*
+  commentId: Overload:IDSApp.Entity.DhcpLog.Clone
+  href: IDSApp.Entity.DhcpLog.html#IDSApp_Entity_DhcpLog_Clone
+  name: Clone
+  nameWithType: DhcpLog.Clone
+  fullName: IDSApp.Entity.DhcpLog.Clone

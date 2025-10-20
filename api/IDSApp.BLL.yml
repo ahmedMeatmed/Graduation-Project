@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.BLL
+  commentId: N:IDSApp.BLL
+  id: IDSApp.BLL
+  children:
+  - IDSApp.BLL.SettingBLL
+  langs:
+  - csharp
+  - vb
+  name: IDSApp.BLL
+  nameWithType: IDSApp.BLL
+  fullName: IDSApp.BLL
+  type: Namespace
+  assemblies:
+  - IDSApp
+references:
+- uid: IDSApp.BLL.SettingBLL
+  commentId: T:IDSApp.BLL.SettingBLL
+  href: IDSApp.BLL.SettingBLL.html
+  name: SettingBLL
+  nameWithType: SettingBLL
+  fullName: IDSApp.BLL.SettingBLL

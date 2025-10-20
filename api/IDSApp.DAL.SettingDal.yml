@@ -1,0 +1,665 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.DAL.SettingDal
+  commentId: T:IDSApp.DAL.SettingDal
+  id: SettingDal
+  parent: IDSApp.DAL
+  children:
+  - IDSApp.DAL.SettingDal.Delete(System.Int32)
+  - IDSApp.DAL.SettingDal.GetAll
+  - IDSApp.DAL.SettingDal.GetById(System.Int32)
+  - IDSApp.DAL.SettingDal.GetByName(System.String)
+  - IDSApp.DAL.SettingDal.GetInternalIpPrefix
+  - IDSApp.DAL.SettingDal.Insert(System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  - IDSApp.DAL.SettingDal.Update(System.Int32,System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  langs:
+  - csharp
+  - vb
+  name: SettingDal
+  nameWithType: SettingDal
+  fullName: IDSApp.DAL.SettingDal
+  type: Class
+  source:
+    id: SettingDal
+    path: G:\C#\IDSApp\IDSApp\DAL\SettingDal.cs
+    startLine: 9
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.DAL
+  syntax:
+    content: public static class SettingDal
+    content.vb: Public Module SettingDal
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.DAL.SettingDal.GetAll
+  commentId: M:IDSApp.DAL.SettingDal.GetAll
+  id: GetAll
+  parent: IDSApp.DAL.SettingDal
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: SettingDal.GetAll()
+  fullName: IDSApp.DAL.SettingDal.GetAll()
+  type: Method
+  source:
+    id: GetAll
+    path: G:\C#\IDSApp\IDSApp\DAL\SettingDal.cs
+    startLine: 11
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.DAL
+  syntax:
+    content: public static SettingCollection GetAll()
+    return:
+      type: IDSApp.Collection.SettingCollection
+    content.vb: Public Shared Function GetAll() As SettingCollection
+  overload: IDSApp.DAL.SettingDal.GetAll*
+- uid: IDSApp.DAL.SettingDal.GetById(System.Int32)
+  commentId: M:IDSApp.DAL.SettingDal.GetById(System.Int32)
+  id: GetById(System.Int32)
+  parent: IDSApp.DAL.SettingDal
+  langs:
+  - csharp
+  - vb
+  name: GetById(int)
+  nameWithType: SettingDal.GetById(int)
+  fullName: IDSApp.DAL.SettingDal.GetById(int)
+  type: Method
+  source:
+    id: GetById
+    path: G:\C#\IDSApp\IDSApp\DAL\SettingDal.cs
+    startLine: 30
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.DAL
+  syntax:
+    content: public static Settings GetById(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: IDSApp.Entity.Settings
+    content.vb: Public Shared Function GetById(id As Integer) As Settings
+  overload: IDSApp.DAL.SettingDal.GetById*
+  nameWithType.vb: SettingDal.GetById(Integer)
+  fullName.vb: IDSApp.DAL.SettingDal.GetById(Integer)
+  name.vb: GetById(Integer)
+- uid: IDSApp.DAL.SettingDal.GetByName(System.String)
+  commentId: M:IDSApp.DAL.SettingDal.GetByName(System.String)
+  id: GetByName(System.String)
+  parent: IDSApp.DAL.SettingDal
+  langs:
+  - csharp
+  - vb
+  name: GetByName(string)
+  nameWithType: SettingDal.GetByName(string)
+  fullName: IDSApp.DAL.SettingDal.GetByName(string)
+  type: Method
+  source:
+    id: GetByName
+    path: G:\C#\IDSApp\IDSApp\DAL\SettingDal.cs
+    startLine: 63
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.DAL
+  syntax:
+    content: public static Settings GetByName(string name)
+    parameters:
+    - id: name
+      type: System.String
+    return:
+      type: IDSApp.Entity.Settings
+    content.vb: Public Shared Function GetByName(name As String) As Settings
+  overload: IDSApp.DAL.SettingDal.GetByName*
+  nameWithType.vb: SettingDal.GetByName(String)
+  fullName.vb: IDSApp.DAL.SettingDal.GetByName(String)
+  name.vb: GetByName(String)
+- uid: IDSApp.DAL.SettingDal.Insert(System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  commentId: M:IDSApp.DAL.SettingDal.Insert(System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  id: Insert(System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  parent: IDSApp.DAL.SettingDal
+  langs:
+  - csharp
+  - vb
+  name: Insert(string, string, string, string, string, DateTime)
+  nameWithType: SettingDal.Insert(string, string, string, string, string, DateTime)
+  fullName: IDSApp.DAL.SettingDal.Insert(string, string, string, string, string, System.DateTime)
+  type: Method
+  source:
+    id: Insert
+    path: G:\C#\IDSApp\IDSApp\DAL\SettingDal.cs
+    startLine: 98
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.DAL
+  syntax:
+    content: public static bool Insert(string settingKey, string settingValue, string dataType, string category, string desc, DateTime lastModified)
+    parameters:
+    - id: settingKey
+      type: System.String
+    - id: settingValue
+      type: System.String
+    - id: dataType
+      type: System.String
+    - id: category
+      type: System.String
+    - id: desc
+      type: System.String
+    - id: lastModified
+      type: System.DateTime
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Insert(settingKey As String, settingValue As String, dataType As String, category As String, desc As String, lastModified As Date) As Boolean
+  overload: IDSApp.DAL.SettingDal.Insert*
+  nameWithType.vb: SettingDal.Insert(String, String, String, String, String, Date)
+  fullName.vb: IDSApp.DAL.SettingDal.Insert(String, String, String, String, String, Date)
+  name.vb: Insert(String, String, String, String, String, Date)
+- uid: IDSApp.DAL.SettingDal.Update(System.Int32,System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  commentId: M:IDSApp.DAL.SettingDal.Update(System.Int32,System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  id: Update(System.Int32,System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  parent: IDSApp.DAL.SettingDal
+  langs:
+  - csharp
+  - vb
+  name: Update(int, string, string, string, string, string, DateTime)
+  nameWithType: SettingDal.Update(int, string, string, string, string, string, DateTime)
+  fullName: IDSApp.DAL.SettingDal.Update(int, string, string, string, string, string, System.DateTime)
+  type: Method
+  source:
+    id: Update
+    path: G:\C#\IDSApp\IDSApp\DAL\SettingDal.cs
+    startLine: 114
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.DAL
+  syntax:
+    content: public static int Update(int id, string settingKey, string settingValue, string dataType, string category, string desc, DateTime lastModified)
+    parameters:
+    - id: id
+      type: System.Int32
+    - id: settingKey
+      type: System.String
+    - id: settingValue
+      type: System.String
+    - id: dataType
+      type: System.String
+    - id: category
+      type: System.String
+    - id: desc
+      type: System.String
+    - id: lastModified
+      type: System.DateTime
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function Update(id As Integer, settingKey As String, settingValue As String, dataType As String, category As String, desc As String, lastModified As Date) As Integer
+  overload: IDSApp.DAL.SettingDal.Update*
+  nameWithType.vb: SettingDal.Update(Integer, String, String, String, String, String, Date)
+  fullName.vb: IDSApp.DAL.SettingDal.Update(Integer, String, String, String, String, String, Date)
+  name.vb: Update(Integer, String, String, String, String, String, Date)
+- uid: IDSApp.DAL.SettingDal.Delete(System.Int32)
+  commentId: M:IDSApp.DAL.SettingDal.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: IDSApp.DAL.SettingDal
+  langs:
+  - csharp
+  - vb
+  name: Delete(int)
+  nameWithType: SettingDal.Delete(int)
+  fullName: IDSApp.DAL.SettingDal.Delete(int)
+  type: Method
+  source:
+    id: Delete
+    path: G:\C#\IDSApp\IDSApp\DAL\SettingDal.cs
+    startLine: 131
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.DAL
+  syntax:
+    content: public static bool Delete(int id)
+    parameters:
+    - id: id
+      type: System.Int32
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function Delete(id As Integer) As Boolean
+  overload: IDSApp.DAL.SettingDal.Delete*
+  nameWithType.vb: SettingDal.Delete(Integer)
+  fullName.vb: IDSApp.DAL.SettingDal.Delete(Integer)
+  name.vb: Delete(Integer)
+- uid: IDSApp.DAL.SettingDal.GetInternalIpPrefix
+  commentId: M:IDSApp.DAL.SettingDal.GetInternalIpPrefix
+  id: GetInternalIpPrefix
+  parent: IDSApp.DAL.SettingDal
+  langs:
+  - csharp
+  - vb
+  name: GetInternalIpPrefix()
+  nameWithType: SettingDal.GetInternalIpPrefix()
+  fullName: IDSApp.DAL.SettingDal.GetInternalIpPrefix()
+  type: Method
+  source:
+    id: GetInternalIpPrefix
+    path: G:\C#\IDSApp\IDSApp\DAL\SettingDal.cs
+    startLine: 142
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.DAL
+  syntax:
+    content: public static string GetInternalIpPrefix()
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetInternalIpPrefix() As String
+  overload: IDSApp.DAL.SettingDal.GetInternalIpPrefix*
+references:
+- uid: IDSApp.DAL
+  commentId: N:IDSApp.DAL
+  href: IDSApp.html
+  name: IDSApp.DAL
+  nameWithType: IDSApp.DAL
+  fullName: IDSApp.DAL
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.DAL
+    name: DAL
+    href: IDSApp.DAL.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.DAL
+    name: DAL
+    href: IDSApp.DAL.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IDSApp.DAL.SettingDal.GetAll*
+  commentId: Overload:IDSApp.DAL.SettingDal.GetAll
+  href: IDSApp.DAL.SettingDal.html#IDSApp_DAL_SettingDal_GetAll
+  name: GetAll
+  nameWithType: SettingDal.GetAll
+  fullName: IDSApp.DAL.SettingDal.GetAll
+- uid: IDSApp.Collection.SettingCollection
+  commentId: T:IDSApp.Collection.SettingCollection
+  parent: IDSApp.Collection
+  href: IDSApp.Collection.SettingCollection.html
+  name: SettingCollection
+  nameWithType: SettingCollection
+  fullName: IDSApp.Collection.SettingCollection
+- uid: IDSApp.Collection
+  commentId: N:IDSApp.Collection
+  href: IDSApp.html
+  name: IDSApp.Collection
+  nameWithType: IDSApp.Collection
+  fullName: IDSApp.Collection
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Collection
+    name: Collection
+    href: IDSApp.Collection.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Collection
+    name: Collection
+    href: IDSApp.Collection.html
+- uid: IDSApp.DAL.SettingDal.GetById*
+  commentId: Overload:IDSApp.DAL.SettingDal.GetById
+  href: IDSApp.DAL.SettingDal.html#IDSApp_DAL_SettingDal_GetById_System_Int32_
+  name: GetById
+  nameWithType: SettingDal.GetById
+  fullName: IDSApp.DAL.SettingDal.GetById
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: IDSApp.Entity.Settings
+  commentId: T:IDSApp.Entity.Settings
+  parent: IDSApp.Entity
+  href: IDSApp.Entity.Settings.html
+  name: Settings
+  nameWithType: Settings
+  fullName: IDSApp.Entity.Settings
+- uid: IDSApp.Entity
+  commentId: N:IDSApp.Entity
+  href: IDSApp.html
+  name: IDSApp.Entity
+  nameWithType: IDSApp.Entity
+  fullName: IDSApp.Entity
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Entity
+    name: Entity
+    href: IDSApp.Entity.html
+- uid: IDSApp.DAL.SettingDal.GetByName*
+  commentId: Overload:IDSApp.DAL.SettingDal.GetByName
+  href: IDSApp.DAL.SettingDal.html#IDSApp_DAL_SettingDal_GetByName_System_String_
+  name: GetByName
+  nameWithType: SettingDal.GetByName
+  fullName: IDSApp.DAL.SettingDal.GetByName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: IDSApp.DAL.SettingDal.Insert*
+  commentId: Overload:IDSApp.DAL.SettingDal.Insert
+  href: IDSApp.DAL.SettingDal.html#IDSApp_DAL_SettingDal_Insert_System_String_System_String_System_String_System_String_System_String_System_DateTime_
+  name: Insert
+  nameWithType: SettingDal.Insert
+  fullName: IDSApp.DAL.SettingDal.Insert
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: IDSApp.DAL.SettingDal.Update*
+  commentId: Overload:IDSApp.DAL.SettingDal.Update
+  href: IDSApp.DAL.SettingDal.html#IDSApp_DAL_SettingDal_Update_System_Int32_System_String_System_String_System_String_System_String_System_String_System_DateTime_
+  name: Update
+  nameWithType: SettingDal.Update
+  fullName: IDSApp.DAL.SettingDal.Update
+- uid: IDSApp.DAL.SettingDal.Delete*
+  commentId: Overload:IDSApp.DAL.SettingDal.Delete
+  href: IDSApp.DAL.SettingDal.html#IDSApp_DAL_SettingDal_Delete_System_Int32_
+  name: Delete
+  nameWithType: SettingDal.Delete
+  fullName: IDSApp.DAL.SettingDal.Delete
+- uid: IDSApp.DAL.SettingDal.GetInternalIpPrefix*
+  commentId: Overload:IDSApp.DAL.SettingDal.GetInternalIpPrefix
+  href: IDSApp.DAL.SettingDal.html#IDSApp_DAL_SettingDal_GetInternalIpPrefix
+  name: GetInternalIpPrefix
+  nameWithType: SettingDal.GetInternalIpPrefix
+  fullName: IDSApp.DAL.SettingDal.GetInternalIpPrefix

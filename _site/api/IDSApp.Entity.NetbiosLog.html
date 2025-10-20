@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class NetbiosLog | mysite </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class NetbiosLog | mysite ">
+      
+      <meta name="description" content="Represents a NetBIOS (Network Basic Input/Output System) log entry captured by the Intrusion Detection System. Contains information about NetBIOS name resolution and service discovery operations for monitoring Windows network browsing, host discovery, and detecting network reconnaissance activities.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="mysite">
+            mysite
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="IDSApp.Entity.NetbiosLog">
+
+
+
+  <h1 id="IDSApp_Entity_NetbiosLog" data-uid="IDSApp.Entity.NetbiosLog" class="text-break">
+Class NetbiosLog  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="IDSApp.html">IDSApp</a>.<a class="xref" href="IDSApp.Entity.html">Entity</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>IDSApp.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a NetBIOS (Network Basic Input/Output System) log entry captured by the Intrusion Detection System.
+Contains information about NetBIOS name resolution and service discovery operations for monitoring
+Windows network browsing, host discovery, and detecting network reconnaissance activities.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NetbiosLog</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">NetbiosLog</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="IDSApp_Entity_NetbiosLog__ctor_" data-uid="IDSApp.Entity.NetbiosLog.#ctor*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog__ctor" data-uid="IDSApp.Entity.NetbiosLog.#ctor">
+  NetbiosLog()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the NetbiosLog class with default values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetbiosLog()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog__ctor_" data-uid="IDSApp.Entity.NetbiosLog.#ctor*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog__ctor_IDSApp_Entity_NetbiosLog_" data-uid="IDSApp.Entity.NetbiosLog.#ctor(IDSApp.Entity.NetbiosLog)">
+  NetbiosLog(NetbiosLog)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the NetbiosLog class as a copy of an existing NetbiosLog object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetbiosLog(NetbiosLog n)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>n</code> <a class="xref" href="IDSApp.Entity.NetbiosLog.html">NetbiosLog</a></dt>
+    <dd><p>Source NetbiosLog object to copy from</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog__ctor_" data-uid="IDSApp.Entity.NetbiosLog.#ctor*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog__ctor_System_Int32_System_Int32_System_String_System_String_System_String_System_String_System_String_System_String_System_DateTime_System_String_System_String_" data-uid="IDSApp.Entity.NetbiosLog.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime,System.String,System.String)">
+  NetbiosLog(int, int, string, string, string, string, string, string, DateTime, string, string)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the NetbiosLog class with specified parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetbiosLog(int netbiosLogId, int logId, string queryName, string queryType, string response, string responderIp, string sourceIp, string destinationIp, DateTime timestamp, string sessionId, string status)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>netbiosLogId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Unique identifier for the NetBIOS log entry</p>
+</dd>
+    <dt><code>logId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Reference identifier linking to the main system log</p>
+</dd>
+    <dt><code>queryName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>NetBIOS name being queried or resolved</p>
+</dd>
+    <dt><code>queryType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Type of NetBIOS query</p>
+</dd>
+    <dt><code>response</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Response data from the NetBIOS query</p>
+</dd>
+    <dt><code>responderIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>IP address of the system responding to the query</p>
+</dd>
+    <dt><code>sourceIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Source IP address initiating the query</p>
+</dd>
+    <dt><code>destinationIp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Destination IP address for the query</p>
+</dd>
+    <dt><code>timestamp</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd><p>When the NetBIOS operation occurred</p>
+</dd>
+    <dt><code>sessionId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Unique session identifier for tracking conversations</p>
+</dd>
+    <dt><code>status</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Operation status</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="IDSApp_Entity_NetbiosLog_DestinationIp_" data-uid="IDSApp.Entity.NetbiosLog.DestinationIp*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_DestinationIp" data-uid="IDSApp.Entity.NetbiosLog.DestinationIp">
+  DestinationIp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Destination IP address for the NetBIOS query (often broadcast address)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string DestinationIp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog_LogId_" data-uid="IDSApp.Entity.NetbiosLog.LogId*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_LogId" data-uid="IDSApp.Entity.NetbiosLog.LogId">
+  LogId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reference identifier linking to the main system log entry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LogId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog_NetbiosLogId_" data-uid="IDSApp.Entity.NetbiosLog.NetbiosLogId*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_NetbiosLogId" data-uid="IDSApp.Entity.NetbiosLog.NetbiosLogId">
+  NetbiosLogId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unique identifier for the NetBIOS log entry</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int NetbiosLogId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog_QueryName_" data-uid="IDSApp.Entity.NetbiosLog.QueryName*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_QueryName" data-uid="IDSApp.Entity.NetbiosLog.QueryName">
+  QueryName
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>NetBIOS name being queried or resolved</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string QueryName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog_QueryType_" data-uid="IDSApp.Entity.NetbiosLog.QueryType*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_QueryType" data-uid="IDSApp.Entity.NetbiosLog.QueryType">
+  QueryType
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Type of NetBIOS query (e.g., NBSTAT, NBTNAME, SESSION, DATAGRAM)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string QueryType { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog_ResponderIp_" data-uid="IDSApp.Entity.NetbiosLog.ResponderIp*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_ResponderIp" data-uid="IDSApp.Entity.NetbiosLog.ResponderIp">
+  ResponderIp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>IP address of the system responding to the NetBIOS query</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ResponderIp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog_Response_" data-uid="IDSApp.Entity.NetbiosLog.Response*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_Response" data-uid="IDSApp.Entity.NetbiosLog.Response">
+  Response
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Response data from the NetBIOS query, including resolved names and services</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Response { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog_SessionId_" data-uid="IDSApp.Entity.NetbiosLog.SessionId*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_SessionId" data-uid="IDSApp.Entity.NetbiosLog.SessionId">
+  SessionId
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Unique session identifier for tracking NetBIOS conversations</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SessionId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog_SourceIp_" data-uid="IDSApp.Entity.NetbiosLog.SourceIp*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_SourceIp" data-uid="IDSApp.Entity.NetbiosLog.SourceIp">
+  SourceIp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Source IP address initiating the NetBIOS query</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SourceIp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog_Status_" data-uid="IDSApp.Entity.NetbiosLog.Status*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_Status" data-uid="IDSApp.Entity.NetbiosLog.Status">
+  Status
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Operation status (e.g., Success, Failed, Timeout, NoResponse)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string Status { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="IDSApp_Entity_NetbiosLog_Timestamp_" data-uid="IDSApp.Entity.NetbiosLog.Timestamp*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_Timestamp" data-uid="IDSApp.Entity.NetbiosLog.Timestamp">
+  Timestamp
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Timestamp when the NetBIOS operation occurred</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime Timestamp { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetime">DateTime</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="IDSApp_Entity_NetbiosLog_Clone_" data-uid="IDSApp.Entity.NetbiosLog.Clone*"></a>
+
+  <h3 id="IDSApp_Entity_NetbiosLog_Clone" data-uid="IDSApp.Entity.NetbiosLog.Clone">
+  Clone()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates a deep copy of the current NetbiosLog instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetbiosLog Clone()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="IDSApp.Entity.NetbiosLog.html">NetbiosLog</a></dt>
+    <dd><p>A new NetbiosLog object that is an exact copy of the current instance</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

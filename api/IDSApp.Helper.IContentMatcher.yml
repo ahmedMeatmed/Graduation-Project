@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Helper.IContentMatcher
+  commentId: T:IDSApp.Helper.IContentMatcher
+  id: IContentMatcher
+  parent: IDSApp.Helper
+  children:
+  - IDSApp.Helper.IContentMatcher.Match(System.Byte[],System.String)
+  langs:
+  - csharp
+  - vb
+  name: IContentMatcher
+  nameWithType: IContentMatcher
+  fullName: IDSApp.Helper.IContentMatcher
+  type: Interface
+  source:
+    id: IContentMatcher
+    path: G:\C#\IDSApp\IDSApp\Helper\BytePatternMatcher.cs
+    startLine: 9
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: >-
+    Defines an interface for pattern matchers that operate on raw packet payloads.
+
+    Used for detecting signatures or malicious content across various protocols.
+  example: []
+  syntax:
+    content: public interface IContentMatcher
+    content.vb: Public Interface IContentMatcher
+- uid: IDSApp.Helper.IContentMatcher.Match(System.Byte[],System.String)
+  commentId: M:IDSApp.Helper.IContentMatcher.Match(System.Byte[],System.String)
+  id: Match(System.Byte[],System.String)
+  parent: IDSApp.Helper.IContentMatcher
+  langs:
+  - csharp
+  - vb
+  name: Match(byte[], string)
+  nameWithType: IContentMatcher.Match(byte[], string)
+  fullName: IDSApp.Helper.IContentMatcher.Match(byte[], string)
+  type: Method
+  source:
+    id: Match
+    path: G:\C#\IDSApp\IDSApp\Helper\BytePatternMatcher.cs
+    startLine: 17
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  summary: Determines whether the specified payload matches a predefined pattern.
+  example: []
+  syntax:
+    content: bool Match(byte[] payload, string protocol)
+    parameters:
+    - id: payload
+      type: System.Byte[]
+      description: The byte array representing packet data.
+    - id: protocol
+      type: System.String
+      description: The name of the protocol being analyzed (e.g., HTTP, DNS).
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the pattern is found within the payload; otherwise, <code>false</code>.
+    content.vb: Function Match(payload As Byte(), protocol As String) As Boolean
+  overload: IDSApp.Helper.IContentMatcher.Match*
+  nameWithType.vb: IContentMatcher.Match(Byte(), String)
+  fullName.vb: IDSApp.Helper.IContentMatcher.Match(Byte(), String)
+  name.vb: Match(Byte(), String)
+references:
+- uid: IDSApp.Helper
+  commentId: N:IDSApp.Helper
+  href: IDSApp.html
+  name: IDSApp.Helper
+  nameWithType: IDSApp.Helper
+  fullName: IDSApp.Helper
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+- uid: IDSApp.Helper.IContentMatcher.Match*
+  commentId: Overload:IDSApp.Helper.IContentMatcher.Match
+  href: IDSApp.Helper.IContentMatcher.html#IDSApp_Helper_IContentMatcher_Match_System_Byte___System_String_
+  name: Match
+  nameWithType: IContentMatcher.Match
+  fullName: IDSApp.Helper.IContentMatcher.Match
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

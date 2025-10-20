@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace IDSApp.Helper | mysite </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace IDSApp.Helper | mysite ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="mysite">
+            mysite
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="IDSApp.Helper">
+
+  <h1 id="IDSApp_Helper" data-uid="IDSApp.Helper" class="text-break">Namespace IDSApp.Helper</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.BoyerMooreSearch.html">BoyerMooreSearch</a></dt>
+      <dd><p>Provides efficient search methods for locating byte or character sequences
+within larger datasets, based on the Boyer-Moore algorithm.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.BytePatternMatcher.html">BytePatternMatcher</a></dt>
+      <dd><p>Performs pattern matching on raw byte payloads using a simple byte comparison algorithm.
+Used for non-text protocols or binary signatures.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.DnsConditions.html">DnsConditions</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.EnhancedPcreValidator.html">EnhancedPcreValidator</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.EnhancedRuleParser.html">EnhancedRuleParser</a></dt>
+      <dd><p>Advanced rule parsing and analysis system for Intrusion Detection System (IDS)</p>
+<p>Main Responsibilities:</p>
+<ul>
+<li>Parse and extract conditions from security rules in multiple protocols</li>
+<li>Analyze network traffic against parsed rule conditions</li>
+<li>Validate rule syntax and semantics</li>
+<li>Extract metadata and content patterns from rules</li>
+</ul>
+<p>Supported Protocols:</p>
+<ul>
+<li>HTTP/HTTPS traffic analysis</li>
+<li>TLS/SSL certificate inspection</li>
+<li>DNS query and response parsing</li>
+<li>ICMP packet analysis</li>
+<li>Network flow and connection tracking</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>High-performance regex-based parsing</li>
+<li>Comprehensive protocol support</li>
+<li>Rule validation and error checking</li>
+<li>TLS fingerprinting and certificate analysis</li>
+<li>Content pattern extraction and normalization</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.EnhancedSignatureRuleEngine.html">EnhancedSignatureRuleEngine</a></dt>
+      <dd><p>Enhanced rule engine for signature-based threat detection with support for
+multiple rule formats, performance optimizations, and advanced pattern matching.
+Provides fast packet inspection using bloom filters and rule prioritization.</p>
+<p>Features:</p>
+<ul>
+<li>PCRE pattern matching with validation and recovery</li>
+<li>Protocol-specific rule optimization and indexing</li>
+<li>Rule conflict resolution and prioritization</li>
+<li>Performance monitoring and statistical analysis</li>
+<li>Fast-path optimization using bloom filters</li>
+<li>Multi-threaded rule checking with load balancing</li>
+<li>Comprehensive error handling and validation</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.html">EnhancedSignatureRuleEngine.PcreContentMatcher</a></dt>
+      <dd><p>PCRE-based content matcher implementation for regex pattern matching</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.FlowConditions.html">FlowConditions</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.HttpConditions.html">HttpConditions</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.IPNetwork.html">IPNetwork</a></dt>
+      <dd><p>Represents an IP network range in CIDR notation
+Supports both IPv4 and IPv6 network containment checks</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.IcmpConditions.html">IcmpConditions</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.NetworkConditions.html">NetworkConditions</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.OptimizedLogger.html">OptimizedLogger</a></dt>
+      <dd><p>Provides optimized logging functionality for the IDS system with configurable log levels
+to reduce console clutter while maintaining essential statistics and critical information.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.ParsedRuleConditions.html">ParsedRuleConditions</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.PcreContentMatcher.html">PcreContentMatcher</a></dt>
+      <dd><p>Performs pattern matching using PCRE (Perl-Compatible Regular Expressions).
+Useful for detecting text-based signatures in HTTP, SMTP, or DNS payloads.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.ProtocolPerformance.html">ProtocolPerformance</a></dt>
+      <dd><p>Represents performance metrics for a specific network protocol.
+Tracks packet counts, total bytes, and last update timestamp.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.RuleBloomFilter.html">RuleBloomFilter</a></dt>
+      <dd><p>Bloom Filter implementation specialized for security rules
+Uses multiple hash functions to represent rules in compact bit array</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.RuleFastPathOptimizer.html">RuleFastPathOptimizer</a></dt>
+      <dd><p>High-performance rule checking optimization system using Bloom Filters technology</p>
+<p>Main Responsibilities:</p>
+<ul>
+<li>Create and manage Bloom Filters for fast rule filtering</li>
+<li>Reduce number of rules needing detailed inspection</li>
+<li>Provide automatic performance statistics and optimization</li>
+<li>Manage cache for inspection results</li>
+</ul>
+<p>How It Works:</p>
+<ol>
+<li>Group rules by protocol and common ports</li>
+<li>Build Bloom Filters for each rule group</li>
+<li>Use filters for quick match possibility checking</li>
+<li>Skip detailed inspection when filters confirm no possible match</li>
+</ol>
+<p>Features:</p>
+<ul>
+<li>Significant rule inspection performance improvement</li>
+<li>Automatic adaptation to rule changes</li>
+<li>Continuous system accuracy monitoring</li>
+<li>Automatic rebuild when efficiency decreases</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.RuleGroup.html">RuleGroup</a></dt>
+      <dd><p>Represents a group of security rules with common characteristics
+Used for organized rule management and optimization</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.RuleMetadata.html">RuleMetadata</a></dt>
+      <dd></dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.RuleOptimizationStats.html">RuleOptimizationStats</a></dt>
+      <dd><p>Statistics container for rule optimization performance metrics
+Tracks filter count, rule count, memory usage, and accuracy estimates</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.RulePerformance.html">RulePerformance</a></dt>
+      <dd><p>Represents performance statistics for a specific IDS rule.
+Tracks total checks, matches, average time, and efficiency.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.RulePriorityManager.html">RulePriorityManager</a></dt>
+      <dd><p>Manages rule priorities and detects conflicts among IDS rules.
+Ensures that when multiple rules match the same packet, the most specific rule is applied first.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.RuleSpecificity.html">RuleSpecificity</a></dt>
+      <dd><p>Represents the specificity of a rule with a score and contributing fields.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.RuleStatistics.html">RuleStatistics</a></dt>
+      <dd><p>Provides real-time collection and analysis of rule and protocol performance statistics.
+Periodically saves data to the database for long-term analytics.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.StatisticsSnapshot.html">StatisticsSnapshot</a></dt>
+      <dd><p>Provides a summarized snapshot of the current IDS performance metrics.
+Useful for dashboards and monitoring.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.TlsConditions.html">TlsConditions</a></dt>
+      <dd></dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.IContentMatcher.html">IContentMatcher</a></dt>
+      <dd><p>Defines an interface for pattern matchers that operate on raw packet payloads.
+Used for detecting signatures or malicious content across various protocols.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="IDSApp.Helper.OptimizedLogger.LogLevel.html">OptimizedLogger.LogLevel</a></dt>
+      <dd></dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

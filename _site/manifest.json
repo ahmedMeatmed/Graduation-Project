@@ -1,0 +1,1180 @@
+{
+  "source_base_path": "G:/C#/IDSApp/IDSApp",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.BLL.SettingBLL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.BLL.SettingBLL.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.BLL.SettingBLL",
+      "Summary": "<p sourcefile=\"api/IDSApp.BLL.SettingBLL.yml\" sourcestartlinenumber=\"1\">Provides business logic layer operations for application settings management with built-in caching for performance.\nThis class serves as a facade to the data access layer with additional caching capabilities for frequently accessed settings.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.BLL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.BLL.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.BLL",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Collection.SettingCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Collection.SettingCollection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Collection.SettingCollection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Collection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Collection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Collection",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.DAL.SettingDal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.DAL.SettingDal.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.DAL.SettingDal",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.DAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.DAL.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.DAL",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Entity.DbLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Entity.DbLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Entity.DbLog",
+      "Summary": "<p sourcefile=\"api/IDSApp.Entity.DbLog.yml\" sourcestartlinenumber=\"1\">Represents a database operation log entry captured by the Intrusion Detection System.\nContains detailed information about database queries, connections, and operations for security monitoring.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Entity.DhcpLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Entity.DhcpLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Entity.DhcpLog",
+      "Summary": "<p sourcefile=\"api/IDSApp.Entity.DhcpLog.yml\" sourcestartlinenumber=\"1\">Represents a DHCP (Dynamic Host Configuration Protocol) log entry captured by the Intrusion Detection System.\nContains detailed information about DHCP network transactions for monitoring IP address allocation and potential network threats.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Entity.LdapLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Entity.LdapLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Entity.LdapLog",
+      "Summary": "<p sourcefile=\"api/IDSApp.Entity.LdapLog.yml\" sourcestartlinenumber=\"1\">Represents an LDAP (Lightweight Directory Access Protocol) log entry captured by the Intrusion Detection System.\nContains detailed information about directory service operations for monitoring authentication,\ndirectory queries, and detecting unauthorized access attempts or directory service attacks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Entity.NetbiosLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Entity.NetbiosLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Entity.NetbiosLog",
+      "Summary": "<p sourcefile=\"api/IDSApp.Entity.NetbiosLog.yml\" sourcestartlinenumber=\"1\">Represents a NetBIOS (Network Basic Input/Output System) log entry captured by the Intrusion Detection System.\nContains information about NetBIOS name resolution and service discovery operations for monitoring\nWindows network browsing, host discovery, and detecting network reconnaissance activities.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Entity.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Entity.Settings.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Entity.Settings",
+      "Summary": "<p sourcefile=\"api/IDSApp.Entity.Settings.yml\" sourcestartlinenumber=\"1\">Represents a configuration setting for the Intrusion Detection System.\nStores system parameters, thresholds, and operational configurations that control IDS behavior and functionality.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Entity.Signatures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Entity.Signatures.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Entity.Signatures",
+      "Summary": "<p sourcefile=\"api/IDSApp.Entity.Signatures.yml\" sourcestartlinenumber=\"1\">Represents a security signature used for intrusion detection.\nContains information about attack patterns, network traffic characteristics,\nand detection rules.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Entity.TftpLog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Entity.TftpLog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Entity.TftpLog",
+      "Summary": "<p sourcefile=\"api/IDSApp.Entity.TftpLog.yml\" sourcestartlinenumber=\"1\">Represents a log entry for TFTP (Trivial File Transfer Protocol) activity.\nContains information about the operation, file transferred, transfer size, source and destination IPs, timestamp, session, and status.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Entity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Entity",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.BoyerMooreSearch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.BoyerMooreSearch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.BoyerMooreSearch",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.BoyerMooreSearch.yml\" sourcestartlinenumber=\"1\">Provides efficient search methods for locating byte or character sequences\nwithin larger datasets, based on the Boyer-Moore algorithm.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.BytePatternMatcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.BytePatternMatcher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.BytePatternMatcher",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.BytePatternMatcher.yml\" sourcestartlinenumber=\"1\">Performs pattern matching on raw byte payloads using a simple byte comparison algorithm.\nUsed for non-text protocols or binary signatures.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.DnsConditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.DnsConditions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.DnsConditions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.EnhancedPcreValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.EnhancedPcreValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.EnhancedPcreValidator",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.EnhancedRuleParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.EnhancedRuleParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.EnhancedRuleParser",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"1\">Advanced rule parsing and analysis system for Intrusion Detection System (IDS)</p>\n<p sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"3\">Main Responsibilities:</p>\n<ul sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"4\">\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"4\">Parse and extract conditions from security rules in multiple protocols</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"5\">Analyze network traffic against parsed rule conditions</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"6\">Validate rule syntax and semantics</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"7\">Extract metadata and content patterns from rules</li>\n</ul>\n<p sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"9\">Supported Protocols:</p>\n<ul sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"10\">\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"10\">HTTP/HTTPS traffic analysis</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"11\">TLS/SSL certificate inspection</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"12\">DNS query and response parsing</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"13\">ICMP packet analysis</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"14\">Network flow and connection tracking</li>\n</ul>\n<p sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"16\">Features:</p>\n<ul sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"17\">\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"17\">High-performance regex-based parsing</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"18\">Comprehensive protocol support</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"19\">Rule validation and error checking</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"20\">TLS fingerprinting and certificate analysis</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedRuleParser.yml\" sourcestartlinenumber=\"21\">Content pattern extraction and normalization</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.EnhancedSignatureRuleEngine.PcreContentMatcher.yml\" sourcestartlinenumber=\"1\">PCRE-based content matcher implementation for regex pattern matching</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.EnhancedSignatureRuleEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.EnhancedSignatureRuleEngine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.EnhancedSignatureRuleEngine",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.EnhancedSignatureRuleEngine.yml\" sourcestartlinenumber=\"1\">Enhanced rule engine for signature-based threat detection with support for\nmultiple rule formats, performance optimizations, and advanced pattern matching.\nProvides fast packet inspection using bloom filters and rule prioritization.</p>\n<p sourcefile=\"api/IDSApp.Helper.EnhancedSignatureRuleEngine.yml\" sourcestartlinenumber=\"5\">Features:</p>\n<ul sourcefile=\"api/IDSApp.Helper.EnhancedSignatureRuleEngine.yml\" sourcestartlinenumber=\"6\">\n<li sourcefile=\"api/IDSApp.Helper.EnhancedSignatureRuleEngine.yml\" sourcestartlinenumber=\"6\">PCRE pattern matching with validation and recovery</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedSignatureRuleEngine.yml\" sourcestartlinenumber=\"7\">Protocol-specific rule optimization and indexing</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedSignatureRuleEngine.yml\" sourcestartlinenumber=\"8\">Rule conflict resolution and prioritization</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedSignatureRuleEngine.yml\" sourcestartlinenumber=\"9\">Performance monitoring and statistical analysis</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedSignatureRuleEngine.yml\" sourcestartlinenumber=\"10\">Fast-path optimization using bloom filters</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedSignatureRuleEngine.yml\" sourcestartlinenumber=\"11\">Multi-threaded rule checking with load balancing</li>\n<li sourcefile=\"api/IDSApp.Helper.EnhancedSignatureRuleEngine.yml\" sourcestartlinenumber=\"12\">Comprehensive error handling and validation</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.FlowConditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.FlowConditions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.FlowConditions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.HttpConditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.HttpConditions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.HttpConditions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.IContentMatcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.IContentMatcher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.IContentMatcher",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.IContentMatcher.yml\" sourcestartlinenumber=\"1\">Defines an interface for pattern matchers that operate on raw packet payloads.\nUsed for detecting signatures or malicious content across various protocols.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.IPNetwork.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.IPNetwork.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.IPNetwork",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.IPNetwork.yml\" sourcestartlinenumber=\"1\">Represents an IP network range in CIDR notation\nSupports both IPv4 and IPv6 network containment checks</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.IcmpConditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.IcmpConditions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.IcmpConditions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.NetworkConditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.NetworkConditions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.NetworkConditions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.OptimizedLogger.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.OptimizedLogger.LogLevel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.OptimizedLogger.LogLevel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.OptimizedLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.OptimizedLogger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.OptimizedLogger",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.OptimizedLogger.yml\" sourcestartlinenumber=\"1\">Provides optimized logging functionality for the IDS system with configurable log levels\nto reduce console clutter while maintaining essential statistics and critical information.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.ParsedRuleConditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.ParsedRuleConditions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.ParsedRuleConditions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.PcreContentMatcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.PcreContentMatcher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.PcreContentMatcher",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.PcreContentMatcher.yml\" sourcestartlinenumber=\"1\">Performs pattern matching using PCRE (Perl-Compatible Regular Expressions).\nUseful for detecting text-based signatures in HTTP, SMTP, or DNS payloads.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.ProtocolPerformance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.ProtocolPerformance.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.ProtocolPerformance",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.ProtocolPerformance.yml\" sourcestartlinenumber=\"1\">Represents performance metrics for a specific network protocol.\nTracks packet counts, total bytes, and last update timestamp.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.RuleBloomFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.RuleBloomFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.RuleBloomFilter",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.RuleBloomFilter.yml\" sourcestartlinenumber=\"1\">Bloom Filter implementation specialized for security rules\nUses multiple hash functions to represent rules in compact bit array</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.RuleFastPathOptimizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.RuleFastPathOptimizer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.RuleFastPathOptimizer",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"1\">High-performance rule checking optimization system using Bloom Filters technology</p>\n<p sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"3\">Main Responsibilities:</p>\n<ul sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"4\">\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"4\">Create and manage Bloom Filters for fast rule filtering</li>\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"5\">Reduce number of rules needing detailed inspection</li>\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"6\">Provide automatic performance statistics and optimization</li>\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"7\">Manage cache for inspection results</li>\n</ul>\n<p sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"9\">How It Works:</p>\n<ol sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"10\">\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"10\">Group rules by protocol and common ports</li>\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"11\">Build Bloom Filters for each rule group</li>\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"12\">Use filters for quick match possibility checking</li>\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"13\">Skip detailed inspection when filters confirm no possible match</li>\n</ol>\n<p sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"15\">Features:</p>\n<ul sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"16\">\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"16\">Significant rule inspection performance improvement</li>\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"17\">Automatic adaptation to rule changes</li>\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"18\">Continuous system accuracy monitoring</li>\n<li sourcefile=\"api/IDSApp.Helper.RuleFastPathOptimizer.yml\" sourcestartlinenumber=\"19\">Automatic rebuild when efficiency decreases</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.RuleGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.RuleGroup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.RuleGroup",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.RuleGroup.yml\" sourcestartlinenumber=\"1\">Represents a group of security rules with common characteristics\nUsed for organized rule management and optimization</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.RuleMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.RuleMetadata.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.RuleMetadata",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.RuleOptimizationStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.RuleOptimizationStats.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.RuleOptimizationStats",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.RuleOptimizationStats.yml\" sourcestartlinenumber=\"1\">Statistics container for rule optimization performance metrics\nTracks filter count, rule count, memory usage, and accuracy estimates</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.RulePerformance.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.RulePerformance.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.RulePerformance",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.RulePerformance.yml\" sourcestartlinenumber=\"1\">Represents performance statistics for a specific IDS rule.\nTracks total checks, matches, average time, and efficiency.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.RulePriorityManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.RulePriorityManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.RulePriorityManager",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.RulePriorityManager.yml\" sourcestartlinenumber=\"1\">Manages rule priorities and detects conflicts among IDS rules.\nEnsures that when multiple rules match the same packet, the most specific rule is applied first.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.RuleSpecificity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.RuleSpecificity.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.RuleSpecificity",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.RuleSpecificity.yml\" sourcestartlinenumber=\"1\">Represents the specificity of a rule with a score and contributing fields.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.RuleStatistics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.RuleStatistics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.RuleStatistics",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.RuleStatistics.yml\" sourcestartlinenumber=\"1\">Provides real-time collection and analysis of rule and protocol performance statistics.\nPeriodically saves data to the database for long-term analytics.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.StatisticsSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.StatisticsSnapshot.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.StatisticsSnapshot",
+      "Summary": "<p sourcefile=\"api/IDSApp.Helper.StatisticsSnapshot.yml\" sourcestartlinenumber=\"1\">Provides a summarized snapshot of the current IDS performance metrics.\nUseful for dashboards and monitoring.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.TlsConditions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.TlsConditions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper.TlsConditions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.Helper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.Helper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.IDSCore.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.IDSCore.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.IDSCore",
+      "Summary": "<p sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"1\">Main Intrusion Detection System core engine that coordinates packet capture, processing,\nrule matching, and alert generation. Provides real-time network traffic analysis and\nthreat detection using signature-based and behavioral analysis techniques.</p>\n<p sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"5\">Key Responsibilities:</p>\n<ul sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"6\">\n<li sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"6\">Packet capture from network interfaces or PCAP files</li>\n<li sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"7\">Multi-threaded packet processing with worker queues</li>\n<li sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"8\">Rule-based threat detection using enhanced signature engine</li>\n<li sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"9\">Protocol parsing and analysis (HTTP, DNS, SSH, FTP, etc.)</li>\n<li sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"10\">Alert generation and security event logging</li>\n<li sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"11\">Performance monitoring and system statistics collection</li>\n<li sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"12\">Flow tracking and behavioral analysis</li>\n<li sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"13\">DDoS and port scan detection</li>\n<li sourcefile=\"api/IDSApp.IDSCore.yml\" sourcestartlinenumber=\"14\">Resource management and cleanup</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.PacketCaptureWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.PacketCaptureWrapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.PacketCaptureWrapper",
+      "Summary": "<p sourcefile=\"api/IDSApp.PacketCaptureWrapper.yml\" sourcestartlinenumber=\"1\">Wrapper class for packet capture data that provides structured access\nto packet information and metadata for efficient processing</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.PerformanceMonitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.PerformanceMonitor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.PerformanceMonitor",
+      "Summary": "<p sourcefile=\"api/IDSApp.PerformanceMonitor.yml\" sourcestartlinenumber=\"1\">Monitors and reports system performance metrics including packet processing statistics,\nmemory usage, and rule matching performance. Generates periodic performance reports\nto help identify bottlenecks and optimize system performance.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.BoyerMooreSearch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.BoyerMooreSearch.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.BoyerMooreSearch",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.BoyerMooreSearch.yml\" sourcestartlinenumber=\"1\">Efficient binary pattern search using Boyer-Moore algorithm</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.DatabaseParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.DatabaseParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.DatabaseParser",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"1\">Database protocol parser for Intrusion Detection System</p>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"3\">Main Responsibilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"4\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"4\">Parse and analyze database network traffic for security threats</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"5\">Extract SQL queries, commands, and session information</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"6\">Detect suspicious database activities and potential attacks</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"7\">Generate security logs and alerts for database operations</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"9\">Supported Database Engines:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"10\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"10\">MySQL (port 3306)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"11\">PostgreSQL (port 5432)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"12\">SQL Server (port 1433)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"13\">Generic SQL traffic analysis</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"15\">Security Detection Capabilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"16\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"16\">Dangerous SQL commands (DROP, DELETE, ALTER, etc.)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"17\">Suspicious query patterns and keywords</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"18\">Long-running queries indicating potential attacks</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"19\">Unauthorized database access attempts</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"20\">SQL injection pattern detection</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"22\">Features:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"23\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"23\">Protocol-aware parsing based on destination ports</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"24\">Payload fingerprinting for attack correlation</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"25\">Session tracking and correlation</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"26\">Comprehensive logging with performance considerations</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DatabaseParser.yml\" sourcestartlinenumber=\"27\">Memory-efficient payload handling</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.DhcpParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.DhcpParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.DhcpParser",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"1\">DHCP protocol parser for Intrusion Detection System</p>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"3\">Main Responsibilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"4\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"4\">Parse and analyze DHCP (Dynamic Host Configuration Protocol) network traffic</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"5\">Detect DHCP-based attacks and suspicious activities</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"6\">Monitor IP address assignment and lease management</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"7\">Identify rogue DHCP servers and IP spoofing attempts</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"9\">DHCP Protocol Support:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"10\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"10\">Message Types: DISCOVER, OFFER, REQUEST, ACK, NAK, RELEASE, DECLINE, INFORM</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"11\">Standard Ports: 67 (server), 68 (client)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"12\">Option parsing and validation</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"13\">Lease duration monitoring</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"15\">Security Detection Capabilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"16\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"16\">Rogue DHCP server detection</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"17\">IP address spoofing in DHCP transactions</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"18\">Suspicious lease duration values</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"19\">Malicious content in DHCP options</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"20\">DHCP starvation attacks</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"21\">Unauthorized IP assignment attempts</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"23\">Features:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"24\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"24\">Comprehensive DHCP header parsing</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"25\">Option analysis with security validation</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"26\">Transaction tracking and correlation</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"27\">Timestamp validation and correction</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DhcpParser.yml\" sourcestartlinenumber=\"28\">Payload fingerprinting for attack correlation</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.DnsParser.DnsRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.DnsParser.DnsRecord.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.DnsParser.DnsRecord",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.DnsRecord.yml\" sourcestartlinenumber=\"1\">Represents a DNS record with name, type, and response data\nUsed for both questions and answers in DNS packets</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.DnsParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.DnsParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.DnsParser",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"1\">DNS protocol parser for Intrusion Detection System</p>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"3\">Main Responsibilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"4\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"4\">Parse and analyze DNS (Domain Name System) network traffic</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"5\">Extract DNS queries and responses for security analysis</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"6\">Detect DNS-based attacks and suspicious domain activities</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"7\">Monitor DNS tunneling and data exfiltration attempts</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"9\">DNS Protocol Support:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"10\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"10\">Query Types: A, AAAA, NS, CNAME, PTR, and other common record types</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"11\">Standard Port: 53 (UDP/TCP)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"12\">DNS packet structure parsing (header, questions, answers)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"13\">Domain name compression pointer resolution</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"15\">Security Detection Capabilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"16\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"16\">DNS tunneling detection through suspicious domain patterns</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"17\">Data exfiltration via DNS queries</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"18\">Malicious domain name patterns and DGA (Domain Generation Algorithm)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"19\">Suspicious query types and response patterns</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"20\">DNS amplification attack indicators</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"22\">Features:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"23\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"23\">Complete DNS packet parsing with compression handling</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"24\">Question and answer section analysis</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"25\">IPv4 and IPv6 address parsing</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"26\">Suspicious domain pattern matching</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.DnsParser.yml\" sourcestartlinenumber=\"27\">Comprehensive logging with forensic data</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.EnhancedHttpHandler.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.EnhancedHttpHandler",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"1\">Advanced HTTP protocol parsing and analysis system for Intrusion Detection System</p>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"3\">Main Responsibilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"4\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"4\">Parse and analyze HTTP/HTTPS traffic for security threats</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"5\">Extract and validate HTTP headers, methods, URLs, and body content</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"6\">Detect malicious patterns in HTTP requests and responses</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"7\">Integrate TLS/SSL certificate analysis for encrypted traffic</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"8\">Provide comprehensive threat scoring and pattern matching</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"10\">Security Detection Capabilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"11\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"11\">Cross-Site Scripting (XSS) attacks</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"12\">SQL Injection (SQLi) attempts</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"13\">Local File Inclusion (LFI) and path traversal</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"14\">Remote Code Execution (RCE) patterns</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"15\">Malicious file uploads and binary content</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"16\">Base64-encoded payloads and evasion techniques</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"17\">Suspicious HTTP headers and user agents</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"19\">Features:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"20\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"20\">Complete HTTP protocol parsing with validation</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"21\">Multi-layer threat detection (text, binary, regex patterns)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"22\">TLS/SSL certificate fingerprinting and analysis</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"23\">Content-type aware inspection optimization</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"24\">Comprehensive logging with forensic data</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.EnhancedHttpHandler.yml\" sourcestartlinenumber=\"25\">Performance-optimized pattern matching</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.FtpParseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.FtpParseResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.FtpParseResult",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.FtpParseResult.yml\" sourcestartlinenumber=\"1\">Comprehensive result container for FTP parsing analysis\nContains parsed command information and security assessment flags</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.FtpParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.FtpParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.FtpParser",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"1\">Advanced FTP protocol parser for Intrusion Detection System</p>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"3\">Main Responsibilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"4\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"4\">Parse and analyze FTP (File Transfer Protocol) commands and transactions</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"5\">Extract filenames, paths, and command arguments with security context</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"6\">Detect suspicious FTP activities and potential attack patterns</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"7\">Normalize paths and identify path traversal attempts</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"8\">Flag credential exposure in FTP sessions</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"10\">Security Detection Capabilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"11\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"11\">Path traversal attacks using &quot;../&quot; and absolute paths</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"12\">Suspicious file extensions indicating malware/scripts</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"13\">Base64-encoded payloads in filenames or arguments</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"14\">Suspicious keywords (shell, cmd, webshell, etc.)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"15\">Credential exposure in PASS commands</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"16\">Long filenames potentially hiding malicious content</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"17\">Percent-encoding evasion techniques</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"19\">Features:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"20\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"20\">Comprehensive FTP command parsing with argument extraction</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"21\">Path normalization and traversal detection</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"22\">File operation classification (RETR, STOR, DELE, etc.)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"23\">Multiple encoding detection and handling</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.FtpParser.yml\" sourcestartlinenumber=\"24\">Suspicious pattern matching with detailed reasoning</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.HttpParser.ThreatResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.HttpParser.ThreatResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.HttpParser.ThreatResult",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.ThreatResult.yml\" sourcestartlinenumber=\"1\">Threat analysis result container</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.HttpParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.HttpParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.HttpParser",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"1\">Advanced HTTP threat detection engine for Intrusion Detection System</p>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"3\">Detection Methods:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"4\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"4\">Text pattern matching for common attack signatures</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"5\">Regular expression analysis for complex attack patterns</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"6\">Binary pattern detection for executable content</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"7\">Base64 decoding and analysis for encoded payloads</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"8\">URL decoding for obfuscated attack vectors</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"10\">Performance Features:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"11\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"11\">Configurable inspection limits to prevent resource exhaustion</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"12\">Content-type filtering to skip non-relevant data</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"13\">Efficient Boyer-Moore algorithm for binary pattern matching</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.HttpParser.yml\" sourcestartlinenumber=\"14\">Threat scoring with adjustable thresholds</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.HttpParserHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.HttpParserHelpers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.HttpParserHelpers",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.HttpParserHelpers.yml\" sourcestartlinenumber=\"1\">HTTP parser utility functions</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.ImapParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.ImapParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.ImapParser",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"1\">IMAP protocol parser for Intrusion Detection System</p>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"3\">Main Responsibilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"4\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"4\">Parse and analyze IMAP (Internet Message Access Protocol) traffic</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"5\">Monitor email client-server communications for security threats</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"6\">Detect suspicious IMAP commands and authentication attempts</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"7\">Analyze email content and attachments for malicious patterns</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"8\">Track session activity and command sequences</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"10\">IMAP Protocol Support:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"11\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"11\">Standard IMAP commands (LOGIN, SELECT, FETCH, STORE, APPEND, LOGOUT)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"12\">Email folder operations and message management</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"13\">Authentication and session management</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"14\">Email content retrieval and analysis</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"16\">Security Detection Capabilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"17\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"17\">Suspicious command patterns and sequences</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"18\">Authentication brute force attempts</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"19\">Malicious payloads in email content</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"20\">Sensitive information extraction attempts</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"21\">Protocol anomalies and error conditions</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"23\">Features:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"24\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"24\">Comprehensive IMAP command and response parsing</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"25\">Configurable suspicious command detection</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"26\">Payload fingerprinting for content correlation</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"27\">Session tracking and attempt counting</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.ImapParser.yml\" sourcestartlinenumber=\"28\">Real-time threat detection and logging</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.LdapParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.LdapParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.LdapParser",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"1\">LDAP protocol parser for Intrusion Detection System</p>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"3\">Main Responsibilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"4\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"4\">Parse and analyze LDAP (Lightweight Directory Access Protocol) traffic</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"5\">Extract directory operations, authentication attempts, and search queries</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"6\">Detect suspicious LDAP activities and directory service attacks</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"7\">Monitor directory access patterns and privilege escalation attempts</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"8\">Analyze distinguished names and filter criteria for security threats</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"10\">LDAP Protocol Support:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"11\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"11\">Authentication operations (BindRequest, BindResponse)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"12\">Directory search and query operations (SearchRequest, SearchResultEntry)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"13\">Directory modification operations (Add, Modify, Delete)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"14\">ASN.1 BER encoding parsing for LDAP packets</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"15\">Standard ports 389 (LDAP) and 636 (LDAPS)</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"17\">Security Detection Capabilities:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"18\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"18\">Suspicious distinguished name patterns</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"19\">Directory traversal and unauthorized access attempts</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"20\">LDAP injection and filter manipulation</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"21\">Privilege escalation through directory modifications</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"22\">Encrypted LDAPS traffic monitoring</li>\n</ul>\n<p sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"24\">Features:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"25\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"25\">Complete ASN.1 BER protocol parsing</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"26\">Operation type extraction and classification</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"27\">Distinguished name analysis and validation</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"28\">Result code monitoring for failed operations</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.LdapParser.yml\" sourcestartlinenumber=\"29\">Encrypted session detection and handling</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.NetbiosParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.NetbiosParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.NetbiosParser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.NtpParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.NtpParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.NtpParser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.Pop3Parser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.Pop3Parser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.Pop3Parser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.RdpParseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.RdpParseResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.RdpParseResult",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.RdpParseResult.yml\" sourcestartlinenumber=\"1\">Result container for RDP parsing operations\nStores extracted RDP session data, authentication information, and security analysis results\nProvides utility methods for result validation and formatting</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.RdpParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.RdpParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.RdpParser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.SmbParseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.SmbParseResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.SmbParseResult",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.SmbParseResult.yml\" sourcestartlinenumber=\"1\">Result container for SMB parsing operations\nStores extracted SMB command data, file information, and security analysis results\nProvides formatted output for logging and monitoring systems</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.SmbParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.SmbParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.SmbParser",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.SmbParser.yml\" sourcestartlinenumber=\"1\">Advanced SMB parser supporting SMB1/SMB2/SMB3,\nextracting command, filename, share, and performing\nIDS checks for suspicious activity.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.SmtpParseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.SmtpParseResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.SmtpParseResult",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.SmtpParseResult.yml\" sourcestartlinenumber=\"1\">Result container for SMTP parsing operations\nStores extracted email metadata, security analysis results, and suspicion reasons\nProvides formatted output for logging and email security monitoring</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.SmtpParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.SmtpParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.SmtpParser",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.SmtpParser.yml\" sourcestartlinenumber=\"1\">Advanced SMTP parser that extracts From, To, Subject,\ndecodes MIME headers, handles multi-line subjects,\nand performs basic IDS checks for suspicious content and attachments.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.SnmpParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.SnmpParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.SnmpParser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.SshParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.SshParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.SshParser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.TelnetParseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.TelnetParseResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.TelnetParseResult",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.TelnetParseResult.yml\" sourcestartlinenumber=\"1\">Result container for Telnet parsing operations\nStores extracted Telnet commands, connection information, and security analysis results\nProvides utility methods for result validation and formatted output</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.TelnetParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.TelnetParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.TelnetParser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.TftpParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.TftpParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.TftpParser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.TlsParser.TlsParseResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.TlsParser.TlsParseResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.TlsParser.TlsParseResult",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.TlsParser.TlsParseResult.yml\" sourcestartlinenumber=\"1\">Comprehensive result container for TLS parsing operations\nStores extracted TLS handshake data, security analysis results, and threat intelligence matches</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.TlsParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.TlsParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing.TlsParser",
+      "Summary": "<p sourcefile=\"api/IDSApp.ProtocolParsing.TlsParser.yml\" sourcestartlinenumber=\"1\">Production-ready TLS parser:</p>\n<ul sourcefile=\"api/IDSApp.ProtocolParsing.TlsParser.yml\" sourcestartlinenumber=\"2\">\n<li sourcefile=\"api/IDSApp.ProtocolParsing.TlsParser.yml\" sourcestartlinenumber=\"2\">Parses TLS records and handshake (ClientHello, Certificate)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.TlsParser.yml\" sourcestartlinenumber=\"3\">Extracts SNI, computes a best-effort JA3 fingerprint</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.TlsParser.yml\" sourcestartlinenumber=\"4\">Extracts certificate(s) from Certificate handshake and inspects them (self-signed, expired, SHA256 fingerprint)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.TlsParser.yml\" sourcestartlinenumber=\"5\">Performs lightweight deep-inspection on ASCII content (configurable)</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.TlsParser.yml\" sourcestartlinenumber=\"6\">Logs results to DB via LogBLL.Insert and saves TLS-ERROR rows also via LogBLL.Insert</li>\n<li sourcefile=\"api/IDSApp.ProtocolParsing.TlsParser.yml\" sourcestartlinenumber=\"7\">Loads known-malicious JA3s from Ja3Repository (DB-backed)</li>\n</ul>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.ProtocolParsing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.ProtocolParsing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp.ProtocolParsing",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IDSApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IDSApp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "IDSApp",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

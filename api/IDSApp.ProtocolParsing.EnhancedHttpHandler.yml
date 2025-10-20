@@ -1,0 +1,2180 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  commentId: T:IDSApp.ProtocolParsing.EnhancedHttpHandler
+  id: EnhancedHttpHandler
+  parent: IDSApp.ProtocolParsing
+  children:
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.#ctor(IDSApp.ProtocolParsing.HttpParser)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.Dispose
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.Headers
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.Host
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.Method
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody(HttpMachine.HttpParser,System.ArraySegment{System.Byte})
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody(IDSApp.ProtocolParsing.HttpParser,System.ArraySegment{System.Byte})
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnFragment(HttpMachine.HttpParser,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName(HttpMachine.HttpParser,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName(IDSApp.ProtocolParsing.HttpParser,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue(HttpMachine.HttpParser,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue(IDSApp.ProtocolParsing.HttpParser,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd(HttpMachine.HttpParser)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd(IDSApp.ProtocolParsing.HttpParser)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin(HttpMachine.HttpParser)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin(IDSApp.ProtocolParsing.HttpParser)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd(HttpMachine.HttpParser)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd(IDSApp.ProtocolParsing.HttpParser)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod(HttpMachine.HttpParser,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod(IDSApp.ProtocolParsing.HttpParser,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnQueryString(HttpMachine.HttpParser,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri(HttpMachine.HttpParser,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri(IDSApp.ProtocolParsing.HttpParser,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode(HttpMachine.HttpParser,System.Int32,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode(IDSApp.ProtocolParsing.HttpParser,System.Int32,System.String)
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.RequestBody
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.Reset
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.ResponseBody
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.StatusCode
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsCipher
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsFingerprint
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsSni
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsVersion
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.Url
+  - IDSApp.ProtocolParsing.EnhancedHttpHandler.UserAgent
+  langs:
+  - csharp
+  - vb
+  name: EnhancedHttpHandler
+  nameWithType: EnhancedHttpHandler
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  type: Class
+  source:
+    id: EnhancedHttpHandler
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 40
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: >-
+    Advanced HTTP protocol parsing and analysis system for Intrusion Detection System
+
+
+    Main Responsibilities:
+
+    - Parse and analyze HTTP/HTTPS traffic for security threats
+
+    - Extract and validate HTTP headers, methods, URLs, and body content
+
+    - Detect malicious patterns in HTTP requests and responses
+
+    - Integrate TLS/SSL certificate analysis for encrypted traffic
+
+    - Provide comprehensive threat scoring and pattern matching
+
+
+    Security Detection Capabilities:
+
+    - Cross-Site Scripting (XSS) attacks
+
+    - SQL Injection (SQLi) attempts
+
+    - Local File Inclusion (LFI) and path traversal
+
+    - Remote Code Execution (RCE) patterns
+
+    - Malicious file uploads and binary content
+
+    - Base64-encoded payloads and evasion techniques
+
+    - Suspicious HTTP headers and user agents
+
+
+    Features:
+
+    - Complete HTTP protocol parsing with validation
+
+    - Multi-layer threat detection (text, binary, regex patterns)
+
+    - TLS/SSL certificate fingerprinting and analysis
+
+    - Content-type aware inspection optimization
+
+    - Comprehensive logging with forensic data
+
+    - Performance-optimized pattern matching
+  example: []
+  syntax:
+    content: 'public class EnhancedHttpHandler : IHttpParserHandler, IDisposable'
+    content.vb: Public Class EnhancedHttpHandler Implements IHttpParserHandler, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - HttpMachine.IHttpParserHandler
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Method
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.Method
+  id: Method
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: Method
+  nameWithType: EnhancedHttpHandler.Method
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Method
+  type: Property
+  source:
+    id: Method
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 43
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public string Method { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Method As String
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.Method*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Url
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.Url
+  id: Url
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: EnhancedHttpHandler.Url
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Url
+  type: Property
+  source:
+    id: Url
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 44
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public string Url { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Url As String
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.Url*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Host
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.Host
+  id: Host
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: Host
+  nameWithType: EnhancedHttpHandler.Host
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Host
+  type: Property
+  source:
+    id: Host
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 45
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public string Host { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Host As String
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.Host*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.UserAgent
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.UserAgent
+  id: UserAgent
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: UserAgent
+  nameWithType: EnhancedHttpHandler.UserAgent
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.UserAgent
+  type: Property
+  source:
+    id: UserAgent
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 46
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public string UserAgent { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserAgent As String
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.UserAgent*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.StatusCode
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.StatusCode
+  id: StatusCode
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: StatusCode
+  nameWithType: EnhancedHttpHandler.StatusCode
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.StatusCode
+  type: Property
+  source:
+    id: StatusCode
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 47
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public int StatusCode { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property StatusCode As Integer
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.StatusCode*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.RequestBody
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.RequestBody
+  id: RequestBody
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: RequestBody
+  nameWithType: EnhancedHttpHandler.RequestBody
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.RequestBody
+  type: Property
+  source:
+    id: RequestBody
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 48
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public byte[] RequestBody { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public Property RequestBody As Byte()
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.RequestBody*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.ResponseBody
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.ResponseBody
+  id: ResponseBody
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: ResponseBody
+  nameWithType: EnhancedHttpHandler.ResponseBody
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.ResponseBody
+  type: Property
+  source:
+    id: ResponseBody
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 49
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public byte[] ResponseBody { get; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public Property ResponseBody As Byte()
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.ResponseBody*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Headers
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.Headers
+  id: Headers
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: Headers
+  nameWithType: EnhancedHttpHandler.Headers
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Headers
+  type: Property
+  source:
+    id: Headers
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 50
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public Dictionary<string, string> Headers { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: Public Property Headers As Dictionary(Of String, String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.Headers*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsSni
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsSni
+  id: TlsSni
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: TlsSni
+  nameWithType: EnhancedHttpHandler.TlsSni
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsSni
+  type: Property
+  source:
+    id: TlsSni
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 53
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public string TlsSni { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TlsSni As String
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsSni*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsCipher
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsCipher
+  id: TlsCipher
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: TlsCipher
+  nameWithType: EnhancedHttpHandler.TlsCipher
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsCipher
+  type: Property
+  source:
+    id: TlsCipher
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 54
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public string TlsCipher { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TlsCipher As String
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsCipher*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsVersion
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsVersion
+  id: TlsVersion
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: TlsVersion
+  nameWithType: EnhancedHttpHandler.TlsVersion
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsVersion
+  type: Property
+  source:
+    id: TlsVersion
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 55
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public string TlsVersion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TlsVersion As String
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsVersion*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsFingerprint
+  commentId: P:IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsFingerprint
+  id: TlsFingerprint
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: TlsFingerprint
+  nameWithType: EnhancedHttpHandler.TlsFingerprint
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsFingerprint
+  type: Property
+  source:
+    id: TlsFingerprint
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 56
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public string TlsFingerprint { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TlsFingerprint As String
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsFingerprint*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.#ctor(IDSApp.ProtocolParsing.HttpParser)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.#ctor(IDSApp.ProtocolParsing.HttpParser)
+  id: '#ctor(IDSApp.ProtocolParsing.HttpParser)'
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: EnhancedHttpHandler(HttpParser)
+  nameWithType: EnhancedHttpHandler.EnhancedHttpHandler(HttpParser)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.EnhancedHttpHandler(IDSApp.ProtocolParsing.HttpParser)
+  type: Constructor
+  source:
+    id: .ctor
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 64
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public EnhancedHttpHandler(HttpParser httpParser)
+    parameters:
+    - id: httpParser
+      type: IDSApp.ProtocolParsing.HttpParser
+    content.vb: Public Sub New(httpParser As HttpParser)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.#ctor*
+  nameWithType.vb: EnhancedHttpHandler.New(HttpParser)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.New(IDSApp.ProtocolParsing.HttpParser)
+  name.vb: New(HttpParser)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Dispose
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.Dispose
+  id: Dispose
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: EnhancedHttpHandler.Dispose()
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 72
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: Clean up resources
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Reset
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.Reset
+  id: Reset
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: EnhancedHttpHandler.Reset()
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Reset()
+  type: Method
+  source:
+    id: Reset
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 81
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  summary: Reset parser state for processing new HTTP message
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.Reset*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin(HttpMachine.HttpParser)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin(HttpMachine.HttpParser)
+  id: OnMessageBegin(HttpMachine.HttpParser)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnMessageBegin(HttpParser)
+  nameWithType: EnhancedHttpHandler.OnMessageBegin(HttpParser)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin(HttpMachine.HttpParser)
+  type: Method
+  source:
+    id: OnMessageBegin
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 101
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  example: []
+  syntax:
+    content: public void OnMessageBegin(HttpParser parser)
+    parameters:
+    - id: parser
+      type: HttpMachine.HttpParser
+    content.vb: Public Sub OnMessageBegin(parser As HttpParser)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin*
+  implements:
+  - HttpMachine.IHttpParserHandler.OnMessageBegin(HttpMachine.HttpParser)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod(HttpMachine.HttpParser,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod(HttpMachine.HttpParser,System.String)
+  id: OnMethod(HttpMachine.HttpParser,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnMethod(HttpParser, string)
+  nameWithType: EnhancedHttpHandler.OnMethod(HttpParser, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod(HttpMachine.HttpParser, string)
+  type: Method
+  source:
+    id: OnMethod
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 108
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  example: []
+  syntax:
+    content: public void OnMethod(HttpParser parser, string method)
+    parameters:
+    - id: parser
+      type: HttpMachine.HttpParser
+    - id: method
+      type: System.String
+    content.vb: Public Sub OnMethod(parser As HttpParser, method As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod*
+  implements:
+  - HttpMachine.IHttpParserHandler.OnMethod(HttpMachine.HttpParser,System.String)
+  nameWithType.vb: EnhancedHttpHandler.OnMethod(HttpParser, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod(HttpMachine.HttpParser, String)
+  name.vb: OnMethod(HttpParser, String)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri(HttpMachine.HttpParser,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri(HttpMachine.HttpParser,System.String)
+  id: OnRequestUri(HttpMachine.HttpParser,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnRequestUri(HttpParser, string)
+  nameWithType: EnhancedHttpHandler.OnRequestUri(HttpParser, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri(HttpMachine.HttpParser, string)
+  type: Method
+  source:
+    id: OnRequestUri
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 113
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  example: []
+  syntax:
+    content: public void OnRequestUri(HttpParser parser, string requestUri)
+    parameters:
+    - id: parser
+      type: HttpMachine.HttpParser
+    - id: requestUri
+      type: System.String
+    content.vb: Public Sub OnRequestUri(parser As HttpParser, requestUri As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri*
+  implements:
+  - HttpMachine.IHttpParserHandler.OnRequestUri(HttpMachine.HttpParser,System.String)
+  nameWithType.vb: EnhancedHttpHandler.OnRequestUri(HttpParser, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri(HttpMachine.HttpParser, String)
+  name.vb: OnRequestUri(HttpParser, String)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnFragment(HttpMachine.HttpParser,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnFragment(HttpMachine.HttpParser,System.String)
+  id: OnFragment(HttpMachine.HttpParser,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnFragment(HttpParser, string)
+  nameWithType: EnhancedHttpHandler.OnFragment(HttpParser, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnFragment(HttpMachine.HttpParser, string)
+  type: Method
+  source:
+    id: OnFragment
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 132
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  example: []
+  syntax:
+    content: public void OnFragment(HttpParser parser, string fragment)
+    parameters:
+    - id: parser
+      type: HttpMachine.HttpParser
+    - id: fragment
+      type: System.String
+    content.vb: Public Sub OnFragment(parser As HttpParser, fragment As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnFragment*
+  implements:
+  - HttpMachine.IHttpParserHandler.OnFragment(HttpMachine.HttpParser,System.String)
+  nameWithType.vb: EnhancedHttpHandler.OnFragment(HttpParser, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnFragment(HttpMachine.HttpParser, String)
+  name.vb: OnFragment(HttpParser, String)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnQueryString(HttpMachine.HttpParser,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnQueryString(HttpMachine.HttpParser,System.String)
+  id: OnQueryString(HttpMachine.HttpParser,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnQueryString(HttpParser, string)
+  nameWithType: EnhancedHttpHandler.OnQueryString(HttpParser, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnQueryString(HttpMachine.HttpParser, string)
+  type: Method
+  source:
+    id: OnQueryString
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 151
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  example: []
+  syntax:
+    content: public void OnQueryString(HttpParser parser, string queryString)
+    parameters:
+    - id: parser
+      type: HttpMachine.HttpParser
+    - id: queryString
+      type: System.String
+    content.vb: Public Sub OnQueryString(parser As HttpParser, queryString As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnQueryString*
+  implements:
+  - HttpMachine.IHttpParserHandler.OnQueryString(HttpMachine.HttpParser,System.String)
+  nameWithType.vb: EnhancedHttpHandler.OnQueryString(HttpParser, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnQueryString(HttpMachine.HttpParser, String)
+  name.vb: OnQueryString(HttpParser, String)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName(HttpMachine.HttpParser,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName(HttpMachine.HttpParser,System.String)
+  id: OnHeaderName(HttpMachine.HttpParser,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnHeaderName(HttpParser, string)
+  nameWithType: EnhancedHttpHandler.OnHeaderName(HttpParser, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName(HttpMachine.HttpParser, string)
+  type: Method
+  source:
+    id: OnHeaderName
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 170
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  example: []
+  syntax:
+    content: public void OnHeaderName(HttpParser parser, string name)
+    parameters:
+    - id: parser
+      type: HttpMachine.HttpParser
+    - id: name
+      type: System.String
+    content.vb: Public Sub OnHeaderName(parser As HttpParser, name As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName*
+  implements:
+  - HttpMachine.IHttpParserHandler.OnHeaderName(HttpMachine.HttpParser,System.String)
+  nameWithType.vb: EnhancedHttpHandler.OnHeaderName(HttpParser, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName(HttpMachine.HttpParser, String)
+  name.vb: OnHeaderName(HttpParser, String)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue(HttpMachine.HttpParser,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue(HttpMachine.HttpParser,System.String)
+  id: OnHeaderValue(HttpMachine.HttpParser,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnHeaderValue(HttpParser, string)
+  nameWithType: EnhancedHttpHandler.OnHeaderValue(HttpParser, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue(HttpMachine.HttpParser, string)
+  type: Method
+  source:
+    id: OnHeaderValue
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 175
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  example: []
+  syntax:
+    content: public void OnHeaderValue(HttpParser parser, string value)
+    parameters:
+    - id: parser
+      type: HttpMachine.HttpParser
+    - id: value
+      type: System.String
+    content.vb: Public Sub OnHeaderValue(parser As HttpParser, value As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue*
+  implements:
+  - HttpMachine.IHttpParserHandler.OnHeaderValue(HttpMachine.HttpParser,System.String)
+  nameWithType.vb: EnhancedHttpHandler.OnHeaderValue(HttpParser, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue(HttpMachine.HttpParser, String)
+  name.vb: OnHeaderValue(HttpParser, String)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd(HttpMachine.HttpParser)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd(HttpMachine.HttpParser)
+  id: OnHeadersEnd(HttpMachine.HttpParser)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnHeadersEnd(HttpParser)
+  nameWithType: EnhancedHttpHandler.OnHeadersEnd(HttpParser)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd(HttpMachine.HttpParser)
+  type: Method
+  source:
+    id: OnHeadersEnd
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 185
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  example: []
+  syntax:
+    content: public void OnHeadersEnd(HttpParser parser)
+    parameters:
+    - id: parser
+      type: HttpMachine.HttpParser
+    content.vb: Public Sub OnHeadersEnd(parser As HttpParser)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd*
+  implements:
+  - HttpMachine.IHttpParserHandler.OnHeadersEnd(HttpMachine.HttpParser)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody(HttpMachine.HttpParser,System.ArraySegment{System.Byte})
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody(HttpMachine.HttpParser,System.ArraySegment{System.Byte})
+  id: OnBody(HttpMachine.HttpParser,System.ArraySegment{System.Byte})
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnBody(HttpParser, ArraySegment<byte>)
+  nameWithType: EnhancedHttpHandler.OnBody(HttpParser, ArraySegment<byte>)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody(HttpMachine.HttpParser, System.ArraySegment<byte>)
+  type: Method
+  source:
+    id: OnBody
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 187
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  example: []
+  syntax:
+    content: public void OnBody(HttpParser parser, ArraySegment<byte> data)
+    parameters:
+    - id: parser
+      type: HttpMachine.HttpParser
+    - id: data
+      type: System.ArraySegment{System.Byte}
+    content.vb: Public Sub OnBody(parser As HttpParser, data As ArraySegment(Of Byte))
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody*
+  implements:
+  - HttpMachine.IHttpParserHandler.OnBody(HttpMachine.HttpParser,System.ArraySegment{System.Byte})
+  nameWithType.vb: EnhancedHttpHandler.OnBody(HttpParser, ArraySegment(Of Byte))
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody(HttpMachine.HttpParser, System.ArraySegment(Of Byte))
+  name.vb: OnBody(HttpParser, ArraySegment(Of Byte))
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd(HttpMachine.HttpParser)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd(HttpMachine.HttpParser)
+  id: OnMessageEnd(HttpMachine.HttpParser)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnMessageEnd(HttpParser)
+  nameWithType: EnhancedHttpHandler.OnMessageEnd(HttpParser)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd(HttpMachine.HttpParser)
+  type: Method
+  source:
+    id: OnMessageEnd
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 193
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  example: []
+  syntax:
+    content: public void OnMessageEnd(HttpParser parser)
+    parameters:
+    - id: parser
+      type: HttpMachine.HttpParser
+    content.vb: Public Sub OnMessageEnd(parser As HttpParser)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd*
+  implements:
+  - HttpMachine.IHttpParserHandler.OnMessageEnd(HttpMachine.HttpParser)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode(HttpMachine.HttpParser,System.Int32,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode(HttpMachine.HttpParser,System.Int32,System.String)
+  id: OnResponseCode(HttpMachine.HttpParser,System.Int32,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnResponseCode(HttpParser, int, string)
+  nameWithType: EnhancedHttpHandler.OnResponseCode(HttpParser, int, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode(HttpMachine.HttpParser, int, string)
+  type: Method
+  source:
+    id: OnResponseCode
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 212
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public void OnResponseCode(HttpParser parser, int statusCode, string statusDescription)
+    parameters:
+    - id: parser
+      type: HttpMachine.HttpParser
+    - id: statusCode
+      type: System.Int32
+    - id: statusDescription
+      type: System.String
+    content.vb: Public Sub OnResponseCode(parser As HttpParser, statusCode As Integer, statusDescription As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode*
+  nameWithType.vb: EnhancedHttpHandler.OnResponseCode(HttpParser, Integer, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode(HttpMachine.HttpParser, Integer, String)
+  name.vb: OnResponseCode(HttpParser, Integer, String)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin(IDSApp.ProtocolParsing.HttpParser)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin(IDSApp.ProtocolParsing.HttpParser)
+  id: OnMessageBegin(IDSApp.ProtocolParsing.HttpParser)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnMessageBegin(HttpParser)
+  nameWithType: EnhancedHttpHandler.OnMessageBegin(HttpParser)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin(IDSApp.ProtocolParsing.HttpParser)
+  type: Method
+  source:
+    id: OnMessageBegin
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 299
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public void OnMessageBegin(HttpParser parser)
+    parameters:
+    - id: parser
+      type: IDSApp.ProtocolParsing.HttpParser
+    content.vb: Public Sub OnMessageBegin(parser As HttpParser)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod(IDSApp.ProtocolParsing.HttpParser,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod(IDSApp.ProtocolParsing.HttpParser,System.String)
+  id: OnMethod(IDSApp.ProtocolParsing.HttpParser,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnMethod(HttpParser, string)
+  nameWithType: EnhancedHttpHandler.OnMethod(HttpParser, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod(IDSApp.ProtocolParsing.HttpParser, string)
+  type: Method
+  source:
+    id: OnMethod
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 300
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public void OnMethod(HttpParser parser, string method)
+    parameters:
+    - id: parser
+      type: IDSApp.ProtocolParsing.HttpParser
+    - id: method
+      type: System.String
+    content.vb: Public Sub OnMethod(parser As HttpParser, method As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod*
+  nameWithType.vb: EnhancedHttpHandler.OnMethod(HttpParser, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod(IDSApp.ProtocolParsing.HttpParser, String)
+  name.vb: OnMethod(HttpParser, String)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri(IDSApp.ProtocolParsing.HttpParser,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri(IDSApp.ProtocolParsing.HttpParser,System.String)
+  id: OnRequestUri(IDSApp.ProtocolParsing.HttpParser,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnRequestUri(HttpParser, string)
+  nameWithType: EnhancedHttpHandler.OnRequestUri(HttpParser, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri(IDSApp.ProtocolParsing.HttpParser, string)
+  type: Method
+  source:
+    id: OnRequestUri
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 301
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public void OnRequestUri(HttpParser parser, string requestUri)
+    parameters:
+    - id: parser
+      type: IDSApp.ProtocolParsing.HttpParser
+    - id: requestUri
+      type: System.String
+    content.vb: Public Sub OnRequestUri(parser As HttpParser, requestUri As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri*
+  nameWithType.vb: EnhancedHttpHandler.OnRequestUri(HttpParser, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri(IDSApp.ProtocolParsing.HttpParser, String)
+  name.vb: OnRequestUri(HttpParser, String)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName(IDSApp.ProtocolParsing.HttpParser,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName(IDSApp.ProtocolParsing.HttpParser,System.String)
+  id: OnHeaderName(IDSApp.ProtocolParsing.HttpParser,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnHeaderName(HttpParser, string)
+  nameWithType: EnhancedHttpHandler.OnHeaderName(HttpParser, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName(IDSApp.ProtocolParsing.HttpParser, string)
+  type: Method
+  source:
+    id: OnHeaderName
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 302
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public void OnHeaderName(HttpParser parser, string name)
+    parameters:
+    - id: parser
+      type: IDSApp.ProtocolParsing.HttpParser
+    - id: name
+      type: System.String
+    content.vb: Public Sub OnHeaderName(parser As HttpParser, name As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName*
+  nameWithType.vb: EnhancedHttpHandler.OnHeaderName(HttpParser, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName(IDSApp.ProtocolParsing.HttpParser, String)
+  name.vb: OnHeaderName(HttpParser, String)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue(IDSApp.ProtocolParsing.HttpParser,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue(IDSApp.ProtocolParsing.HttpParser,System.String)
+  id: OnHeaderValue(IDSApp.ProtocolParsing.HttpParser,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnHeaderValue(HttpParser, string)
+  nameWithType: EnhancedHttpHandler.OnHeaderValue(HttpParser, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue(IDSApp.ProtocolParsing.HttpParser, string)
+  type: Method
+  source:
+    id: OnHeaderValue
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 303
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public void OnHeaderValue(HttpParser parser, string value)
+    parameters:
+    - id: parser
+      type: IDSApp.ProtocolParsing.HttpParser
+    - id: value
+      type: System.String
+    content.vb: Public Sub OnHeaderValue(parser As HttpParser, value As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue*
+  nameWithType.vb: EnhancedHttpHandler.OnHeaderValue(HttpParser, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue(IDSApp.ProtocolParsing.HttpParser, String)
+  name.vb: OnHeaderValue(HttpParser, String)
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd(IDSApp.ProtocolParsing.HttpParser)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd(IDSApp.ProtocolParsing.HttpParser)
+  id: OnHeadersEnd(IDSApp.ProtocolParsing.HttpParser)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnHeadersEnd(HttpParser)
+  nameWithType: EnhancedHttpHandler.OnHeadersEnd(HttpParser)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd(IDSApp.ProtocolParsing.HttpParser)
+  type: Method
+  source:
+    id: OnHeadersEnd
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 304
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public void OnHeadersEnd(HttpParser parser)
+    parameters:
+    - id: parser
+      type: IDSApp.ProtocolParsing.HttpParser
+    content.vb: Public Sub OnHeadersEnd(parser As HttpParser)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody(IDSApp.ProtocolParsing.HttpParser,System.ArraySegment{System.Byte})
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody(IDSApp.ProtocolParsing.HttpParser,System.ArraySegment{System.Byte})
+  id: OnBody(IDSApp.ProtocolParsing.HttpParser,System.ArraySegment{System.Byte})
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnBody(HttpParser, ArraySegment<byte>)
+  nameWithType: EnhancedHttpHandler.OnBody(HttpParser, ArraySegment<byte>)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody(IDSApp.ProtocolParsing.HttpParser, System.ArraySegment<byte>)
+  type: Method
+  source:
+    id: OnBody
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 305
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public void OnBody(HttpParser parser, ArraySegment<byte> data)
+    parameters:
+    - id: parser
+      type: IDSApp.ProtocolParsing.HttpParser
+    - id: data
+      type: System.ArraySegment{System.Byte}
+    content.vb: Public Sub OnBody(parser As HttpParser, data As ArraySegment(Of Byte))
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody*
+  nameWithType.vb: EnhancedHttpHandler.OnBody(HttpParser, ArraySegment(Of Byte))
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody(IDSApp.ProtocolParsing.HttpParser, System.ArraySegment(Of Byte))
+  name.vb: OnBody(HttpParser, ArraySegment(Of Byte))
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd(IDSApp.ProtocolParsing.HttpParser)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd(IDSApp.ProtocolParsing.HttpParser)
+  id: OnMessageEnd(IDSApp.ProtocolParsing.HttpParser)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnMessageEnd(HttpParser)
+  nameWithType: EnhancedHttpHandler.OnMessageEnd(HttpParser)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd(IDSApp.ProtocolParsing.HttpParser)
+  type: Method
+  source:
+    id: OnMessageEnd
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 306
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public void OnMessageEnd(HttpParser parser)
+    parameters:
+    - id: parser
+      type: IDSApp.ProtocolParsing.HttpParser
+    content.vb: Public Sub OnMessageEnd(parser As HttpParser)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd*
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode(IDSApp.ProtocolParsing.HttpParser,System.Int32,System.String)
+  commentId: M:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode(IDSApp.ProtocolParsing.HttpParser,System.Int32,System.String)
+  id: OnResponseCode(IDSApp.ProtocolParsing.HttpParser,System.Int32,System.String)
+  parent: IDSApp.ProtocolParsing.EnhancedHttpHandler
+  langs:
+  - csharp
+  - vb
+  name: OnResponseCode(HttpParser, int, string)
+  nameWithType: EnhancedHttpHandler.OnResponseCode(HttpParser, int, string)
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode(IDSApp.ProtocolParsing.HttpParser, int, string)
+  type: Method
+  source:
+    id: OnResponseCode
+    path: G:\C#\IDSApp\IDSApp\ProtocolParsing\HttpParser.cs
+    startLine: 307
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.ProtocolParsing
+  syntax:
+    content: public void OnResponseCode(HttpParser parser, int statusCode, string statusDescription)
+    parameters:
+    - id: parser
+      type: IDSApp.ProtocolParsing.HttpParser
+    - id: statusCode
+      type: System.Int32
+    - id: statusDescription
+      type: System.String
+    content.vb: Public Sub OnResponseCode(parser As HttpParser, statusCode As Integer, statusDescription As String)
+  overload: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode*
+  nameWithType.vb: EnhancedHttpHandler.OnResponseCode(HttpParser, Integer, String)
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode(IDSApp.ProtocolParsing.HttpParser, Integer, String)
+  name.vb: OnResponseCode(HttpParser, Integer, String)
+references:
+- uid: IDSApp.ProtocolParsing
+  commentId: N:IDSApp.ProtocolParsing
+  href: IDSApp.html
+  name: IDSApp.ProtocolParsing
+  nameWithType: IDSApp.ProtocolParsing
+  fullName: IDSApp.ProtocolParsing
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.ProtocolParsing
+    name: ProtocolParsing
+    href: IDSApp.ProtocolParsing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: HttpMachine.IHttpParserHandler
+  commentId: T:HttpMachine.IHttpParserHandler
+  parent: HttpMachine
+  isExternal: true
+  name: IHttpParserHandler
+  nameWithType: IHttpParserHandler
+  fullName: HttpMachine.IHttpParserHandler
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: HttpMachine
+  commentId: N:HttpMachine
+  isExternal: true
+  name: HttpMachine
+  nameWithType: HttpMachine
+  fullName: HttpMachine
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Method*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.Method
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_Method
+  name: Method
+  nameWithType: EnhancedHttpHandler.Method
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Method
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Url*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.Url
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_Url
+  name: Url
+  nameWithType: EnhancedHttpHandler.Url
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Url
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Host*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.Host
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_Host
+  name: Host
+  nameWithType: EnhancedHttpHandler.Host
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Host
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.UserAgent*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.UserAgent
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_UserAgent
+  name: UserAgent
+  nameWithType: EnhancedHttpHandler.UserAgent
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.UserAgent
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.StatusCode*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.StatusCode
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_StatusCode
+  name: StatusCode
+  nameWithType: EnhancedHttpHandler.StatusCode
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.StatusCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.RequestBody*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.RequestBody
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_RequestBody
+  name: RequestBody
+  nameWithType: EnhancedHttpHandler.RequestBody
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.RequestBody
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.ResponseBody*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.ResponseBody
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_ResponseBody
+  name: ResponseBody
+  nameWithType: EnhancedHttpHandler.ResponseBody
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.ResponseBody
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Headers*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.Headers
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_Headers
+  name: Headers
+  nameWithType: EnhancedHttpHandler.Headers
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Headers
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, string>
+  nameWithType: Dictionary<string, string>
+  fullName: System.Collections.Generic.Dictionary<string, string>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsSni*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsSni
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_TlsSni
+  name: TlsSni
+  nameWithType: EnhancedHttpHandler.TlsSni
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsSni
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsCipher*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsCipher
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_TlsCipher
+  name: TlsCipher
+  nameWithType: EnhancedHttpHandler.TlsCipher
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsCipher
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsVersion*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsVersion
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_TlsVersion
+  name: TlsVersion
+  nameWithType: EnhancedHttpHandler.TlsVersion
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsVersion
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsFingerprint*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsFingerprint
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_TlsFingerprint
+  name: TlsFingerprint
+  nameWithType: EnhancedHttpHandler.TlsFingerprint
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.TlsFingerprint
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.#ctor*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.#ctor
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler__ctor_IDSApp_ProtocolParsing_HttpParser_
+  name: EnhancedHttpHandler
+  nameWithType: EnhancedHttpHandler.EnhancedHttpHandler
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.EnhancedHttpHandler
+  nameWithType.vb: EnhancedHttpHandler.New
+  fullName.vb: IDSApp.ProtocolParsing.EnhancedHttpHandler.New
+  name.vb: New
+- uid: IDSApp.ProtocolParsing.HttpParser
+  commentId: T:IDSApp.ProtocolParsing.HttpParser
+  parent: IDSApp.ProtocolParsing
+  href: IDSApp.ProtocolParsing.HttpParser.html
+  name: HttpParser
+  nameWithType: HttpParser
+  fullName: IDSApp.ProtocolParsing.HttpParser
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Dispose*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.Dispose
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_Dispose
+  name: Dispose
+  nameWithType: EnhancedHttpHandler.Dispose
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.Reset*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.Reset
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_Reset
+  name: Reset
+  nameWithType: EnhancedHttpHandler.Reset
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.Reset
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_OnMessageBegin_HttpMachine_HttpParser_
+  name: OnMessageBegin
+  nameWithType: EnhancedHttpHandler.OnMessageBegin
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageBegin
+- uid: HttpMachine.IHttpParserHandler.OnMessageBegin(HttpMachine.HttpParser)
+  commentId: M:HttpMachine.IHttpParserHandler.OnMessageBegin(HttpMachine.HttpParser)
+  parent: HttpMachine.IHttpParserHandler
+  isExternal: true
+  name: OnMessageBegin(HttpParser)
+  nameWithType: IHttpParserHandler.OnMessageBegin(HttpParser)
+  fullName: HttpMachine.IHttpParserHandler.OnMessageBegin(HttpMachine.HttpParser)
+  spec.csharp:
+  - uid: HttpMachine.IHttpParserHandler.OnMessageBegin(HttpMachine.HttpParser)
+    name: OnMessageBegin
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: HttpMachine.IHttpParserHandler.OnMessageBegin(HttpMachine.HttpParser)
+    name: OnMessageBegin
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: )
+- uid: HttpMachine.HttpParser
+  commentId: T:HttpMachine.HttpParser
+  parent: HttpMachine
+  isExternal: true
+  name: HttpParser
+  nameWithType: HttpParser
+  fullName: HttpMachine.HttpParser
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_OnMethod_HttpMachine_HttpParser_System_String_
+  name: OnMethod
+  nameWithType: EnhancedHttpHandler.OnMethod
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMethod
+- uid: HttpMachine.IHttpParserHandler.OnMethod(HttpMachine.HttpParser,System.String)
+  commentId: M:HttpMachine.IHttpParserHandler.OnMethod(HttpMachine.HttpParser,System.String)
+  parent: HttpMachine.IHttpParserHandler
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: OnMethod(HttpParser, string)
+  nameWithType: IHttpParserHandler.OnMethod(HttpParser, string)
+  fullName: HttpMachine.IHttpParserHandler.OnMethod(HttpMachine.HttpParser, string)
+  nameWithType.vb: IHttpParserHandler.OnMethod(HttpParser, String)
+  fullName.vb: HttpMachine.IHttpParserHandler.OnMethod(HttpMachine.HttpParser, String)
+  name.vb: OnMethod(HttpParser, String)
+  spec.csharp:
+  - uid: HttpMachine.IHttpParserHandler.OnMethod(HttpMachine.HttpParser,System.String)
+    name: OnMethod
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: HttpMachine.IHttpParserHandler.OnMethod(HttpMachine.HttpParser,System.String)
+    name: OnMethod
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_OnRequestUri_HttpMachine_HttpParser_System_String_
+  name: OnRequestUri
+  nameWithType: EnhancedHttpHandler.OnRequestUri
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnRequestUri
+- uid: HttpMachine.IHttpParserHandler.OnRequestUri(HttpMachine.HttpParser,System.String)
+  commentId: M:HttpMachine.IHttpParserHandler.OnRequestUri(HttpMachine.HttpParser,System.String)
+  parent: HttpMachine.IHttpParserHandler
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: OnRequestUri(HttpParser, string)
+  nameWithType: IHttpParserHandler.OnRequestUri(HttpParser, string)
+  fullName: HttpMachine.IHttpParserHandler.OnRequestUri(HttpMachine.HttpParser, string)
+  nameWithType.vb: IHttpParserHandler.OnRequestUri(HttpParser, String)
+  fullName.vb: HttpMachine.IHttpParserHandler.OnRequestUri(HttpMachine.HttpParser, String)
+  name.vb: OnRequestUri(HttpParser, String)
+  spec.csharp:
+  - uid: HttpMachine.IHttpParserHandler.OnRequestUri(HttpMachine.HttpParser,System.String)
+    name: OnRequestUri
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: HttpMachine.IHttpParserHandler.OnRequestUri(HttpMachine.HttpParser,System.String)
+    name: OnRequestUri
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnFragment*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnFragment
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_OnFragment_HttpMachine_HttpParser_System_String_
+  name: OnFragment
+  nameWithType: EnhancedHttpHandler.OnFragment
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnFragment
+- uid: HttpMachine.IHttpParserHandler.OnFragment(HttpMachine.HttpParser,System.String)
+  commentId: M:HttpMachine.IHttpParserHandler.OnFragment(HttpMachine.HttpParser,System.String)
+  parent: HttpMachine.IHttpParserHandler
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: OnFragment(HttpParser, string)
+  nameWithType: IHttpParserHandler.OnFragment(HttpParser, string)
+  fullName: HttpMachine.IHttpParserHandler.OnFragment(HttpMachine.HttpParser, string)
+  nameWithType.vb: IHttpParserHandler.OnFragment(HttpParser, String)
+  fullName.vb: HttpMachine.IHttpParserHandler.OnFragment(HttpMachine.HttpParser, String)
+  name.vb: OnFragment(HttpParser, String)
+  spec.csharp:
+  - uid: HttpMachine.IHttpParserHandler.OnFragment(HttpMachine.HttpParser,System.String)
+    name: OnFragment
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: HttpMachine.IHttpParserHandler.OnFragment(HttpMachine.HttpParser,System.String)
+    name: OnFragment
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnQueryString*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnQueryString
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_OnQueryString_HttpMachine_HttpParser_System_String_
+  name: OnQueryString
+  nameWithType: EnhancedHttpHandler.OnQueryString
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnQueryString
+- uid: HttpMachine.IHttpParserHandler.OnQueryString(HttpMachine.HttpParser,System.String)
+  commentId: M:HttpMachine.IHttpParserHandler.OnQueryString(HttpMachine.HttpParser,System.String)
+  parent: HttpMachine.IHttpParserHandler
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: OnQueryString(HttpParser, string)
+  nameWithType: IHttpParserHandler.OnQueryString(HttpParser, string)
+  fullName: HttpMachine.IHttpParserHandler.OnQueryString(HttpMachine.HttpParser, string)
+  nameWithType.vb: IHttpParserHandler.OnQueryString(HttpParser, String)
+  fullName.vb: HttpMachine.IHttpParserHandler.OnQueryString(HttpMachine.HttpParser, String)
+  name.vb: OnQueryString(HttpParser, String)
+  spec.csharp:
+  - uid: HttpMachine.IHttpParserHandler.OnQueryString(HttpMachine.HttpParser,System.String)
+    name: OnQueryString
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: HttpMachine.IHttpParserHandler.OnQueryString(HttpMachine.HttpParser,System.String)
+    name: OnQueryString
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_OnHeaderName_HttpMachine_HttpParser_System_String_
+  name: OnHeaderName
+  nameWithType: EnhancedHttpHandler.OnHeaderName
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderName
+- uid: HttpMachine.IHttpParserHandler.OnHeaderName(HttpMachine.HttpParser,System.String)
+  commentId: M:HttpMachine.IHttpParserHandler.OnHeaderName(HttpMachine.HttpParser,System.String)
+  parent: HttpMachine.IHttpParserHandler
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: OnHeaderName(HttpParser, string)
+  nameWithType: IHttpParserHandler.OnHeaderName(HttpParser, string)
+  fullName: HttpMachine.IHttpParserHandler.OnHeaderName(HttpMachine.HttpParser, string)
+  nameWithType.vb: IHttpParserHandler.OnHeaderName(HttpParser, String)
+  fullName.vb: HttpMachine.IHttpParserHandler.OnHeaderName(HttpMachine.HttpParser, String)
+  name.vb: OnHeaderName(HttpParser, String)
+  spec.csharp:
+  - uid: HttpMachine.IHttpParserHandler.OnHeaderName(HttpMachine.HttpParser,System.String)
+    name: OnHeaderName
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: HttpMachine.IHttpParserHandler.OnHeaderName(HttpMachine.HttpParser,System.String)
+    name: OnHeaderName
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_OnHeaderValue_HttpMachine_HttpParser_System_String_
+  name: OnHeaderValue
+  nameWithType: EnhancedHttpHandler.OnHeaderValue
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeaderValue
+- uid: HttpMachine.IHttpParserHandler.OnHeaderValue(HttpMachine.HttpParser,System.String)
+  commentId: M:HttpMachine.IHttpParserHandler.OnHeaderValue(HttpMachine.HttpParser,System.String)
+  parent: HttpMachine.IHttpParserHandler
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: OnHeaderValue(HttpParser, string)
+  nameWithType: IHttpParserHandler.OnHeaderValue(HttpParser, string)
+  fullName: HttpMachine.IHttpParserHandler.OnHeaderValue(HttpMachine.HttpParser, string)
+  nameWithType.vb: IHttpParserHandler.OnHeaderValue(HttpParser, String)
+  fullName.vb: HttpMachine.IHttpParserHandler.OnHeaderValue(HttpMachine.HttpParser, String)
+  name.vb: OnHeaderValue(HttpParser, String)
+  spec.csharp:
+  - uid: HttpMachine.IHttpParserHandler.OnHeaderValue(HttpMachine.HttpParser,System.String)
+    name: OnHeaderValue
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: HttpMachine.IHttpParserHandler.OnHeaderValue(HttpMachine.HttpParser,System.String)
+    name: OnHeaderValue
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_OnHeadersEnd_HttpMachine_HttpParser_
+  name: OnHeadersEnd
+  nameWithType: EnhancedHttpHandler.OnHeadersEnd
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnHeadersEnd
+- uid: HttpMachine.IHttpParserHandler.OnHeadersEnd(HttpMachine.HttpParser)
+  commentId: M:HttpMachine.IHttpParserHandler.OnHeadersEnd(HttpMachine.HttpParser)
+  parent: HttpMachine.IHttpParserHandler
+  isExternal: true
+  name: OnHeadersEnd(HttpParser)
+  nameWithType: IHttpParserHandler.OnHeadersEnd(HttpParser)
+  fullName: HttpMachine.IHttpParserHandler.OnHeadersEnd(HttpMachine.HttpParser)
+  spec.csharp:
+  - uid: HttpMachine.IHttpParserHandler.OnHeadersEnd(HttpMachine.HttpParser)
+    name: OnHeadersEnd
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: HttpMachine.IHttpParserHandler.OnHeadersEnd(HttpMachine.HttpParser)
+    name: OnHeadersEnd
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: )
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_OnBody_HttpMachine_HttpParser_System_ArraySegment_System_Byte__
+  name: OnBody
+  nameWithType: EnhancedHttpHandler.OnBody
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnBody
+- uid: HttpMachine.IHttpParserHandler.OnBody(HttpMachine.HttpParser,System.ArraySegment{System.Byte})
+  commentId: M:HttpMachine.IHttpParserHandler.OnBody(HttpMachine.HttpParser,System.ArraySegment{System.Byte})
+  parent: HttpMachine.IHttpParserHandler
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  name: OnBody(HttpParser, ArraySegment<byte>)
+  nameWithType: IHttpParserHandler.OnBody(HttpParser, ArraySegment<byte>)
+  fullName: HttpMachine.IHttpParserHandler.OnBody(HttpMachine.HttpParser, System.ArraySegment<byte>)
+  nameWithType.vb: IHttpParserHandler.OnBody(HttpParser, ArraySegment(Of Byte))
+  fullName.vb: HttpMachine.IHttpParserHandler.OnBody(HttpMachine.HttpParser, System.ArraySegment(Of Byte))
+  name.vb: OnBody(HttpParser, ArraySegment(Of Byte))
+  spec.csharp:
+  - uid: HttpMachine.IHttpParserHandler.OnBody(HttpMachine.HttpParser,System.ArraySegment{System.Byte})
+    name: OnBody
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: HttpMachine.IHttpParserHandler.OnBody(HttpMachine.HttpParser,System.ArraySegment{System.Byte})
+    name: OnBody
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+  - name: )
+- uid: System.ArraySegment{System.Byte}
+  commentId: T:System.ArraySegment{System.Byte}
+  parent: System
+  definition: System.ArraySegment`1
+  href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  name: ArraySegment<byte>
+  nameWithType: ArraySegment<byte>
+  fullName: System.ArraySegment<byte>
+  nameWithType.vb: ArraySegment(Of Byte)
+  fullName.vb: System.ArraySegment(Of Byte)
+  name.vb: ArraySegment(Of Byte)
+  spec.csharp:
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '>'
+  spec.vb:
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: )
+- uid: System.ArraySegment`1
+  commentId: T:System.ArraySegment`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  name: ArraySegment<T>
+  nameWithType: ArraySegment<T>
+  fullName: System.ArraySegment<T>
+  nameWithType.vb: ArraySegment(Of T)
+  fullName.vb: System.ArraySegment(Of T)
+  name.vb: ArraySegment(Of T)
+  spec.csharp:
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ArraySegment`1
+    name: ArraySegment
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.arraysegment-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_OnMessageEnd_HttpMachine_HttpParser_
+  name: OnMessageEnd
+  nameWithType: EnhancedHttpHandler.OnMessageEnd
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnMessageEnd
+- uid: HttpMachine.IHttpParserHandler.OnMessageEnd(HttpMachine.HttpParser)
+  commentId: M:HttpMachine.IHttpParserHandler.OnMessageEnd(HttpMachine.HttpParser)
+  parent: HttpMachine.IHttpParserHandler
+  isExternal: true
+  name: OnMessageEnd(HttpParser)
+  nameWithType: IHttpParserHandler.OnMessageEnd(HttpParser)
+  fullName: HttpMachine.IHttpParserHandler.OnMessageEnd(HttpMachine.HttpParser)
+  spec.csharp:
+  - uid: HttpMachine.IHttpParserHandler.OnMessageEnd(HttpMachine.HttpParser)
+    name: OnMessageEnd
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: HttpMachine.IHttpParserHandler.OnMessageEnd(HttpMachine.HttpParser)
+    name: OnMessageEnd
+    isExternal: true
+  - name: (
+  - uid: HttpMachine.HttpParser
+    name: HttpParser
+    isExternal: true
+  - name: )
+- uid: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode*
+  commentId: Overload:IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode
+  href: IDSApp.ProtocolParsing.EnhancedHttpHandler.html#IDSApp_ProtocolParsing_EnhancedHttpHandler_OnResponseCode_HttpMachine_HttpParser_System_Int32_System_String_
+  name: OnResponseCode
+  nameWithType: EnhancedHttpHandler.OnResponseCode
+  fullName: IDSApp.ProtocolParsing.EnhancedHttpHandler.OnResponseCode

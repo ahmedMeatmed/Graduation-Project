@@ -1,0 +1,185 @@
+### YamlMime:ManagedReference
+items:
+- uid: IDSApp.Helper.OptimizedLogger.LogLevel
+  commentId: T:IDSApp.Helper.OptimizedLogger.LogLevel
+  id: OptimizedLogger.LogLevel
+  parent: IDSApp.Helper
+  children:
+  - IDSApp.Helper.OptimizedLogger.LogLevel.DEBUG
+  - IDSApp.Helper.OptimizedLogger.LogLevel.ERROR
+  - IDSApp.Helper.OptimizedLogger.LogLevel.IMPORTANT
+  - IDSApp.Helper.OptimizedLogger.LogLevel.PERFORMANCE
+  - IDSApp.Helper.OptimizedLogger.LogLevel.STATS
+  langs:
+  - csharp
+  - vb
+  name: OptimizedLogger.LogLevel
+  nameWithType: OptimizedLogger.LogLevel
+  fullName: IDSApp.Helper.OptimizedLogger.LogLevel
+  type: Enum
+  source:
+    id: LogLevel
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 33
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: public enum OptimizedLogger.LogLevel
+    content.vb: Public Enum OptimizedLogger.LogLevel
+- uid: IDSApp.Helper.OptimizedLogger.LogLevel.ERROR
+  commentId: F:IDSApp.Helper.OptimizedLogger.LogLevel.ERROR
+  id: ERROR
+  parent: IDSApp.Helper.OptimizedLogger.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: ERROR
+  nameWithType: OptimizedLogger.LogLevel.ERROR
+  fullName: IDSApp.Helper.OptimizedLogger.LogLevel.ERROR
+  type: Field
+  source:
+    id: ERROR
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 35
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: ERROR = 0
+    return:
+      type: IDSApp.Helper.OptimizedLogger.LogLevel
+- uid: IDSApp.Helper.OptimizedLogger.LogLevel.IMPORTANT
+  commentId: F:IDSApp.Helper.OptimizedLogger.LogLevel.IMPORTANT
+  id: IMPORTANT
+  parent: IDSApp.Helper.OptimizedLogger.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: IMPORTANT
+  nameWithType: OptimizedLogger.LogLevel.IMPORTANT
+  fullName: IDSApp.Helper.OptimizedLogger.LogLevel.IMPORTANT
+  type: Field
+  source:
+    id: IMPORTANT
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 36
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: IMPORTANT = 1
+    return:
+      type: IDSApp.Helper.OptimizedLogger.LogLevel
+- uid: IDSApp.Helper.OptimizedLogger.LogLevel.STATS
+  commentId: F:IDSApp.Helper.OptimizedLogger.LogLevel.STATS
+  id: STATS
+  parent: IDSApp.Helper.OptimizedLogger.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: STATS
+  nameWithType: OptimizedLogger.LogLevel.STATS
+  fullName: IDSApp.Helper.OptimizedLogger.LogLevel.STATS
+  type: Field
+  source:
+    id: STATS
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 37
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: STATS = 2
+    return:
+      type: IDSApp.Helper.OptimizedLogger.LogLevel
+- uid: IDSApp.Helper.OptimizedLogger.LogLevel.PERFORMANCE
+  commentId: F:IDSApp.Helper.OptimizedLogger.LogLevel.PERFORMANCE
+  id: PERFORMANCE
+  parent: IDSApp.Helper.OptimizedLogger.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: PERFORMANCE
+  nameWithType: OptimizedLogger.LogLevel.PERFORMANCE
+  fullName: IDSApp.Helper.OptimizedLogger.LogLevel.PERFORMANCE
+  type: Field
+  source:
+    id: PERFORMANCE
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 38
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: PERFORMANCE = 3
+    return:
+      type: IDSApp.Helper.OptimizedLogger.LogLevel
+- uid: IDSApp.Helper.OptimizedLogger.LogLevel.DEBUG
+  commentId: F:IDSApp.Helper.OptimizedLogger.LogLevel.DEBUG
+  id: DEBUG
+  parent: IDSApp.Helper.OptimizedLogger.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: DEBUG
+  nameWithType: OptimizedLogger.LogLevel.DEBUG
+  fullName: IDSApp.Helper.OptimizedLogger.LogLevel.DEBUG
+  type: Field
+  source:
+    id: DEBUG
+    path: G:\C#\IDSApp\IDSApp\Helper\OptimizedLogger.cs
+    startLine: 39
+  assemblies:
+  - IDSApp
+  namespace: IDSApp.Helper
+  syntax:
+    content: DEBUG = 4
+    return:
+      type: IDSApp.Helper.OptimizedLogger.LogLevel
+references:
+- uid: IDSApp.Helper
+  commentId: N:IDSApp.Helper
+  href: IDSApp.html
+  name: IDSApp.Helper
+  nameWithType: IDSApp.Helper
+  fullName: IDSApp.Helper
+  spec.csharp:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+  spec.vb:
+  - uid: IDSApp
+    name: IDSApp
+    href: IDSApp.html
+  - name: .
+  - uid: IDSApp.Helper
+    name: Helper
+    href: IDSApp.Helper.html
+- uid: IDSApp.Helper.OptimizedLogger.LogLevel
+  commentId: T:IDSApp.Helper.OptimizedLogger.LogLevel
+  parent: IDSApp.Helper
+  href: IDSApp.Helper.OptimizedLogger.html
+  name: OptimizedLogger.LogLevel
+  nameWithType: OptimizedLogger.LogLevel
+  fullName: IDSApp.Helper.OptimizedLogger.LogLevel
+  spec.csharp:
+  - uid: IDSApp.Helper.OptimizedLogger
+    name: OptimizedLogger
+    href: IDSApp.Helper.OptimizedLogger.html
+  - name: .
+  - uid: IDSApp.Helper.OptimizedLogger.LogLevel
+    name: LogLevel
+    href: IDSApp.Helper.OptimizedLogger.LogLevel.html
+  spec.vb:
+  - uid: IDSApp.Helper.OptimizedLogger
+    name: OptimizedLogger
+    href: IDSApp.Helper.OptimizedLogger.html
+  - name: .
+  - uid: IDSApp.Helper.OptimizedLogger.LogLevel
+    name: LogLevel
+    href: IDSApp.Helper.OptimizedLogger.LogLevel.html
