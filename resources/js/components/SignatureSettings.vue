@@ -102,7 +102,7 @@
       <template #body>
               <div class="mb-3">
                 <form @submit.prevent="searchSignature">
-                  <input type="search" v-model="signature.attackName" class="form-control d-inline" style="width: 95%;" placeholder="Search by Attack Name">
+                  <input type="search" @keyup="searchSignature" v-model="signature.attackName" class="form-control d-inline" style="width: 95%;" placeholder="Search by Attack Name">
                 <button type="submit"><i class="bi bi-search p-2 fs-5 m-2" style="cursor: pointer;"></i></button>
                 </form>
                 <div :style="backToAllSignatures" >
