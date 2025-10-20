@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Signature;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateSignatureRequest extends FormRequest
@@ -11,7 +12,8 @@ class UpdateSignatureRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        // return true;
+        return $this->user()->can('update',Signature::class);
     }
 
     /**

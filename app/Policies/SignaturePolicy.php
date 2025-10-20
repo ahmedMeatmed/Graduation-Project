@@ -13,7 +13,7 @@ class SignaturePolicy
      */
     public function viewAny(User $user): bool
     {
-        return $user->Role === 'Admin';
+        return false;
     }
 
     /**

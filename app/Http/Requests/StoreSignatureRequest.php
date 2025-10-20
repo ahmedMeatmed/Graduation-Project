@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Signature;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Gate;
 
 class StoreSignatureRequest extends FormRequest
 {
@@ -11,7 +13,7 @@ class StoreSignatureRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return true;
+        return $this->user()->can('create',Signature::class);
     }
 
     /**
@@ -21,24 +23,7 @@ class StoreSignatureRequest extends FormRequest
      */
     public function rules(): array
     {
-        // return [
-        //     // Validation rules
-        //     "engine" => "bail|required",
-        //     "attackName" => "bail|required",
-        //     "ruleText" => "bail|required",
-        //     "protocol" => "bail|required",
-        //     "protocol" => "bail|required",
-        //     "srcPort" => "bail|required",
-        //     "direction" => "bail|required",
-        //     "destIp" => "bail|required",
-        //     "destPort" => "bail|required",
-        //     "flow" => "bail|required",
-        //     "http" => "bail|required",
-        //     "tls" => "bail|required",
-        //     "contentPattern" => "bail|required",
-        //     "sid" => "bail|required",
-        //     "rev" => "bail|required",
-        // ];
+       
         return[
         'engine'        => 'required|string|in:snort,suricata', // only allow supported engines
         'attackName'    => 'required|string|max:255',
