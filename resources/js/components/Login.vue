@@ -4,18 +4,18 @@
   <div class="login-page d-flex align-items-center justify-content-center vh-100">
     <div class="card p-4 shadow-lg login-card">
       <div class="text-center mb-4">
-        <img :src="logoUrl" alt="AEGIS Logo" class="img-fluid logo-img m-auto">
-        <!-- <h4 class="mt-3 text-secondary">Intelligent Defense System</h4> -->
+        <img src="..\\imgs/logo.png" alt="AEGIS Logo" class="img-fluid logo-img m-auto">
+        <h4 class="mt-3 text-secondary">Intelligent Defense System</h4>
       </div>
 
-      <form @submit.prevent="handleLogin">
+      <form @submit.prevent="loginUser">
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
           <input 
             type="text" 
             class="form-control" 
             id="username" 
-            v-model="username" 
+            v-model="credentials.username"
             required
             placeholder="Enter your username"
           >
@@ -26,54 +26,44 @@
             type="password" 
             class="form-control" 
             id="password" 
-            v-model="password" 
+            v-model="credentials.password"
             required
             placeholder="Enter your password"
           >
         </div>
-        
-        <div v-if="loginError" class="alert alert-danger" role="alert">
-          {{ loginError }}
-        </div>
 
         <button type="submit" class="btn btn-primary w-100 btn-lg">Log In</button>
       </form>
-
-      <div class="text-center mt-3">
-        <a href="#" class="text-muted small">Forgot Password?</a>
-      </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'LoginPage',
-  data() {
-    return {
-      // **NOTE:** Replace '/path/to/your/logo.png' with the actual path 
-      // where you place the 'logo.png' file in your project's assets or public folder.
-      logoUrl: '..\\imgs/logo.png', // Assuming logo.png is in your public folder
-      username: '',
-      password: '',
-      loginError: '',
-    };
-  },
-  methods: {
-    handleLogin() {
-      // Simple validation for demonstration purposes
-      if (this.username === 'admin' && this.password === 'password') {
-        this.loginError = '';
-        console.log('Login successful!');
-        // In a real application, you would handle token storage, 
-        // redirect the user, and make an API call here.
-        alert('Login Successful!');
-      } else {
-        this.loginError = 'Invalid username or password. Please try again.';
-      }
-    },
-  },
-};
+<script setup>
+
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+const credentials = ref({
+  username: '',
+  password: ''
+});
+
+    const loginUser = async ()=>{
+        console.log(credentials);
+        await axios.post('http://127.0.0.1:8000/api/login',credentials.value)
+        .then((response)=>{
+            console.log(response)
+
+            localStorage.setItem('token', response.data.data.token);
+
+            useRouter().push('/dashboard');
+        })
+        .catch((error)=>{
+
+            console.error("Login failed:", error);
+            
+        });
+    }
+
 </script>
 
 <style scoped>

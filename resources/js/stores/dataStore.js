@@ -1,6 +1,7 @@
-import axios from "axios";
+import api from "../bootstrap";
 import { defineStore } from "pinia";
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 
 export const useDataStore = defineStore('data',()=>{
@@ -21,11 +22,9 @@ export const useDataStore = defineStore('data',()=>{
 
 
     const FetchLogs = async () =>{
-        await axios.get('http://127.0.0.1:8000/api/v1/logs')
+        await api.get('logs')
         .then((response)=>{
-            //  console.log(response.data);
              logs.value = response.data;
-            //  console.log(logs.value)
         })
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
@@ -33,7 +32,7 @@ export const useDataStore = defineStore('data',()=>{
     }
 
     const FetchSingleLog = async (log)=>{
-        await axios.get(`http://127.0.0.1:8000/api/v1/logs/${log}`)
+        await api.get(`logs/${log}`)
         .then((response)=>{
             singleLog.value = response.data;
         })
@@ -43,7 +42,7 @@ export const useDataStore = defineStore('data',()=>{
     }
 
     const FetchAlerts = async ()=>{
-        await axios.get("http://127.0.0.1:8000/api/v1/alerts")
+        await api.get("alerts")
         .then((response)=>{
             alerts.value = response.data
         })
@@ -53,7 +52,7 @@ export const useDataStore = defineStore('data',()=>{
     }
 
     const FetchSingleAlert = async (alert)=>{
-        await axios.get(`http://127.0.0.1:8000/api/v1/alerts/${alert}`)
+        await api.get(`alerts/${alert}`)
         .then((response)=>{
             singleAlert.value = response.data;
         })
@@ -62,12 +61,11 @@ export const useDataStore = defineStore('data',()=>{
         })
     }
      const FetchSignatures = async (page)=>{
-        await axios.get(`http://127.0.0.1:8000/api/v1/signatures?page=${page}`)
+        await api.get(`signatures?page=${page}`)
         .then((response)=>{
             firstPage.value = response.data.from
             lastPage.value = response.data.last_page
             signatures.value = response.data.data
-            // console.log(signatures.value);
         })
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
@@ -75,7 +73,7 @@ export const useDataStore = defineStore('data',()=>{
     }
 
     const FetchSingleSignature =  async (signature)=>{
-        await axios.get(`http://127.0.0.1:8000/api/v1/signatures/${signature}`)
+        await api.get(`signatures/${signature}`)
         .then((response)=>{
             singleSignature.value = response.data;
         })
@@ -84,23 +82,17 @@ export const useDataStore = defineStore('data',()=>{
         })
     }
     const searchSignature = (attack) => {
-  axios.get(`http://127.0.0.1:8000/api/v1/signatures/search/${attack}`)
-    .then((response) => {
-    //   console.log(response.data.data);
-
-      signatures.value = response.data;
-    })
-    .catch((error) => {
-      console.log("can't fetch");
-    });
-    }
+        api.get(`signatures/search/${attack}`)
+            .then((response) => {
+            signatures.value = response.data;
+            })
+            .catch((error) => {
+            console.log("can't fetch");
+            });
+            }
 
     const storeSignature =async (signature)=>{
-        await axios.post("http://127.0.0.1:8000/api/v1/signatures",signature,{
-            headers:{
-                'Content-Type' :  'application/json'
-            }
-        })
+        await api.post("signatures",signature)
         .then((response)=>{
             console.log("✅ Created:", response.data);
         })
@@ -111,16 +103,27 @@ export const useDataStore = defineStore('data',()=>{
         })
     }
     const storeUser = async ()=>{
-        await axios.post()
+        await api.post()
     }
 
-
+    const logout = async ()=>{
+        await api.post('logout')
+        .then((response)=>{
+            console.log("✅ Logged out:", response.data);
+            localStorage.removeItem('token');
+            useRouter().push('/login');
+        })
+        .catch((error)=>{
+            console.error("Logout failed:", error);
+        });
+    }
 
     return{
         FetchLogs,FetchSingleLog,
         FetchAlerts,FetchSingleAlert,
         FetchSignatures,searchSignature,
         FetchSingleSignature,storeSignature,
+        logout,
         singleSignature,
         logs,singleLog,
         alerts,singleAlert,

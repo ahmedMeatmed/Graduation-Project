@@ -68,7 +68,7 @@
                 <li>
                     <hr class="dropdown-divider" />
                 </li>
-                <li><a class="dropdown-item" href="/">Sign out</a></li>
+                <li><a class="dropdown-item" @click="logoutUser">Sign out</a></li>
             </ul>
         </div>
             </li>
@@ -82,8 +82,9 @@ import { useDataStore } from '../stores/dataStore';
 
 useDataStore().FetchAlerts();
 const data =useDataStore();
-let notifications = computed(()=>
-data.alerts.length
-);
+let notifications = computed(()=>data.alerts.length);
+const logoutUser = async ()=>{
+    await data.logout();
+}
 
 </script>
