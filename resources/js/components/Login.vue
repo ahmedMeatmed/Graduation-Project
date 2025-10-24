@@ -30,7 +30,9 @@
             required
             placeholder="Enter your password"
           >
+          <span class="text-danger m-auto p-1" v-if="error"><small>username or password invalid</small></span>
         </div>
+
 
         <button type="submit" class="btn btn-primary w-100 btn-lg">Log In</button>
       </form>
@@ -40,29 +42,25 @@
 
 <script setup>
 
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useRouter } from 'vue-router';
+const valid = ref(false);
 const credentials = ref({
   username: '',
   password: ''
 });
 
     const loginUser = async ()=>{
-        console.log(credentials);
         await axios.post('http://127.0.0.1:8000/api/login',credentials.value)
         .then((response)=>{
-            console.log(response)
-
             localStorage.setItem('token', response.data.data.token);
-
-            useRouter().push('/dashboard');
         })
-        .catch((error)=>{
-
-            console.error("Login failed:", error);
-            
+        .catch(()=>{
+            valid.value = true;
         });
     }
+
+    const error = computed(()=>valid.value);
 
 </script>
 

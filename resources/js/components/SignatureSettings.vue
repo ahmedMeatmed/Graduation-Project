@@ -138,7 +138,7 @@
               <!-- <router-link :to="singleSignature(signature.signId)" @click="showSignatures.value.close()">
                 {{ signature.attackName }}
               </router-link> -->
-              <a :href="singleSignature(signature.signId)">{{ signature.AttackName }}</a>
+              <a :href="singleSignature(signature.SignId)">{{ signature.AttackName }}</a>
             </td>
             <td class="border p-1 text-center">{{ signature.Protocol }}</td>
             <td class="border p-1 text-center">{{ signature.SrcIp }}</td>
