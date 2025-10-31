@@ -93,7 +93,7 @@ export const useDataStore = defineStore('data',()=>{
             .catch((error) => {
             console.log("can't fetch");
             });
-            }
+    }
 
     const storeSignature =async (signature)=>{
         await api.post("signatures",signature)
@@ -106,9 +106,38 @@ export const useDataStore = defineStore('data',()=>{
             // console.error(errors.value.attackName[0]);
         })
     }
+
     const storeUser = async ()=>{
-        await api.post()
+        await api.post('users',)
+        .then((response)=>{
+
+        })
+        .catch((error)=>{
+
+        })
     }
+
+    const FetchUsers = async()=>{
+        await api.get('users')
+        .then((response)=>{
+
+        })
+        .catch((error)=>{
+
+        })
+
+    }
+
+    const FetchSingleUser = async(user)=>{
+        await api.get(`users/${user}`)
+        .then((response)=>{
+
+        })
+        .catch((error)=>{
+
+        })
+    }
+
 
     const logout = async ()=>{
         await api.post('logout')
@@ -127,7 +156,7 @@ export const useDataStore = defineStore('data',()=>{
         FetchAlerts,FetchSingleAlert,
         FetchSignatures,searchSignature,
         FetchSingleSignature,storeSignature,
-        logout,
+        logout,storeUser,FetchUsers,FetchSingleUser,
         singleSignature,
         logs,singleLog,
         alerts,singleAlert,

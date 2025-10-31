@@ -42,7 +42,26 @@
     </Modal>
 
   <Modal ref="showUsers" id="showUsers" title="show Users">
-
+    <template #body>
+     <table class="table table-striped border">
+        <thead>
+          <th class="border p-1 text-center">User Name</th>
+          <th class="border p-1 text-center">Role</th>
+          <th class="border p-1 text-center">Actions</th>
+          </thead>
+        <tbody>
+          <tr >
+            <td class="border p-1 text-center">asad</td>
+             </tr>
+             <tr >
+            <td class="border p-1 text-center">asad</td>
+             </tr>
+             <tr >
+            <td class="border p-1 text-center">asad</td>
+             </tr>
+        </tbody>
+      </table>
+      </template>
     </Modal>
     
 </template>

@@ -1,5 +1,4 @@
 <template>
-   
    <div class="container my-5">
                   <Statistics />
                   <Charts />
