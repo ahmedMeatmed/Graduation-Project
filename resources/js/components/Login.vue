@@ -8,7 +8,7 @@
         <h4 class="mt-3 text-secondary">Intelligent Defense System</h4>
       </div>
 
-      <form @submit.prevent="loginUser">
+      <form @submit.prevent="login">
         <div class="mb-3">
           <label for="username" class="form-label">Username</label>
           <input 
@@ -43,23 +43,17 @@
 <script setup>
 
 import { computed, ref } from 'vue';
-const valid = ref(false);
+import { useRouter } from 'vue-router';
+import { useDataStore } from '../stores/dataStore';
+useDataStore();
 const credentials = ref({
   username: '',
   password: ''
 });
-
-    const loginUser = async ()=>{
-        await axios.post('http://127.0.0.1:8000/api/login',credentials.value)
-        .then((response)=>{
-            localStorage.setItem('token', response.data.data.token);
-        })
-        .catch(()=>{
-            valid.value = true;
-        });
-    }
-
-    const error = computed(()=>valid.value);
+const login =async ()=>{
+    await useDataStore().loginUser(credentials.value);
+}
+const error = computed(()=>useDataStore().valid);
 
 </script>
 

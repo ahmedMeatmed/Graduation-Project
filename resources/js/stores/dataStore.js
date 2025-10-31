@@ -6,6 +6,8 @@ import { useRouter } from "vue-router";
 
 export const useDataStore = defineStore('data',()=>{
 
+    const router = useRouter();
+
     let logs = ref([]);
     let singleLog = ref([]);
 
@@ -19,6 +21,7 @@ export const useDataStore = defineStore('data',()=>{
     let lastPage = ref(null);
 
     let errors = ref([]);
+    let valid = ref(false);
 
 
     const FetchLogs = async () =>{
@@ -86,6 +89,7 @@ export const useDataStore = defineStore('data',()=>{
         })
     }
     const searchSignature = (attack) => {
+        console.log(attack);
         api.get(`signatures/search/${attack}`)
             .then((response) => {
             signatures.value = response.data.data;
@@ -138,16 +142,28 @@ export const useDataStore = defineStore('data',()=>{
         })
     }
 
-
     const logout = async ()=>{
         await api.post('logout')
         .then((response)=>{
             console.log("✅ Logged out:", response.data);
             localStorage.removeItem('token');
-            useRouter().push('/login');
+            router.push('/login');
         })
         .catch((error)=>{
             console.error("Logout failed:", error);
+        });
+    }
+   
+    const loginUser = async (credentials)=>{
+        
+        await axios.post('http://127.0.0.1:8000/api/login',credentials)
+        .then((response)=>{
+            localStorage.setItem('token', response.data.data.token);
+
+            router.push('/dashboard');
+        })
+        .catch(()=>{
+            valid.value = true;
         });
     }
 
@@ -157,7 +173,7 @@ export const useDataStore = defineStore('data',()=>{
         FetchSignatures,searchSignature,
         FetchSingleSignature,storeSignature,
         logout,storeUser,FetchUsers,FetchSingleUser,
-        singleSignature,
+        singleSignature,loginUser,valid,
         logs,singleLog,
         alerts,singleAlert,
         signatures,firstPage,lastPage,

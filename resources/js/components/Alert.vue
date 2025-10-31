@@ -23,9 +23,9 @@
 <script setup>
 import { useRoute } from 'vue-router';
 import { useDataStore } from '../stores/dataStore';
+import { onMounted } from 'vue';
 
 const router = useRoute();
-useDataStore().FetchSingleAlert(router.params.alert)
 const data = useDataStore();
 
 let resolveButton = document.getElementById('resolve');
@@ -34,4 +34,7 @@ const resolving = ()=>{
   resolveButton.classList.remove('btn-primary');
   resolveButton.classList.add('btn-success');
 }
+onMounted(()=>{
+  useDataStore().FetchSingleAlert(router.params.alert)
+})
 </script>

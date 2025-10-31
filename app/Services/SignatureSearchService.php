@@ -15,10 +15,3 @@ class SignatureSearchService{
         return $this->signatures->searchByAttackName($attack);
     }
 }
-// class SignatureSearchService
-// {
-//     public function searchByAttackName(string $keyword)
-//     {
-//         return Signature::where('attackName', 'like', "%{$keyword}%")->get();
-//     }
-// }

@@ -10,24 +10,19 @@ use App\Services\SignatureSearchService;
 
 class SignatureController extends Controller{
 
-    protected SignatureSearchService $signatureService;
-
-    public function __construct(SignatureSearchService $signatureService)
-    {
-        $this->signatureService = $signatureService;
-    }
 
     // Custom search route
     public function search($attack)
     {
-        $results = $this->signatureService->searchByAttackName($attack);
+        dd($attack);
+        // $results = Signature::where('AttackName','like',"%$attack%")->get();
         return response()->json($results);
     }
 
     public function index(){
-        $signatures = Signature::paginate(5);
-
-        return SignatureResource::collection($signatures);
+        // $signatures = Signature::paginate(5);
+        // return SignatureResource::collection($signatures);
+        return "HELLO";
     }
 
 

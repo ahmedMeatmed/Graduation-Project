@@ -135,18 +135,12 @@
             <td class="border p-1 text-center">{{ signature.SignId }}</td>
             <td class="border p-1 text-center">{{ signature.Engine }}</td>
             <td class="border p-1 text-center">
-              <!-- <router-link :to="singleSignature(signature.signId)" @click="showSignatures.value.close()">
-                {{ signature.attackName }}
-              </router-link> -->
               <a :href="singleSignature(signature.SignId)">{{ signature.AttackName }}</a>
             </td>
             <td class="border p-1 text-center">{{ signature.Protocol }}</td>
             <td class="border p-1 text-center">{{ signature.SrcIp }}</td>
             <td class="border p-1 text-center">{{ signature.SrcPort }}</td>
-            <!-- <td class="border p-1 text-center">{{ signature.direction }}</td> -->
             <td class="border p-1 text-center">{{ signature.DestIp }}</td>
-            <!-- <td class="border p-1 text-center">{{ signature.destPort }}</td> -->
-            <!-- <td class="border p-1 text-center"><button class="btn btn-info">View</button></td> -->
           </tr>
         </tbody>
       </table>
@@ -200,22 +194,18 @@ const incrementPage = ()=>{
 const decrementPage = ()=>{
   if(page.value > 0 && page.value != 1){
     page.value--;
-    viewSignatures;
+    useDataStore().FetchSignatures(page.value);
   }
 }
 
 const viewSignatures = ()=>{
-  useDataStore().FetchSignatures(page.value);
+  useDataStore().FetchSignatures(0);
   showSignatures.value.open()
   sliderVisibility.value="visibility: visible;";
   signaturesNumberVisibilty.value = "visibility: hidden;";
   backToAllSignatures.value = "visibility: hidden;";
   signature.value.attackName = '';
 }
-
-
-
-// console.log(date.toLocaleDateString());
 
 const date = new Date;
  const newSignature = ref({

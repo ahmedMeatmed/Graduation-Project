@@ -35,7 +35,6 @@
 </template>
 <script setup>
 import { useDataStore } from '../stores/dataStore';
-// useDataStore().FetchAlerts();
 const data = useDataStore();
 
 const singleAlert = (alertId)=>{

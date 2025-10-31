@@ -14,8 +14,12 @@
 <script setup>
 import SideBar from "@/components/SideBar.vue"
 import { useDataStore } from "@/stores/dataStore"
+import { onMounted } from "vue"
 
 const store = useDataStore()
-store.FetchLogs()
-store.FetchAlerts()
+onMounted(()=>{
+  store.FetchLogs();
+  store.FetchAlerts();
+})
+
 </script>

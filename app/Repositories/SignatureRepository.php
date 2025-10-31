@@ -7,7 +7,7 @@ class SignatureRepository{
 
     public function searchByAttackName(string $attack){
         
-        return Signature::where('attackName','like',"%$attack%")->get();
+        return Signature::where('AttackName','like',"%$attack%")->get();
     }
 
 }

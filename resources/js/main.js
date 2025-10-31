@@ -14,8 +14,8 @@ const pinia = createPinia();
 const router = createRouter({
     
     history:createWebHistory(),
-    routes
-})
+    routes,
+  });
 
 router.beforeEach((to, from, next) => {
   const isAuthenticated = !!localStorage.getItem('token') ;

@@ -79,12 +79,14 @@
 <script setup>
 import { computed } from 'vue';
 import { useDataStore } from '../stores/dataStore';
+import { useRouter } from 'vue-router';
+const router = useRouter();
 
-useDataStore().FetchAlerts();
 const data =useDataStore();
 let notifications = computed(()=>data.alerts.length);
 const logoutUser = async ()=>{
     await data.logout();
+    router.push('/login');
 }
 
 </script>
