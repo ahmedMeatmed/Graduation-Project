@@ -23,6 +23,11 @@ export const useDataStore = defineStore('data',()=>{
     let errors = ref([]);
     let valid = ref(false);
 
+    const user = ref({
+        username:'',
+        role : '',
+    })
+
 
     const FetchLogs = async () =>{
         await api.get('logs')
@@ -132,6 +137,18 @@ export const useDataStore = defineStore('data',()=>{
 
     }
 
+    const FetchUser = async()=>{
+        let token = localStorage.getItem('token');
+        await api.get(`users/${token}`)
+        .then((response)=>{
+            user.value.username = response.data.data.userName;
+            user.value.role = response.data.data.role;
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+    }
+
     const FetchSingleUser = async(user)=>{
         await api.get(`users/${user}`)
         .then((response)=>{
@@ -159,7 +176,8 @@ export const useDataStore = defineStore('data',()=>{
         await axios.post('http://127.0.0.1:8000/api/login',credentials)
         .then((response)=>{
             localStorage.setItem('token', response.data.data.token);
-
+            user.value.username = response.data.data.userName;
+            user.value.role = response.data.data.role;
             router.push('/dashboard');
         })
         .catch(()=>{
@@ -173,7 +191,7 @@ export const useDataStore = defineStore('data',()=>{
         FetchSignatures,searchSignature,
         FetchSingleSignature,storeSignature,
         logout,storeUser,FetchUsers,FetchSingleUser,
-        singleSignature,loginUser,valid,
+        singleSignature,loginUser,valid,user,FetchUser,
         logs,singleLog,
         alerts,singleAlert,
         signatures,firstPage,lastPage,
