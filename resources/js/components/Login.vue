@@ -1,7 +1,9 @@
 
 
 <template>
-  <div class="login-page d-flex align-items-center justify-content-center vh-100">
+      <LoadingSpinner v-if="useDataStore().loading" />
+
+  <div v-else class="login-page d-flex align-items-center justify-content-center vh-100">
     <div class="card p-4 shadow-lg login-card">
       <div class="text-center mb-4">
         <img src="..\\imgs/logo.png" alt="AEGIS Logo" class="img-fluid logo-img m-auto">
@@ -43,8 +45,9 @@
 <script setup>
 
 import { computed, ref } from 'vue';
-import { useRouter } from 'vue-router';
 import { useDataStore } from '../stores/dataStore';
+import LoadingSpinner from "../tools/LoadingSpinner.vue";
+
 useDataStore();
 const credentials = ref({
   username: '',

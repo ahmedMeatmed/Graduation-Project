@@ -23,6 +23,8 @@ export const useDataStore = defineStore('data',()=>{
     let errors = ref([]);
     let valid = ref(false);
 
+    const loading = ref(false);
+
     const user = ref({
         username:'',
         role : '',
@@ -30,6 +32,7 @@ export const useDataStore = defineStore('data',()=>{
 
 
     const FetchLogs = async () =>{
+        loading.value = true;
         await api.get('logs')
         .then((response)=>{
              logs.value = response.data.data;
@@ -37,9 +40,13 @@ export const useDataStore = defineStore('data',()=>{
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
+        .finally(()=>{
+            loading.value = false;
+        })
     }
 
     const FetchSingleLog = async (log)=>{
+        loading.value = true;
         await api.get(`logs/${log}`)
         .then((response)=>{
             singleLog.value = response.data.data;
@@ -47,9 +54,14 @@ export const useDataStore = defineStore('data',()=>{
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
+           .finally(()=>{
+            loading.value = false;
+        })
     }
 
     const FetchAlerts = async ()=>{
+                loading.value = true;
+
         await api.get("alerts")
         .then((response)=>{
             // console.log(response);
@@ -58,9 +70,13 @@ export const useDataStore = defineStore('data',()=>{
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
+           .finally(()=>{
+            loading.value = false;
+        })
     }
 
     const FetchSingleAlert = async (alert)=>{
+        loading.value = true;
         await api.get(`alerts/${alert}`)
         .then((response)=>{
             singleAlert.value = response.data.data;
@@ -68,8 +84,12 @@ export const useDataStore = defineStore('data',()=>{
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
+         .finally(()=>{
+            loading.value = false;
+        })
     }
      const FetchSignatures = async (page)=>{
+        loading.value = true;
         await api.get(`signatures?page=${page}`)
         .then((response)=>{
             firstPage.value = response.data.meta.current_page
@@ -79,11 +99,13 @@ export const useDataStore = defineStore('data',()=>{
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
+           .finally(()=>{
+            loading.value = false;
+        })
     }
 
     const FetchSingleSignature =  async (signature)=>{
-            // console.log(signature);
-
+        loading.value = true;
         await api.get(`signatures/${signature}`)
         .then((response)=>{
             console.log(response);
@@ -92,19 +114,27 @@ export const useDataStore = defineStore('data',()=>{
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
+           .finally(()=>{
+            loading.value = false;
+        })
     }
     const searchSignature = (attack) => {
-        console.log(attack);
+        loading.value = true;
         api.get(`signatures/search/${attack}`)
             .then((response) => {
             signatures.value = response.data.data;
             })
             .catch((error) => {
             console.log("can't fetch");
-            });
+            })
+               .finally(()=>{
+            loading.value = false;
+        })
     }
 
     const storeSignature =async (signature)=>{
+                loading.value = true;
+
         await api.post("signatures",signature)
         .then((response)=>{
             console.log("✅ Created:", response.data);
@@ -138,6 +168,8 @@ export const useDataStore = defineStore('data',()=>{
     }
 
     const FetchUser = async()=>{
+                loading.value = true;
+
         let token = localStorage.getItem('token');
         await api.get(`users/${token}`)
         .then((response)=>{
@@ -146,6 +178,9 @@ export const useDataStore = defineStore('data',()=>{
         })
         .catch((error)=>{
             console.log(error);
+        })
+           .finally(()=>{
+            loading.value = false;
         })
     }
 
@@ -172,7 +207,8 @@ export const useDataStore = defineStore('data',()=>{
     }
    
     const loginUser = async (credentials)=>{
-        
+                loading.value = true;
+
         await axios.post('http://127.0.0.1:8000/api/login',credentials)
         .then((response)=>{
             localStorage.setItem('token', response.data.data.token);
@@ -182,7 +218,10 @@ export const useDataStore = defineStore('data',()=>{
         })
         .catch(()=>{
             valid.value = true;
-        });
+        })
+           .finally(()=>{
+            loading.value = false;
+        })
     }
 
     return{
@@ -192,7 +231,7 @@ export const useDataStore = defineStore('data',()=>{
         FetchSingleSignature,storeSignature,
         logout,storeUser,FetchUsers,FetchSingleUser,
         singleSignature,loginUser,valid,user,FetchUser,
-        logs,singleLog,
+        logs,singleLog,loading,
         alerts,singleAlert,
         signatures,firstPage,lastPage,
     };

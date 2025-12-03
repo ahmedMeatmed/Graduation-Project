@@ -27,7 +27,11 @@
 <script setup>
 import { useRoute } from 'vue-router';
 import { useDataStore } from '../stores/dataStore';
-const router = useRoute();
-useDataStore().FetchSingleLog(router.params.log)
+import { onMounted } from 'vue';
+const route = useRoute();
 const data = useDataStore();
+onMounted(()=>{
+  data.FetchSingleLog(route.params.log)
+
+})
 </script>

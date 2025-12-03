@@ -5,6 +5,7 @@ use App\Models\Signature;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreSignatureRequest;
+use App\Http\Requests\UpdateSignatureRequest;
 use App\Http\Resources\SignatureResource;
 use App\Services\SignatureSearchService;
 
@@ -14,20 +15,17 @@ class SignatureController extends Controller{
     // Custom search route
     public function search($attack)
     {
-        dd($attack);
-        // $results = Signature::where('AttackName','like',"%$attack%")->get();
+        $results = Signature::where('AttackName','like',"%$attack%")->get();
         return response()->json($results);
     }
 
     public function index(){
-        // $signatures = Signature::paginate(5);
-        // return SignatureResource::collection($signatures);
-        return "HELLO";
+        $signatures = Signature::paginate(5);
+        return SignatureResource::collection($signatures);
     }
 
 
     public function store(StoreSignatureRequest $request){
-        // dd($request);
         $data = $request->validated();  // get validated input
         $signature = Signature::create($data); // create record
         return response()->json([
@@ -37,7 +35,16 @@ class SignatureController extends Controller{
     }
 
        
-    public function update(){}
+    public function update($signature, UpdateSignatureRequest $request){
+        $data = $request->validated();  // get validated input
+        $sign = Signature::findOrFail($signature); 
+        $sign->update($data); // update record
+        return response()->json([
+            'message' => 'Signature updated successfully',
+            'data' => $sign
+        ], 200);
+
+    }
 
 
     public function show($signature){
@@ -45,6 +52,14 @@ class SignatureController extends Controller{
         $sign = Signature::findOrFail($signature); 
 
         return new SignatureResource($sign);
+
+    }
+    public function destroy($signature){
+        $sign = Signature::findOrFail($signature); 
+        $sign->delete(); // delete record
+        return response()->json([
+            'message' => 'Signature deleted successfully'
+        ], 200);
 
     }
  

@@ -23,7 +23,11 @@
               <input v-model="profile.name" type="text" class="form-control" placeholder="Enter your name">
             </div>
 
-        
+            <!-- <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div> -->
+
+                <!--  -->
 
             <!-- Password -->
             <!-- <div class="mb-3 text-start">
@@ -59,8 +63,8 @@ const profile = reactive({
   name: data.user.username,
   role: data.user.role,
 });
-onMounted(async() => {
-  await data.FetchUser();
-});
+// data.FetchUser();
+
+
 
 </script>

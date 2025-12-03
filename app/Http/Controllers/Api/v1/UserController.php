@@ -14,6 +14,10 @@ use Laravel\Sanctum\PersonalAccessToken;
 class UserController extends Controller
 {
     //
+    public function index(){
+        $users = User::all();
+        return UserResource::collection($users);
+    }
      public function store(StoreUserRequest $request){
         $user = [
             'Username' => $request->username,
@@ -34,7 +38,25 @@ class UserController extends Controller
             }
     }
     
-    public function update(UpdateUserRequest $user){
+    public function update(UpdateUserRequest $request, $user){
+        $data = $request->validated();  // get validated input
+        $usr = User::findOrFail($user); 
+        if(isset($data['PasswordHash'])){
+            $data['PasswordHash'] = Hash::make($data['PasswordHash']);
+        }
+        $usr->update($data); // update record
+        return response()->json([
+            'message' => 'User updated successfully',
+            'data' => $usr
+        ], 200);
+
+    }
+    public function destroy($user){
+        $usr = User::findOrFail($user); 
+        $usr->delete(); // delete record
+        return response()->json([
+            'message' => 'User deleted successfully'
+        ], 200);
 
     }
 }
