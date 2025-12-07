@@ -8,6 +8,8 @@ export const useDataStore = defineStore('data',()=>{
 
     const router = useRouter();
 
+    let users = ref([]);
+
     let logs = ref([]);
     let singleLog = ref([]);
 
@@ -40,13 +42,10 @@ export const useDataStore = defineStore('data',()=>{
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
-        .finally(()=>{
-            loading.value = false;
-        })
+      
     }
 
     const FetchSingleLog = async (log)=>{
-        loading.value = true;
         await api.get(`logs/${log}`)
         .then((response)=>{
             singleLog.value = response.data.data;
@@ -54,29 +53,21 @@ export const useDataStore = defineStore('data',()=>{
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
-           .finally(()=>{
-            loading.value = false;
-        })
     }
 
     const FetchAlerts = async ()=>{
-                loading.value = true;
 
         await api.get("alerts")
         .then((response)=>{
-            // console.log(response);
             alerts.value = response.data.data
         })
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
-           .finally(()=>{
-            loading.value = false;
-        })
+       
     }
 
     const FetchSingleAlert = async (alert)=>{
-        loading.value = true;
         await api.get(`alerts/${alert}`)
         .then((response)=>{
             singleAlert.value = response.data.data;
@@ -84,12 +75,8 @@ export const useDataStore = defineStore('data',()=>{
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
-         .finally(()=>{
-            loading.value = false;
-        })
     }
      const FetchSignatures = async (page)=>{
-        loading.value = true;
         await api.get(`signatures?page=${page}`)
         .then((response)=>{
             firstPage.value = response.data.meta.current_page
@@ -99,13 +86,9 @@ export const useDataStore = defineStore('data',()=>{
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
-           .finally(()=>{
-            loading.value = false;
-        })
     }
 
     const FetchSingleSignature =  async (signature)=>{
-        loading.value = true;
         await api.get(`signatures/${signature}`)
         .then((response)=>{
             console.log(response);
@@ -114,22 +97,16 @@ export const useDataStore = defineStore('data',()=>{
         .catch((response)=>{
             console.log(response.data+"can't Fetch");
         })
-           .finally(()=>{
-            loading.value = false;
-        })
     }
     const searchSignature = (attack) => {
-        loading.value = true;
         api.get(`signatures/search/${attack}`)
             .then((response) => {
             signatures.value = response.data.data;
+            console.log(signatures.value);
             })
             .catch((error) => {
             console.log("can't fetch");
             })
-               .finally(()=>{
-            loading.value = false;
-        })
     }
 
     const storeSignature =async (signature)=>{
@@ -137,12 +114,11 @@ export const useDataStore = defineStore('data',()=>{
 
         await api.post("signatures",signature)
         .then((response)=>{
-            console.log("✅ Created:", response.data);
+            console.log("✅ Created:");
         })
         .catch((error)=>{
             errors.value = error.response.data.errors;
             console.error(errors.value.attackName[0]);
-            // console.error(errors.value.attackName[0]);
         })
     }
 
@@ -159,17 +135,15 @@ export const useDataStore = defineStore('data',()=>{
     const FetchUsers = async()=>{
         await api.get('users')
         .then((response)=>{
-
+            users.value = response.data.data;
         })
         .catch((error)=>{
-
+            console.log(error);
         })
 
     }
 
     const FetchUser = async()=>{
-                loading.value = true;
-
         let token = localStorage.getItem('token');
         await api.get(`users/${token}`)
         .then((response)=>{
@@ -214,6 +188,7 @@ export const useDataStore = defineStore('data',()=>{
             localStorage.setItem('token', response.data.data.token);
             user.value.username = response.data.data.userName;
             user.value.role = response.data.data.role;
+            console.log("✅ Logged in");
             router.push('/dashboard');
         })
         .catch(()=>{
@@ -233,6 +208,6 @@ export const useDataStore = defineStore('data',()=>{
         singleSignature,loginUser,valid,user,FetchUser,
         logs,singleLog,loading,
         alerts,singleAlert,
-        signatures,firstPage,lastPage,
+        signatures,firstPage,lastPage,users
     };
 })

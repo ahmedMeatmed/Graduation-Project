@@ -45,19 +45,21 @@
     <template #body>
      <table class="table table-striped border">
         <thead>
+          <th class="border p-1 text-center">Id</th>
           <th class="border p-1 text-center">User Name</th>
           <th class="border p-1 text-center">Role</th>
           <th class="border p-1 text-center">Actions</th>
           </thead>
         <tbody>
-          <tr >
-            <td class="border p-1 text-center">asad</td>
-             </tr>
-             <tr >
-            <td class="border p-1 text-center">asad</td>
-             </tr>
-             <tr >
-            <td class="border p-1 text-center">asad</td>
+          <tr v-for="user in data.users" :key="user.userId">
+            <td class="border p-1 text-center">{{user.userId}}</td>
+            <td class="border p-1 text-center">{{ user.userName }}</td>
+            <td class="border p-1 text-center">{{ user.role }}</td>
+            <td class="border p-1 text-center">
+              <button @click="editUser(user)" class="btn m-1 btn-success">Edit</button>
+              <button class="btn m-1 btn-primary">Show</button>
+              <button class="btn m-1 btn-danger">Delete</button>
+            </td>
              </tr>
         </tbody>
       </table>
@@ -81,7 +83,8 @@ const createUser = ()=>{
   User.value.open()
 }
 const viewUsers =()=>{
-  showUsers.value.open()
+  showUsers.value.open();
+  data.FetchUsers();
 }
 const newUser = ref({
   userName:'',
@@ -89,4 +92,13 @@ const newUser = ref({
   confirmPassword:'',
   role:'Admin',
 });
+
+const editUser = (user)=>{
+  newUser.value.userName = user.userName;
+  newUser.value.role = user.role;
+  User.value.open();
+  showUsers.value.close();
+
+  console.log(newUser.value);
+}
 </script>

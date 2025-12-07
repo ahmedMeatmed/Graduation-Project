@@ -63,7 +63,6 @@ const profile = reactive({
   name: data.user.username,
   role: data.user.role,
 });
-// data.FetchUser();
 
 
 
