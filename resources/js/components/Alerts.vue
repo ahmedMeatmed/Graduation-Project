@@ -9,10 +9,10 @@
                         <th class="text-center border">AttackType</th>
                         <th class="text-center border">SourceIP</th>
                         <th class="text-center border">DestinationIP</th>
-                        <!-- <th class="text-center border">AssignedTo</th> -->
                         <th class="text-center border">Severity</th>
                         <th class="text-center border">Status</th>
-                        <th class="text-center border">Timestamp</th>
+                        <!-- <th class="text-center border">Timestamp</th> -->
+                        <th class="text-center border">AssignedTo</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,10 +24,10 @@
                     <td class="text-center border">{{ alert.AttackType }}</td>
                     <td class="text-center border">{{ alert.SourceIP }}</td>
                     <td class="text-center border">{{ alert.DestinationIP }}</td>
-                    <!-- <td class="text-center border">{{ alert.AssignedTo }}</td> -->
                     <td class="text-center border">{{ alert.Severity }}</td>
                     <td class="text-center border">{{ alert.Status }}</td>
-                    <td class="text-center border">{{ alert.Timestamp }}</td>
+                    <!-- <td class="text-center border">{{ alert.Timestamp }}</td> -->
+                    <td class="text-center border">{{ alert.AssignedTo }}</td>
 
                 </tr>
             </tbody>

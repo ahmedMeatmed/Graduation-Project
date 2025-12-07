@@ -1,26 +1,26 @@
 <template>
     <div class="card text-center mt-2">
-  <div class="card-header">
-    Date : {{ data.singleLog.Timestamp }}
+  <div class="card-header bg-info">
+   <b>Date</b>: {{ data.singleLog.Timestamp }}
   </div>
-  <div class="card-body">
-    <h5 class="card-title border-bottom text-left p-2">SourceIP : {{ data.singleLog.SourceIP}} </h5>
-    <h5 class="card-title border-bottom text-left p-2">DestinationIP : {{ data.singleLog.DestinationIP}}</h5>
-    <h5 class="card-title border-bottom text-left p-2">PacketSize : {{ data.singleLog.PacketSize}}</h5>
-    <h5 class="card-title border-bottom text-left p-2">IsMalicious : {{ data.singleLog.IsMalicious}}</h5>
-    <h5 class="card-title border-bottom text-left p-2">Protocol : {{ data.singleLog.Protocol}}</h5>
-    <h5 class="card-title border-bottom text-left p-2">SrcPort : {{ data.singleLog.SrcPort}}</h5>
-    <h5 class="card-title border-bottom text-left p-2">DestPort : {{ data.singleLog.DestPort}}</h5>
-    <h5 class="card-title border-bottom text-left p-2">PayloadSize : {{ data.singleLog.PayloadSize}}</h5>
-    <h5 class="card-title border-bottom text-left p-2">TcpFlags : {{ data.singleLog.TcpFlags}}</h5>
-    <h5 class="card-title border-bottom text-left p-2">FlowDirection : {{ data.singleLog.FlowDirection}}</h5>
-    <h5 class="card-title border-bottom text-left p-2">PacketCount : {{ data.singleLog.PacketCount}}</h5>
-    <h5 class="card-title border-bottom text-left p-2">MatchedSignatureId : {{ data.singleLog.MatchedSignatureId}}</h5>
+  <div class="card-body bg-success text-white">
+    <span class="d-block card-title border-bottom text-left p-2"><b>SourceIP </b>: {{ data.singleLog.SourceIP}} </span>
+    <span class="d-block card-title border-bottom text-left p-2"><b>DestinationIP </b>: {{ data.singleLog.DestinationIP}}</span>
+    <span class="d-block card-title border-bottom text-left p-2"><b>PacketSize </b>: {{ data.singleLog.PacketSize}}</span>
+    <span class="d-block card-title border-bottom text-left p-2"><b>IsMalicious </b>: {{ data.singleLog.IsMalicious}}</span>
+    <span class="d-block card-title border-bottom text-left p-2"><b>Protocol </b>: {{ data.singleLog.Protocol}}</span>
+    <span class="d-block card-title border-bottom text-left p-2"><b>SrcPort </b>: {{ data.singleLog.SrcPort}}</span>
+    <span class="d-block card-title border-bottom text-left p-2"><b>DestPort </b>: {{ data.singleLog.DestPort}}</span>
+    <span class="d-block card-title border-bottom text-left p-2"><b>PayloadSize </b>: {{ data.singleLog.PayloadSize}}</span>
+    <span class="d-block card-title border-bottom text-left p-2"><b>TcpFlags </b>: {{ data.singleLog.TcpFlags}}</span>
+    <span class="d-block card-title border-bottom text-left p-2"><b>FlowDirection </b>: {{ data.singleLog.FlowDirection}}</span>
+    <span class="d-block card-title border-bottom text-left p-2"><b>PacketCount </b>: {{ data.singleLog.PacketCount}}</span>
+    <span class="d-block card-title border-bottom text-left p-2"><b>MatchedSignatureId </b>: {{ data.singleLog.MatchedSignatureId}}</span>
  
     <router-link to="/logs" class="btn btn-success">Go To All Logs</router-link>
   </div>
-  <div class="card-footer text-body-secondary ">
-    Duration : {{ data.singleLog.Duration }}
+  <div class="card-footer text-body-secondary bg-warning ">
+    <b>Duration</b> : {{ data.singleLog.Duration }}
   </div>
 </div>
 </template>
