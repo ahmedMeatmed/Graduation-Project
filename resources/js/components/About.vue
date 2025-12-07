@@ -32,18 +32,18 @@
         Together, we combine our skills to deliver a complete and well-structured IDS solution.
       </p>
       <ul class="list-group list-group-flush mt-3">
-        <li class="list-group-item">Team Member 1 – Project Manager</li>
-        <li class="list-group-item">Team Member 2 – Backend Developer</li>
-        <li class="list-group-item">Team Member 3 – Frontend Developer</li>
-        <li class="list-group-item">Team Member 4 – Security Analyst</li>
-        <li class="list-group-item">Team Member 5 – Network Engineer</li>
-        <li class="list-group-item">Team Member 6 – Data Analyst</li>
-        <li class="list-group-item">Team Member 7 – Tester & QA</li>
-        <li class="list-group-item">Team Member 8 – UI/UX Designer</li>
-        <li class="list-group-item">Team Member 9 – Documentation Specialist</li>
-        <li class="list-group-item">Team Member 10 – Research & Development</li>
-        <li class="list-group-item">Team Member 11 – Integration Engineer</li>
-        <li class="list-group-item">Team Member 12 – Deployment & Maintenance</li>
+        <li class="list-group-item"> <b>Mahmoud Azzam</b> – Project Manager</li>
+        <li class="list-group-item"> <b>Ahmed Meatmed</b> – Full Stack Developer</li>
+        <li class="list-group-item"> <b>Osama Naser </b>– Backend Developer</li>
+        <li class="list-group-item"> <b>Marwa Sameer </b>– Frontend Developer</li>
+        <li class="list-group-item"> <b>Ahmed Ramadan </b>– Security Analyst</li>
+        <li class="list-group-item"> <b>Mohamed Abo Gaml </b>– Network Engineer</li>
+        <li class="list-group-item"> <b>Abdalla Helal </b>– Network Engineer</li>
+        <li class="list-group-item"> <b>Yara Khaled </b>– Network Engineer</li>
+        <li class="list-group-item"> <b> Ahmed Elbamby </b>– AI & ML Engineer </li>
+        <li class="list-group-item"> <b> Mohamed Elrawy </b>– AI & ML Engineer </li>
+        <li class="list-group-item"> <b> Kareem Elhelow </b>– AI & ML Engineer </li>
+        <li class="list-group-item"> <b>Mona Adel </b>– UI/UX Designer</li>
       </ul>
     </div>
 
@@ -65,30 +65,30 @@
       <!-- First slide -->
       <div class="carousel-item active">
         <div class="d-flex justify-content-center gap-4 flex-wrap">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 1">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 2">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 3">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 4">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/meatmed.jpg"  class="rounded-circle shadow" alt="Team Member 3">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/ramadan.jpg" class="rounded-circle shadow" alt="Team Member 4">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/bamby.jpg" class="rounded-circle shadow" alt="Team Member 5">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/azzam.jpg" class="rounded-circle shadow" alt="Team Member 2">
         </div>
       </div>
-
+      
       <!-- Second slide -->
       <div class="carousel-item">
         <div class="d-flex justify-content-center gap-4 flex-wrap">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 5">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 6">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 7">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 8">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/abdalla.jpg"  class="rounded-circle shadow" alt="Team Member 1">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/gaml.jpg" class="rounded-circle shadow" alt="Team Member 6">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/kareem.jpg" class="rounded-circle shadow" alt="Team Member 7">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/osama.jpg" class="rounded-circle shadow" alt="Team Member 8">
         </div>
       </div>
 
       <!-- Third slide -->
       <div class="carousel-item">
         <div class="d-flex justify-content-center gap-4 flex-wrap">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 9">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 10">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 11">
-          <img src="https://placehold.co/120" class="rounded-circle shadow" alt="Team Member 12">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/rawy.jpg" class="rounded-circle shadow" alt="Team Member 9">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/yara.jpg" class="rounded-circle shadow" alt="Team Member 10">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/mona.jpg" class="rounded-circle shadow" alt="Team Member 11">
+          <img height="120" width="120" src="..\\imgs/TeamMembers/marwa.jpg" class="rounded-circle shadow" alt="Team Member 12">
         </div>
       </div>
     </div>
