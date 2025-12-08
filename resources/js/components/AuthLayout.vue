@@ -22,6 +22,7 @@ const store = useDataStore()
 onMounted(async()=>{
   await store.FetchLogs();
   await store.FetchAlerts();
+  await store.FetchUsers();
   await store.FetchUser();
 
 })

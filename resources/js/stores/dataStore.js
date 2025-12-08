@@ -91,7 +91,6 @@ export const useDataStore = defineStore('data',()=>{
     const FetchSingleSignature =  async (signature)=>{
         await api.get(`signatures/${signature}`)
         .then((response)=>{
-            console.log(response);
             singleSignature.value = response.data.data;
         })
         .catch((response)=>{

@@ -20,7 +20,7 @@
           <i class="bi bi-people-fill fs-2 mb-2 text-success"></i>
           <h5>Users</h5>
           <!-- <h3 class="fw-bold">{{ card.value }}</h3> -->
-          <h3 class="fw-bold">123</h3>
+          <h3 class="fw-bold">{{ data.users.length }}</h3>
         </div>
       </div>
       <div class="col-md-3" >

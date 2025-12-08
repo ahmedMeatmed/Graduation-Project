@@ -81,10 +81,10 @@ const User = ref(null);
 
 const createUser = ()=>{
   User.value.open()
+  newUser.value = "";
 }
 const viewUsers =()=>{
   showUsers.value.open();
-  data.FetchUsers();
 }
 const newUser = ref({
   userName:'',
@@ -98,7 +98,5 @@ const editUser = (user)=>{
   newUser.value.role = user.role;
   User.value.open();
   showUsers.value.close();
-
-  console.log(newUser.value);
 }
 </script>

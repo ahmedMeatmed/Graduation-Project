@@ -2,18 +2,16 @@
 
 namespace App\Http\Requests;
 
-use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateUserRequest extends FormRequest
+class UpdateAlertRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        // return true;
-        return $this->user()->can('update',User::class);
+        return true;
     }
 
     /**
@@ -25,9 +23,7 @@ class UpdateUserRequest extends FormRequest
     {
         return [
             //
-            'username' => 'required|string|min:3|max:50|unique:users,username',
-            'password' => 'required|string|min:8',
-            'Role'     => 'required|string',
+            // "status" =>"required",
         ];
     }
 }
