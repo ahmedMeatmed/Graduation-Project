@@ -34,7 +34,6 @@ export const useDataStore = defineStore('data',()=>{
 
 
     const FetchLogs = async () =>{
-        loading.value = true;
         await api.get('logs')
         .then((response)=>{
              logs.value = response.data.data;
@@ -132,6 +131,8 @@ export const useDataStore = defineStore('data',()=>{
     }
 
     const FetchUsers = async()=>{
+        loading.value = true;
+
         await api.get('users')
         .then((response)=>{
             users.value = response.data.data;

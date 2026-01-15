@@ -20,10 +20,14 @@ import { onMounted } from "vue"
 
 const store = useDataStore()
 onMounted(async()=>{
+  await store.FetchUsers();
   await store.FetchLogs();
   await store.FetchAlerts();
-  await store.FetchUsers();
   await store.FetchUser();
+  setInterval(() => {
+  store.FetchLogs();
+  store.FetchAlerts();
+}, 5000);
 
 })
 
