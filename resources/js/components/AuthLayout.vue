@@ -24,10 +24,10 @@ onMounted(async()=>{
   await store.FetchLogs();
   await store.FetchAlerts();
   await store.FetchUser();
-//   setInterval(() => {
-//   store.FetchLogs();
-//   store.FetchAlerts();
-// }, 5000);
+  setInterval(() => {
+  store.FetchLogs();
+  store.FetchAlerts();
+}, 60000);
 
 })
 

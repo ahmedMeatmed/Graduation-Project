@@ -3,7 +3,7 @@
   <div class="card-header bg-info">
    <b>Date</b>: {{ data.singleLog.Timestamp }}
   </div>
-  <div class="card-body bg-success text-white">
+  <div class="card-body">
     <span class="d-block card-title border-bottom text-left p-2"><b>SourceIP </b>: {{ data.singleLog.SourceIP}} </span>
     <span class="d-block card-title border-bottom text-left p-2"><b>DestinationIP </b>: {{ data.singleLog.DestinationIP}}</span>
     <span class="d-block card-title border-bottom text-left p-2"><b>PacketSize </b>: {{ data.singleLog.PacketSize}}</span>
@@ -19,7 +19,7 @@
  
     <router-link to="/logs" class="btn btn-success">Go To All Logs</router-link>
   </div>
-  <div class="card-footer text-body-secondary bg-warning ">
+  <div class="card-footer  ">
     <b>Duration</b> : {{ data.singleLog.Duration }}
   </div>
 </div>

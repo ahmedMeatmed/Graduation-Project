@@ -98,14 +98,17 @@ export const useDataStore = defineStore('data',()=>{
     }
     
     const searchSignature = (attack) => {
-        api.post(`signatures/search`,attack)
-            .then((response) => {
+
+        api.post('signatures/search',attack)
+        .then((response) => {
             signatures.value = response.data.data;
             console.log(signatures.value);
-            })
-            .catch((error) => {
+        })
+        .catch((error) => {
             console.log("can't fetch");
-            })
+        })
+        console.log(attack);
+        typeof(attack);
     }
 
     const storeSignature =async (signature)=>{
@@ -200,6 +203,21 @@ export const useDataStore = defineStore('data',()=>{
         })
     }
 
+    const updateAlertStatus = async (alertId, status, assignedTo = "") => {
+        loading.value = true;  
+
+        await api.put(`alerts/${alertId}`, { "status" : status, "assignedTo" : assignedTo })
+            .then((response) => {
+                // console.log("✅ Alert status updated:", response.data);
+            })
+            .catch((error) => {
+                console.error("❌ Failed to update alert status:", error);
+            })
+            .finally(() => {
+                loading.value = false;
+            });
+    };
+
     return{
         FetchLogs,FetchSingleLog,
         FetchAlerts,FetchSingleAlert,
@@ -209,6 +227,8 @@ export const useDataStore = defineStore('data',()=>{
         singleSignature,loginUser,valid,user,FetchUser,
         logs,singleLog,loading,
         alerts,singleAlert,
-        signatures,firstPage,lastPage,users
+        signatures,firstPage,lastPage,users,
+        updateAlertStatus
     };
 })
+
