@@ -2,8 +2,8 @@
 namespace App\Http\Controllers\Api\v1;
 
 use App\Models\Signature;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\SearchSignatureRequest;
 use App\Http\Requests\StoreSignatureRequest;
 use App\Http\Requests\UpdateSignatureRequest;
 use App\Http\Resources\SignatureResource;
@@ -13,9 +13,10 @@ class SignatureController extends Controller{
 
 
     // Custom search route
-    public function search($attack)
+    public function search(SearchSignatureRequest $request,SignatureSearchService $search)
     {
-        $results = Signature::where('AttackName','like',"%$attack%")->get();
+        $results = $search->searchByAttackName($request->attack);
+        // dd($results);
         return response()->json($results);
     }
 

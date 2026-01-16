@@ -24,7 +24,7 @@ Route::middleware('auth:sanctum')->prefix('v1')->group(function () {
 
     Route::apiResource('alerts', AlertController::class);
 
-    Route::get('signatures/search/{attack}', [SignatureController::class, 'search']);
+    Route::post('signatures/search', [SignatureController::class, 'search']);
 
     Route::post('/logout', [LoginController::class, 'logout']);
 });

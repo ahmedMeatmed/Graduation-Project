@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdateAlertRequest;
 use App\Http\Resources\AlertResource;
 use App\Models\Alert;
-use Illuminate\Http\Request;
 
 class AlertController extends Controller
 {
@@ -19,17 +18,15 @@ class AlertController extends Controller
 
     public function show($alert){
 
-        $al = Alert::findOrFail($alert);
+        $alert = Alert::findOrFail($alert);
 
-        return new AlertResource($al);
+        return new AlertResource($alert);
     }
 
     public function update(UpdateAlertRequest $request,$alert){
-        $al = Alert::findOrFail($alert);
-        $al->update([$al->Status => "Resolved"]);
-        $al = Alert::findOrFail($alert);
-        dd($request);
-        return $al;
+        $alert = Alert::findOrFail($alert);
+        $alert->update(["Status"=>$request->status , "AssignedTo"=>$request->assignedTo]);
 
+        return new AlertResource($alert);
     }
 }

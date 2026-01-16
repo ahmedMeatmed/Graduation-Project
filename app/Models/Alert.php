@@ -10,8 +10,9 @@ class Alert extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        "Status"
-    ];
+        "Status",
+        "AssignedTo",
+        ];
     protected $table = "Alerts";
-    protected $primaryKey = "AlertId";
+    protected $primaryKey = "AlertID";
 }
