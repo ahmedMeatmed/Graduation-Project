@@ -123,7 +123,6 @@
             <input
               type="file"
               class="form-control"
-              v-model="settings.pcapFilePath"
               placeholder="D:\graduation\capture.pcap"
             />
           </div>

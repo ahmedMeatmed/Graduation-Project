@@ -21,6 +21,7 @@ class SignatureController extends Controller{
     }
 
     public function index(){
+        // dd("index");
         $signatures = Signature::paginate(5);
         return SignatureResource::collection($signatures);
     }

@@ -96,8 +96,9 @@ export const useDataStore = defineStore('data',()=>{
             console.log(response.data+"can't Fetch");
         })
     }
+    
     const searchSignature = (attack) => {
-        api.get(`signatures/search/${attack}`)
+        api.post(`signatures/search`,attack)
             .then((response) => {
             signatures.value = response.data.data;
             console.log(signatures.value);
