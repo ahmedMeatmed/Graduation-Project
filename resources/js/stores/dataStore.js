@@ -218,6 +218,18 @@ export const useDataStore = defineStore('data',()=>{
             });
     };
 
+    const updateSettings = async (settingId, settingValue) => {
+        loading.value = true;
+        await api.put(`settings/${settingId}`, { "SettingValue": settingValue })
+            .then((response) => {
+                console.log("✅ Setting updated:", response.data); })
+            .catch((error) => {
+                console.error("❌ Failed to update setting:", error);
+            })
+            .finally(() => {
+                loading.value = false;
+            });
+
     return{
         FetchLogs,FetchSingleLog,
         FetchAlerts,FetchSingleAlert,
@@ -228,7 +240,7 @@ export const useDataStore = defineStore('data',()=>{
         logs,singleLog,loading,
         alerts,singleAlert,
         signatures,firstPage,lastPage,users,
-        updateAlertStatus
+        updateAlertStatus,updateSettings,
     };
 })
 

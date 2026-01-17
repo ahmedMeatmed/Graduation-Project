@@ -23,6 +23,7 @@ class UpdateSettingRequest extends FormRequest
     {
         return [
             //
+            'SettingValue' => 'required',
         ];
     }
 }

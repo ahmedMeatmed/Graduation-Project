@@ -11,6 +11,7 @@ use App\Http\Controllers\Api\v1\IdsController;
 use App\Http\Controllers\Api\v1\LogController;
 use App\Http\Controllers\Api\v1\UserController;
 use App\Http\Controllers\Api\v1\AlertController;
+use App\Http\Controllers\Api\v1\SettingController;
 use App\Http\Controllers\Api\v1\SignatureController;
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
@@ -24,6 +25,8 @@ Route::middleware('auth:sanctum')->prefix('v1')->group(function () {
     Route::apiResource('signatures', SignatureController::class);
 
     Route::apiResource('alerts', AlertController::class);
+
+    Route::apiResource('settings', SettingController::class);
 
     Route::post('signatures/search', [SignatureController::class, 'search']);
 
