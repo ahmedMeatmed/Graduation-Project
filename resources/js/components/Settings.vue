@@ -113,8 +113,8 @@
           <div class="mb-3">
             <label class="form-label">Capture Mode</label>
             <select class="form-select" v-model="settings.captureMode">
-              <option value="pcap">PCAP File</option>
               <option value="live">Live Interface</option>
+              <option value="Pcap">PCAP File</option>
             </select>
           </div>
 
@@ -123,7 +123,6 @@
             <input
               type="file"
               class="form-control"
-              placeholder="D:\graduation\capture.pcap"
             />
           </div>
         </div>
@@ -148,6 +147,7 @@ import UserSettings from './UserSettings.vue';
 import { reactive } from "vue";
 
 const settings = reactive({
+  captureMode: "live",
   pcapFilePath: "",
   portScanThreshold: 10,
   deauthThreshold: 15,
@@ -163,7 +163,7 @@ const settings = reactive({
 
 function saveSettings() {
   console.log("Saved settings:", settings);
-  alert("Settings saved (static demo)");
+
 }
 </script>
 

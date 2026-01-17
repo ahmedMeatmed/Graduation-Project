@@ -20,7 +20,7 @@
               <div class="mb-3">
             <label class="form-label"><b>Role</b></label>
             <!-- <input v-model="newUser.role" type="text" class="form-control" required> -->
-            <select name="role" id="role" v-model="newUser.role" class="form-control dropdown" style="cursor: pointer;" required>
+            <select name="role" id="role" v-model="newUser.role" class="form-select dropdown" style="cursor: pointer;" required>
               <option value="1">Admin</option>
               <option value="0">Analyst</option>
             </select>

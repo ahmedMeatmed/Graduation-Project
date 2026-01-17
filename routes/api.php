@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\Api\v1\IdsController;
 use App\Http\Controllers\Api\v1\LogController;
 use App\Http\Controllers\Api\v1\UserController;
 use App\Http\Controllers\Api\v1\AlertController;
@@ -25,6 +26,10 @@ Route::middleware('auth:sanctum')->prefix('v1')->group(function () {
     Route::apiResource('alerts', AlertController::class);
 
     Route::post('signatures/search', [SignatureController::class, 'search']);
+
+    Route::post('Run', [IdsController::class, 'index']);
+    
+    Route::post('Stop', [IdsController::class, 'destroy']);
 
     Route::post('/logout', [LoginController::class, 'logout']);
 });
