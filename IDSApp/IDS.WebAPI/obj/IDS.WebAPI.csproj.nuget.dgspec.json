@@ -1,0 +1,211 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\C#\\IDSApp\\IDS.WebAPI\\IDS.WebAPI.csproj": {}
+  },
+  "projects": {
+    "G:\\C#\\IDSApp\\IDS.WebAPI\\IDS.WebAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\C#\\IDSApp\\IDS.WebAPI\\IDS.WebAPI.csproj",
+        "projectName": "IDS.WebAPI",
+        "projectPath": "G:\\C#\\IDSApp\\IDS.WebAPI\\IDS.WebAPI.csproj",
+        "packagesPath": "C:\\Users\\Ahmed Ramadan\\.nuget\\packages\\",
+        "outputPath": "G:\\C#\\IDSApp\\IDS.WebAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ahmed Ramadan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "G:\\C#\\IDSApp\\IDSApp\\IDSApp.csproj": {
+                "projectPath": "G:\\C#\\IDSApp\\IDSApp\\IDSApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\C#\\IDSApp\\IDSApp\\IDSApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\C#\\IDSApp\\IDSApp\\IDSApp.csproj",
+        "projectName": "IDSApp",
+        "projectPath": "G:\\C#\\IDSApp\\IDSApp\\IDSApp.csproj",
+        "packagesPath": "C:\\Users\\Ahmed Ramadan\\.nuget\\packages\\",
+        "outputPath": "G:\\C#\\IDSApp\\IDSApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ahmed Ramadan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Ardin.dnYara": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "BouncyCastle.Cryptography": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
+            "DnsClient": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "FluentFTP": {
+              "target": "Package",
+              "version": "[53.0.1, )"
+            },
+            "FreeRDP-Sharp.Native": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "HttpMachine": {
+              "target": "Package",
+              "version": "[0.9.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.14.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "PCRE.NET": {
+              "target": "Package",
+              "version": "[1.2.2, )"
+            },
+            "PacketDotNet": {
+              "target": "Package",
+              "version": "[1.4.8, )"
+            },
+            "SMBLibrary": {
+              "target": "Package",
+              "version": "[1.5.4.1, )"
+            },
+            "SSH.NET": {
+              "target": "Package",
+              "version": "[2025.0.0, )"
+            },
+            "SharpPcap": {
+              "target": "Package",
+              "version": "[6.3.1, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

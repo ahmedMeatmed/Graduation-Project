@@ -1,0 +1,6 @@
+cd G:\C#\IDSApp\IDSApp
+docfx init 
+docfx metadata
+docfx build
+docfx pdf docfx.json
+docfx serve _site
