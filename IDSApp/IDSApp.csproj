@@ -1,0 +1,214 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <OutputType>Exe</OutputType>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ardin.dnYara" Version="2.1.0" />
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.6.2" />
+    <PackageReference Include="DnsClient" Version="1.8.0" />
+    <PackageReference Include="FluentFTP" Version="53.0.1" />
+    <PackageReference Include="FreeRDP-Sharp.Native" Version="1.1.1" />
+    <PackageReference Include="HttpMachine" Version="0.9.0" />
+    <PackageReference Include="MailKit" Version="4.14.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.9" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="PacketDotNet" Version="1.4.8" />
+    <PackageReference Include="PCRE.NET" Version="1.2.2" />
+    <PackageReference Include="SharpPcap" Version="6.3.1" />
+    <PackageReference Include="SMBLibrary" Version="1.5.4.1" />
+    <PackageReference Include="SSH.NET" Version="2025.0.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libeay32.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libfreerdp-cache.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libfreerdp-client.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libfreerdp-codec.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libfreerdp-common.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libfreerdp-core.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libfreerdp-crypto.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libfreerdp-gdi.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libfreerdp-locale.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libfreerdp-primitives.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libfreerdp-rail.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libfreerdp-utils.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwfreerdp-client.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-asn1.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-bcrypt.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-credentials.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-credui.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-crt.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-crypto.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-dsparse.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-environment.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-error.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-file.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-handle.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-heap.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-input.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-interlocked.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-io.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-library.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-path.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-pipe.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-pool.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-registry.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-rpc.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-sspi.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-sspicli.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-synch.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-sysinfo.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-thread.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-timezone.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-utils.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-winhttp.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\libwinpr-winsock.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Ahmed Ramadan\.nuget\packages\freerdp-sharp.native\1.1.1\build\x86\ssleay32.dll" />
+  </ItemGroup>
+
+</Project>
