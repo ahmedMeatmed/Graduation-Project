@@ -229,6 +229,7 @@ export const useDataStore = defineStore('data',()=>{
             .finally(() => {
                 loading.value = false;
             });
+        };
 
     return{
         FetchLogs,FetchSingleLog,

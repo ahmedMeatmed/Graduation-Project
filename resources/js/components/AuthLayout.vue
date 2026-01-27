@@ -27,7 +27,7 @@ onMounted(async()=>{
   setInterval(() => {
   store.FetchLogs();
   store.FetchAlerts();
-}, 60000);
+}, 5000);
 
 })
 
