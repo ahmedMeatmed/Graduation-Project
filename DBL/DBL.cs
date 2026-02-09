@@ -1,15 +1,121 @@
-﻿using IDSApp.Helper;
-using Microsoft.Data.SqlClient;
-using System;
+﻿using System;
 using System.Data;
+using System.Net.Sockets;
+using System.Text;
+using Microsoft.Data.SqlClient;
 
 namespace IDSApp.DBL
 {
     /// <summary>
-    /// Provides database helper methods for executing queries, non-queries, and parameterized commands.
+    /// Database & Redis helper.
+    /// SQL methods are disabled (return dummy values) to avoid DB writes.
+    /// Redis methods push logs to Laravel-compatible list.
     /// </summary>
     internal static class DBL
     {
+        // --- Redis settings ---
+        public static string RedisHost = "127.0.0.1";
+        public static int RedisPort = 6379;
+        public static int RedisDB = 0;
+        // Redis DB index (matches SELECT in Laravel config)
+        public static int RedisDb = 0;
+        // Optional password for AUTH (set if your Redis requires a password)
+        public static string RedisPassword = null;
+        public static string RedisListKey = "aegis_database_ids_logs";
+
+        /// <summary>
+        /// Push a log string into Redis list
+        /// </summary>
+        public static int PushLog(string log)
+        {
+            return PushToRedis(RedisListKey, log);
+        }
+
+        private static int PushToRedis(string key, string value)
+        {
+            try
+            {
+                using var tcp = new TcpClient();
+                tcp.Connect(RedisHost, RedisPort);
+                var ns = tcp.GetStream();
+
+                // If password provided, AUTH first
+                if (!string.IsNullOrEmpty(RedisPassword))
+                {
+                    string authCmd = BuildRespArray(new[] { "AUTH", RedisPassword });
+                    string authResp = WriteAndRead(ns, authCmd);
+                    if (string.IsNullOrEmpty(authResp) || !(authResp.StartsWith("+OK") || authResp.StartsWith("+")))
+                        throw new Exception("Redis AUTH failed: " + authResp);
+                }
+
+                // SELECT DB if not zero
+                if (RedisDb != 0)
+                {
+                    string selCmd = BuildRespArray(new[] { "SELECT", RedisDb.ToString() });
+                    string selResp = WriteAndRead(ns, selCmd);
+                    if (string.IsNullOrEmpty(selResp) || !(selResp.StartsWith("+OK") || selResp.StartsWith(":")))
+                        throw new Exception("Redis SELECT failed: " + selResp);
+                }
+
+                // Select DB
+                string selectCmd = BuildRespArray(new[] { "SELECT", RedisDB.ToString() });
+                ns.Write(Encoding.UTF8.GetBytes(selectCmd), 0, Encoding.UTF8.GetByteCount(selectCmd));
+                ns.Read(new byte[1024], 0, 1024);
+
+                // RPUSH
+                string rpushCmd = BuildRespArray(new[] { "RPUSH", key, value });
+                ns.Write(Encoding.UTF8.GetBytes(rpushCmd), 0, Encoding.UTF8.GetByteCount(rpushCmd));
+
+                byte[] buf = new byte[1024];
+                int read = ns.Read(buf, 0, buf.Length);
+                if (read <= 0) return 0;
+
+                string resp = Encoding.UTF8.GetString(buf, 0, read);
+                return resp.Length > 0 && (resp[0] == '+' || resp[0] == ':') ? 1 : 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Redis push failed: " + ex.Message);
+                return 0;
+            }
+        }
+
+        private static string WriteAndRead(NetworkStream ns, string cmd)
+        {
+            byte[] bytes = Encoding.UTF8.GetBytes(cmd);
+            ns.Write(bytes, 0, bytes.Length);
+            // Read reply (up to 8KB)
+            byte[] buf = new byte[8192];
+            int read = 0;
+            // Wait briefly for reply data
+            int timeoutMs = 500;
+            DateTime start = DateTime.UtcNow;
+            while (DateTime.UtcNow - start < TimeSpan.FromMilliseconds(timeoutMs))
+            {
+                if (ns.DataAvailable)
+                {
+                    read = ns.Read(buf, 0, buf.Length);
+                    break;
+                }
+                Thread.Sleep(10);
+            }
+            if (read <= 0) return string.Empty;
+            return Encoding.UTF8.GetString(buf, 0, read);
+        }
+        private static string BuildRespArray(string[] parts)
+        {
+            var sb = new StringBuilder();
+            sb.Append("*").Append(parts.Length).Append("\r\n");
+            foreach (var p in parts)
+            {
+                var bytes = Encoding.UTF8.GetBytes(p ?? string.Empty);
+                sb.Append("$").Append(bytes.Length).Append("\r\n");
+                sb.Append(p ?? string.Empty).Append("\r\n");
+            }
+            return sb.ToString();
+        }
+
+        // --- SQL Methods ---
         private static string conStr = "Data Source=DESKTOP-RL48M7M\\SQLEXPRESS;Initial Catalog=IDS;Integrated Security=True;Trust Server Certificate=True";
 
         /// <summary>
@@ -31,13 +137,13 @@ namespace IDSApp.DBL
         /// <param name="command">The SQL command to execute.</param>
         /// <returns>The number of rows affected.</returns>
         public static int ExecuteNonQuery(string command)
-        {
-            using SqlConnection con = new SqlConnection(conStr);
-            using SqlCommand cmd = new SqlCommand(command, con);
-            con.Open();
-            int noOfRows = cmd.ExecuteNonQuery();
-            return noOfRows;
-        }
+            {
+                using SqlConnection con = new SqlConnection(conStr);
+                using SqlCommand cmd = new SqlCommand(command, con);
+                con.Open();
+                int noOfRows = cmd.ExecuteNonQuery();
+                return noOfRows;
+            }
 
         /// <summary>
         /// Executes a SQL query and returns the first row of the result, or null if no rows exist.

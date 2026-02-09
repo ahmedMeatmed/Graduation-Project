@@ -134,92 +134,131 @@ namespace IDSApp.DAL
         /// <param name="info">Additional information about the log entry</param>
         /// <returns>The newly created LogID if successful, otherwise -1</returns>
         public static int Insert(
-     DateTime timestamp,
-     string sourceIp,
-     string destinationIp,
-     double packetSize,
-     bool isMalicious,
-     string protocolName,
-     string protocol,
-     int srcPort,
-     int destPort,
-     double payloadSize,
-     string tcpFlags,
-     string flowDirection,
-     int packetCount,
-     double duration,
-     int? matchedSignatureId,
-     string info)
+            DateTime timestamp,
+            string sourceIp,
+            string destinationIp,
+            double packetSize,
+            bool isMalicious,
+            string protocolName,
+            string protocol,
+            int srcPort,
+            int destPort,
+            double payloadSize,
+            string tcpFlags,
+            string flowDirection,
+            int packetCount,
+            double duration,
+            int? matchedSignatureId,
+            string info)
         {
             try
             {
                 // Log debug قبل التنفيذ
-                OptimizedLogger.LogDebug($"[DB-DEBUG] Attempting INSERT with values: " +
+                OptimizedLogger.LogDebug($"[Redis] Attempting INSERT with values: " +
                     $"Timestamp={timestamp}, SourceIp='{sourceIp}', DestinationIp='{destinationIp}', " +
                     $"PacketSize={packetSize}, IsMalicious={isMalicious}, ProtocolName='{protocolName}', Protocol='{protocol}', " +
                     $"SrcPort={srcPort}, DestPort={destPort}, PayloadSize={payloadSize}, TcpFlags='{tcpFlags}', " +
                     $"FlowDirection='{flowDirection}', PacketCount={packetCount}, Duration={duration}, " +
                     $"MatchedSignatureId={(matchedSignatureId.HasValue ? matchedSignatureId.Value.ToString() : "NULL")}, Info='{info}'");
 
-                string query = @"
-SET NOCOUNT OFF;
+                // string query = @"
+                    // SET NOCOUNT OFF;
 
-INSERT INTO Logs 
-    (Timestamp, SourceIp, DestinationIp, PacketSize, IsMalicious, ProtocolName, Protocol,
-     SrcPort, DestPort, PayloadSize, TcpFlags, FlowDirection, PacketCount, Duration,
-     MatchedSignatureId, Info)
-VALUES
-    (@Timestamp, @SourceIp, @DestinationIp, @PacketSize, @IsMalicious, @ProtocolName, @Protocol,
-     @SrcPort, @DestPort, @PayloadSize, @TcpFlags, @FlowDirection, @PacketCount, @Duration,
-     @MatchedSignatureId, @Info);
+                    // INSERT INTO Logs 
+                    //     (Timestamp, SourceIp, DestinationIp, PacketSize, IsMalicious, ProtocolName, Protocol,
+                    //     SrcPort, DestPort, PayloadSize, TcpFlags, FlowDirection, PacketCount, Duration,
+                    //     MatchedSignatureId, Info)
+                    // VALUES
+                    //     (@Timestamp, @SourceIp, @DestinationIp, @PacketSize, @IsMalicious, @ProtocolName, @Protocol,
+                    //     @SrcPort, @DestPort, @PayloadSize, @TcpFlags, @FlowDirection, @PacketCount, @Duration,
+                    //     @MatchedSignatureId, @Info);
 
-SELECT CAST(@@IDENTITY AS INT);
-";
+                    // SELECT CAST(@@IDENTITY AS INT);
+                    // ";
 
-                SqlParameter[] parameters = {
-            new SqlParameter("@Timestamp", SqlDbType.DateTime2) { Value = timestamp },
-            new SqlParameter("@SourceIp", SqlDbType.NVarChar, 100) { Value = (object)sourceIp ?? DBNull.Value },
-            new SqlParameter("@DestinationIp", SqlDbType.NVarChar, 100) { Value = (object)destinationIp ?? DBNull.Value },
-            new SqlParameter("@PacketSize", SqlDbType.Float) { Value = packetSize },
-            new SqlParameter("@IsMalicious", SqlDbType.Bit) { Value = isMalicious },
-            new SqlParameter("@ProtocolName", SqlDbType.NVarChar, 100) { Value = (object)protocolName ?? DBNull.Value },
-            new SqlParameter("@Protocol", SqlDbType.NVarChar, 40) { Value = (object)protocol ?? DBNull.Value },
-            new SqlParameter("@SrcPort", SqlDbType.Int) { Value = srcPort },
-            new SqlParameter("@DestPort", SqlDbType.Int) { Value = destPort },
-            new SqlParameter("@PayloadSize", SqlDbType.Float) { Value = payloadSize },
-            new SqlParameter("@TcpFlags", SqlDbType.NVarChar, 40) { Value = (object)tcpFlags ?? DBNull.Value },
-            new SqlParameter("@FlowDirection", SqlDbType.NVarChar, 20) { Value = (object)flowDirection ?? DBNull.Value },
-            new SqlParameter("@PacketCount", SqlDbType.Int) { Value = packetCount },
-            new SqlParameter("@Duration", SqlDbType.Float) { Value = duration },
-            new SqlParameter("@MatchedSignatureId", SqlDbType.Int) { Value = (object)matchedSignatureId ?? DBNull.Value },
-            new SqlParameter("@Info", SqlDbType.NVarChar, -1) { Value = (object)info ?? DBNull.Value }
-        };
+                // SqlParameter[] parameters = {
+                //     new SqlParameter("@Timestamp", SqlDbType.DateTime2) { Value = timestamp },
+                //     new SqlParameter("@SourceIp", SqlDbType.NVarChar, 100) { Value = (object)sourceIp ?? DBNull.Value },
+                //     new SqlParameter("@DestinationIp", SqlDbType.NVarChar, 100) { Value = (object)destinationIp ?? DBNull.Value },
+                //     new SqlParameter("@PacketSize", SqlDbType.Float) { Value = packetSize },
+                //     new SqlParameter("@IsMalicious", SqlDbType.Bit) { Value = isMalicious },
+                //     new SqlParameter("@ProtocolName", SqlDbType.NVarChar, 100) { Value = (object)protocolName ?? DBNull.Value },
+                //     new SqlParameter("@Protocol", SqlDbType.NVarChar, 40) { Value = (object)protocol ?? DBNull.Value },
+                //     new SqlParameter("@SrcPort", SqlDbType.Int) { Value = srcPort },
+                //     new SqlParameter("@DestPort", SqlDbType.Int) { Value = destPort },
+                //     new SqlParameter("@PayloadSize", SqlDbType.Float) { Value = payloadSize },
+                //     new SqlParameter("@TcpFlags", SqlDbType.NVarChar, 40) { Value = (object)tcpFlags ?? DBNull.Value },
+                //     new SqlParameter("@FlowDirection", SqlDbType.NVarChar, 20) { Value = (object)flowDirection ?? DBNull.Value },
+                //     new SqlParameter("@PacketCount", SqlDbType.Int) { Value = packetCount },
+                //     new SqlParameter("@Duration", SqlDbType.Float) { Value = duration },
+                //     new SqlParameter("@MatchedSignatureId", SqlDbType.Int) { Value = (object)matchedSignatureId ?? DBNull.Value },
+                //     new SqlParameter("@Info", SqlDbType.NVarChar, -1) { Value = (object)info ?? DBNull.Value }
+                // };
 
-                object result = DBL.DBL.ExecuteScalarWithParameters(query, parameters);
+            //     object result = DBL.DBL.ExecuteScalarWithParameters(query, parameters);
 
-                if (result != null && int.TryParse(result.ToString(), out int newId) && newId > 0)
-                {
-                    OptimizedLogger.LogDebug($"[DB-SUCCESS] Log inserted successfully with ID={newId}");
-                    return newId;
-                }
-                else
-                {
-                    OptimizedLogger.LogError("[DB-FAIL] Insert executed but returned no valid ID (possible NOCOUNT ON, missing identity, or trigger interference).");
-                    return 0;
-                }
-            }
-            catch (SqlException ex)
+                //     if (result != null && int.TryParse(result.ToString(), out int newId) && newId > 0)
+                //     {
+                //         OptimizedLogger.LogDebug($"[DB-SUCCESS] Log inserted successfully with ID={newId}");
+                //         return newId;
+                //     }
+                //     else
+                //     {
+                //         OptimizedLogger.LogError("[DB-FAIL] Insert executed but returned no valid ID (possible NOCOUNT ON, missing identity, or trigger interference).");
+                //         return 0;
+                //     }
+                // }
+                // catch (SqlException ex)
+                // {
+                //     OptimizedLogger.LogError($"[DB-EXCEPTION] SQL Error inserting log: Number={ex.Number}, Message={ex.Message}, " +
+                //         $"Inner={ex.InnerException?.Message}, StackTrace={ex.StackTrace}");
+                //     return -1;
+                // }
+                // catch (Exception ex)
+                // {
+                //     OptimizedLogger.LogError($"[DB-GENERAL] Unexpected error inserting log: Message={ex.Message}, " +
+                //         $"Inner={ex.InnerException?.Message}, StackTrace={ex.StackTrace}");
+                //     return -1;
+                // }
+        
+            string json = $@"{{
+            ""timestamp"": ""{timestamp:yyyy-MM-dd HH:mm:ss}"",
+            ""sourceIp"": ""{EscapeJson(sourceIp)}"",
+            ""destinationIp"": ""{EscapeJson(destinationIp)}"",
+            ""packetSize"": {packetSize},
+            ""isMalicious"": {isMalicious.ToString().ToLower()},
+            ""protocolName"": ""{EscapeJson(protocolName)}"",
+            ""protocol"": ""{EscapeJson(protocol)}"",
+            ""srcPort"": {srcPort},
+            ""destPort"": {destPort},
+            ""payloadSize"": {payloadSize},
+            ""tcpFlags"": ""{EscapeJson(tcpFlags)}"",
+            ""flowDirection"": ""{EscapeJson(flowDirection)}"",
+            ""packetCount"": {packetCount},
+            ""duration"": {duration},
+            ""matchedSignatureId"": {(matchedSignatureId.HasValue ? matchedSignatureId.Value.ToString() : "null")},
+            ""info"": ""{EscapeJson(info)}""
+        }}";
+
+            int result = DBL.DBL.PushLog(json);
+
+            if (result == 1)
             {
-                OptimizedLogger.LogError($"[DB-EXCEPTION] SQL Error inserting log: Number={ex.Number}, Message={ex.Message}, " +
-                    $"Inner={ex.InnerException?.Message}, StackTrace={ex.StackTrace}");
-                return -1;
+                OptimizedLogger.LogDebug("[REDIS-SUCCESS] Log pushed to Redis successfully.");
+                return 1; // success
             }
-            catch (Exception ex)
+            else
             {
-                OptimizedLogger.LogError($"[DB-GENERAL] Unexpected error inserting log: Message={ex.Message}, " +
-                    $"Inner={ex.InnerException?.Message}, StackTrace={ex.StackTrace}");
-                return -1;
+                OptimizedLogger.LogError("[REDIS-FAIL] Failed to push log to Redis.");
+                return 0;
             }
+        }
+        catch (Exception ex)
+        {
+            OptimizedLogger.LogError($"[REDIS-ERROR] Unexpected error pushing log: {ex.Message}");
+            return -1;
+        }
+        
         }
 
 

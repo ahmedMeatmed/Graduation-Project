@@ -9,14 +9,14 @@
     namespace IDSApp.DAL
     {
         /// <summary>
-        /// Data Access Layer for handling Alert-related database operations
-        /// </summary>
+            /// Data Access Layer for handling Alert-related database operations
+            /// </summary>
         internal class AlertDal
         {
             /// <summary>
-            /// Retrieves all alerts from the database
-            /// </summary>
-            /// <returns>An AlertCollection containing all alerts</returns>
+                /// Retrieves all alerts from the database
+                /// </summary>
+                /// <returns>An AlertCollection containing all alerts</returns>
             public static AlertCollection GetAll()
             {
                 AlertCollection collection = new AlertCollection();
@@ -150,24 +150,44 @@
                     OptimizedLogger.LogDebug($"Invalid severity '{severity}' replaced with 'Medium' for log {logId}");
                 }
 
-                string query = @"INSERT INTO Alerts 
-                        (LogID, Message, AttackType, Severity, SourceIP, DestinationIP, AssignedTo, Timestamp, Status) 
-                        VALUES (@LogID, @Message, @AttackType, @Severity, @SourceIP, @DestinationIP, @AssignedTo, @Timestamp, @Status)";
+                // string query = @"INSERT INTO Alerts 
+                        // (LogID, Message, AttackType, Severity, SourceIP, DestinationIP, AssignedTo, Timestamp, Status) 
+                        // VALUES (@LogID, @Message, @AttackType, @Severity, @SourceIP, @DestinationIP, @AssignedTo, @Timestamp, @Status)";
 
-                SqlParameter[] parameters = new SqlParameter[]
-                {
-            new SqlParameter("@LogID", SqlDbType.Int) { Value = logId },
-            new SqlParameter("@Message", SqlDbType.NVarChar, 255) { Value = message },
-            new SqlParameter("@AttackType", SqlDbType.NVarChar, 100) { Value = attackType ?? (object)DBNull.Value },
-            new SqlParameter("@Severity", SqlDbType.NVarChar, 20) { Value = severity },
-            new SqlParameter("@SourceIP", SqlDbType.NVarChar, 45) { Value = sourceIp ?? (object)DBNull.Value },
-            new SqlParameter("@DestinationIP", SqlDbType.NVarChar, 45) { Value = destinationIp ?? (object)DBNull.Value },
-            new SqlParameter("@AssignedTo", SqlDbType.NVarChar, 100) { Value = assignedTo ?? (object)DBNull.Value },
-            new SqlParameter("@Timestamp", SqlDbType.DateTime) { Value = timestamp },
-            new SqlParameter("@Status", SqlDbType.NVarChar, 20) { Value = status }
-                };
+                // SqlParameter[] parameters = new SqlParameter[]
+                    // {
+                    // new SqlParameter("@LogID", SqlDbType.Int) { Value = logId },
+                    // new SqlParameter("@Message", SqlDbType.NVarChar, 255) { Value = message },
+                    // new SqlParameter("@AttackType", SqlDbType.NVarChar, 100) { Value = attackType ?? (object)DBNull.Value },
+                    // new SqlParameter("@Severity", SqlDbType.NVarChar, 20) { Value = severity },
+                    // new SqlParameter("@SourceIP", SqlDbType.NVarChar, 45) { Value = sourceIp ?? (object)DBNull.Value },
+                    // new SqlParameter("@DestinationIP", SqlDbType.NVarChar, 45) { Value = destinationIp ?? (object)DBNull.Value },
+                    // new SqlParameter("@AssignedTo", SqlDbType.NVarChar, 100) { Value = assignedTo ?? (object)DBNull.Value },
+                    // new SqlParameter("@Timestamp", SqlDbType.DateTime) { Value = timestamp },
+                    // new SqlParameter("@Status", SqlDbType.NVarChar, 20) { Value = status }
+                    //     };
 
-                return DBL.DBL.ExecuteNonQueryWithParameters(query, parameters) > 0;
+
+                
+                // return DBL.DBL.ExecuteNonQueryWithParameters(query, parameters) > 0;
+
+                // Build JSON payload
+                    string json = $@"{{
+                        ""logId"": {logId},
+                        ""message"": ""{EscapeJson(message)}"",
+                        ""attackType"": ""{EscapeJson(attackType)}"",
+                        ""severity"": ""{severity}"",
+                        ""sourceIp"": ""{EscapeJson(sourceIp)}"",
+                        ""destinationIp"": ""{EscapeJson(destinationIp)}"",
+                        ""assignedTo"": ""{EscapeJson(assignedTo)}"",
+                        ""timestamp"": ""{timestamp:yyyy-MM-dd HH:mm:ss}"",
+                        ""status"": ""{EscapeJson(status)}""
+                    }}";
+
+                    // Push to Redis
+                    int result = DBL.DBL.PushLog(json);
+
+                    return result == 1;
             }
 
             /// <summary>
