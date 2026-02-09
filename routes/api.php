@@ -13,6 +13,7 @@ use App\Http\Controllers\Api\v1\UserController;
 use App\Http\Controllers\Api\v1\AlertController;
 use App\Http\Controllers\Api\v1\SettingController;
 use App\Http\Controllers\Api\v1\SignatureController;
+use Illuminate\Support\Facades\Redis;
 
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 
@@ -35,4 +36,8 @@ Route::middleware('auth:sanctum')->prefix('v1')->group(function () {
     Route::post('Stop', [IdsController::class, 'destroy']);
 
     Route::post('/logout', [LoginController::class, 'logout']);
+});
+
+Route::get('/test', function () {
+    return Redis::connection();
 });
