@@ -223,21 +223,21 @@ namespace IDSApp.DAL
         
             string json = $@"{{
             ""timestamp"": ""{timestamp:yyyy-MM-dd HH:mm:ss}"",
-            ""sourceIp"": ""{EscapeJson(sourceIp)}"",
-            ""destinationIp"": ""{EscapeJson(destinationIp)}"",
+            ""sourceIp"": ""{sourceIp}"",
+            ""destinationIp"": ""{destinationIp}"",
             ""packetSize"": {packetSize},
             ""isMalicious"": {isMalicious.ToString().ToLower()},
-            ""protocolName"": ""{EscapeJson(protocolName)}"",
-            ""protocol"": ""{EscapeJson(protocol)}"",
+            ""protocolName"": ""{protocolName}"",
+            ""protocol"": ""{protocol}"",
             ""srcPort"": {srcPort},
             ""destPort"": {destPort},
             ""payloadSize"": {payloadSize},
-            ""tcpFlags"": ""{EscapeJson(tcpFlags)}"",
-            ""flowDirection"": ""{EscapeJson(flowDirection)}"",
+            ""tcpFlags"": ""{tcpFlags}"",
+            ""flowDirection"": ""{flowDirection}"",
             ""packetCount"": {packetCount},
             ""duration"": {duration},
             ""matchedSignatureId"": {(matchedSignatureId.HasValue ? matchedSignatureId.Value.ToString() : "null")},
-            ""info"": ""{EscapeJson(info)}""
+            ""info"": ""{info}""
         }}";
 
             int result = DBL.DBL.PushLog(json);

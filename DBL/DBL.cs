@@ -17,91 +17,88 @@ namespace IDSApp.DBL
         public static string RedisHost = "127.0.0.1";
         public static int RedisPort = 6379;
         public static int RedisDB = 0;
-        // Redis DB index (matches SELECT in Laravel config)
         public static int RedisDb = 0;
+    
         // Optional password for AUTH (set if your Redis requires a password)
         public static string RedisPassword = null;
         public static string RedisListKey = "aegis_database_ids_logs";
 
+        private static string conStr = "Data Source=DESKTOP-8PK3HGB;Initial Catalog=IDS;Integrated Security=True;Trust Server Certificate=True";
+
         /// <summary>
         /// Push a log string into Redis list
         /// </summary>
-        public static int PushLog(string log)
+  public static int PushLog(string log)
         {
-            return PushToRedis(RedisListKey, log);
-        }
+            int maxRetries = 3;
+            int attempt = 0;
 
-        private static int PushToRedis(string key, string value)
-        {
-            try
+            while (attempt < maxRetries)
             {
-                using var tcp = new TcpClient();
-                tcp.Connect(RedisHost, RedisPort);
-                var ns = tcp.GetStream();
-
-                // If password provided, AUTH first
-                if (!string.IsNullOrEmpty(RedisPassword))
+                try
                 {
-                    string authCmd = BuildRespArray(new[] { "AUTH", RedisPassword });
-                    string authResp = WriteAndRead(ns, authCmd);
-                    if (string.IsNullOrEmpty(authResp) || !(authResp.StartsWith("+OK") || authResp.StartsWith("+")))
-                        throw new Exception("Redis AUTH failed: " + authResp);
-                }
+                    using var tcp = new TcpClient();
+                    tcp.Connect(RedisHost, RedisPort);
+                    var ns = tcp.GetStream();
 
-                // SELECT DB if not zero
-                if (RedisDb != 0)
+                    // AUTH if password is set
+                    if (!string.IsNullOrEmpty(RedisPassword))
+                    {
+                        string authResp = WriteAndRead(ns, BuildRespArray(new[] { "AUTH", RedisPassword }));
+                        if (!authResp.StartsWith("+OK"))
+                            throw new Exception("Redis AUTH failed: " + authResp);
+                    }
+
+                    // SELECT DB
+                    string selectResp = WriteAndRead(ns, BuildRespArray(new[] { "SELECT", RedisDB.ToString() }));
+                    if (!selectResp.StartsWith("+OK") && !selectResp.StartsWith(":"))
+                        throw new Exception("Redis SELECT failed: " + selectResp);
+
+                    // RPUSH to list
+                    string rpushResp = WriteAndRead(ns, BuildRespArray(new[] { "RPUSH", RedisListKey, log }));
+
+                    if (rpushResp.StartsWith(":") || rpushResp.StartsWith("+"))
+                        return 1; // success
+                    else if (rpushResp.StartsWith("-ERR"))
+                    {
+                        Console.WriteLine("[REDIS ERROR] " + rpushResp);
+                        return 0;
+                    }
+                }
+                catch (Exception ex)
                 {
-                    string selCmd = BuildRespArray(new[] { "SELECT", RedisDb.ToString() });
-                    string selResp = WriteAndRead(ns, selCmd);
-                    if (string.IsNullOrEmpty(selResp) || !(selResp.StartsWith("+OK") || selResp.StartsWith(":")))
-                        throw new Exception("Redis SELECT failed: " + selResp);
+                    attempt++;
+                    Console.WriteLine($"[REDIS PUSH ERROR] Attempt {attempt}: {ex.Message}");
+                    Thread.Sleep(100 * attempt); // incremental backoff
                 }
-
-                // Select DB
-                string selectCmd = BuildRespArray(new[] { "SELECT", RedisDB.ToString() });
-                ns.Write(Encoding.UTF8.GetBytes(selectCmd), 0, Encoding.UTF8.GetByteCount(selectCmd));
-                ns.Read(new byte[1024], 0, 1024);
-
-                // RPUSH
-                string rpushCmd = BuildRespArray(new[] { "RPUSH", key, value });
-                ns.Write(Encoding.UTF8.GetBytes(rpushCmd), 0, Encoding.UTF8.GetByteCount(rpushCmd));
-
-                byte[] buf = new byte[1024];
-                int read = ns.Read(buf, 0, buf.Length);
-                if (read <= 0) return 0;
-
-                string resp = Encoding.UTF8.GetString(buf, 0, read);
-                return resp.Length > 0 && (resp[0] == '+' || resp[0] == ':') ? 1 : 0;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Redis push failed: " + ex.Message);
-                return 0;
-            }
+
+            return 0; // failed after retries
         }
 
         private static string WriteAndRead(NetworkStream ns, string cmd)
         {
             byte[] bytes = Encoding.UTF8.GetBytes(cmd);
             ns.Write(bytes, 0, bytes.Length);
-            // Read reply (up to 8KB)
+
             byte[] buf = new byte[8192];
             int read = 0;
-            // Wait briefly for reply data
-            int timeoutMs = 500;
+
             DateTime start = DateTime.UtcNow;
-            while (DateTime.UtcNow - start < TimeSpan.FromMilliseconds(timeoutMs))
+            while (DateTime.UtcNow - start < TimeSpan.FromSeconds(1))
             {
                 if (ns.DataAvailable)
                 {
                     read = ns.Read(buf, 0, buf.Length);
                     break;
                 }
-                Thread.Sleep(10);
+                Thread.Sleep(1);
             }
+
             if (read <= 0) return string.Empty;
             return Encoding.UTF8.GetString(buf, 0, read);
         }
+
         private static string BuildRespArray(string[] parts)
         {
             var sb = new StringBuilder();
@@ -114,9 +111,7 @@ namespace IDSApp.DBL
             }
             return sb.ToString();
         }
-
         // --- SQL Methods ---
-        private static string conStr = "Data Source=DESKTOP-RL48M7M\\SQLEXPRESS;Initial Catalog=IDS;Integrated Security=True;Trust Server Certificate=True";
 
         /// <summary>
         /// Executes a SQL query and returns the result as a <see cref="DataTable"/>.
@@ -228,9 +223,9 @@ namespace IDSApp.DBL
                 catch (SqlException ex)
                 {
                     // سجل رقم الخطأ لتعرف السبب الحقيقي
-                    OptimizedLogger.LogError(
-                        $"[DBL] SQL Error (Number={ex.Number}, State={ex.State}): {ex.Message}"
-                    );
+                    // OptimizedLogger.LogError(
+                    //     $"[DBL] SQL Error (Number={ex.Number}, State={ex.State}): {ex.Message}"
+                    // );
 
                     // لو الخطأ مؤقت (timeouts أو deadlocks) نحاول تكرار العملية
                     if (ex.Number == -2 || ex.Number == 1205 || ex.Number == 4060 || ex.Number == 233)
@@ -248,7 +243,7 @@ namespace IDSApp.DBL
                 }
                 catch (Exception ex)
                 {
-                    OptimizedLogger.LogError($"[DBL] General Error executing scalar query: {ex.Message}");
+                    // OptimizedLogger.LogError($"[DBL] General Error executing scalar query: {ex.Message}");
                     return null;
                 }
             }

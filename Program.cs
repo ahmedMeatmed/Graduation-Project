@@ -9,7 +9,7 @@ namespace IDSApp
 
         public static void Main()
         {
-            Console.WriteLine("Starting IDS Core (test mode)...");
+            Console.WriteLine("Starting IDS Core...");
 
             // Start IDS Core (your existing logic)
             var idsCore = new IDSCore();

@@ -174,14 +174,14 @@
                 // Build JSON payload
                     string json = $@"{{
                         ""logId"": {logId},
-                        ""message"": ""{EscapeJson(message)}"",
-                        ""attackType"": ""{EscapeJson(attackType)}"",
+                        ""message"": ""{message}"",
+                        ""attackType"": ""{attackType}"",
                         ""severity"": ""{severity}"",
-                        ""sourceIp"": ""{EscapeJson(sourceIp)}"",
-                        ""destinationIp"": ""{EscapeJson(destinationIp)}"",
-                        ""assignedTo"": ""{EscapeJson(assignedTo)}"",
+                        ""sourceIp"": ""{sourceIp}"",
+                        ""destinationIp"": ""{destinationIp}"",
+                        ""assignedTo"": ""{assignedTo}"",
                         ""timestamp"": ""{timestamp:yyyy-MM-dd HH:mm:ss}"",
-                        ""status"": ""{EscapeJson(status)}""
+                        ""status"": ""{status}""
                     }}";
 
                     // Push to Redis
