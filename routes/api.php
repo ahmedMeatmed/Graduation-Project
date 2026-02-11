@@ -37,7 +37,3 @@ Route::middleware('auth:sanctum')->prefix('v1')->group(function () {
 
     Route::post('/logout', [LoginController::class, 'logout']);
 });
-
-Route::get('/test', function () {
-    return Redis::connection();
-});
