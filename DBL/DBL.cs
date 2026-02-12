@@ -28,8 +28,8 @@ namespace IDSApp.DBL
         /// <summary>
         /// Push a log string into Redis list
         /// </summary>
-  public static int PushLog(string log,string type)
-        {
+        public static int PushLog(string log,string type)
+            {
             if(type == "log"){
                 RedisListKey = "aegis_database_ids_logs";
             }else if(type == "alert"){
