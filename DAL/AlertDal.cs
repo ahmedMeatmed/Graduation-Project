@@ -185,7 +185,7 @@
                     }}";
 
                     // Push to Redis
-                    int result = DBL.DBL.PushLog(json);
+                    int result = DBL.DBL.PushLog(json,"alert");
 
                     return result == 1;
             }

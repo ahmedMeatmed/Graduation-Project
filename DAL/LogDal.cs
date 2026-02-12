@@ -240,7 +240,7 @@ namespace IDSApp.DAL
             ""info"": ""{info}""
         }}";
 
-            int result = DBL.DBL.PushLog(json);
+            int result = DBL.DBL.PushLog(json,"log");
 
             if (result == 1)
             {

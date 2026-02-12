@@ -28,13 +28,20 @@ namespace IDSApp.DBL
         /// <summary>
         /// Push a log string into Redis list
         /// </summary>
-  public static int PushLog(string log)
+  public static int PushLog(string log,string type)
         {
+            if(type == "log"){
+                RedisListKey = "aegis_database_ids_logs";
+            }else if(type == "alert"){
+                RedisListKey = "aegis_database_ids_alerts";
+            }
+
             int maxRetries = 3;
             int attempt = 0;
 
             while (attempt < maxRetries)
             {
+                  
                 try
                 {
                     using var tcp = new TcpClient();

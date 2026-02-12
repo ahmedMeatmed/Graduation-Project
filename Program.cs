@@ -20,7 +20,7 @@ namespace IDSApp
             IDSApp.DBL.DBL.RedisPort = 6379;
             IDSApp.DBL.DBL.RedisDb = 0; // set to Laravel's DB index if needed
             IDSApp.DBL.DBL.RedisPassword = null; // set if your Redis requires password
-            IDSApp.DBL.DBL.RedisListKey = "aegis_database_ids_logs"; // match Laravel key
+            // IDSApp.DBL.DBL.RedisListKey = "aegis_database_ids_logs"; // match Laravel key
 
             Console.WriteLine("IDS Core started . Press any key to stop...");
 
