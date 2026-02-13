@@ -2,8 +2,11 @@
 
 namespace App\Console\Commands;
 
+use App\Events\logSent;
+use App\Events\alertSent;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Redis;
+use ParagonIE\Sodium\Core\Curve25519\Fe;
 
 class RedisListener extends Command
 {
@@ -41,23 +44,29 @@ class RedisListener extends Command
             $Fetchedalerts[] = json_decode($alerts[1], true);
 
             $this->info("Received log: " . count($Fetchedlogs));
-            $this->info("Received log: " . count($Fetchedalerts));
-            print_r($Fetchedalerts);
+            $this->info("Received alert: " . count($Fetchedalerts));
+            // print_r($Fetchedalerts);
 
             // When batch is full
-            if (count($Fetchedlogs) >= $batchSize)
-                {
-
+            if (count($Fetchedlogs) >= $batchSize){
                 $this->info("Processing 50 Fetchedlogs...");
-
                 foreach ($Fetchedlogs as $log) {
-                    // Example: save to DB
-                    // LogModel::create($log);
-                    // print_r($log);
+                    broadcast(new logSent($log));
                 }
 
                 // Reset batch
                 $Fetchedlogs = [];
+            }
+
+            if(count($Fetchedalerts) > 0){
+                $this->info("Processing 1 Fetchedalerts...");
+                foreach ($Fetchedalerts as $alert) {
+                    broadcast(new alertSent($alert));
+                }
+
+                // Reset batch
+                $Fetchedalerts = [];
+
             }
         }
     }

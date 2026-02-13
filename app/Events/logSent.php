@@ -4,22 +4,23 @@ namespace App\Events;
 
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Broadcasting\PresenceChannel;
-use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class logSent
+class logSent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels, ShouldBroadcast;
+
+    public $log;
 
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public function __construct($log)
     {
         //
+        $this->log = $log;
     }
 
     /**
@@ -30,7 +31,15 @@ class logSent
     public function broadcastOn(): array
     {
         return [
-            new PrivateChannel('channel-name'),
+            new Channel('logs-channel'),
         ];
     }
+    public function broadcastWith()
+    {
+        return [
+            'log' => $this->log,
+        ];
+    }
+
+
 }

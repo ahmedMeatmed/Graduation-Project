@@ -10,16 +10,20 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class alertSent
+class alertSent implements ShouldBroadcast
 {
-    use Dispatchable, InteractsWithSockets, SerializesModels, ShouldBroadcast;
+    use Dispatchable, InteractsWithSockets, SerializesModels;
+
+
+    public $alert;
 
     /**
      * Create a new event instance.
      */
-    public function __construct()
+    public function __construct($alert)
     {
         //
+        $this->alert = $alert;
     }
 
     /**
@@ -30,7 +34,15 @@ class alertSent
     public function broadcastOn(): array
     {
         return [
-            new PrivateChannel('channel-name'),
+            new Channel('alerts-channel'),
         ];
     }
+
+    public function broadcastWith()
+    {
+        return [
+            'alert' => $this->alert,
+        ];
+    }
+
 }
