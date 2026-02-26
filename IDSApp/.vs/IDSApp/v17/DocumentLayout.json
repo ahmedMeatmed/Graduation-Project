@@ -3,12 +3,6 @@
   "WorkspaceRootPath": "H:\\Graduation-Project\\IDSApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58F60365-204D-4AA5-82D0-41031FFF6B96}|..\\IDSWindowsService\\IDSWindowsService.csproj|h:\\graduation-project\\idswindowsservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58F60365-204D-4AA5-82D0-41031FFF6B96}|..\\IDSWindowsService\\IDSWindowsService.csproj|h:\\graduation-project\\idswindowsservice\\worker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{95FEF9E2-2F6D-40CB-A0FC-FDBCC6346FB8}|IDSApp.csproj|h:\\graduation-project\\idsapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95FEF9E2-2F6D-40CB-A0FC-FDBCC6346FB8}|IDSApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -24,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\Graduation-Project\\IDSApp\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -41,41 +35,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "IDSApp",
               "DocumentMoniker": "H:\\Graduation-Project\\IDSApp\\IDSApp.csproj",
               "RelativeDocumentMoniker": "IDSApp.csproj",
-              "ToolTip": "H:\\Graduation-Project\\IDSApp\\IDSApp.csproj*",
-              "RelativeToolTip": "IDSApp.csproj*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ToolTip": "H:\\Graduation-Project\\IDSApp\\IDSApp.csproj",
+              "RelativeToolTip": "IDSApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-02-25T23:27:04.533Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "H:\\Graduation-Project\\IDSWindowsService\\Program.cs",
-              "RelativeDocumentMoniker": "..\\IDSWindowsService\\Program.cs",
-              "ToolTip": "H:\\Graduation-Project\\IDSWindowsService\\Program.cs",
-              "RelativeToolTip": "..\\IDSWindowsService\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T23:23:29.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Worker.cs",
-              "DocumentMoniker": "H:\\Graduation-Project\\IDSWindowsService\\Worker.cs",
-              "RelativeDocumentMoniker": "..\\IDSWindowsService\\Worker.cs",
-              "ToolTip": "H:\\Graduation-Project\\IDSWindowsService\\Worker.cs",
-              "RelativeToolTip": "..\\IDSWindowsService\\Worker.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T23:23:12.62Z",
               "EditorCaption": ""
             }
           ]

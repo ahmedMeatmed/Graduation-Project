@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IDSWindowsService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ec65d9ff78a4ac311d6dd09fe2c983406d5497f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e0a1451b112fe2eb822386b16ab35b2bd63a71c")]
 [assembly: System.Reflection.AssemblyProductAttribute("IDSWindowsService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IDSWindowsService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
